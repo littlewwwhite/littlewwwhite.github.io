@@ -46,7 +46,7 @@ DeepSeek API 提供了强大的自然语言处理功能，能够帮助我们实�
 import requests
 
 def analyze_content(content):
-    url = "https://api.deepseek.com/v1/analyze"
+    url = "https://api.deepseek.com/v1"
     headers = {
         "Authorization": "Bearer YOUR_API_KEY",
         "Content-Type": "application/json"
@@ -101,7 +101,7 @@ print(metadata)
 import requests
 
 def analyze_content(content):
-    url = "https://api.deepseek.com/v1/analyze"
+    url = "https://api.deepseek.com/v1"
     headers = {
         "Authorization": "Bearer YOUR_API_KEY",
         "Content-Type": "application/json"
@@ -132,4 +132,4 @@ metadata = generate_metadata(result)
 print(metadata)
 ```
 
-通过这个工具，博主可以更加专注于内容创作，而无需担心元数据的生成问题。希望本文能为你的博客写作带来新的灵感和效率提升。
+通过这个工具，可以更加专注于内容创作，而无需担心元数据的生成问题。
