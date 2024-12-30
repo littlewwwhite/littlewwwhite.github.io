@@ -8,12 +8,10 @@ tags:
 - DeepSeek API
 - 自动化工具
 - SEO
-title: 使用 Python 和 DeepSeek API 自动化生成博客文章元数据
+title: 利用Python和DeepSeek API自动生成博客元数据
 ---
 
-本文介绍了如何利用 Python 和 DeepSeek API 开发一个自动化工具，用于高效生成博客文章的元数据，包括标题、描述、标签和分类，从而提升写作效率和SEO优化。
-
-# 使用 Python 和 DeepSeek API 自动化生成博客文章元数据
+本文探讨了如何利用Python和DeepSeek API开发一个自动化工具，用于高效生成博客文章的元数据，包括标题、描述、标签和分类，从而提升写作效率和SEO优化。
 
 ## 引言
 

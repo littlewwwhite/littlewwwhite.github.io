@@ -74,6 +74,39 @@ def optimize_content(content):
         print(f"API 调用错误：{str(e)}")
         return None
 
+def remove_main_title(content):
+    """删除文章中的主标题（# 开头的标题）"""
+    lines = []
+    found_title = False
+    skip_empty = False
+    
+    # 处理每一行
+    for line in content.split('\n'):
+        # 如果是front matter，直接添加
+        if line.strip() == '---':
+            found_title = False
+            skip_empty = False
+            lines.append(line)
+            continue
+            
+        # 如果找到主标题，标记跳过
+        if not found_title and line.strip().startswith('# '):
+            found_title = True
+            skip_empty = True
+            continue
+            
+        # 如果正在跳过空行且当前行为空
+        if skip_empty and not line.strip():
+            continue
+            
+        # 如果遇到非空行，停止跳过空行
+        if skip_empty and line.strip():
+            skip_empty = False
+            
+        lines.append(line)
+    
+    return '\n'.join(lines)
+
 def find_post(post_name):
     """在posts目录中查找指定名称的文章"""
     # 如果输入的是完整路径，检查是否为目录
@@ -158,15 +191,17 @@ def update_markdown_file(file_path):
 
     print("\n内容已优化")
 
-    # 生成新的文件内容
-    new_content = f"""---
+    # 删除主标题
+    full_content = f"""---
 {yaml.dump(front_matter, allow_unicode=True, sort_keys=False)}---
 
 {optimized_content}"""
+    
+    final_content = remove_main_title(full_content)
 
     # 写入文件
     with open(file_path, 'w', encoding='utf-8') as f:
-        f.write(new_content)
+        f.write(final_content)
     
     print(f"\n已更新文件：{file_path}")
 
