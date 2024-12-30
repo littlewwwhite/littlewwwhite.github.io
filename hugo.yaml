@@ -73,6 +73,16 @@ params:
   DateFormat: "2006-01-02" # 这个时间是作者自己写的，只能这样写
   mainSections: ["posts"]
   ShowArchiveCount: true
+  assets:
+    disableHLJS: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+  imaging:
+    anchor: Smart
+    quality: 75
+    resampleFilter: Lanczos
 
   homeInfoParams:
     # 首页的 profile 内容
@@ -117,14 +127,6 @@ params:
     keys: ["title", "permalink", "summary", "content"]
     includeMatches: true
 
-  # 设置网站的标签页的图标，即 favicon
-  assets:
-    disableHLJS: true
-    favicon: "favicon.png"
-    favicon16x16: "favicon.png"
-    favicon32x32: "favicon.png"
-    apple_touch_icon: "favicon.png"
-    safari_pinned_tab: "favicon.png"
   # 评论的设置
   giscus:
     repo: "littlewwwhite/littlewwwhite.github.io"
