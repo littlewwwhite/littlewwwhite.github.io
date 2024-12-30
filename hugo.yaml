@@ -1,6 +1,6 @@
 baseURL: "https://littlewwwhite.github.io/" # 主站的 URL
-title: zjding's Blog # 站点标题
-copyright: "[ zjding's Blog](https://littlewwwhite.github.io/)" # 网站的版权声明，通常显示在页脚
+title: zjding'Log # 站点标题
+copyright: "[zjding'Log](https://littlewwwhite.github.io/)" # 网站的版权声明，通常显示在页脚
 theme: PaperMod # 主题
 languageCode: ZH-cn # 语言
 
@@ -25,22 +25,22 @@ languages:
     # https://gohugo.io/content-management/menus/#define-in-site-configuration
     menus:
       main:
-        - name: 首页
+        - name: Post
           pageRef: /
           weight: 4 # 控制在页面上展示的前后顺序
-        - name: 归档
+        - name: Archives
           pageRef: archives/
           weight: 5
-        - name: 分类
+        - name: Categories
           pageRef: categories/
           weight: 10
-        - name: 标签
+        - name: Tags
           pageRef: tags/
           weight: 10
-        - name: 搜索
+        - name: Search
           pageRef: search/
           weight: 20
-        - name: 关于
+        - name: About
           pageRef: about/
           weight: 21
 
@@ -51,6 +51,12 @@ outputs:
     - RSS # 这个其实无所谓
     - JSON # necessary for search, 这里的配置修改好之后，一定要重新生成一下
 
+
+# ~~~~~~~~~
+# 主题的配置(基本上是)
+# ~~~~~~~~~
+pagination:
+  pagerSize: 10 # 每页展示的文章数量，这个没找到文档，应该是主题自己设置的
 
 # 参数
 params:
@@ -69,7 +75,7 @@ params:
   ShowPageNums: true # 展示页面的页数
   ShowToc: true # 展示文章详情页的目录
   comments: true # 评论
-  images: ["https://i.postimg.cc/7hwBy7VS/calcr.png"] # 缺省的图片，比如，博客的封面
+  images: [] # 缺省的图片，比如，博客的封面
   DateFormat: "2006-01-02" # 这个时间是作者自己写的，只能这样写
   mainSections: ["posts"]
   ShowArchiveCount: true
@@ -88,9 +94,7 @@ params:
     # 首页的 profile 内容
     Title: "Hey Guys 👋 I'm zjding"
     # 首页的 profile 内容
-    Content: >
-      Welcome to my Blog! I'm a NLPer, major in LLM, embedding, RAG and Agent. <br>
-      
+    Content: Welcome to my Blog! I'm a NLPer, major in LLM, embedding, RAG and Agent.
 
   socialIcons:
     - name: github
