@@ -1,0 +1,11 @@
+.mermaid {
+    margin: 1em 0;
+    text-align: center;
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: 1em;
+}
+
+.dark .mermaid {
+    background: var(--entry);
+} 

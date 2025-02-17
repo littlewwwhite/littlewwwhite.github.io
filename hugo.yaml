@@ -161,6 +161,12 @@ params:
   ShowLastMod: true # 显示最后修改时间
   enableGitInfo: true # 启用 Git 信息
 
+  # 添加 Mermaid 支持
+  mermaid:
+    enable: true
+    theme: "default" # 可选：default, dark, forest, neutral
+    align: "center"
+
 markup:
   goldmark:
     renderer:

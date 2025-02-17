@@ -5,4 +5,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 {{ partial "mathjax.html" . }}
+{{ if .Page.Store.Get "hasMermaid" }}
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: '{{ .Site.Params.mermaid.theme | default "default" }}',
+        align: '{{ .Site.Params.mermaid.align | default "center" }}',
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true,
+            curve: 'basis'
+        },
+        sequence: {
+            useMaxWidth: true,
+            showSequenceNumbers: true
+        }
+    });
+</script>
+{{ end }}
 {{- /* Head custom content area end */ -}}
