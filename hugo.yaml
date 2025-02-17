@@ -4,11 +4,14 @@ copyright: "[zjding'Log](https://littlewwwhite.github.io/)" # 网站的版权声
 theme: PaperMod # 主题
 languageCode: ZH-cn # 语言
 
+# 添加以下配置
+timeZone: Asia/Shanghai
+
 enableInlineShortcodes: true # shortcode，类似于模板变量，可以在写 markdown 的时候便捷地插入，官方文档中有一个视频讲的很通俗
 hasCJKLanguage: true # 是否有 CJK 的字符
 enableRobotsTXT: true # 允许生成 robots.txt
-buildDrafts: false # 构建时是否包括草稿
-buildFuture: false # 构建未来发布的内容
+buildDrafts: true # 构建时是否包括草稿
+buildFuture: true # 构建未来发布的内容
 buildExpired: false # 构建过期的内容
 enableEmoji: true # 允许 emoji
 pygmentsUseClasses: true
@@ -95,6 +98,8 @@ params:
     Title: "Hey Guys 👋 I'm zjding"
     # 首页的 profile 内容
     Content: Welcome to my Blog! I'm a NLPer, major in LLM, embedding, RAG and Agent.
+    SortBy: "date"
+    Descending: true
 
   socialIcons:
     - name: github
@@ -147,6 +152,14 @@ params:
     lang: "zh-CN"
     crossorigin: "anonymous"
 
+  # 添加以下配置
+  orderSectionsByDate: true
+  ShowLatestPosts: true
+
+  # 文章相关
+  ShowWordCount: true # 显示字数统计
+  ShowLastMod: true # 显示最后修改时间
+  enableGitInfo: true # 启用 Git 信息
 
 markup:
   goldmark:
