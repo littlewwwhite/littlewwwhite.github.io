@@ -10,7 +10,9 @@ draft: false
 
 下面是本地图片的插入方法：
 
-![alt text](03-Notes/littlewwwhite/content/posts/my-first-post/image.png)
+这是一个 AI 游戏的设计图：
+
+![alt text](image.png)
 
 *注：使用相对路径 (./) 引用图片*
 
