@@ -1,0 +1,46 @@
+/* KaTeX 样式适配主题 */
+.katex {
+    font-size: 1em !important;
+}
+
+/* 行内公式样式 */
+.katex-inline {
+    padding: 0.2em 0.1em;
+    color: var(--content);
+}
+
+/* 块级公式样式 */
+.katex-display {
+    padding: 1em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    color: var(--content);
+}
+
+/* 暗色主题适配 */
+.dark .katex {
+    color: var(--content);
+}
+
+/* 确保公式中的文本在暗色主题下可见 */
+.dark .katex-html {
+    color: var(--content);
+}
+
+/* 滚动条样式 */
+.katex-display > .katex {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* 确保公式背景色与主题一致 */
+.katex-display {
+    background: var(--entry);
+    border-radius: var(--radius);
+}
+
+/* 暗色主题下的背景色 */
+.dark .katex-display {
+    background: var(--entry);
+} 
