@@ -51,7 +51,7 @@ $$
   - 变点数量默认25个，覆盖前80%数据区间（`changepoint_range=0.8`）。
   
 - **季节项s(t)**：
-  - 傅里叶级数展开：$$s(t)=\sum_{n=1}^N \left( a_n \cos\left(\frac{2\pi nt}{P}\right) + b_n \sin\left(\frac{2\pi nt}{P}\right) \right)$$。
+  - 傅里叶级数展开：$$s(t)=\sum_{n=1}^N(a_n\cos(\frac{2\pi nt}{P})+b_n\sin(\frac{2\pi nt}{P}))$$。
   - 年周期（P=365.25）、周周期（P=7）可独立配置。
   
 - **节假日项h(t)**：
