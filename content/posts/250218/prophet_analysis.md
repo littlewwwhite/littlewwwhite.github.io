@@ -41,9 +41,7 @@ Prophet特别适用于具有显著内在规律的时间序列数据，尤其是�
 
 Prophet的基础模型可以分解为以下几个部分：
 
-$$
-y(t) = \underbrace{g(t)}_{\text{趋势项}} + \underbrace{s(t)}_{\text{季节项}} + \underbrace{h(t)}_{\text{节假日项}} + \epsilon_t
-$$
+$$y(t) = \underbrace{g(t)}_{\text{趋势项}} + \underbrace{s(t)}_{\text{季节项}} + \underbrace{h(t)}_{\text{节假日项}} + \epsilon_t$$
 
 - **趋势项g(t)**：
   - 可选逻辑增长（带饱和上限）或分段线性模型。
