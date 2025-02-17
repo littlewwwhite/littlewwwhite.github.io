@@ -10,3 +10,10 @@ sh tools/blog.sh
 
 post 文件夹下仅负责内容的生成
 播客 md 文件名不能包含中文，否则会报错
+
+latex 要用 $$ 包裹，否则会报错，且在一行内，如下
+
+```md
+$$y(t) = \underbrace{g(t)}_{\text{趋势项}} + \underbrace{s(t)}_{\text{季节项}} + \underbrace{h(t)}_{\text{节假日项}} + \epsilon_t$$
+```
+
