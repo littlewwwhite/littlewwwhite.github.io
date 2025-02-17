@@ -1,11 +1,34 @@
 .mermaid {
     margin: 1em 0;
     text-align: center;
-    background: var(--entry);
-    border-radius: var(--radius);
     padding: 1em;
+    border-radius: var(--radius);
 }
 
+/* 亮色主题样式 */
+:root:not(.dark) .mermaid {
+    background: var(--code-bg);
+}
+
+/* 暗色主题样式 */
 .dark .mermaid {
-    background: var(--entry);
+    background: var(--code-block-bg);
+}
+
+/* 确保文字颜色在不同主题下都清晰可见 */
+.mermaid text {
+    fill: var(--content) !important;
+}
+
+/* 确保连接线在不同主题下都清晰可见 */
+.dark .mermaid .messageText,
+.dark .mermaid .loopText,
+.dark .mermaid .labelText {
+    fill: var(--content) !important;
+}
+
+/* 确保箭头在暗色主题下可见 */
+.dark .mermaid .marker {
+    fill: var(--content) !important;
+    stroke: var(--content) !important;
 } 

@@ -164,7 +164,9 @@ params:
   # 添加 Mermaid 支持
   mermaid:
     enable: true
-    theme: "default" # 可选：default, dark, forest, neutral
+    theme:
+      light: "default" # 亮色主题
+      dark: "dark" # 暗色主题
     align: "center"
 
 markup:
