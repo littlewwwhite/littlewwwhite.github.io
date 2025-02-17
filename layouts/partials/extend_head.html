@@ -16,14 +16,20 @@
         document.querySelectorAll('.post-content').forEach(function(element) {
             let content = element.innerHTML;
             
-            // 修复块级公式
+            // 修复块级公式，将 $$ 替换为临时标记
             content = content.replace(/\$\$([\s\S]*?)\$\$/g, function(match, formula) {
-                return '<div class="math math-display">' + match + '</div>';
+                // 使用特殊标记替换 $$，避免被后续处理影响
+                return '<div class="math math-display">@@DISPLAY_MATH_START@@' + formula + '@@DISPLAY_MATH_END@@</div>';
             });
             
             // 修复行内公式
             content = content.replace(/\$((?!\$).*?)\$/g, function(match, formula) {
                 return '<span class="math math-inline">' + match + '</span>';
+            });
+            
+            // 还原块级公式的标记
+            content = content.replace(/@@DISPLAY_MATH_START@@([\s\S]*?)@@DISPLAY_MATH_END@@/g, function(match, formula) {
+                return formula;
             });
             
             element.innerHTML = content;
@@ -32,7 +38,7 @@
         // 配置 KaTeX 渲染
         renderMathInElement(document.body, {
             delimiters: [
-                {left: '$$', right: '$$', display: true},
+                {left: '<div class="math math-display">', right: '</div>', display: true},
                 {left: '$', right: '$', display: false}
             ],
             ignoredTags: [
