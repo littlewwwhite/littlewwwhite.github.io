@@ -12,6 +12,14 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // 预处理：修复可能的 Markdown 解析问题
+        document.querySelectorAll('.post-content').forEach(function(element) {
+            // 确保数学公式周围有适当的空白
+            element.innerHTML = element.innerHTML.replace(/([^\\])\$\$/g, '$1\n$$');
+            element.innerHTML = element.innerHTML.replace(/\$\$([^$])/g, '$$\n$1');
+        });
+
+        // 配置 KaTeX 渲染
         renderMathInElement(document.body, {
             delimiters: [
                 {left: '$$', right: '$$', display: true},
@@ -31,7 +39,19 @@
             minRuleThickness: 0.05,
             maxSize: Infinity,
             maxExpand: 1000,
-            globalGroup: true
+            globalGroup: true,
+            // 添加自定义处理
+            preProcess: function(math) {
+                // 处理可能的空格问题
+                return math.trim();
+            }
+        });
+
+        // 修复渲染后的样式
+        document.querySelectorAll('.katex-display').forEach(function(element) {
+            // 确保显示块级公式有正确的间距
+            element.style.margin = '1em 0';
+            element.style.overflow = 'auto';
         });
     });
 </script>
