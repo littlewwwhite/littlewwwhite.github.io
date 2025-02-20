@@ -92,7 +92,7 @@ sequenceDiagram
 
 2. **处理延迟**  
    - 单文件处理耗时公式：  
-     \[ T_{\text{total}} = T_{\text{split}} + N_{\text{chunks}} \times T_{\text{embedding}} + T_{\text{db-write}} \]
+     $$ T_{\text{total}} = T_{\text{split}} + N_{\text{chunks}} \times T_{\text{embedding}} + T_{\text{db-write}} $$
      - 假设：  
        - 100 页 PDF 分割为 500 个文本块
        - Jina Embedding 模型延迟 50ms/块
