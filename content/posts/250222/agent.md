@@ -42,7 +42,7 @@ title: langgraph、crewai和autogen的对比
 
 ### 根据场景选择
 ```mermaid
-graph TD
+flowchart TD
     A[需求分析] --> B{需要精确流程控制?}
     B -->|是| C[选择LangGraph]
     B -->|否| D{需要快速原型开发?}
