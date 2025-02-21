@@ -8,10 +8,10 @@ tags:
 - CrewAI
 - AutoGen
 - 多智能体系统
-title: Agent
+title: langgraph、crewai和autogen的对比
 ---
 
-### langgraph、crewai和autogen的对比
+### 自我感受
 
 作为一个开发者，我用过AutoGen和LangGraph，下面是我的一些对比：
 
