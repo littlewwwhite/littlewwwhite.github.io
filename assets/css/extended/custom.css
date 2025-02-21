@@ -1,34 +1,55 @@
-.mermaid {
+/* Mermaid 图表样式 */
+.mermaid-wrapper {
     margin: 1em 0;
     text-align: center;
-    padding: 1em;
+    background: var(--entry);
     border-radius: var(--radius);
+    padding: 1em;
+}
+
+.mermaid {
+    font-family: var(--font-family) !important;
+    background: transparent !important;
 }
 
 /* 亮色主题样式 */
 :root:not(.dark) .mermaid {
-    background: var(--code-bg);
+    color: var(--primary);
+}
+
+:root:not(.dark) .mermaid .node rect,
+:root:not(.dark) .mermaid .node circle,
+:root:not(.dark) .mermaid .node polygon {
+    fill: var(--entry) !important;
+    stroke: var(--border) !important;
 }
 
 /* 暗色主题样式 */
 .dark .mermaid {
-    background: var(--code-block-bg);
+    color: var(--primary);
 }
 
-/* 确保文字颜色在不同主题下都清晰可见 */
-.mermaid text {
-    fill: var(--content) !important;
+.dark .mermaid .node rect,
+.dark .mermaid .node circle,
+.dark .mermaid .node polygon {
+    fill: var(--entry) !important;
+    stroke: var(--border) !important;
+}
+
+/* 确保文本在两种主题下都清晰可见 */
+.mermaid .label {
+    color: var(--content) !important;
+    font-family: var(--font-family) !important;
 }
 
 /* 确保连接线在不同主题下都清晰可见 */
-.dark .mermaid .messageText,
-.dark .mermaid .loopText,
-.dark .mermaid .labelText {
-    fill: var(--content) !important;
+.mermaid .edgePath .path {
+    stroke: var(--content) !important;
+    stroke-width: 2px;
 }
 
-/* 确保箭头在暗色主题下可见 */
-.dark .mermaid .marker {
+/* 确保箭头在两种主题下都清晰可见 */
+.mermaid .arrowheadPath {
     fill: var(--content) !important;
-    stroke: var(--content) !important;
+    stroke: none !important;
 } 

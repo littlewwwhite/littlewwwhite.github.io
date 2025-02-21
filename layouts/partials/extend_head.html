@@ -73,50 +73,41 @@
 
 {{- /* Mermaid 支持 */ -}}
 {{ if .Page.Store.Get "hasMermaid" }}
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
 <script>
-    const initializeMermaid = () => {
-        const isDark = document.body.className.includes('dark');
-        const theme = isDark ? 
-            '{{ .Site.Params.mermaid.theme.dark | default "dark" }}' : 
-            '{{ .Site.Params.mermaid.theme.light | default "default" }}';
-        
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: theme,
-            align: '{{ .Site.Params.mermaid.align | default "center" }}',
-            flowchart: {
-                useMaxWidth: true,
-                htmlLabels: true,
-                curve: 'basis'
-            },
-            sequence: {
-                useMaxWidth: true,
-                showSequenceNumbers: true
-            }
-        });
-    };
+  // 初始化 mermaid 配置
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true,
+      curve: 'basis',
+    },
+    themeVariables: {
+      fontFamily: 'var(--font-family)',
+      fontSize: '16px',
+    },
+    securityLevel: 'loose',
+  });
 
-    // 初始化
-    document.addEventListener('DOMContentLoaded', initializeMermaid);
-
-    // 监听主题切换
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.attributeName === 'class') {
-                mermaid.initialize({ theme: document.body.className.includes('dark') ? 
-                    '{{ .Site.Params.mermaid.theme.dark | default "dark" }}' : 
-                    '{{ .Site.Params.mermaid.theme.light | default "default" }}'
-                });
-                // 重新渲染所有图表
-                mermaid.init(undefined, document.querySelectorAll('.mermaid'));
-            }
-        });
+  // 监听主题切换
+  document.addEventListener('DOMContentLoaded', function() {
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === 'class' && 
+            mutation.target.classList.contains('dark')) {
+          mermaid.initialize({
+            theme: 'dark'
+          });
+        }
+      });
     });
 
-    observer.observe(document.body, {
-        attributes: true
+    observer.observe(document.documentElement, {
+      attributes: true
     });
+  });
 </script>
 {{ end }}
 {{- /* Head custom content area end */ -}}
