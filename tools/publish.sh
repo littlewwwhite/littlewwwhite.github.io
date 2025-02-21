@@ -10,11 +10,12 @@ check_dependencies() {
 show_menu() {
     echo "博客工具菜单："
     echo "1. 优化博客内容"
-    echo "2. 生成博客元数据"
-    echo "3. 完整处理（先优化内容，再生成元数据）"
-    echo "4. 退出"
+    echo "2. 优化并生成博客元数据"
+    echo "3. 仅格式化博客开头结构"
+    echo "4. 完整处理（先优化内容，再生成元数据）"
+    echo "5. 退出"
     echo
-    read -p "请选择操作 (1-4): " choice
+    read -p "请选择操作 (1-5): " choice
 }
 
 # 获取文章名称
@@ -40,12 +41,16 @@ main() {
                 ;;
             3)
                 post_name=$(get_post_name)
+                python3 tools/blog_formatter.py "$post_name"
+                ;;
+            4)
+                post_name=$(get_post_name)
                 echo "开始优化内容..."
                 python3 tools/blog_optimizer.py "$post_name"
                 echo "开始生成元数据..."
                 python3 tools/blog_processor.py "$post_name"
                 ;;
-            4)
+            5)
                 echo "退出程序"
                 exit 0
                 ;;
