@@ -97,7 +97,7 @@ params:
     # 首页的 profile 内容
     Title: "Hey Guys 👋 I'm zjding"
     # 首页的 profile 内容
-    Content: Welcome to my Blog! I'm a NLPer, major in LLM, embedding, RAG and Agent.
+    Content: Welcome to my Blog! I'm a NLPer, interest in LLMops, Embedding, RAG and Agent.
     SortBy: "date"
     Descending: true
 
