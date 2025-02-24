@@ -61,7 +61,7 @@ title: 结合 AWS S3、Qdrant 和 MySQL 的文件处理与存储机制
 
     try:
         response = client.chat.completions.create(
-            model="deepseek-chat",
+            model=os.getenv("MODEL_NAME"),
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"请分析以下博客内容：\n\n{content}"}

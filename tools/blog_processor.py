@@ -83,7 +83,7 @@ def get_content_analysis(content):
 
     try:
         response = client.chat.completions.create(
-            model="deepseek-chat",
+            model=os.getenv("MODEL_NAME"),
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"请分析以下博客内容：\n\n{content}"}

@@ -59,7 +59,7 @@ def optimize_content(content):
 
     try:
         response = client.chat.completions.create(
-            model="deepseek-chat",
+            model=os.getenv("MODEL_NAME"),
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"请优化以下文章内容：\n\n{content}"}
