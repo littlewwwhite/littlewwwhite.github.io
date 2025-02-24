@@ -83,6 +83,32 @@ title: 结合 AWS S3、Qdrant 和 MySQL 的文件处理与存储机制
         print(f"API 调用错误：{str(e)}")
         return None
 
+def process_image_paths(content, folder_name):
+    """处理 markdown 内容中的图片路径
+    
+    Args:
+        content (str): markdown 文本内容
+        folder_name (str): 文章所在文件夹名称
+    
+    Returns:
+        str: 处理后的 markdown 内容
+    """
+    import re
+    
+    # 匹配 markdown 图片语法
+    pattern = r'!\[(.*?)\]\((image/.*?)\)'
+    
+    def replace_path(match):
+        alt_text = match.group(1)
+        image_path = match.group(2)
+        # 构建新的图片路径
+        new_path = f'/post/{folder_name}/{image_path}'
+        return f'![{alt_text}]({new_path})'
+    
+    # 替换所有匹配的图片路径
+    processed_content = re.sub(pattern, replace_path, content)
+    return processed_content
+
 def format_front_matter(file_path):
     """格式化 markdown 文件的 front matter"""
     # 读取文件内容
@@ -96,7 +122,6 @@ def format_front_matter(file_path):
         parts = content.split('---', 2)
         if len(parts) >= 3:
             try:
-                # 确保 front_matter 是字典类型
                 yaml_content = yaml.safe_load(parts[1])
                 if isinstance(yaml_content, dict):
                     front_matter = yaml_content
@@ -107,8 +132,13 @@ def format_front_matter(file_path):
                 print(f"警告：front matter 解析失败，将创建新的 front matter")
                 front_matter = {}
     
-    # 获取文件夹名称中的日期（格式：YYMMDD）
+    # 获取文件夹名称
     folder_name = file_path.parent.name
+    
+    # 处理图片路径
+    main_content = process_image_paths(main_content, folder_name)
+    
+    # 获取文件夹名称中的日期（格式：YYMMDD）
     if len(folder_name) == 6 and folder_name.isdigit():
         date = f"20{folder_name[:2]}-{folder_name[2:4]}-{folder_name[4:]}"
     else:
