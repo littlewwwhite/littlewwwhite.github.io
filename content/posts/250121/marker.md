@@ -2,7 +2,7 @@
 categories:
 - 技术工具
 - 开源软件
-date: '2025-02-24'
+date: '2025-01-21'
 tags:
 - 文档转换
 - 开源工具
@@ -66,9 +66,8 @@ title: Marker：强大的开源文档转换工具
 - 《Switch Transformers》
 - 《Multi-column CNN》
 
-这些示例展示了Markdown和JSON格式的转换效果，帮助用户更好地理解工具的能力。
+你可以去代码仓库查看下 Markdown和JSON格式的转换效果，个人觉得还是不错的。
 
-![marker](/posts/250121/2.png)
 
 ---
 
