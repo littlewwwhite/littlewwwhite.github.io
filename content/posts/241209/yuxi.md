@@ -15,6 +15,10 @@ title: Yuxi-Know：基于大模型 RAG 的知识库与知识图谱问答平台
 
 [https://github.com/xerrors/Yuxi-Know](https://github.com/xerrors/Yuxi-Know)
 
+
+该项目前身：[KnowledgeGraph-based-on-Raw-text-A27](https://github.com/littlewwwhite/KnowledgeGraph-based-on-Raw-text-A27)
+我们是基于最早的基于 uie 抽取的实体关系，然后构建的知识图谱，然后基于知识图谱进行问答，在 graphRAG 出来后，我们又基于 graphRAG 进行了重构，并增加了知识库的支持。
+
 Yuxi-Know 是一个结合大模型 RAG 技术和知识图谱的问答平台，支持多种大模型调用和本地部署，提供知识库和知识图谱的问答功能。项目采用 Llamaindex、VueJS、Flask 和 Neo4j 等技术栈，支持开发和生产环境的 Docker 部署。
 
 ![1740370629487](image.png)
