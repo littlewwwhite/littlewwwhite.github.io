@@ -21,7 +21,7 @@ title: Yuxi-Know：基于大模型 RAG 的知识库与知识图谱问答平台
 
 Yuxi-Know 是一个结合大模型 RAG 技术和知识图谱的问答平台，支持多种大模型调用和本地部署，提供知识库和知识图谱的问答功能。项目采用 Llamaindex、VueJS、Flask 和 Neo4j 等技术栈，支持开发和生产环境的 Docker 部署。
 
-![1740370629487](/content/posts/241209/image.png)
+![interface](images/2.png)
 
 `Yuxi-Know` 是一个基于大模型 RAG（Retrieval-Augmented Generation）知识库与知识图谱的问答平台，以下是关于这个仓库的详细介绍：
 
@@ -41,7 +41,7 @@ Yuxi-Know 是一个结合大模型 RAG 技术和知识图谱的问答平台，�
   - Ollma Embedding 支持（Open-like Embedding 支持）。
   - 知识图谱索引支持自定义 Embedding 模型。
 
-![interface](/content/posts/241209/interface.png)
+![interface](images/interface.png)
 
 ### 项目结构
 项目主要包含以下几个重要部分：
@@ -76,12 +76,12 @@ docker logs <CONTAINER_NAME>  # 例如：docker logs api-dev
 docker compose -f docker/docker-compose.yml --env-file src/.env up --build
 ```
 
-![gif](1.png)
+![gif](images/1.png)
 
 ### 模型支持
 - 对话模型仅支持通过 API 调用的模型，如果需要运行本地模型，则建议使用 vllm 转成 API 服务之后使用。使用前请在 `.env` 配置 APIKEY 后使用，配置项目参考：[src/config/models.yaml](src/config/models.yaml)。
 
-这个项目“语析（基于大模型的知识库 + 知识图谱问答平台）”主要有以下功能和用途：
+这个项目"语析（基于大模型的知识库 + 知识图谱问答平台）"主要有以下功能和用途：
 
 ### 1. 问答平台功能
 - **基于大模型 RAG 知识库与知识图谱**：是一个问答平台，结合了大模型的 RAG（Retrieval-Augmented Generation，检索增强生成）技术，利用知识库和知识图谱来提供问答服务。其技术栈包括 Llamaindex、VueJS、Flask 和 Neo4j。
