@@ -61,7 +61,7 @@ title: 结合 AWS S3、Qdrant 和 MySQL 的文件处理与存储机制
 
     try:
         response = client.chat.completions.create(
-            model=os.getenv("MODEL_NAME"),
+            model="deepseek-chat",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"请分析以下博客内容：\n\n{content}"}
@@ -96,10 +96,16 @@ def format_front_matter(file_path):
         parts = content.split('---', 2)
         if len(parts) >= 3:
             try:
-                front_matter = yaml.safe_load(parts[1])
+                # 确保 front_matter 是字典类型
+                yaml_content = yaml.safe_load(parts[1])
+                if isinstance(yaml_content, dict):
+                    front_matter = yaml_content
+                else:
+                    front_matter = {}
                 main_content = parts[2].strip()
             except yaml.YAMLError:
-                pass
+                print(f"警告：front matter 解析失败，将创建新的 front matter")
+                front_matter = {}
     
     # 获取文件夹名称中的日期（格式：YYMMDD）
     folder_name = file_path.parent.name
@@ -110,7 +116,7 @@ def format_front_matter(file_path):
     
     # 获取AI分析结果
     analysis = get_content_analysis(main_content)
-    if analysis:
+    if analysis and isinstance(analysis, dict):
         # 更新 front matter
         front_matter.update({
             "date": date,
@@ -140,8 +146,8 @@ def format_front_matter(file_path):
         f.write(new_content)
     
     print(f"\n已更新文件格式：{file_path}")
-    print(f"分类: {', '.join(front_matter['categories'])}")
-    print(f"标签: {', '.join(front_matter['tags'])}")
+    print(f"分类: {', '.join(front_matter.get('categories', []))}")
+    print(f"标签: {', '.join(front_matter.get('tags', []))}")
 
 def process_folder(folder_name):
     """处理指定文件夹中的markdown文件"""
