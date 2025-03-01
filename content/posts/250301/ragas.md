@@ -30,6 +30,40 @@ Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非
 
 目前学术界和工业界对于 RAG 的评估并没有一个统一的标准，传统的指标如：[ROUGE](https://aclanthology.org/W04-1013/)、[BLEU](https://www.aclweb.org/anthology/P02-1040/) 、[ARES](https://arxiv.org/abs/2311.09476)等，这些指标在评估 RAG 时稍显落后，于是乎 [Ragas](https://arxiv.org/pdf/2309.15217v1) 诞生了。
 
+## Ragas 使用逻辑
+
+RAGAs 是一个用于评测检索增强生成（RAG）应用的评测框架，它的核心目标是提供一套综合性的评测指标和方法，以量化地评测 RAG 管道 (RAG Pipeline) 在不同组件层面上的性能。RAGAs 特别适用于那些结合了检索（Retrieval）和生成（Generation）两个主要组件的 RAG 系统，支持 Langchain 和 Llama-Index。
+
+评测流程
+
+开始：启动准备和设置 RAG 应用的过程。
+
+数据准备：加载和分块处理文档。
+
+设置向量数据库：生成向量嵌入并存储在向量数据库中。
+
+设置检索器组件：基于向量数据库设置检索器。
+
+组合 RAG 管道：结合检索器、提示模板和 LLM 组成 RAG 管道。
+
+准备评测数据：准备问题和对应的真实答案。
+
+构建数据集：通过推理准备数据并构建用于评测的数据集。
+
+评测 RAG 应用：导入评测指标并对 RAG 应用进行评测。
+
+结束：完成评测过程。
+
+评测体系
+
+无参考评测：RAGAs 最初设计为一种 “无参考” 评测框架，意味着它不依赖于人工注释的真实标签，而是利用大型语言模型（LLM）进行评测。
+
+组件级评测：RAGAs 允许对 RAG 管道的两个主要组件 —— 检索器和生成器 —— 分别进行评测。这种分离评测方法有助于精确地识别管道中的性能瓶颈。
+
+综合性评测指标：RAGAs 提供了一系列评测指标，包括上下文精度 (Context Precision)、上下文召回 (Context Recall)、忠实度 (Faithfulness) 和答案相关性 (Answer Relevancy)。这些指标共同构成了 RAGAs 评分，用于全面评测 RAG 管道的性能。
+
+
+
 ### 评估方法
 1. **非 LLM 指标**：使用 BleuScore 评分
 ```python
@@ -417,3 +451,4 @@ Testset generated and saved to rag_testset.csv
 - [Ragas App Login](https://app.ragas.io/login)
 - [Ragas App Token Generation](https://app.ragas.io/dashboard/settings/app-tokens)
 - [Ragas GitHub Issue for LLM Support](https://github.com/explodinggradients/ragas/issues/1617)
+- [RAG 评测调研：框架、指标和方法 | EvalScope](https://evalscope.readthedocs.io/zh-cn/latest/blog/RAG/RAG_Evaluation.html#id1)
