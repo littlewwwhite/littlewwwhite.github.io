@@ -14,7 +14,7 @@ title: Ragas 评估使用指南
 
 ## Ragas 评估指南
 
-以下是Ragas-LLM-app的简单介绍，内容主要介绍使用 Ragas 评估简单 LLM 应用，特别是文本摘要管道的流程，后续还会针对Ragas-RAG进行详细的介绍。
+以下是Ragas-LLM-app的简单介绍，内容主要介绍使用 Ragas 评估简单 LLM 应用，RAG，以及综合流程的处理方法。
 
 ### Ragas 是什么
 Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非 LLM 指标和基于 LLM 的指标。 RAGAs 框架定义了四个核心评估指标 ——context_relevancy（上下文相关性）、context_recall（上下文回溯）、faithfulness（忠实度）和 answer_relevancy（答案相关性）—— 这四个指标共同构成了 RAGAs 评分体系。
@@ -169,6 +169,11 @@ results.to_pandas()
 
 ![image.png](/posts/250301/images/1.png)
 
+### RAG 评估
+
+
+
+
 ### 完整示例
 
 ```python
@@ -213,10 +218,192 @@ print("\nDetailed Results:\n", df[["user_input", "response", "bleu_score", "summ
 # results.upload(token="your-ragas-app-token")
 ```
 
+### 关于一个完整的RAG 应用
+以下是将 [https://docs.ragas.io/en/latest/getstarted/rag_eval/](https://docs.ragas.io/en/latest/getstarted/rag_eval/) 中分布的代码流程合并为一个优雅、简洁的单一代码块。该页面介绍如何使用 Ragas 评估 RAG 应用的性能，涉及加载测试数据集、配置评估指标、执行评估并保存结果。我将保留原文的核心逻辑，优化结构并注释关键步骤。
+
+---
+
+### 合并后的代码
+
+```python
+import os
+from datasets import load_dataset
+from ragas import evaluate
+from ragas.metrics import (
+    faithfulness, answer_relevancy, context_precision, context_recall
+)
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
+# 设置 API 密钥
+os.environ["OPENAI_API_KEY"] = "your_openai_key"
+
+# 初始化 LLM 和嵌入模型
+llm = ChatOpenAI(model="gpt-4o")
+embeddings = OpenAIEmbeddings()  # 或使用 HuggingFaceEmbeddings("sentence-transformers/all-MiniLM-L6-v2")
+
+# 加载测试数据集
+dataset = load_dataset("explodinggradients/fiqa", "rag-eval-explodinggradients")["baseline"]
+print(f"Loaded {len(dataset)} samples from fiqa dataset")
+
+# 配置评估指标
+metrics = [
+    faithfulness(llm=llm),           # 答案忠实度
+    answer_relevancy(llm=llm, embeddings=embeddings),  # 答案相关性
+    context_precision(llm=llm),      # 上下文精确度
+    context_recall(llm=llm)          # 上下文召回率
+]
+
+# 执行评估
+result = evaluate(
+    dataset=dataset,
+    metrics=metrics,
+    llm=llm,
+    embeddings=embeddings,
+    raise_exceptions=True  # 显示错误以便调试
+)
+
+# 输出结果并保存
+print("Evaluation Results:", result)
+result.to_pandas().to_csv("rag_eval_results.csv", index=False)
+print("Results saved to rag_eval_results.csv")
+print(result.to_pandas().head())  # 显示前 5 个样本
+```
+
+---
+
+### 代码说明
+
+1. **导入与配置**：
+   - 导入必要模块，包括 Ragas 的评估工具、LangChain 的 LLM 和嵌入模型，以及 Hugging Face 数据集支持。
+   - 设置 OpenAI API 密钥。
+
+2. **模型初始化**：
+   - 使用 `gpt-4o` 作为评估 LLM，`OpenAIEmbeddings` 用于嵌入（可选使用 Hugging Face 模型）。
+   - 这些模型驱动指标计算。
+
+3. **加载数据集**：
+   - 从 Hugging Face 加载 "explodinggradients/fiqa" 数据集的 "rag-eval-explodinggradients" 子集，包含问题、答案和上下文。
+   - 数据集格式已适配 Ragas（包括 `question`, `answer`, `contexts`, `ground_truths`）。
+
+4. **配置指标**：
+   - 定义 4 个核心指标：忠实度（faithfulness）、答案相关性（answer_relevancy）、上下文精确度（context_precision）、上下文召回率（context_recall）。
+   - 每个指标绑定 LLM 和嵌入模型。
+
+5. **执行与保存**：
+   - 使用 `evaluate` 函数一次性评估所有样本和指标。
+
+---
+
+### 输出示例
+运行后，输出类似：
+```
+Loaded 50 samples from fiqa dataset
+Evaluation Results: {'faithfulness': 0.92, 'answer_relevancy': 0.95, 'context_precision': 0.88, 'context_recall': 0.90}
+Results saved to rag_eval_results.csv
+   question  answer  contexts  ground_truths  faithfulness  answer_relevancy  context_precision  context_recall
+0  What is...  It is...  [ctx1, ctx2]  True answer...  0.95          0.98              0.90            0.92
+1  How does...  It does...  [ctx3]      True answer...  0.90          0.94              0.85            0.89
+...
+```
+---
+
+### 综合测试相关代码
+
+```python
+import os
+from ragas.testset import TestsetGenerator
+from ragas.testset.evolutions import SimpleEvolution, MultiContextEvolution, ReasoningEvolution
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+# 设置 API 密钥
+os.environ["OPENAI_API_KEY"] = "your_openai_key"
+
+# 初始化 LLM 和嵌入模型
+generator_llm = ChatOpenAI(model="gpt-4o")
+critic_llm = ChatOpenAI(model="gpt-4o")
+embeddings = OpenAIEmbeddings()
+
+# 加载并分割文档
+loader = PyPDFLoader("https://arxiv.org/pdf/2309.15217.pdf")  # 示例使用 RAGAs 论文
+documents = loader.load()
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+docs = text_splitter.split_documents(documents)
+print(f"Loaded {len(docs)} document chunks")
+
+# 配置测试集生成器
+generator = TestsetGenerator(
+    generator_llm=generator_llm,
+    critic_llm=critic_llm,
+    embeddings=embeddings,
+    docstore=None  # 使用默认内存存储
+)
+
+# 定义演化分布
+distributions = {
+    SimpleEvolution(): 0.5,         # 50% 简单问题
+    MultiContextEvolution(): 0.25,  # 25% 多上下文问题
+    ReasoningEvolution(): 0.25     # 25% 推理问题
+}
+
+# 生成测试集
+testset = generator.generate_with_langchain_docs(
+    documents=docs,
+    test_size=10,              # 生成 10 个测试样本
+    distributions=distributions,
+    raise_exceptions=True      # 显示错误以便调试
+)
+
+# 转换为 DataFrame 并保存
+df = testset.to_pandas()
+df.to_csv("rag_testset.csv", index=False)
+print("Testset generated and saved to rag_testset.csv")
+print(df.head())  # 显示前 5 个样本
+```
+
+---
+
+### 代码说明
+
+1. **导入与配置**：
+   - 导入所有必要模块，包括 Ragas 的测试集生成工具和 LangChain 的 LLM、嵌入模型及文档处理工具。
+   - 设置 OpenAI API 密钥。
+
+2. **模型初始化**：
+   - 使用 `gpt-4o` 作为生成器和批评者 LLM，`OpenAIEmbeddings` 用于嵌入。
+   - 这些模型驱动问题生成和质量评估。
+
+3. **文档加载与分割**：
+   - 从指定 URL 加载 PDF（示例使用 RAGAs 论文）。
+   - 使用 `RecursiveCharacterTextSplitter` 将文档分割为大小 1000 字符、200 字符重叠的块。
+
+4. **测试集生成器**：
+   - 初始化 `TestsetGenerator`，配置 LLM 和嵌入模型，默认使用内存文档存储。
+   - 定义演化分布：50% 简单问题，25% 多上下文问题，25% 推理问题。
+
+5. **生成与保存**：
+   - 调用 `generate_with_langchain_docs` 生成 10 个测试样本。
+   - 将结果转为 pandas DataFrame 并保存为 CSV 文件，同时打印前 5 行。
+
+---
+
+### 输出示例
+运行后，输出类似：
+```
+Loaded 15 document chunks
+Testset generated and saved to rag_testset.csv
+   question_type  question  ground_truth  contexts  ...
+0  simple        What is RAGAs?  RAGAs is a framework...  [doc_chunk_1, ...]
+1  multi_context  How does RAGAs compare...?  RAGAs differs by...  [doc_chunk_2, ...]
+2  reasoning     Why might RAGAs be preferred...?  Due to its...  [doc_chunk_3, ...]
+...
+```
+
+---
 
 
-#### 资源链接
-文档还提供了额外资源，如指标指南 [更多关于指标](../../concepts/metrics/)、自定义模型指南 [自定义模型](../../howtos/customizations/customize_models.md)、LlamaIndex 集成 [LlamaIndex 集成指南](./../../howtos/integrations/_llamaindex.md)，以及支持 AWS、Azure 和 Google AI 的详细配置。
 
 **关键引用**
 
