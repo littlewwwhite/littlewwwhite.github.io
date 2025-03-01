@@ -12,18 +12,18 @@ title: Ragas 评估使用指南
 ---
 
 
-## Ragas 评估指南
+# Ragas 评估指南
 
 以下是Ragas-LLM-app的简单介绍，内容主要介绍使用 Ragas 评估简单 LLM 应用，RAG，以及综合流程的处理方法。
 
-### Ragas 是什么
+## Ragas 是什么
 Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非 LLM 指标和基于 LLM 的指标。 RAGAs 框架定义了四个核心评估指标 ——context_relevancy（上下文相关性）、context_recall（上下文回溯）、faithfulness（忠实度）和 answer_relevancy（答案相关性）—— 这四个指标共同构成了 RAGAs 评分体系。
 
 我们已经知道，简历一个 RAG 其实并不复杂，但是如果要将其应用到生产环境中，你不得不面对非常多的挑战，不同组件之间生成的数据是否能够满足自己的需求？数据的质量是否达标等等，这些问题都是需要我们考虑的，而 Ragas 就是帮助我们解决这些问题的工具。
 
 目前学术界和工业界对于 RAG 的评估并没有一个统一的标准，传统的指标如：[ROUGE](https://aclanthology.org/W04-1013/)、[BLEU](https://www.aclweb.org/anthology/P02-1040/) 、[ARES](https://arxiv.org/abs/2311.09476)等，这些指标在评估 RAG 时稍显落后，于是乎 [RAGAs](https://arxiv.org/pdf/2309.15217v1) 诞生了。
 
-#### 评估方法
+### 评估方法
 1. **非 LLM 指标**：使用 BleuScore 评分
 ```python
 from ragas import SingleTurnSample
@@ -96,10 +96,10 @@ await metric.single_turn_ascore(test_data)
 ```
 
 
-#### 数据集与结果
+### 数据集与结果
 RAGAs 支持从 Hugging Face 加载数据集，如 "explodinggradients/earning_report_summary"，包含 50 个样本，特征包括 user_input 和 response，生成的结果可导出到 pandas 分析，或通过 [app.ragas.io](https://app.ragas.io/) 进行交互式分析。
 
-#### 意外细节
+### 意外细节
 除了常见指标，内容还提到可以通过注释 15-20 个样本并训练自定义指标来改进评估，涉及上传到 [app.ragas.io](https://app.ragas.io/) 并使用 Ragas APP token，这可能是用户未预料到的额外步骤。
 
 ---
@@ -169,7 +169,7 @@ results.to_pandas()
 
 ![image.png](/posts/250301/images/1.png)
 
-### RAG 评估
+## RAGAs中的RAG 评估
 
 
 
@@ -272,7 +272,7 @@ print(result.to_pandas().head())  # 显示前 5 个样本
 
 ---
 
-### 代码说明
+#### 代码说明
 
 1. **导入与配置**：
    - 导入必要模块，包括 Ragas 的评估工具、LangChain 的 LLM 和嵌入模型，以及 Hugging Face 数据集支持。
@@ -295,7 +295,7 @@ print(result.to_pandas().head())  # 显示前 5 个样本
 
 ---
 
-### 输出示例
+
 运行后，输出类似：
 ```
 Loaded 50 samples from fiqa dataset
@@ -308,7 +308,7 @@ Results saved to rag_eval_results.csv
 ```
 ---
 
-### 综合测试相关代码
+#### 综合测试相关代码
 
 ```python
 import os
@@ -365,7 +365,7 @@ print(df.head())  # 显示前 5 个样本
 
 ---
 
-### 代码说明
+#### 代码说明
 
 1. **导入与配置**：
    - 导入所有必要模块，包括 Ragas 的测试集生成工具和 LangChain 的 LLM、嵌入模型及文档处理工具。
@@ -389,7 +389,7 @@ print(df.head())  # 显示前 5 个样本
 
 ---
 
-### 输出示例
+#### 输出示例
 运行后，输出类似：
 ```
 Loaded 15 document chunks
