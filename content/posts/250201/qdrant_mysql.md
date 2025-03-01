@@ -7,7 +7,7 @@ tags:
 - 数据库同步
 - 向量数据库
 - 数据分析
-title: Qdrant与MySQL同步机制解析
+title: Qdrant与MySQL同步机制解析-1
 ---
 
 

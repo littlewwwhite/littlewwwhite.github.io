@@ -8,7 +8,7 @@ tags:
 - Qdrant
 - MySQL
 - 文件处理
-title: 结合 AWS S3、Qdrant 和 MySQL 的文件处理与存储机制
+title: 结合 AWS S3、Qdrant 和 MySQL 的文件处理与存储机制-2
 ---
 
 本文探讨了一种结合 AWS S3、Qdrant 向量数据库和 MySQL 的文件处理和存储机制，旨在提供高效的文件上传、存储和检索方案，支持语义搜索和元数据管理。
