@@ -300,7 +300,7 @@ print(result.to_pandas().head())  # 显示前 5 个样本
 
 
 运行后，输出类似：
-```
+```markdown
 Loaded 50 samples from fiqa dataset
 Evaluation Results: {'faithfulness': 0.92, 'answer_relevancy': 0.95, 'context_precision': 0.88, 'context_recall': 0.90}
 Results saved to rag_eval_results.csv
@@ -394,7 +394,7 @@ print(df.head())  # 显示前 5 个样本
 
 #### 输出示例
 运行后，输出类似：
-```
+```markdown
 Loaded 15 document chunks
 Testset generated and saved to rag_testset.csv
    question_type  question  ground_truth  contexts  ...
