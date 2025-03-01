@@ -112,10 +112,7 @@ Ragas 支持从 Hugging Face 加载数据集，如 "explodinggradients/earning_r
 ---
 
 ### 详细报告
-
-以下是链接 [https://docs.ragas.io/en/latest/getstarted/evals/](https://docs.ragas.io/en/latest/getstarted/evals/) 内容的全面翻译，内容结构化呈现，涵盖所有细节，适合深入了解。
-
-数据集格式至少包含 user_input 和 response 字段，如下所示：
+如果使用 Ragas 的数据集评测，则数据集格式至少包含 user_input 和 response 字段，如下所示：
 ```python
 [
     # Sample 1
