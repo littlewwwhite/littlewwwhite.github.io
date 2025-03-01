@@ -14,12 +14,19 @@ title: Ragas 评估使用指南
 
 # Ragas 评估指南
 
-以下是Ragas-LLM-app的简单介绍，内容主要介绍使用 Ragas 评估简单 LLM 应用，RAG，以及综合流程的处理方法。
+以下是Ragas-LLM-app的简单介绍，内容主要介绍使用 Ragas 评估简单 LLM 应用，RAG，综合流程的处理方法，以及RAGAs 的评估方法。
 
 ## Ragas 是什么
-Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非 LLM 指标和基于 LLM 的指标。 RAGAs 框架定义了四个核心评估指标 ——context_relevancy（上下文相关性）、context_recall（上下文回溯）、faithfulness（忠实度）和 answer_relevancy（答案相关性）—— 这四个指标共同构成了 RAGAs 评分体系。
+Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非 LLM 指标和基于 LLM 的指标。 RAGAs 框架定义了四个核心评估指标 ——context_relevancy（上下文相关性）、context_recall（上下文回溯）、faithfulness（忠实度）和 answer_relevancy（答案相关性）—— 这四个指标共同构成了 RAGAs 评分体系。RAGAs 本身使用的有多个标准，核心在于应用过程中的如下几点：
+```markdown
+- 上下文相关性
+- 上下文回溯
+- 忠实度
+- 答案相关性
+```
 
-我们已经知道，简历一个 RAG 其实并不复杂，但是如果要将其应用到生产环境中，你不得不面对非常多的挑战，不同组件之间生成的数据是否能够满足自己的需求？数据的质量是否达标等等，这些问题都是需要我们考虑的，而 Ragas 就是帮助我们解决这些问题的工具。
+
+简历一个 RAG 其实并不复杂，但是如果要将其应用到生产环境中，你不得不面对非常多的挑战，不同组件之间生成的数据是否能够满足自己的需求？数据的质量是否达标等等，这些问题都是需要我们考虑的，而 Ragas 就是帮助我们解决这些问题的工具。
 
 目前学术界和工业界对于 RAG 的评估并没有一个统一的标准，传统的指标如：[ROUGE](https://aclanthology.org/W04-1013/)、[BLEU](https://www.aclweb.org/anthology/P02-1040/) 、[ARES](https://arxiv.org/abs/2311.09476)等，这些指标在评估 RAG 时稍显落后，于是乎 [RAGAs](https://arxiv.org/pdf/2309.15217v1) 诞生了。
 
