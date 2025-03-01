@@ -163,11 +163,11 @@ results.to_pandas()
 ```
 
 一个例子如下：
-![image.png](/posts/250301/2.png)
+![image.png](/posts/250301/images/2.png)
 
 当然 [app.ragas.io](https://app.ragas.io/) 也提供了交互式分析，可以查看每个指标的详细结果，你首先要注册一个账号，然后生成一个 Ragas APP token，然后就可以上传结果查看仪表板。
 
-![image.png](/posts/250301/1.png)
+![image.png](/posts/250301/images/1.png)
 
 ### 完整示例
 
@@ -212,6 +212,8 @@ print("\nDetailed Results:\n", df[["user_input", "response", "bleu_score", "summ
 # 可选：上传到 app.ragas.io（需 token）
 # results.upload(token="your-ragas-app-token")
 ```
+
+
 
 #### 资源链接
 文档还提供了额外资源，如指标指南 [更多关于指标](../../concepts/metrics/)、自定义模型指南 [自定义模型](../../howtos/customizations/customize_models.md)、LlamaIndex 集成 [LlamaIndex 集成指南](./../../howtos/integrations/_llamaindex.md)，以及支持 AWS、Azure 和 Google AI 的详细配置。
