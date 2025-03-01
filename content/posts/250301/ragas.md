@@ -7,17 +7,17 @@ tags:
 - Ragas
 - LLM评估
 - 文本摘要
-- RAGAs
+- Ragas
 title: Ragas 评估使用指南
 ---
 
 
 # Ragas 评估指南
 
-以下是Ragas-LLM-app的简单介绍，内容主要介绍使用 Ragas 评估简单 LLM 应用，RAG，综合流程的处理方法，以及RAGAs 的评估方法。
+以下是Ragas-LLM-app的简单介绍，内容主要介绍使用 Ragas 评估简单 LLM 应用，RAG，综合流程的处理方法，以及Ragas 的评估方法。
 
 ## Ragas 是什么
-Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非 LLM 指标和基于 LLM 的指标。 RAGAs 框架定义了四个核心评估指标 ——context_relevancy（上下文相关性）、context_recall（上下文回溯）、faithfulness（忠实度）和 answer_relevancy（答案相关性）—— 这四个指标共同构成了 RAGAs 评分体系。RAGAs 本身使用的有多个标准，核心在于应用过程中的如下几点：
+Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非 LLM 指标和基于 LLM 的指标。 Ragas 框架定义了四个核心评估指标 ——context_relevancy（上下文相关性）、context_recall（上下文回溯）、faithfulness（忠实度）和 answer_relevancy（答案相关性）—— 这四个指标共同构成了 Ragas 评分体系。Ragas 本身使用的有多个标准，核心在于应用过程中的如下几点：
 ```markdown
 - 上下文相关性
 - 上下文回溯
@@ -28,7 +28,7 @@ Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非
 
 简历一个 RAG 其实并不复杂，但是如果要将其应用到生产环境中，你不得不面对非常多的挑战，不同组件之间生成的数据是否能够满足自己的需求？数据的质量是否达标等等，这些问题都是需要我们考虑的，而 Ragas 就是帮助我们解决这些问题的工具。
 
-目前学术界和工业界对于 RAG 的评估并没有一个统一的标准，传统的指标如：[ROUGE](https://aclanthology.org/W04-1013/)、[BLEU](https://www.aclweb.org/anthology/P02-1040/) 、[ARES](https://arxiv.org/abs/2311.09476)等，这些指标在评估 RAG 时稍显落后，于是乎 [RAGAs](https://arxiv.org/pdf/2309.15217v1) 诞生了。
+目前学术界和工业界对于 RAG 的评估并没有一个统一的标准，传统的指标如：[ROUGE](https://aclanthology.org/W04-1013/)、[BLEU](https://www.aclweb.org/anthology/P02-1040/) 、[ARES](https://arxiv.org/abs/2311.09476)等，这些指标在评估 RAG 时稍显落后，于是乎 [Ragas](https://arxiv.org/pdf/2309.15217v1) 诞生了。
 
 ### 评估方法
 1. **非 LLM 指标**：使用 BleuScore 评分
@@ -104,7 +104,7 @@ await metric.single_turn_ascore(test_data)
 
 
 ### 数据集与结果
-RAGAs 支持从 Hugging Face 加载数据集，如 "explodinggradients/earning_report_summary"，包含 50 个样本，特征包括 user_input 和 response，生成的结果可导出到 pandas 分析，或通过 [app.ragas.io](https://app.ragas.io/) 进行交互式分析。
+Ragas 支持从 Hugging Face 加载数据集，如 "explodinggradients/earning_report_summary"，包含 50 个样本，特征包括 user_input 和 response，生成的结果可导出到 pandas 分析，或通过 [app.ragas.io](https://app.ragas.io/) 进行交互式分析。
 
 ### 意外细节
 除了常见指标，内容还提到可以通过注释 15-20 个样本并训练自定义指标来改进评估，涉及上传到 [app.ragas.io](https://app.ragas.io/) 并使用 Ragas APP token，这可能是用户未预料到的额外步骤。
@@ -176,7 +176,7 @@ results.to_pandas()
 
 ![image.png](/posts/250301/images/1.png)
 
-## RAGAs中的RAG 评估
+## Ragas中的RAG 评估
 
 
 
@@ -226,11 +226,7 @@ print("\nDetailed Results:\n", df[["user_input", "response", "bleu_score", "summ
 ```
 
 ### 关于一个完整的RAG 应用
-以下是将 [https://docs.ragas.io/en/latest/getstarted/rag_eval/](https://docs.ragas.io/en/latest/getstarted/rag_eval/) 中分布的代码流程合并为一个优雅、简洁的单一代码块。该页面介绍如何使用 Ragas 评估 RAG 应用的性能，涉及加载测试数据集、配置评估指标、执行评估并保存结果。我将保留原文的核心逻辑，优化结构并注释关键步骤。
-
----
-
-### 合并后的代码
+下面是一个完整的RAG 应用，包括数据集的加载、评估指标的配置、评估结果的保存等，可以在 Ragas中找到相关的 API 文档，包含了完整的评估流程。
 
 ```python
 import os
@@ -334,7 +330,7 @@ critic_llm = ChatOpenAI(model="gpt-4o")
 embeddings = OpenAIEmbeddings()
 
 # 加载并分割文档
-loader = PyPDFLoader("https://arxiv.org/pdf/2309.15217.pdf")  # 示例使用 RAGAs 论文
+loader = PyPDFLoader("https://arxiv.org/pdf/2309.15217.pdf")  # 示例使用 Ragas 论文
 documents = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 docs = text_splitter.split_documents(documents)
@@ -383,7 +379,7 @@ print(df.head())  # 显示前 5 个样本
    - 这些模型驱动问题生成和质量评估。
 
 3. **文档加载与分割**：
-   - 从指定 URL 加载 PDF（示例使用 RAGAs 论文）。
+   - 从指定 URL 加载 PDF（示例使用 Ragas 论文）。
    - 使用 `RecursiveCharacterTextSplitter` 将文档分割为大小 1000 字符、200 字符重叠的块。
 
 4. **测试集生成器**：
@@ -402,9 +398,9 @@ print(df.head())  # 显示前 5 个样本
 Loaded 15 document chunks
 Testset generated and saved to rag_testset.csv
    question_type  question  ground_truth  contexts  ...
-0  simple        What is RAGAs?  RAGAs is a framework...  [doc_chunk_1, ...]
-1  multi_context  How does RAGAs compare...?  RAGAs differs by...  [doc_chunk_2, ...]
-2  reasoning     Why might RAGAs be preferred...?  Due to its...  [doc_chunk_3, ...]
+0  simple        What is Ragas?  Ragas is a framework...  [doc_chunk_1, ...]
+1  multi_context  How does Ragas compare...?  Ragas differs by...  [doc_chunk_2, ...]
+2  reasoning     Why might Ragas be preferred...?  Due to its...  [doc_chunk_3, ...]
 ...
 ```
 
