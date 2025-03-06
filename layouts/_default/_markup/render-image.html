@@ -4,20 +4,32 @@
   {{- $path := strings.TrimPrefix "./" $u.Path -}}
   {{- $path := strings.TrimPrefix "../" $path -}}
   
+  {{- $filePath := .Page.File.Path -}}
+  {{- $dirPath := path.Dir $filePath -}}
+  {{- $dirName := path.Base $dirPath -}}
+  
   {{- if hasPrefix $path "image/" -}}
-    {{- $filePath := .Page.File.Path -}}
-    {{- $dirPath := path.Dir $filePath -}}
-    {{- $dirName := path.Base $dirPath -}}
     {{- $src = printf "/posts/%s/%s" $dirName $path -}}
+  {{- else if hasPrefix $path "sglang/" -}}
+    {{- $src = printf "/posts/%s/image/%s" $dirName $path -}}
   {{- else -}}
-    {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+    {{- $resourcePath := $path -}}
+    {{- $found := false -}}
+    
+    {{- with or (.PageInner.Resources.Get $resourcePath) (resources.Get $resourcePath) -}}
       {{- $src = .RelPermalink -}}
+      {{- $found = true -}}
       {{- with $u.RawQuery -}}
         {{- $src = printf "%s?%s" $src . -}}
       {{- end -}}
       {{- with $u.Fragment -}}
         {{- $src = printf "%s#%s" $src . -}}
       {{- end -}}
+    {{- end -}}
+    
+    {{- if not $found -}}
+      {{- $imagePath := printf "image/%s" $path -}}
+      {{- $src = printf "/posts/%s/%s" $dirName $imagePath -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
