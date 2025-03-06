@@ -75,14 +75,11 @@
 {{ if .Page.Store.Get "hasMermaid" }}
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
 <script>
-  // 初始化 mermaid 配置
+  // 初始化 mermaid 配置 - 固定使用默认主题
   document.addEventListener('DOMContentLoaded', function() {
-    const isDark = document.documentElement.classList.contains('dark');
-    const theme = isDark ? 'dark' : 'default';
-    
     mermaid.initialize({
       startOnLoad: true,
-      theme: theme,
+      theme: 'default', // 固定使用默认主题
       flowchart: {
         useMaxWidth: true,
         htmlLabels: true,
@@ -91,39 +88,17 @@
       themeVariables: {
         fontFamily: 'var(--font-family)',
         fontSize: '16px',
+        primaryColor: '#333',
+        primaryTextColor: '#333',
+        primaryBorderColor: '#999',
+        lineColor: '#666',
+        secondaryColor: '#f9f9f9',
+        tertiaryColor: '#fff',
       },
       securityLevel: 'loose',
     });
-
-    // 监听主题切换
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.attributeName === 'class') {
-          const isDarkNow = document.documentElement.classList.contains('dark');
-          const newTheme = isDarkNow ? 'dark' : 'default';
-          
-          // 重新渲染所有图表
-          document.querySelectorAll('.mermaid').forEach(function(element) {
-            const graphCode = element.textContent.trim();
-            if (graphCode) {
-              try {
-                // 清空当前图表
-                element.innerHTML = graphCode;
-                // 使用新主题重新渲染
-                mermaid.initialize({ theme: newTheme });
-                mermaid.init(undefined, element);
-              } catch (error) {
-                console.error('Mermaid 重新渲染失败:', error);
-              }
-            }
-          });
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true
-    });
+    
+    // 不再需要监听主题切换，因为我们固定使用默认主题
   });
 </script>
 {{ end }}
