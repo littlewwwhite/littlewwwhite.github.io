@@ -15,7 +15,7 @@ title: Ragas 评估使用指南
 # Ragas 评估指南
 
 以下是Ragas-LLM-app的简单介绍，内容主要介绍使用 Ragas 评估简单 LLM 应用，RAG，综合流程的处理方法，以及Ragas 的评估方法。
-![3.png](./images/3.png)
+![3.png](/posts/250301/images/3.png)
 
 ## Ragas 是什么
 Ragas 是一个用于评估 LLM 应用的工具，支持多种指标，包括非 LLM 指标和基于 LLM 的指标。 Ragas 框架定义了四个核心评估指标 ——context_relevancy（上下文相关性）、context_recall（上下文回溯）、faithfulness（忠实度）和 answer_relevancy（答案相关性）—— 这四个指标共同构成了 Ragas 评分体系。Ragas 本身使用的有多个标准:
@@ -187,11 +187,11 @@ results.to_pandas()
 ```
 
 一个例子如下：
-![image.png](./images/2.png)
+![image.png](/posts/250301/images/2.png)
 
 当然 [app.ragas.io](https://app.ragas.io/) 也提供了交互式分析，可以查看每个指标的详细结果，你首先要注册一个账号，然后生成一个 Ragas APP token，然后就可以上传结果查看仪表板。
 
-![image.png](./images/1.png)
+![image.png](/posts/250301/images/1.png)
 
 ## Ragas中的RAG 评估
 
