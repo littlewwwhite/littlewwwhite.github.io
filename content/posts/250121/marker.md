@@ -50,7 +50,7 @@ title: Marker：强大的开源文档转换工具
 - 批量处理速度显著提升，在H100上预计吞吐量为122页/秒（22个进程下每页约0.18秒）
 - 与云服务（如Llamaparse和Mathpix）及其他开源工具相比，性能更优
 
-![marker](image/3.png)
+![marker](image/2.png)
 
 ### 3. 混合模式
 通过传递 `--use_llm` 标志，可以使用大语言模型（LLM）来提高准确性：
