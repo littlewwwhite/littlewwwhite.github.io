@@ -15,7 +15,7 @@ title: Marker：强大的开源文档转换工具
 
 
 
-![marker](/posts/250121/image/1.png)
+![marker](posts/250121/image/1.png)
 
 
 `Marker` 是一个功能强大的开源工具，旨在将PDF和图像文件快速且准确地转换为Markdown、JSON和HTML格式。本文将从功能特性、商业使用、托管API、社区支持、安装与使用以及目录结构等方面详细介绍该工具。
