@@ -1,6 +1,0 @@
-{{- $src := .Destination -}}
-{{- $isRemote := strings.HasPrefix $src "http" -}}
-{{- if not $isRemote -}}
-  {{- $src = path.Join .Page.File.Dir $src -}}
-{{- end -}}
-<img src="{{ $src }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }} /> 

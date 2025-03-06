@@ -27,13 +27,13 @@ SGLang（Structured Generation Language）旨在解决传统LLM推理框架（�
 
 ---
 
-![1740390590387](./image/1740390590387.png)
+![SGLang性能对比图](../image/sglang/1740390590387.png)
 Figure 1: Throughput of Different Systems on LLM Tasks (Llama-7B on A10G, FP16, Tensor Parallelism=1)
 
 
 
 
-![1740390600425](./image/1740390600425.png)
+![不同系统性能对比](../image/sglang/1740390600425.png)
 Figure 2: Throughput of Different Systems on LLM Tasks (Mixtral-8x7B on A10G, FP16, Tensor Parallelism=8)
 
 #### **2. 核心技术解析**
@@ -58,7 +58,7 @@ Figure 2: Throughput of Different Systems on LLM Tasks (Mixtral-8x7B on A10G, FP
 - **多模态模型**：支持LLaVA NeXT、Qwen-VL等视觉-语言模型，通过HTTP接口直接传入图像URL或Base64编码。
 - **量化优化**：集成AWQ、GPTQ等量化方法，支持INT4/FP8数据类型，降低显存占用（如Qwen2-VL-7B仅需70GB显存）。
 
-![1740392606252](./image/1740392606252.png)
+![KV缓存共享示例](../image/sglang/1740392606252.png)
 Figure 3: KV cache sharing examples. Blue boxes are shareable prompt parts, green boxes are non-shareable parts, and yellow boxes are non-shareable model outputs. Shareable parts include few-shot learning examples, questions in self-consistency, chat history in multi-turn chat, and search history in tree-of-thought.
 
 
