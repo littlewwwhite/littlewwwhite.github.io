@@ -52,4 +52,106 @@
 .mermaid .arrowheadPath {
     fill: var(--content) !important;
     stroke: none !important;
+}
+
+/* Mermaid 图表明暗主题适配 */
+.mermaid-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.mermaid {
+  background-color: transparent !important;
+  font-family: var(--font-family);
+}
+
+/* 明亮主题下的 Mermaid 样式 */
+:root:not(.dark) .mermaid {
+  color: #333;
+}
+
+:root:not(.dark) .mermaid .node rect,
+:root:not(.dark) .mermaid .node circle,
+:root:not(.dark) .mermaid .node ellipse,
+:root:not(.dark) .mermaid .node polygon,
+:root:not(.dark) .mermaid .node path {
+  fill: #f9f9f9;
+  stroke: #999;
+}
+
+:root:not(.dark) .mermaid .label {
+  color: #333;
+}
+
+:root:not(.dark) .mermaid .cluster rect {
+  fill: #f9f9f9;
+  stroke: #999;
+}
+
+/* 暗黑主题下的 Mermaid 样式 */
+.dark .mermaid {
+  color: #ddd;
+}
+
+.dark .mermaid .node rect,
+.dark .mermaid .node circle,
+.dark .mermaid .node ellipse,
+.dark .mermaid .node polygon,
+.dark .mermaid .node path {
+  fill: #2d2d2d;
+  stroke: #888;
+}
+
+.dark .mermaid .label {
+  color: #ddd;
+}
+
+.dark .mermaid .cluster rect {
+  fill: #2d2d2d;
+  stroke: #888;
+}
+
+.dark .mermaid .edgeLabel {
+  background-color: #2d2d2d;
+  color: #ddd;
+}
+
+/* 表格明暗主题适配 */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  overflow-x: auto;
+  width: 100%;
+}
+
+table th, table td {
+  padding: 0.5em 1em;
+  border: 1px solid var(--border);
+}
+
+table th {
+  background-color: var(--theme);
+  color: var(--primary);
+  font-weight: bold;
+}
+
+:root:not(.dark) table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.dark table tr:nth-child(even) {
+  background-color: #333;
+}
+
+.dark table th, 
+.dark table td {
+  color: var(--content);
+}
+
+/* 确保表格在小屏幕上可以滚动 */
+.post-content table {
+  display: block;
+  overflow-x: auto;
 } 
