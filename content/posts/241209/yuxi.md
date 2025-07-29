@@ -21,7 +21,7 @@ title: Yuxi-Know：基于大模型 RAG 的知识库与知识图谱问答平台
 
 Yuxi-Know 是一个结合大模型 RAG 技术和知识图谱的问答平台，支持多种大模型调用和本地部署，提供知识库和知识图谱的问答功能。项目采用 Llamaindex、VueJS、Flask 和 Neo4j 等技术栈，支持开发和生产环境的 Docker 部署。
 
-![界面展示](image/2.png)
+![界面展示](02-Work/02-Notes/littlewwwhite/content/posts/241209/image/2.png)
 
 `Yuxi-Know` 是一个基于大模型 RAG（Retrieval-Augmented Generation）知识库与知识图谱的问答平台，以下是关于这个仓库的详细介绍：
 
@@ -41,7 +41,7 @@ Yuxi-Know 是一个结合大模型 RAG 技术和知识图谱的问答平台，�
   - Ollma Embedding 支持（Open-like Embedding 支持）。
   - 知识图谱索引支持自定义 Embedding 模型。
 
-![接口展示](image/interface.png)
+![接口展示](interface.png)
 
 ### 项目结构
 项目主要包含以下几个重要部分：
@@ -76,7 +76,7 @@ docker logs <CONTAINER_NAME>  # 例如：docker logs api-dev
 docker compose -f docker/docker-compose.yml --env-file src/.env up --build
 ```
 
-![演示](image/1.png)
+![演示](02-Work/02-Notes/littlewwwhite/content/posts/241209/image/1.png)
 
 ### 模型支持
 - 对话模型仅支持通过 API 调用的模型，如果需要运行本地模型，则建议使用 vllm 转成 API 服务之后使用。使用前请在 `.env` 配置 APIKEY 后使用，配置项目参考：[src/config/models.yaml](src/config/models.yaml)。

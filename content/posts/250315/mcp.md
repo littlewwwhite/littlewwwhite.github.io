@@ -15,7 +15,7 @@ title: 深入解析 MCP 协议：模型上下文协议的核心与应用
 
 ### 1. **MCP 协议是什么？**
 MCP 协议是由 Anthropic 于 2024 年 11 月推出并开源的一种标准化通信协议，旨在实现大型语言模型（LLM）与外部数据源、工具和应用程序之间的无缝集成。它通过提供一个统一的接口和上下文管理机制，增强 LLM 的功能性、灵活性和可扩展性，解决传统 AI 系统与外部资源交互时的碎片化和孤岛问题。
-![image](image/mcp.png)
+![image](mcp.png)
 
 - **全称**：Model Context Protocol（模型上下文协议）
 - **提出者**：Anthropic
@@ -31,7 +31,7 @@ MCP 的核心在于“模型上下文”（Model Context），即 LLM 在运行�
 
 ### 3. **技术架构**
 MCP 采用客户端-主机-服务器的架构，基于 JSON-RPC 构建，支持有状态会话协议。其主要组成部分包括：
-![image](image/arch.png)
+![image](arch.png)
 
 - **MCP Client（客户端）**：
   - 负责与 LLM 交互的应用程序（如 IDE、聊天工具）。

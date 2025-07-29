@@ -187,11 +187,11 @@ results.to_pandas()
 ```
 
 一个例子如下：
-![2.png](image/2.png)
+![2.png](02-Work/02-Notes/littlewwwhite/content/posts/250301/image/2.png)
 
 当然 [app.ragas.io](https://app.ragas.io/) 也提供了交互式分析，可以查看每个指标的详细结果，你首先要注册一个账号，然后生成一个 Ragas APP token，然后就可以上传结果查看仪表板。
 
-![1.png](image/1.png)
+![1.png](02-Work/02-Notes/littlewwwhite/content/posts/250301/image/1.png)
 
 ## Ragas中的RAG 评估
 
