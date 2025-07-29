@@ -8,7 +8,7 @@ tags:
 - PageIndex
 - 文档索引
 - 推理型检索
-title: Pageindex: 新一代的文档智能检索介绍
+title: Pageindex -- 新一代的文档智能检索介绍
 ---
 
 # PageIndex 深入解析：面向推理型 RAG 的文档索引系统（技术详解与实战指南）
