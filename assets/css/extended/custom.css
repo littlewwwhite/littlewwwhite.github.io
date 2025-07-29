@@ -83,4 +83,19 @@ table tr:nth-child(even) {
 
 table tr:nth-child(odd) {
   background-color: white !important;
+}
+
+/* 修复未指定语言的代码块的样式 */
+.post-content pre {
+  background-color: #fafafa !important;
+  color: #212529 !important;
+  padding: 1em;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+}
+
+.dark .post-content pre {
+  background-color: #0d1117 !important;
+  color: #e6edf3 !important;
+  border: 1px solid #30363d;
 } 
