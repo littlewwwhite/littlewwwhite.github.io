@@ -98,4 +98,17 @@ table tr:nth-child(odd) {
   background-color: #0d1117 !important;
   color: #e6edf3 !important;
   border: 1px solid #30363d;
+}
+
+/* 优化普通 code 标签的对比度 */
+.post-content code {
+  background-color: #fafafa !important;
+  color: #212529 !important;
+  border: 1px solid #ddd !important;
+}
+
+.dark .post-content code {
+  background-color: #0d1117 !important;
+  color: #e6edf3 !important;
+  border: 1px solid #30363d !important;
 } 
