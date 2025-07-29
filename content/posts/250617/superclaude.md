@@ -8,7 +8,7 @@ tags:
 - 工程化框架
 - 配置驱动
 - 认知工作流
-title: Superclaude
+title: Superclaude cc的增强大杀器
 ---
 
 # SuperClaude Framework 技术解析与实践指南：用配置驱动的认知工作流增强 Claude Code
