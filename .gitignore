@@ -30,3 +30,6 @@ resources/_gen/
 .env
 scripts/*
 pycache-*
+
+.spec-workflow
+.obsidian
