@@ -1,19 +1,91 @@
-/* Mermaid 图表样式 - 不跟随主题变化 */
+/* Mermaid 图表样式 - 全宽显示 */
 .mermaid-wrapper {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  display: block;
+  width: 100%;
   margin: 1.5rem 0;
   overflow-x: auto;
   background-color: white;
-  padding: 15px;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.mermaid-expand-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.05);
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.mermaid-expand-btn:hover {
+  background: rgba(0,0,0,0.1);
+  color: #333;
+}
+
+/* 全屏模态框 */
+.mermaid-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.mermaid-modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: auto;
+}
+
+.mermaid-modal-content svg {
+  width: auto !important;
+  height: auto !important;
+  min-width: 80vw;
+  max-width: none;
+}
+
+.mermaid-modal-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .mermaid {
+  width: 100%;
+  min-width: fit-content;
   background-color: white !important;
   font-family: var(--font-family);
   color: #333 !important;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .mermaid .node rect,
@@ -49,75 +121,363 @@
   stroke: none !important;
 }
 
-/* 表格样式 - 不跟随主题变化 */
+/* 表格样式 */
 .post-content table {
-  display: block;
-  overflow-x: auto;
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
   background-color: white;
   color: #333;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 1.5rem 0;
+  overflow: hidden;
 }
 
-table {
-  border-collapse: collapse;
+.post-content .table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content table th,
+.post-content table td {
+  padding: 0.75em 1em;
+  border: 1px solid #e1e4e8;
+  color: #333;
+  text-align: left;
+}
+
+.post-content table th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+
+.post-content table tbody tr:nth-child(even) {
+  background-color: #f6f8fa;
+}
+
+.post-content table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* 代码块统一样式 */
+.post-content pre,
+.post-content .highlight pre {
+  background-color: #fafafa;
+  color: #212529;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #e1e4e8;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.dark .post-content pre,
+.dark .post-content .highlight pre {
+  background-color: #0d1117;
+  color: #e6edf3;
+  border-color: #30363d;
+}
+
+/* 行内代码样式 */
+.post-content code:not(pre code) {
+  background-color: #f0f0f0;
+  color: #d63384;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.dark .post-content code:not(pre code) {
+  background-color: #21262d;
+  color: #f0883e;
+}
+
+/* 侧边栏 TOC 样式 */
+.post-wrapper {
+  position: relative;
+}
+
+.toc-sidebar {
+  position: fixed;
+  /* 1:9比例：距文本1份，距右边界9份，即从文本边界算起占1/10位置 */
+  left: calc(50% + var(--main-width) / 2 + (100vw - 50% - var(--main-width) / 2) * 0.1);
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(380px, calc((100vw - 50% - var(--main-width) / 2) * 0.8));
+  max-height: 80vh;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+/* 收起状态：缩放到按钮大小，定位到按钮上方 */
+.toc-sidebar.collapsed {
+  left: auto;
+  right: 30px;
+  top: auto;
+  bottom: calc(60px + 42px + 10px); /* 按钮位置 + 按钮高度 + 间距 */
+  transform: none;
+  width: 42px;
+  height: 42px;
+  max-height: 42px;
+  overflow: hidden;
+}
+
+.toc-nav {
+  position: relative;
+  padding: 1rem;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* 收起状态：圆形按钮样式 */
+.toc-sidebar.collapsed .toc-nav {
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 64px;
+  background: var(--tertiary);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .toc-nav {
+  background: var(--entry);
+}
+
+.toc-nav details summary {
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+.toc-nav details summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc-title {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  color: var(--primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.toc-title::after {
+  content: "▼";
+  font-size: 0.7em;
+  transition: transform 0.2s;
+}
+
+details:not([open]) .toc-title::after {
+  transform: rotate(-90deg);
+}
+
+/* 收起状态：隐藏标题文本，只显示箭头 */
+.toc-sidebar.collapsed .toc-title {
+  padding: 0;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 0;
+  color: var(--secondary);
+}
+
+.toc-sidebar.collapsed .toc-title::after {
+  content: "▼";
+  font-size: 16px;
+  margin: 0;
+  color: var(--secondary);
+  display: block;
+  line-height: 1;
+  transform: rotate(-90deg);
+}
+
+.toc-sidebar.collapsed .toc-title:hover {
+  color: var(--primary);
+}
+
+.toc-sidebar.collapsed .toc-title:hover::after {
+  color: var(--primary);
+}
+
+/* 收起状态：隐藏其他内容 */
+.toc-sidebar.collapsed .toc-level-btns,
+.toc-sidebar.collapsed .toc-content {
+  display: none;
+}
+
+.toc-level-btns {
+  position: absolute;
+  top: 1rem;
+  right: 2.5rem;
+  display: flex;
+  gap: 4px;
+}
+
+
+.toc-level-btns button {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--theme);
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.toc-level-btns button:hover {
+  background: var(--border);
+  color: var(--primary);
+}
+
+.toc-content {
+  font-family: var(--font-family);
+  margin-top: 0.75rem;
+  padding-left: 1.2em; /* 向右移动约2个字符长度 */
+}
+
+.toc-content #TableOfContents {
+  margin: 0;
+  padding: 0;
+}
+
+.toc-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-content ul ul {
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+  border-left: 1px solid var(--border);
+  display: none;
+}
+
+/* 第三级及更深层级 */
+.toc-content ul ul ul {
+  padding-left: 0.875rem;
+}
+
+.toc-content ul ul ul ul {
+  padding-left: 0.75rem;
+}
+
+.toc-content li.expanded > ul {
+  display: block;
+}
+
+/* 展开/收起按钮样式 */
+.toc-content li {
+  margin: 0.25rem 0;
+}
+
+.toc-content li.has-children {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 按钮和链接在同一行的容器 */
+.toc-content li.has-children > .toc-link-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
   width: 100%;
 }
 
-table th, table td {
-  padding: 0.5em 1em;
-  border: 1px solid #ddd;
-  color: #333 !important;
+.toc-expand-toggle {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 0.7em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, color 0.2s;
+  margin-top: 0.15rem;
 }
 
-table th {
-  background-color: #f2f2f2 !important;
-  color: #333 !important;
-  font-weight: bold;
+.toc-expand-toggle::before {
+  content: "▶";
+  display: inline-block;
+  transition: transform 0.2s;
 }
 
-table tr:nth-child(even) {
-  background-color: #f8f8f8 !important;
+.toc-content li.has-children.expanded > .toc-link-wrapper > .toc-expand-toggle::before {
+  transform: rotate(90deg);
 }
 
-table tr:nth-child(odd) {
-  background-color: white !important;
+.toc-expand-toggle:hover {
+  color: var(--primary);
 }
 
-/* 修复未指定语言的代码块的样式 */
-.post-content pre {
-  background-color: #fafafa !important;
-  color: #212529 !important;
-  padding: 1em;
-  border-radius: var(--radius);
-  border: 1px solid #ddd;
+.toc-content a {
+  color: var(--secondary);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  display: block;
+  flex: 1;
 }
 
-.dark .post-content pre {
-  background-color: #0d1117 !important;
-  color: #e6edf3 !important;
-  border: 1px solid #30363d;
+/* 确保嵌套的ul正常显示 */
+.toc-content li.has-children > ul {
+  width: 100%;
+  margin-top: 0.25rem;
 }
 
-/* 优化普通 code 标签的对比度 */
-.post-content code:not(.chroma code) {
-  background-color: #fafafa !important;
-  color: #212529 !important;
-  border: 1px solid #ddd !important;
+.toc-content a:hover,
+.toc-content a.active {
+  color: var(--primary);
 }
 
-.dark .post-content code:not(.chroma code) {
-  background-color: #0d1117 !important;
-  color: #e6edf3 !important;
-  border: 1px solid #30363d !important;
+.toc-content a.active {
+  font-weight: 600;
 }
 
-/* 确保所有普通code标签都有正确的颜色 */
-body .post-content code {
-  color: #212529 !important;
+/* 滚动条样式 */
+.toc-sidebar::-webkit-scrollbar {
+  width: 4px;
 }
 
-body.dark .post-content code {
-  color: #e6edf3 !important;
+.toc-sidebar::-webkit-scrollbar-thumb {
+  background: var(--tertiary);
+  border-radius: 2px;
+}
+
+/* 响应式：小屏幕隐藏侧边栏 TOC */
+@media (max-width: 1200px) {
+  .toc-sidebar {
+    display: none;
+  }
 } 

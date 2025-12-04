@@ -2,6 +2,7 @@
   {{ .Page.Store.Set "hasMermaid" true }}
 {{ end }}
 <div class="mermaid-wrapper">
+  <button class="mermaid-expand-btn" title="放大查看">⛶</button>
   <pre class="mermaid">
     {{- .Inner | safeHTML }}
   </pre>

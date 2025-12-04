@@ -37,4 +37,24 @@
   if (OSName == "windows") {
     document.body.className += ' win11'
   }
+
+  // Mermaid 放大功能
+  document.querySelectorAll('.mermaid-expand-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const wrapper = this.closest('.mermaid-wrapper');
+      const svg = wrapper.querySelector('svg');
+      if (!svg) return;
+
+      const modal = document.createElement('div');
+      modal.className = 'mermaid-modal';
+      modal.innerHTML = `<button class="mermaid-modal-close">×</button><div class="mermaid-modal-content">${svg.outerHTML}</div>`;
+      document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
+
+      const close = () => { modal.remove(); document.body.style.overflow = ''; };
+      modal.querySelector('.mermaid-modal-close').onclick = close;
+      modal.onclick = e => { if (e.target === modal) close(); };
+      document.addEventListener('keydown', function esc(e) { if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); } });
+    });
+  });
 </script>
