@@ -33,3 +33,6 @@ pycache-*
 
 .spec-workflow
 .obsidian
+
+# Publish skill output (ephemeral)
+_dist/
