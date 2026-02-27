@@ -1,24 +1,92 @@
-## 功能
-- 执行下列信息即可自动优化生成内容：
-	tools/blog_optimizer.py 仅仅负责优化文章，包括格式，内容
-	tools/blog_processor.py 负责优化内容并上传
+# zjding's Blog
 
+基于 Hugo + PaperMod 主题的技术博客。
 
+## 快速开始
 
-- tools 文件夹下仅负责内容的优化
-sh tools/publish.sh
+### 写博客
 
-** 若要求输入路径，请输入post 下 文件夹的名称 **
-** 若要求输入路径，请输入post 下 文件夹的名称 **
-** 若要求输入路径，请输入post 下 文件夹的名称 **
+使用 Claude Code Skills 工作流：
 
+1. **创建新文章**
+   ```
+   /blog-new "My Article Title"
+   ```
 
-post 文件夹下仅负责内容的生成
-播客 md 文件名不能包含中文，否则会报错
+2. **格式化/验证文章**
+   ```
+   /blog-format 251028
+   ```
 
-latex 要用 $$ 包裹，否则会报错，且在一行内，如下
+### 本地预览
 
-```md
-$$y(t) = \underbrace{g(t)}_{\text{趋势项}} + \underbrace{s(t)}_{\text{季节项}} + \underbrace{h(t)}_{\text{节假日项}} + \epsilon_t$$
+```bash
+hugo server -D
 ```
 
+访问 http://localhost:1313
+
+### 发布
+
+```bash
+git add .
+git commit -m "post: add new article"
+git push
+```
+
+GitHub Actions 会自动部署到 GitHub Pages。
+
+## 目录结构
+
+```
+content/posts/
+├── 251028/              # 日期文件夹 (YYMMDD)
+│   ├── index.md         # 主文章
+│   ├── 1.png            # 图片（与 md 同级）
+│   └── diagram.png
+└── 251123/
+    └── index.md
+```
+
+## 写作规范
+
+### Frontmatter
+
+```markdown
+---
+title: "文章标题"
+date: 2025-10-28
+categories:
+  - 云计算
+  - 后端架构
+tags:
+  - Upstash
+  - QStash
+  - Workflow
+---
+```
+
+### 图片路径
+
+使用 **相对路径**（Page Bundle 模式）：
+
+```markdown
+![图片描述](1.png)
+![架构图](diagram.png)
+```
+
+### 数学公式
+
+使用 `$$` 包裹 LaTeX 公式：
+
+```markdown
+$$y(t) = g(t) + s(t) + h(t) + \epsilon_t$$
+```
+
+## Skills 说明
+
+| Skill | 用途 |
+|-------|------|
+| `/blog-new` | 创建新文章 |
+| `/blog-format` | 格式化/验证现有文章 |
+| `/technical-writing` | 技术写作辅助（可选） |
