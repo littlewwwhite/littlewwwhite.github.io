@@ -1,12 +1,12 @@
 ---
 name: blog-new
-description: Create a new blog post with proper structure. Use when starting a new article.
+description: Create a new blog post with proper structure. Use when starting a new article via conversation.
 allowed-tools: Read, Write, Edit, Glob, Bash
 ---
 
 # Blog: New Post
 
-Create a new blog post with Hugo Page Bundle structure.
+Create a new blog post with Hugo Page Bundle structure, optimized for conversation-style writing.
 
 ## Quick Start
 
@@ -15,8 +15,18 @@ Create a new post with this structure:
 ```
 content/posts/YYMMDD/
 ├── index.md
-└── (images go here)
+└── (images go here, same level as index.md)
 ```
+
+## Conversation Workflow
+
+This skill is designed for writing via conversation with Claude:
+
+1. User says: "I want to write about X"
+2. Create the structure
+3. Help the user write the content through conversation
+4. Write the final content to file
+5. (Optional) Use `/blog-format` to validate
 
 ## Frontmatter Template
 
@@ -36,14 +46,6 @@ tags:
 Write your content here...
 ```
 
-## Workflow
-
-1. Create date folder (YYMMDD format)
-2. Create `index.md` with frontmatter
-3. Images go in the same folder, use relative paths like `![alt](image.png)`
-4. Write content
-5. Use `/blog-format` to validate before publishing
-
 ## Image Paths
 
 Use **relative paths** with Page Bundle:
@@ -54,3 +56,10 @@ Use **relative paths** with Page Bundle:
 ```
 
 No leading slash, no `image/` subfolder.
+
+## Git as "Draft vs Published"
+
+- Use git history to distinguish versions
+- No need for separate draft/published folders
+- Commit frequently as you write
+- Push when ready to publish

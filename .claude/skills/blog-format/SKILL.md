@@ -1,19 +1,19 @@
 ---
 name: blog-format
-description: Format and validate blog posts. Fix frontmatter, image paths, and markdown structure.
+description: Validate blog post structure and image paths. Prefer minimal changes.
 allowed-tools: Read, Write, Edit, Glob, Bash
 ---
 
-# Blog: Format Post
+# Blog: Format & Validate
 
-Format and validate existing blog posts.
+Validate blog posts with minimal changes. Focus on verification rather than modification.
 
 ## What This Does
 
-1. **Frontmatter Check**: Verify required fields (title, date, categories, tags)
-2. **Image Paths**: Fix paths to use Page Bundle relative paths
-3. **Markdown Cleanup**: Remove duplicate titles, fix formatting issues
-4. **Structure Validation**: Ensure consistent structure
+1. **Verify**: Check that frontmatter has required fields
+2. **Validate**: Ensure image paths use relative Page Bundle format
+3. **Confirm**: No absolute paths, no `image/` subfolder references
+4. **Minimal Fix**: Only fix obvious issues, prefer to flag and ask
 
 ## Frontmatter Requirements
 
@@ -26,23 +26,25 @@ Required fields:
 Optional but recommended:
 - `description`: short summary
 - `ShowToc`: true/false
-- `summary`: alternative to description
 
-## Image Path Correction
+## Image Path Validation
 
-Fix these patterns:
+**Good** (use these):
+```markdown
+![alt](1.png)
+![description](diagram.png)
+```
 
-| Bad | Good |
-|-----|------|
-| `![alt](image/1.png)` | `![alt](1.png)` |
-| `![alt](/post/251028/image/1.png)` | `![alt](1.png)` |
-| `![alt](/posts/251028/image/1.png)` | `![alt](1.png)` |
+**Bad** (fix or flag these):
+```markdown
+![alt](image/1.png)           ❌ no image/ subfolder
+![alt](/post/251028/1.png)   ❌ no absolute path
+![alt](/posts/251028/1.png)  ❌ no absolute path
+```
 
-Keep images in the same folder as `index.md`.
+## Philosophy
 
-## Common Fixes
-
-1. Remove duplicate H1 titles (keep only frontmatter `title`)
-2. Fix LaTeX: use `$$` for math
-3. Ensure proper spacing around code blocks
-4. Validate mermaid diagrams format
+- **Prefer verification over modification**
+- **Ask before making significant changes**
+- **Keep content intact**
+- **Git is our safety net**
