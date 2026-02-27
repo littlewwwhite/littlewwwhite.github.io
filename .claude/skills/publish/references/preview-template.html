@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}} — Preview</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0f0f0f;--card:#1a1a1a;--text:#e0e0e0;--muted:#888;--accent:#2563eb;--border:#2a2a2a;--radius-card:12px;--radius-btn:8px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+h1{font-size:1.5rem;font-weight:600;padding:1.25rem 2rem;border-bottom:1px solid var(--border);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.grid{display:grid;grid-template-columns:1fr 320px;flex:1;overflow:hidden}
+/* Tabs */
+.tabs{display:flex;gap:4px;padding:0.75rem 1rem 0;background:var(--bg)}
+.tab{padding:0.5rem 1rem;border:none;background:transparent;color:var(--muted);font-size:0.875rem;cursor:pointer;border-radius:var(--radius-btn) var(--radius-btn) 0 0;transition:all .15s}
+.tab:hover{color:var(--text)}
+.tab.active{background:var(--card);color:var(--text)}
+.content-area{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.tab-panel{display:none;flex:1;overflow:auto;padding:1rem}
+.tab-panel.active{display:block}
+.tab-panel pre{white-space:pre-wrap;word-wrap:break-word;font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:0.85rem;line-height:1.6;color:var(--text);background:var(--card);padding:1rem;border-radius:var(--radius-card)}
+/* Sidebar */
+.sidebar{border-left:1px solid var(--border);padding:1rem;display:flex;flex-direction:column;gap:1rem;overflow-y:auto}
+.status{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;padding:0.625rem 0.75rem;background:var(--card);border-radius:var(--radius-btn)}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot.ok{background:#22c55e}.dot.off{background:#ef4444}
+.group-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.25rem}
+.platform-group{background:var(--card);border-radius:var(--radius-card);padding:0.75rem}
+.platform-group+.platform-group{margin-top:0.5rem}
+label.platform{display:flex;align-items:center;gap:0.5rem;padding:0.35rem 0;font-size:0.85rem;cursor:pointer}
+label.platform input{accent-color:var(--accent)}
+.actions{margin-top:auto;display:flex;flex-direction:column;gap:0.5rem}
+button.primary,button.secondary{width:100%;padding:0.625rem;border:none;border-radius:var(--radius-btn);font-size:0.85rem;font-weight:500;cursor:pointer;transition:opacity .15s}
+button.primary{background:var(--accent);color:#fff}
+button.primary:disabled{opacity:0.35;cursor:not-allowed}
+button.secondary{background:var(--border);color:var(--text)}
+button.secondary:hover{opacity:0.85}
+.hint{font-size:0.75rem;color:var(--muted);text-align:center}
+/* Toast */
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(120%);background:#333;color:#fff;padding:0.6rem 1.2rem;border-radius:var(--radius-btn);font-size:0.825rem;opacity:0;transition:all .3s ease}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+</style>
+</head>
+<body>
+
+<h1>{{TITLE}}</h1>
+
+<div class="grid">
+  <!-- Main content area -->
+  <div class="content-area">
+    <div class="tabs">
+      <button class="tab active" data-tab="article">Article</button>
+      <button class="tab" data-tab="dynamic">Dynamic</button>
+      <button class="tab" data-tab="thread">Thread</button>
+    </div>
+    <div class="tab-panel active" id="panel-article"><pre>{{ARTICLE_CONTENT}}</pre></div>
+    <div class="tab-panel" id="panel-dynamic"><pre>{{DYNAMIC_CONTENT}}</pre></div>
+    <div class="tab-panel" id="panel-thread"><pre>{{THREAD_CONTENT}}</pre></div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="status">
+      <span class="dot off" id="statusDot"></span>
+      <span id="statusText">Checking MultiPost...</span>
+    </div>
+
+    <div class="platform-group">
+      <div class="group-label">Article Platforms</div>
+      <label class="platform"><input type="checkbox" data-type="article" data-name="zhihu"> Zhihu</label>
+      <label class="platform"><input type="checkbox" data-type="article" data-name="juejin"> Juejin</label>
+      <label class="platform"><input type="checkbox" data-type="article" data-name="csdn"> CSDN</label>
+      <label class="platform"><input type="checkbox" data-type="article" data-name="jianshu"> Jianshu</label>
+      <label class="platform"><input type="checkbox" data-type="article" data-name="weixin"> WeChat</label>
+    </div>
+
+    <div class="platform-group">
+      <div class="group-label">Dynamic Platforms</div>
+      <label class="platform"><input type="checkbox" data-type="dynamic" data-name="rednote"> Xiaohongshu</label>
+      <label class="platform"><input type="checkbox" data-type="dynamic" data-name="weibo"> Weibo</label>
+      <label class="platform"><input type="checkbox" data-type="dynamic" data-name="x"> Twitter / X</label>
+      <label class="platform"><input type="checkbox" data-type="dynamic" data-name="douyin"> Douyin</label>
+    </div>
+
+    <div class="actions">
+      <button class="primary" id="btnPublish" disabled>Publish Selected</button>
+      <button class="secondary" id="btnCopy">Copy Current Tab</button>
+    </div>
+    <p class="hint" id="hint">Install MultiPost extension for one-click publishing</p>
+  </aside>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  const META = {{META_JSON}};
+  const CONTENT = {
+    article: { markdown: `{{ARTICLE_MD_ESCAPED}}`, html: `{{ARTICLE_HTML_ESCAPED}}` },
+    dynamic: { text: `{{DYNAMIC_MD_ESCAPED}}` },
+    thread:  { text: `{{THREAD_MD_ESCAPED}}` }
+  };
+
+  /* --- State --- */
+  let multipostReady = false;
+  let activeTab = "article";
+
+  /* --- DOM refs --- */
+  const $tabs    = document.querySelectorAll(".tab");
+  const $panels  = document.querySelectorAll(".tab-panel");
+  const $checks  = document.querySelectorAll('input[data-type]');
+  const $publish = document.getElementById("btnPublish");
+  const $copy    = document.getElementById("btnCopy");
+  const $dot     = document.getElementById("statusDot");
+  const $status  = document.getElementById("statusText");
+  const $hint    = document.getElementById("hint");
+  const $toast   = document.getElementById("toast");
+
+  /* --- Tabs --- */
+  $tabs.forEach(t => t.addEventListener("click", () => {
+    $tabs.forEach(b => b.classList.remove("active"));
+    $panels.forEach(p => p.classList.remove("active"));
+    t.classList.add("active");
+    activeTab = t.dataset.tab;
+    document.getElementById("panel-" + activeTab).classList.add("active");
+  }));
+
+  /* --- Checkbox -> publish button state --- */
+  function refreshPublishBtn(){
+    const anyChecked = [...$checks].some(c => c.checked);
+    $publish.disabled = !(multipostReady && anyChecked);
+  }
+  $checks.forEach(c => c.addEventListener("change", refreshPublishBtn));
+
+  /* --- MultiPost detection --- */
+  function checkMultiPost(){
+    window.postMessage({
+      type: "request",
+      traceId: crypto.randomUUID(),
+      action: "MULTIPOST_EXTENSION_CHECK_SERVICE_STATUS",
+      data: {}
+    }, "*");
+  }
+
+  window.addEventListener("message", (e) => {
+    if (e.data?.type !== "response") return;
+    if (e.data.action === "MULTIPOST_EXTENSION_CHECK_SERVICE_STATUS") {
+      multipostReady = e.data.code === 0;
+      $dot.className = "dot " + (multipostReady ? "ok" : "off");
+      $status.textContent = multipostReady ? "MultiPost connected" : "MultiPost not detected";
+      $hint.style.display = multipostReady ? "none" : "";
+      refreshPublishBtn();
+    }
+  });
+
+  checkMultiPost();
+  setTimeout(()=>{ if(!multipostReady){ $status.textContent="MultiPost not detected"; }}, 2000);
+
+  /* --- Publish --- */
+  $publish.addEventListener("click", () => {
+    const checked = [...$checks].filter(c => c.checked);
+    const articlePlatforms = checked.filter(c => c.dataset.type === "article").map(c => ({ name: c.dataset.name }));
+    const dynamicPlatforms = checked.filter(c => c.dataset.type === "dynamic").map(c => ({ name: c.dataset.name }));
+
+    if (articlePlatforms.length) {
+      window.postMessage({
+        type: "request",
+        traceId: crypto.randomUUID(),
+        action: "MULTIPOST_EXTENSION_PUBLISH",
+        data: {
+          platforms: articlePlatforms,
+          isAutoPublish: false,
+          data: {
+            title: META.title,
+            digest: META.title,
+            cover: { name: "", url: "" },
+            htmlContent: CONTENT.article.html,
+            markdownContent: CONTENT.article.markdown
+          }
+        }
+      }, "*");
+    }
+
+    if (dynamicPlatforms.length) {
+      window.postMessage({
+        type: "request",
+        traceId: crypto.randomUUID(),
+        action: "MULTIPOST_EXTENSION_PUBLISH",
+        data: {
+          platforms: dynamicPlatforms,
+          isAutoPublish: false,
+          data: {
+            title: META.title,
+            content: CONTENT.dynamic.text,
+            images: [],
+            videos: []
+          }
+        }
+      }, "*");
+    }
+
+    toast("Publishing request sent to MultiPost");
+  });
+
+  /* --- Copy --- */
+  $copy.addEventListener("click", async () => {
+    const textMap = {
+      article: CONTENT.article.markdown,
+      dynamic: CONTENT.dynamic.text,
+      thread:  CONTENT.thread.text
+    };
+    try {
+      await navigator.clipboard.writeText(textMap[activeTab]);
+      toast("Copied to clipboard");
+    } catch { toast("Copy failed — check browser permissions"); }
+  });
+
+  /* --- Toast --- */
+  function toast(msg){
+    $toast.textContent = msg;
+    $toast.classList.add("show");
+    setTimeout(()=> $toast.classList.remove("show"), 2200);
+  }
+})();
+</script>
+</body>
+</html>
