@@ -28,22 +28,22 @@ languages:
     # https://gohugo.io/content-management/menus/#define-in-site-configuration
     menus:
       main:
-        - name: Post
+        - name: 文章
           pageRef: /
-          weight: 4 # 控制在页面上展示的前后顺序
-        - name: Archives
+          weight: 4
+        - name: 归档
           pageRef: archives/
           weight: 5
-        - name: Categories
+        - name: 分类
           pageRef: categories/
           weight: 10
-        - name: Tags
+        - name: 标签
           pageRef: tags/
           weight: 10
-        - name: Search
+        - name: 搜索
           pageRef: search/
           weight: 20
-        - name: About
+        - name: 关于
           pageRef: about/
           weight: 21
 
@@ -94,34 +94,23 @@ params:
     resampleFilter: Lanczos
 
   homeInfoParams:
-    # 首页的 profile 内容
-    Title: "Hey Guys 👋 I'm zjding"
-    # 首页的 profile 内容
-    Content: Welcome to my Blog! I'm a NLPer, interest in LLMops, Embedding, RAG and Agent. Currently working on using AI to reconstruct the entire film and game production process.
+    Title: "你好 👋 我是 zjding"
+    Content: NLP 工程师，关注 LLMOps、Embedding、RAG 和 Agent。目前专注于用 AI 重构影视与游戏制作全流程。
     SortBy: "date"
     Descending: true
 
   socialIcons:
     - name: github
-      title: Follow my Github
+      title: 关注我的 Github
       url: "https://github.com/littlewwwhite"
     - name: X
-      title: Follow my Twitter
+      title: 关注我的 Twitter
       url: "https://x.com/peopleallremake"
-    # - name: Bilibili
-    #   title: 关注我的 B 站帐号
-    #   url: "https://space.bilibili.com/3493138859559908"
-    # - name: Youtube
-    #   title: Follow my Youtube Channel
-    #   url: "https://youtube.com/@peopleallremake"
-    # - name: Telegram
-    #   title: Contact Me
-    #   url: "https://t.me/uncoldplay"
     - name: Email
-      title: Contact Me
+      title: 联系我
       url: "mailto:d1095245867@gmail.com"
     - name: RSS
-      title: Follow my RSS
+      title: 订阅 RSS
       url: "https://littlewwwhite.github.io/index.xml"
 
   # 搜索
