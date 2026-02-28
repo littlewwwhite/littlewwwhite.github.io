@@ -95,6 +95,46 @@ Conclusion: Refined thesis + implications
 - **Code, identifiers, tool names**: English as-is
 - **Comments in code**: English
 
+## Thinking Depth: 感悟 → 延伸 → 原创
+
+The thinking process has three layers. Each layer adds originality:
+
+### Layer 1: 感悟 (Resonance)
+What in the source material clicks? Why does it ring true? Connect it to your own experience or intuition.
+- "This resonates because in my project I saw exactly this pattern..."
+- "The reason this works is actually deeper than the author states..."
+
+### Layer 2: 延伸 (Extension)
+Push the source ideas further than the original author did. Techniques:
+- **Cross-domain analogy**: Borrow from biology, economics, physics, history to illuminate the point
+- **Extreme-case reasoning**: "If we push this logic to its limit, it implies..."
+- **Connecting dots**: Link ideas from different sources that the authors themselves didn't connect
+- **Real-world cases**: Cite specific products, companies, or incidents that illustrate the point
+
+### Layer 3: 原创观点 (Original Thesis)
+Formulate YOUR position — not a summary of what others said, but what YOU believe after digesting everything.
+- The thesis should be something the source authors didn't explicitly state
+- It should feel like a natural conclusion from your reflections, not a forced contrarian take
+
+**Default stance: agreement + extension.** Only disagree when genuinely warranted.
+
+## End-of-Post References
+
+Every post that draws from external sources MUST end with a `## 延伸阅读` section:
+
+```markdown
+## 延伸阅读
+
+- [Article Title — Author](url)
+- [Article Title — Author](url)
+```
+
+Rules:
+- **No inline citations in the body** — do not write "according to [source]" or link to sources mid-text
+- All opinions in the body are presented as your own ("我认为", "我发现", "我的判断是")
+- The 延伸阅读 section is a courtesy acknowledgment, not a source attribution
+- List only the primary sources, not every link you encountered
+
 ## Don't Do This
 
 - Summarize without synthesizing — add your own analysis, don't just rephrase the source
@@ -103,3 +143,5 @@ Conclusion: Refined thesis + implications
 - Use corporate-speak: "leverage", "synergy", "comprehensive solution"
 - Over-explain basics the target audience already knows
 - Treat all options as equal — make a recommendation and defend it
+- Cite sources inline — no "according to [author]" or "[source] argues that" in the body
+- Write a post that could be identified as a rewrite of a specific source article

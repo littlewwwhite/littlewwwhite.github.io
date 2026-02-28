@@ -58,6 +58,48 @@ Welcome to the machine.
 - "My take" section with original analysis
 - Strong closing line
 
+## Example: Think Stage Output
+
+Before writing, Claude outputs a thinking note like this:
+
+```markdown
+## 📌 Source Key Points
+- 黄东旭的文章核心论点：给 AI 设计的软件应该"复古"而非创新，因为 LLM 的先验知识偏好已有范式
+- 关键数据：TiDB Cloud 90%+ 新集群由 Agent 创建
+- 接口设计三条件：可自然语言描述、可符号固化、交付确定性结果
+
+## 🤔 Reflections & Extensions
+- "熟悉度优先"这个观点说到了点上——这跟生物学里的生态位理论很像，进化中最成功的不是最强壮的物种，而是对已有生态位适应最好的
+- 把"代码是最好的 Meta Tool"推到极致：如果 Agent 能自己写工具，那 MCP 这类工具协议的价值不在于工具本身，而在于提供"写工具的脚手架"
+- 源材料没提到但我认为重要的：商业模式的断裂可能比技术变化更深刻——当代码生产成本趋零，整个 SaaS 定价逻辑都要重构
+
+## 🎯 My Article Thesis
+- 不是"黄东旭说了什么"，而是"我认为给 AI 做软件的核心策略是复古，这背后有三个可迁移的思考框架"
+- 结构：Pattern C (Original Thesis Essay)，用三个框架串联
+
+## 📎 References for 延伸阅读
+- [AI Agent 时代，基础软件该怎么做？ — 黄东旭](url)
+```
+
+### Why this thinking note works:
+- Extracts key points without just listing them — identifies the core argument
+- Extensions go beyond the source: biology analogy, MCP implication, business model angle
+- Thesis is the writer's own position, not a summary
+- References tracked for end-of-post 延伸阅读
+
+## Example: 延伸阅读 Section
+
+Every post that draws from external sources ends with:
+
+```markdown
+## 延伸阅读
+
+- [AI Agent 时代，基础软件该怎么做？ — 黄东旭](https://example.com/article)
+- [The Bitter Lesson — Rich Sutton](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)
+```
+
+No inline citations in the body. All opinions presented as the writer's own.
+
 ## Example 2: Tool Evaluation (Pattern B)
 
 ```markdown

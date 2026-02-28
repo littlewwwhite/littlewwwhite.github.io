@@ -1,48 +1,85 @@
 ---
 name: blog-post-creator
 description: Generate high-quality technical blog posts from raw ideas and reference materials. Thesis-driven, depth-first writing in zjding's voice with automatic Hugo formatting.
-allowed-tools: Read, Write, Edit, Glob, Bash, WebFetch
+allowed-tools: Read, Write, Edit, Glob, Bash, WebFetch, AskUserQuestion
 ---
 
 # Blog Post Creator
 
-Generate a complete, ready-to-publish blog post from user's raw ideas, notes, and reference materials. User provides direction; Claude handles content, structure, and Hugo formatting.
+Generate a complete, ready-to-publish blog post from user's raw ideas, notes, and reference materials. User provides direction; Claude handles digestion, thinking, and writing.
 
 ## Workflow
 
-1. **User provides** any combination of:
-   - Raw ideas, thoughts, observations
-   - Reference articles, blogs, or URLs
-   - Direction, topic scope, and requirements
-   - Notes, outlines, code snippets
+### Step 1: Gather — Collect and parse all input
 
-2. **Claude does**:
-   - Synthesize material into an **original thesis** (not just summarize)
-   - Generate content in zjding's voice with intellectual depth
-   - Add original analysis, frameworks, and cross-domain analogies
-   - Auto-generate Hugo frontmatter and Page Bundle structure
+- **URLs**: Fetch content via WebFetch, extract key arguments and data
+- **Pasted text**: Organize into structured notes
+- **File paths**: Read local files
+- **User direction**: Note the angle, scope, and emphasis the user wants
 
-3. **Result**: A complete `index.md` under `content/posts/YYMMDD/`, ready for `git push`.
+Output: Internal structured notes of all source material.
 
-## Quality Bar
+### Step 2: Think — Structured reflection (MUST output to user)
 
-Every post must pass these checks:
-- **Has a clear thesis** — not a topic, but a position
-- **Adds original insight** — not just rephrasing the source material
-- **Contains at least one conceptual framework or memorable formulation**
-- **Data supports claims** — benchmarks, comparisons, specific numbers
-- **Strong closing** — actionable takeaway or crystallized insight
+After reading all material, Claude MUST output a **thinking note** before writing. This is the critical step that prevents "rewrite syndrome."
 
-## Hugo Page Bundle Structure
+```markdown
+## 📌 Source Key Points
+- Article A argues X
+- Article B argues Y
+- Key data: [specific numbers/benchmarks from sources]
+
+## 🤔 Reflections & Extensions
+- [Observation] resonates because... [extend with cross-domain case or analogy]
+- Pushing [concept] to its extreme implies...
+- An angle none of the sources mention but I find important: ...
+- This reminds me of [case from another field]...
+
+## 🎯 My Article Thesis
+- Not "sources say X" but "I believe Z"
+- Z is supported by digesting sources + my own extensions
+- Proposed structure: [Pattern A/B/C from writing guidelines]
+
+## 📎 References for 延伸阅读
+- [Title](url)
+- [Title](url)
+```
+
+**Thinking principles:**
+- Default stance is **agreement + extension**, not forced criticism
+- Depth comes from "thinking further" — cross-domain analogies, extreme-case reasoning, connecting dots the sources didn't connect
+- Only express disagreement when genuinely warranted
+- The thesis must be YOUR position, not a summary of sources
+
+**After outputting the thinking note, ask the user:**
+> "Here's my thinking. Want to adjust the direction, add your own thoughts, or proceed to writing?"
+
+### Step 3: Thesis — Lock in article structure
+
+Based on confirmed thinking note:
+- Finalize the thesis statement (one sentence, directional, opinionated)
+- Choose structure pattern (A: Numbered Analysis / B: Problem→Solution / C: Original Thesis)
+- Outline sections with sub-theses
+
+### Step 4: Write — Generate the article
+
+Write the full article following these rules:
+- **All opinions presented as "我认为/我发现/我的判断是"** — the post reads as fully original work
+- **Zero inline citations** — do not write "according to [source]" or link to sources in the body
+- **Weave in source insights naturally** — as if they are your own observations
+- **Add original extensions**: cross-domain analogies, cases, frameworks, aphoristic summaries
+- **Follow writing-guidelines.md** for voice, depth techniques, and formatting
+- **End with `## 延伸阅读`** section listing source URLs
+
+### Step 5: Output — Generate Hugo Page Bundle
 
 ```
 content/posts/YYMMDD/
-├── index.md         # Complete article with frontmatter
-└── *.png / *.jpg    # Images alongside, referenced as ![alt](1.png)
+├── index.md         # Complete article with frontmatter + 延伸阅读
+└── *.png / *.jpg    # Images alongside
 ```
 
-## Frontmatter (Auto-generated)
-
+Auto-generate frontmatter:
 ```yaml
 ---
 title: "Article Title"
@@ -57,24 +94,25 @@ tags:
 ---
 ```
 
+## Quality Bar
+
+Every post must pass these checks:
+- **Has a clear thesis** — not a topic, but a position
+- **Adds original insight** — extensions, cases, analogies not in the source material
+- **Contains at least one conceptual framework or memorable formulation**
+- **Data supports claims** — benchmarks, comparisons, specific numbers
+- **Strong closing** — actionable takeaway or crystallized insight
+- **延伸阅读 at the end** — source links for reference
+
 ## Voice & Depth Guidelines
 
 See [Writing Guidelines](references/writing-guidelines.md) for the full style guide.
-
-Key principles:
-- **Thesis-driven** — Lead with a position, not a topic
-- **First person Chinese, strong opinions with evidence**
-- **Zero preamble** — Jump straight into substance
-- **Create frameworks** — Don't just describe, frame. Build mental models readers can reuse
-- **Aphoristic summaries** — Crystallize complex ideas into one-liners
-- **Cross-domain analogies** — Borrow from physics, biology, economics, history
-- **Synthesize, don't summarize** — Add your own analysis on top of source material
-
 See [Examples](references/examples.md) for reference posts.
 
 ## Philosophy
 
 - **User focuses on ideas, Claude handles format**
-- **Depth over breadth** — Better to go deep on one thesis than shallow on many topics
+- **Think before you write** — the thinking note is not optional
+- **Depth over breadth** — better to go deep on one thesis than shallow on many
+- **The post is yours** — write as if every insight came from your own experience
 - **Git handles versioning** — no draft/published separation
-- **Reference `technical-writing` skill** for editing checklist
