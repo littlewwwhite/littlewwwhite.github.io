@@ -58,7 +58,7 @@ Create output directory: `_dist/<slug>/`
 
 Generate the following files by transforming the source content:
 
-### 3a. `article.md` — Long-form platforms (Zhihu / Juejin / CSDN)
+### 3a. `article.md` — Long-form platforms (Zhihu / WeChat Official Account)
 
 Transformation rules:
 - **Strip Hugo shortcodes**: Remove all `{{< ... >}}` and `{{% ... %}}` syntax
@@ -73,32 +73,27 @@ Transformation rules:
   ```
 - **Keep the full content** — do not summarize or truncate
 
-### 3b. `dynamic.md` — Short-form platforms (Xiaohongshu / Weibo)
+### 3b. `dynamic.md` — Short-form platforms (Xiaohongshu / Weibo / Douyin)
 
 Transformation rules:
-- **Maximum 800 characters** total
-- **Format**: Conversational, engaging summary of the post
-- **Use emoji bullets** (e.g., `✅`, `🔥`, `💡`, `📌`) to highlight key points
-- **Include 3-5 relevant hashtags** at the end (e.g., `#AI #技术分享 #编程`)
-- **Tone**: Casual, approachable, like sharing with a friend
+- **Maximum 300 characters** total (Xiaohongshu optimal length)
+- **Format**: Punchy, scannable, one core message
 - **Structure**:
-  1. Hook line (attention-grabbing opening)
-  2. 3-5 key takeaways as emoji-bulleted points
-  3. Call to action or closing thought
-  4. Hashtags
-- **Do NOT include images or code blocks**
+  1. One-line hook (bold claim or question)
+  2. 2-3 emoji-bulleted key points, each ≤ 1 sentence
+  3. 2-3 hashtags (e.g., `#AI #技术分享`)
+- **Tone**: Casual, like a friend sharing a discovery — not a summary
+- **Do NOT include images, code blocks, or links**
 
-### 3c. `thread.md` — Twitter/X thread
+### 3c. `thread.md` — Twitter/X post
 
 Transformation rules:
-- **3-8 tweets**, each **strictly ≤ 280 characters**
-- **Number each tweet**: `1/N`, `2/N`, etc.
-- **Tweet 1**: Hook — the most compelling insight or claim from the post
-- **Middle tweets**: Key points, one per tweet, self-contained and readable
-- **Last tweet**: Include blog link `https://littlewwwhite.github.io/posts/<slug>/`
-- **Use line breaks** between tweets (two blank lines)
-- **No hashtags** except optionally 1-2 in the last tweet
-- **Tone**: Concise, punchy, informative
+- **1-2 tweets**, each **strictly ≤ 280 characters**
+- **If 1 tweet**: The single most compelling insight + blog link
+- **If 2 tweets**: First tweet is the hook, second adds context + blog link `https://littlewwwhite.github.io/posts/<slug>/`
+- **Tone**: Concise, punchy, opinionated
+- **Optionally 1-2 hashtags**
+- **Do NOT pad** — if the core message fits in 1 tweet, use 1 tweet
 
 ### 3d. `meta.json` — Metadata file
 
@@ -124,18 +119,18 @@ Display each generated version in the terminal with clear separators:
 
 ```
 ========================================
-📄 ARTICLE (Zhihu/Juejin/CSDN)
+📄 ARTICLE (Zhihu/WeChat)
 ========================================
 <first 500 chars of article.md>
 ...
 
 ========================================
-📱 DYNAMIC (Xiaohongshu/Weibo)
+📱 DYNAMIC (Xiaohongshu/Weibo/Douyin)
 ========================================
 <full dynamic.md content>
 
 ========================================
-🐦 THREAD (Twitter/X)
+🐦 TWEET (Twitter/X)
 ========================================
 <full thread.md content>
 
