@@ -160,9 +160,10 @@
   background-color: #f0f0f0;
 }
 
-/* 代码块统一样式 */
-.post-content pre,
-.post-content .highlight pre {
+/* ── Code blocks ── */
+
+/* Plain pre (no .highlight wrapper) */
+.post-content pre {
   background-color: #fafafa;
   color: #212529;
   padding: 1rem;
@@ -174,22 +175,49 @@
   margin: 1rem 0;
 }
 
-/* Override PaperMod's pre code dark defaults (color:#d5d5d6 + !important bg) */
-.post-content pre code {
-  color: #212529 !important;
-  background: #fafafa !important;
+/* .highlight is the sole visible container for syntax-highlighted blocks */
+.post-content .highlight:not(table) {
+  background-color: #fafafa !important;
+  border: 1px solid #e1e4e8;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+  overflow: hidden;
 }
 
-.dark .post-content pre,
-.dark .post-content .highlight pre {
+/* Strip inner pre inside .highlight — let .highlight handle visuals */
+.post-content .highlight pre {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  border: none;
+  border-radius: 0;
+}
+
+/* Code element: text rendering only, no visual box */
+.post-content pre code {
+  display: grid;
+  padding: 1rem;
+  color: #212529 !important;
+  background: transparent !important;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+/* Dark mode */
+.dark .post-content pre {
   background-color: #0d1117;
   color: #e6edf3;
   border-color: #30363d;
 }
 
+.dark .post-content .highlight:not(table) {
+  background-color: #0d1117 !important;
+  border-color: #30363d;
+}
+
 .dark .post-content pre code {
   color: #e6edf3 !important;
-  background: #0d1117 !important;
 }
 
 /* 行内代码样式 */
