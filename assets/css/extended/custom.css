@@ -160,15 +160,56 @@
   background-color: #f0f0f0;
 }
 
+/* ── Heading hierarchy ── */
+.post-title {
+  font-size: 2.25rem !important; /* 36px */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.post-content h2 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-content h3 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content h4 {
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Links ── */
+.post-content a {
+  color: #0366d6;
+  font-weight: inherit;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.post-content a:hover {
+  color: #58a6ff;
+  text-decoration: underline;
+}
+
 /* ── Code blocks ── */
 
 /* Plain pre (no .highlight wrapper) */
 .post-content pre {
-  background-color: #fafafa;
-  color: #212529;
+  background-color: #1c1d21;
+  color: #d5d5d6;
   padding: 1rem;
   border-radius: var(--radius);
-  border: 1px solid #e1e4e8;
+  border: none;
   font-size: 0.875rem;
   line-height: 1.6;
   overflow-x: auto;
@@ -177,14 +218,14 @@
 
 /* .highlight is the sole visible container for syntax-highlighted blocks */
 .post-content .highlight:not(table) {
-  background-color: #fafafa !important;
-  border: 1px solid #e1e4e8;
+  background-color: #1c1d21 !important;
+  border: none;
   border-radius: var(--radius);
   margin: 1rem 0;
   overflow: hidden;
 }
 
-/* Strip inner pre inside .highlight — let .highlight handle visuals */
+/* Strip inner pre inside .highlight */
 .post-content .highlight pre {
   margin: 0;
   padding: 0;
@@ -193,37 +234,35 @@
   border-radius: 0;
 }
 
-/* Code element: text rendering only, no visual box */
+/* Code element: text rendering only */
 .post-content pre code {
   display: grid;
   padding: 1rem;
-  color: #212529 !important;
+  color: #d5d5d6 !important;
   background: transparent !important;
   font-size: 0.875rem;
   line-height: 1.6;
   overflow-x: auto;
 }
 
-/* Dark mode */
+/* Dark mode — code blocks stay dark */
 .dark .post-content pre {
-  background-color: #0d1117;
-  color: #e6edf3;
-  border-color: #30363d;
+  background-color: #1c1d21;
+  color: #d5d5d6;
 }
 
 .dark .post-content .highlight:not(table) {
-  background-color: #0d1117 !important;
-  border-color: #30363d;
+  background-color: #1c1d21 !important;
 }
 
 .dark .post-content pre code {
-  color: #e6edf3 !important;
+  color: #d5d5d6 !important;
 }
 
 /* 行内代码样式 */
 .post-content code:not(pre code) {
-  background-color: #f0f0f0;
-  color: #d63384;
+  background-color: #f5f5f5;
+  color: #1f1f1f;
   padding: 0.15em 0.4em;
   border-radius: 4px;
   font-size: 0.875em;
@@ -231,7 +270,7 @@
 
 .dark .post-content code:not(pre code) {
   background-color: #21262d;
-  color: #f0883e;
+  color: #e6edf3;
 }
 
 /* 侧边栏 TOC 样式 */
