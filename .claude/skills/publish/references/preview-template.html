@@ -6,84 +6,80 @@
 <title>{{TITLE}} — Preview</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0f0f0f;--card:#1a1a1a;--text:#e0e0e0;--muted:#888;--accent:#2563eb;--border:#2a2a2a;--radius-card:12px;--radius-btn:8px}
+:root{--bg:#0f0f0f;--card:#1a1a1a;--text:#e0e0e0;--muted:#888;--accent:#2563eb;--green:#22c55e;--border:#2a2a2a;--radius:8px}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
-h1{font-size:1.5rem;font-weight:600;padding:1.25rem 2rem;border-bottom:1px solid var(--border);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.grid{display:grid;grid-template-columns:1fr 320px;flex:1;overflow:hidden}
-/* Tabs */
-.tabs{display:flex;gap:4px;padding:0.75rem 1rem 0;background:var(--bg)}
-.tab{padding:0.5rem 1rem;border:none;background:transparent;color:var(--muted);font-size:0.875rem;cursor:pointer;border-radius:var(--radius-btn) var(--radius-btn) 0 0;transition:all .15s}
+h1{font-size:1.4rem;font-weight:600;padding:1rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+h1 a{font-size:.75rem;color:var(--muted);text-decoration:none}
+h1 a:hover{color:var(--text)}
+.grid{display:grid;grid-template-columns:1fr 280px;flex:1;overflow:hidden}
+.tabs{display:flex;gap:2px;padding:.75rem 1rem 0;background:var(--bg)}
+.tab{padding:.5rem 1rem;border:none;background:transparent;color:var(--muted);font-size:.85rem;cursor:pointer;border-radius:var(--radius) var(--radius) 0 0;transition:all .15s}
 .tab:hover{color:var(--text)}
 .tab.active{background:var(--card);color:var(--text)}
 .content-area{flex:1;overflow:hidden;display:flex;flex-direction:column}
-.tab-panel{display:none;flex:1;overflow:auto;padding:1rem}
-.tab-panel.active{display:block}
-.tab-panel pre{white-space:pre-wrap;word-wrap:break-word;font-family:'SF Mono',SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:0.85rem;line-height:1.6;color:var(--text);background:var(--card);padding:1rem;border-radius:var(--radius-card)}
-/* Sidebar */
-.sidebar{border-left:1px solid var(--border);padding:1rem;display:flex;flex-direction:column;gap:1rem;overflow-y:auto}
-.status{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;padding:0.625rem 0.75rem;background:var(--card);border-radius:var(--radius-btn)}
-.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.dot.ok{background:#22c55e}.dot.off{background:#ef4444}
-.group-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:0.25rem}
-.platform-group{background:var(--card);border-radius:var(--radius-card);padding:0.75rem}
-.platform-group+.platform-group{margin-top:0.5rem}
-label.platform{display:flex;align-items:center;gap:0.5rem;padding:0.35rem 0;font-size:0.85rem;cursor:pointer}
-label.platform input{accent-color:var(--accent)}
-.actions{margin-top:auto;display:flex;flex-direction:column;gap:0.5rem}
-button.primary,button.secondary{width:100%;padding:0.625rem;border:none;border-radius:var(--radius-btn);font-size:0.85rem;font-weight:500;cursor:pointer;transition:opacity .15s}
-button.primary{background:var(--accent);color:#fff}
-button.primary:disabled{opacity:0.35;cursor:not-allowed}
-button.secondary{background:var(--border);color:var(--text)}
-button.secondary:hover{opacity:0.85}
-.hint{font-size:0.75rem;color:var(--muted);text-align:center}
-/* Toast */
-.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(120%);background:#333;color:#fff;padding:0.6rem 1.2rem;border-radius:var(--radius-btn);font-size:0.825rem;opacity:0;transition:all .3s ease}
+.panel{display:none;flex:1;overflow:auto;padding:1rem}
+.panel.active{display:block}
+.panel pre{white-space:pre-wrap;word-wrap:break-word;font-family:'SF Mono',Consolas,monospace;font-size:.85rem;line-height:1.65;color:var(--text);background:var(--card);padding:1rem;border-radius:var(--radius)}
+.char-count{font-size:.7rem;color:var(--muted);text-align:right;margin-top:.35rem}
+.sidebar{border-left:1px solid var(--border);padding:1rem;display:flex;flex-direction:column;gap:.75rem;overflow-y:auto}
+.info-card{background:var(--card);border-radius:var(--radius);padding:.75rem;font-size:.8rem;line-height:1.5}
+.info-card .label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.25rem}
+.actions{margin-top:auto;display:flex;flex-direction:column;gap:.5rem}
+button{width:100%;padding:.6rem;border:none;border-radius:var(--radius);font-size:.85rem;font-weight:500;cursor:pointer;transition:all .15s}
+.btn-copy{background:var(--accent);color:#fff}
+.btn-copy:hover{opacity:.9}
+.btn-copy.copied{background:var(--green)}
+.btn-open{background:var(--border);color:var(--text)}
+.btn-open:hover{opacity:.85}
+.hint{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.4}
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(120%);background:#333;color:#fff;padding:.6rem 1.2rem;border-radius:var(--radius);font-size:.825rem;opacity:0;transition:all .3s ease}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 </style>
 </head>
 <body>
 
-<h1>{{TITLE}}</h1>
+<h1>
+  {{TITLE}}
+  <a href="{{BLOG_URL}}" target="_blank">View on blog &rarr;</a>
+</h1>
 
 <div class="grid">
-  <!-- Main content area -->
   <div class="content-area">
     <div class="tabs">
-      <button class="tab active" data-tab="article">Article</button>
-      <button class="tab" data-tab="dynamic">Dynamic</button>
-      <button class="tab" data-tab="thread">Thread</button>
+      <button class="tab active" data-tab="article">📄 文章</button>
+      <button class="tab" data-tab="dynamic">💬 动态</button>
+      <button class="tab" data-tab="imagetext">📸 图文</button>
+      <button class="tab" data-tab="video">🎬 短视频</button>
     </div>
-    <div class="tab-panel active" id="panel-article"><pre>{{ARTICLE_CONTENT}}</pre></div>
-    <div class="tab-panel" id="panel-dynamic"><pre>{{DYNAMIC_CONTENT}}</pre></div>
-    <div class="tab-panel" id="panel-thread"><pre>{{THREAD_CONTENT}}</pre></div>
+    <div class="panel active" id="p-article"><pre>{{ARTICLE_CONTENT}}</pre></div>
+    <div class="panel" id="p-dynamic"><pre>{{DYNAMIC_CONTENT}}</pre><div class="char-count" id="cc-dynamic"></div></div>
+    <div class="panel" id="p-imagetext"><pre>{{IMAGETEXT_CONTENT}}</pre><div class="char-count" id="cc-imagetext"></div></div>
+    <div class="panel" id="p-video"><pre>{{VIDEO_CONTENT}}</pre></div>
   </div>
 
-  <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="status">
-      <span class="dot off" id="statusDot"></span>
-      <span id="statusText">Checking MultiPost...</span>
+    <div class="info-card">
+      <div class="label">Workflow</div>
+      1. Copy content from tab<br>
+      2. Open 爱贝壳 extension<br>
+      3. Select matching tab (文章/动态/短视频)<br>
+      4. Paste and select platforms<br>
+      5. Click sync
     </div>
 
-    <div class="platform-group">
-      <div class="group-label">Article Platforms</div>
-      <label class="platform"><input type="checkbox" data-type="article" data-name="zhihu"> Zhihu</label>
-      <label class="platform"><input type="checkbox" data-type="article" data-name="weixin"> WeChat</label>
-    </div>
-
-    <div class="platform-group">
-      <div class="group-label">Dynamic Platforms</div>
-      <label class="platform"><input type="checkbox" data-type="dynamic" data-name="rednote"> Xiaohongshu</label>
-      <label class="platform"><input type="checkbox" data-type="dynamic" data-name="weibo"> Weibo</label>
-      <label class="platform"><input type="checkbox" data-type="dynamic" data-name="x"> Twitter / X</label>
-      <label class="platform"><input type="checkbox" data-type="dynamic" data-name="douyin"> Douyin</label>
+    <div class="info-card">
+      <div class="label">Tab Mapping</div>
+      📄 文章 → 爱贝壳「文章」<br>
+      💬 动态 → 爱贝壳「动态」<br>
+      📸 图文 → 爱贝壳「动态」(图文模式)<br>
+      🎬 短视频 → 爱贝壳「短视频」(描述)
     </div>
 
     <div class="actions">
-      <button class="primary" id="btnPublish" disabled>Publish Selected</button>
-      <button class="secondary" id="btnCopy">Copy Current Tab</button>
+      <button class="btn-copy" id="btnCopy">Copy Current Tab</button>
+      <button class="btn-open" id="btnOpen">Open 爱贝壳</button>
     </div>
-    <p class="hint" id="hint">Install MultiPost extension for one-click publishing</p>
+    <p class="hint">Copy content, then paste into 爱贝壳 to publish across platforms</p>
   </aside>
 </div>
 
@@ -91,132 +87,57 @@ button.secondary:hover{opacity:0.85}
 
 <script>
 (function(){
-  const META = {{META_JSON}};
   const CONTENT = {
-    article: { markdown: `{{ARTICLE_MD_ESCAPED}}`, html: `{{ARTICLE_HTML_ESCAPED}}` },
-    dynamic: { text: `{{DYNAMIC_MD_ESCAPED}}` },
-    thread:  { text: `{{THREAD_MD_ESCAPED}}` }
+    article:   `{{ARTICLE_MD_ESCAPED}}`,
+    dynamic:   `{{DYNAMIC_MD_ESCAPED}}`,
+    imagetext: `{{IMAGETEXT_MD_ESCAPED}}`,
+    video:     `{{VIDEO_MD_ESCAPED}}`
   };
 
-  /* --- State --- */
-  let multipostReady = false;
   let activeTab = "article";
+  const $tabs  = document.querySelectorAll(".tab");
+  const $panels = document.querySelectorAll(".panel");
+  const $copy  = document.getElementById("btnCopy");
+  const $open  = document.getElementById("btnOpen");
+  const $toast = document.getElementById("toast");
 
-  /* --- DOM refs --- */
-  const $tabs    = document.querySelectorAll(".tab");
-  const $panels  = document.querySelectorAll(".tab-panel");
-  const $checks  = document.querySelectorAll('input[data-type]');
-  const $publish = document.getElementById("btnPublish");
-  const $copy    = document.getElementById("btnCopy");
-  const $dot     = document.getElementById("statusDot");
-  const $status  = document.getElementById("statusText");
-  const $hint    = document.getElementById("hint");
-  const $toast   = document.getElementById("toast");
+  // Show char counts
+  ["dynamic","imagetext"].forEach(k => {
+    const el = document.getElementById("cc-" + k);
+    if (el) el.textContent = CONTENT[k].length + " chars";
+  });
 
-  /* --- Tabs --- */
+  // Tab switching
   $tabs.forEach(t => t.addEventListener("click", () => {
     $tabs.forEach(b => b.classList.remove("active"));
     $panels.forEach(p => p.classList.remove("active"));
     t.classList.add("active");
     activeTab = t.dataset.tab;
-    document.getElementById("panel-" + activeTab).classList.add("active");
+    document.getElementById("p-" + activeTab).classList.add("active");
+    $copy.textContent = "Copy Current Tab";
+    $copy.classList.remove("copied");
   }));
 
-  /* --- Checkbox -> publish button state --- */
-  function refreshPublishBtn(){
-    const anyChecked = [...$checks].some(c => c.checked);
-    $publish.disabled = !(multipostReady && anyChecked);
-  }
-  $checks.forEach(c => c.addEventListener("change", refreshPublishBtn));
-
-  /* --- MultiPost detection --- */
-  function checkMultiPost(){
-    window.postMessage({
-      type: "request",
-      traceId: crypto.randomUUID(),
-      action: "MULTIPOST_EXTENSION_CHECK_SERVICE_STATUS",
-      data: {}
-    }, "*");
-  }
-
-  window.addEventListener("message", (e) => {
-    if (e.data?.type !== "response") return;
-    if (e.data.action === "MULTIPOST_EXTENSION_CHECK_SERVICE_STATUS") {
-      multipostReady = e.data.code === 0;
-      $dot.className = "dot " + (multipostReady ? "ok" : "off");
-      $status.textContent = multipostReady ? "MultiPost connected" : "MultiPost not detected";
-      $hint.style.display = multipostReady ? "none" : "";
-      refreshPublishBtn();
-    }
-  });
-
-  checkMultiPost();
-  setTimeout(()=>{ if(!multipostReady){ $status.textContent="MultiPost not detected"; }}, 2000);
-
-  /* --- Publish --- */
-  $publish.addEventListener("click", () => {
-    const checked = [...$checks].filter(c => c.checked);
-    const articlePlatforms = checked.filter(c => c.dataset.type === "article").map(c => ({ name: c.dataset.name }));
-    const dynamicPlatforms = checked.filter(c => c.dataset.type === "dynamic").map(c => ({ name: c.dataset.name }));
-
-    if (articlePlatforms.length) {
-      window.postMessage({
-        type: "request",
-        traceId: crypto.randomUUID(),
-        action: "MULTIPOST_EXTENSION_PUBLISH",
-        data: {
-          platforms: articlePlatforms,
-          isAutoPublish: false,
-          data: {
-            title: META.title,
-            digest: META.title,
-            cover: { name: "", url: "" },
-            htmlContent: CONTENT.article.html,
-            markdownContent: CONTENT.article.markdown
-          }
-        }
-      }, "*");
-    }
-
-    if (dynamicPlatforms.length) {
-      window.postMessage({
-        type: "request",
-        traceId: crypto.randomUUID(),
-        action: "MULTIPOST_EXTENSION_PUBLISH",
-        data: {
-          platforms: dynamicPlatforms,
-          isAutoPublish: false,
-          data: {
-            title: META.title,
-            content: CONTENT.dynamic.text,
-            images: [],
-            videos: []
-          }
-        }
-      }, "*");
-    }
-
-    toast("Publishing request sent to MultiPost");
-  });
-
-  /* --- Copy --- */
+  // Copy
   $copy.addEventListener("click", async () => {
-    const textMap = {
-      article: CONTENT.article.markdown,
-      dynamic: CONTENT.dynamic.text,
-      thread:  CONTENT.thread.text
-    };
     try {
-      await navigator.clipboard.writeText(textMap[activeTab]);
+      await navigator.clipboard.writeText(CONTENT[activeTab]);
+      $copy.textContent = "Copied!";
+      $copy.classList.add("copied");
       toast("Copied to clipboard");
+      setTimeout(() => { $copy.textContent = "Copy Current Tab"; $copy.classList.remove("copied"); }, 2000);
     } catch { toast("Copy failed — check browser permissions"); }
   });
 
-  /* --- Toast --- */
+  // Open 爱贝壳
+  $open.addEventListener("click", () => {
+    window.open("chrome-extension://jejejajkcbhejfiocemmddgbkdlhhngm/options.html", "_blank");
+  });
+
   function toast(msg){
     $toast.textContent = msg;
     $toast.classList.add("show");
-    setTimeout(()=> $toast.classList.remove("show"), 2200);
+    setTimeout(() => $toast.classList.remove("show"), 2200);
   }
 })();
 </script>

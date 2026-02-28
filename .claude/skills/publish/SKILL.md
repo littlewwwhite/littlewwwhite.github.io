@@ -56,9 +56,10 @@ Derive the slug from the directory name (e.g., `250315` from `content/posts/2503
 
 Create output directory: `_dist/<slug>/`
 
-Generate the following files by transforming the source content:
+Generate the following files by transforming the source content.
+These 4 types align with 爱贝壳内容同步助手's content tabs (文章/动态/图文/短视频).
 
-### 3a. `article.md` — Long-form platforms (Zhihu / WeChat Official Account)
+### 3a. `article.md` — 文章 (Zhihu / WeChat Official Account / Toutiao)
 
 Transformation rules:
 - **Strip Hugo shortcodes**: Remove all `{{< ... >}}` and `{{% ... %}}` syntax
@@ -73,29 +74,46 @@ Transformation rules:
   ```
 - **Keep the full content** — do not summarize or truncate
 
-### 3b. `dynamic.md` — Short-form platforms (Xiaohongshu / Weibo / Douyin)
+### 3b. `dynamic.md` — 动态 (X / Weibo / Jike / Threads)
 
 Transformation rules:
-- **Maximum 300 characters** total (Xiaohongshu optimal length)
-- **Format**: Punchy, scannable, one core message
+- **Maximum 280 characters** (X-compatible, works for all dynamic platforms)
+- **Format**: Single punchy statement or hot take
+- **Structure**: One compelling insight + blog link `https://littlewwwhite.github.io/posts/<slug>/`
+- **Optionally 1-2 hashtags**
+- **Tone**: Concise, opinionated, conversational
+- **Do NOT pad** — shorter is better
+- **Do NOT include images, code blocks, or markdown formatting**
+
+### 3c. `imagetext.md` — 图文 (Xiaohongshu / Douyin imagetext / Weishi)
+
+Transformation rules:
+- **Maximum 800 characters** (Xiaohongshu optimal range)
+- **Format**: Visual, scannable, emoji-rich
 - **Structure**:
   1. One-line hook (bold claim or question)
-  2. 2-3 emoji-bulleted key points, each ≤ 1 sentence
-  3. 2-3 hashtags (e.g., `#AI #技术分享`)
-- **Tone**: Casual, like a friend sharing a discovery — not a summary
-- **Do NOT include images, code blocks, or links**
+  2. 3-5 emoji-bulleted key points, each ≤ 1 sentence
+  3. Brief closing thought or call to action
+  4. 3-5 hashtags (e.g., `#AI #技术分享 #编程`)
+- **Tone**: Casual, like a friend sharing a discovery
+- **Do NOT include code blocks or links** (Xiaohongshu strips links)
+- **Designed to pair with images** — reference visual content if the source post has images
 
-### 3c. `thread.md` — Twitter/X post
+### 3d. `video.md` — 短视频文案 (Douyin / Kuaishou / Bilibili)
 
 Transformation rules:
-- **1-2 tweets**, each **strictly ≤ 280 characters**
-- **If 1 tweet**: The single most compelling insight + blog link
-- **If 2 tweets**: First tweet is the hook, second adds context + blog link `https://littlewwwhite.github.io/posts/<slug>/`
-- **Tone**: Concise, punchy, opinionated
-- **Optionally 1-2 hashtags**
-- **Do NOT pad** — if the core message fits in 1 tweet, use 1 tweet
+- **Title**: ≤ 30 characters, attention-grabbing, can use「」for emphasis
+- **Description**: 100-200 characters, conversational script outline
+- **Structure**:
+  1. `title:` — video title
+  2. `hook:` — opening line to grab attention (≤ 1 sentence)
+  3. `script:` — 3-5 bullet points as talking points
+  4. `cta:` — closing call to action
+  5. `tags:` — 3-5 hashtags
+- **Tone**: Energetic, spoken-word friendly, as if narrating to camera
+- **Focus on the single most interesting angle** from the blog post
 
-### 3d. `meta.json` — Metadata file
+### 3e. `meta.json` — Metadata file
 
 ```json
 {
@@ -107,7 +125,8 @@ Transformation rules:
   "outputs": {
     "article": "article.md",
     "dynamic": "dynamic.md",
-    "thread": "thread.md"
+    "imagetext": "imagetext.md",
+    "video": "video.md"
   },
   "blog_url": "https://littlewwwhite.github.io/posts/<slug>/"
 }
@@ -119,26 +138,31 @@ Display each generated version in the terminal with clear separators:
 
 ```
 ========================================
-📄 ARTICLE (Zhihu/WeChat)
+📄 文章 (Zhihu/WeChat/Toutiao)
 ========================================
 <first 500 chars of article.md>
 ...
 
 ========================================
-📱 DYNAMIC (Xiaohongshu/Weibo/Douyin)
+💬 动态 (X/Weibo/Jike/Threads)
 ========================================
 <full dynamic.md content>
 
 ========================================
-🐦 TWEET (Twitter/X)
+📸 图文 (Xiaohongshu/Douyin imagetext)
 ========================================
-<full thread.md content>
+<full imagetext.md content>
+
+========================================
+🎬 短视频 (Douyin/Kuaishou/Bilibili)
+========================================
+<full video.md content>
 
 ========================================
 ```
 
 Then ask the user:
-> "Preview generated. Options:\n1. Confirm and deploy\n2. Regenerate a specific version (article/dynamic/thread)\n3. Edit manually then confirm\n4. Abort"
+> "Preview generated. Options:\n1. Confirm and deploy\n2. Regenerate a specific version (article/dynamic/imagetext/video)\n3. Edit manually then confirm\n4. Abort"
 
 - If user chooses 2, ask which version and what to change, then regenerate only that version
 - If user chooses 3, wait for them to edit files in `_dist/<slug>/`, then proceed to deploy
@@ -161,12 +185,18 @@ git push origin main
 ## Step 6: Generate Browser Preview
 
 1. Read the template at `.claude/skills/publish/references/preview-template.html`
-2. Inject the content from all three generated versions into the template
+2. Inject the content from all four generated versions into the template:
+   - Replace `{{TITLE}}` with the post title
+   - Replace `{{ARTICLE_CONTENT}}`, `{{DYNAMIC_CONTENT}}`, `{{IMAGETEXT_CONTENT}}`, `{{VIDEO_CONTENT}}` with the respective content
+   - Replace `{{META_JSON}}` with the meta.json content
+   - Replace `{{ARTICLE_MD_ESCAPED}}`, `{{DYNAMIC_MD_ESCAPED}}`, `{{IMAGETEXT_MD_ESCAPED}}`, `{{VIDEO_MD_ESCAPED}}` with backtick-escaped content for clipboard
+   - Replace `{{BLOG_URL}}` with the blog URL
 3. Write the result to `_dist/<slug>/preview.html`
 4. Open in browser:
    ```bash
    open _dist/<slug>/preview.html
    ```
+5. Inform the user: "Preview opened. Copy content from each tab and paste into 爱贝壳内容同步助手 to publish."
 
 ## Error Handling
 
