@@ -1,69 +1,98 @@
 # Blog Post Examples
 
-## Complete Example Structure
+## Example 1: Thesis-Driven Analysis (Pattern C)
+
+A post analyzing infrastructure software design for AI Agents:
 
 ```markdown
 ---
-date: 2025-05-18
+title: "AI Agent 时代，基础软件该怎么做？"
+date: 2026-02-28
 categories:
-- 支付系统
-- 软件开发
+  - AI
+  - Infrastructure
 tags:
-- Stripe
-- 订阅计费
-- 混合计费
-- Webhook
-title: Stripe 的接入(独立开发者探索版)
+  - AI Agent
+  - System Design
+  - Database
 ---
 
-## The Problem
+当基础软件的核心用户从人类变成 AI Agent，整个设计范式会发生
+什么变化？这不是假设性问题——TiDB Cloud 上每天新创建的集群，
+超过 90% 已经是 AI Agent 直接创建的。
 
-So, there I was at 3am when production went down...
+## 1. 心智模型：顺应，而不是教育
 
-## Investigation
+给 AI Agent 设计的软件，不应该发明全新接口，而应该贴合已经被
+训练进模型的认知结构。Agent 不是在等一个更强大的系统，它更喜欢
+一个"它已经懂的系统"。
 
-I traced the issue through logs and found:
+> 如果没有稳定的约束容易失控，但如果抽象是封闭的，
+> 又没办法利用效率来演化。这个张力很精妙。
 
-1. First symptom: database locked errors
-2. Then: cascading failures
-3. Root cause: improper file handling in fs.copyFile
+## 2. 接口设计三条件
 
-## The Solution
+| 条件 | 含义 |
+|------|------|
+| 可被自然语言描述 | 接口语义能用一句话讲清楚 |
+| 可被符号逻辑固化 | 意图可以冻结为确定的代码/结构 |
+| 交付确定性结果 | 同样输入总产生同样输出 |
 
-Here's the fix I implemented:
+**代码是最好的 Meta Tool。** 与其给 Agent 堆特化工具，不如让它
+直接写代码——认知密度远高于自然语言，且可无限复用。
 
-\`\`\`typescript // Before (broken) fs.copyFile(source, dest, (err) =>
-{ ... })
+## 我的思考
 
-// After (working) import { copyFile } from 'fs/promises' await
-copyFile(source, dest) \`\`\`
+1. **"顺应"而不是"教育"** — 反直觉但务实
+2. **虚拟化是 Agent Infra 的前提条件**，不是优化项
+3. **商业模式变化可能比技术变化更深刻**
 
-## Results
-
-This prevented 99% of corruption issues. The numbers don't lie.
-
-Want to check the code?
-[See the full implementation](https://github.com/spences10/project)
+Welcome to the machine.
 ```
 
-## Frontmatter Template
+### Why this example works:
+- Clear thesis in opening paragraph (not "let me explore X")
+- Numbered sections with individual sub-theses
+- Table for structured comparison
+- Blockquote for key insight / aphorism
+- "My take" section with original analysis
+- Strong closing line
 
-Every post must start with:
+## Example 2: Tool Evaluation (Pattern B)
 
 ```markdown
 ---
-date: YYYY-MM-DD
+title: "Marker: Document Conversion 的实测赢家"
+date: 2025-02-21
 categories:
-- 分类1
-- 分类2
-- ...
+  - Technical Tools
 tags:
-- 标签1
-- 标签2
-- ...
-title: 文章标题
+  - Document Conversion
+  - PDF Processing
 ---
+
+项目里需要高效解析输入文本。markitdown 把内容切得太碎，
+MinerU 效果也不理想。测试了三个方案后，Marker 在结构化
+输出质量上胜出——以下是数据。
+
+| Tool | Structured Output | Speed | Limitation |
+|...benchmark data...|
+
+## 我的选择和理由
+
+综合对比后选取了 Marker。不是因为它完美，而是因为...
 ```
 
-**Important:** Always set `published: false` initially. Only change to
-`true` when ready for publication.
+### Why this example works:
+- Title states the conclusion ("实测赢家"), not just the topic
+- Opens with the problem context, not tool description
+- Benchmark table as evidence
+- Ends with reasoned recommendation, not "各有千秋"
+
+## Hugo Page Bundle
+
+Files go in `content/posts/YYMMDD/`:
+- `index.md` — the article
+- `*.png`, `*.jpg` — images referenced as `![alt](filename.png)`
+
+No absolute paths. No `image/` subfolder.

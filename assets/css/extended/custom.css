@@ -174,11 +174,22 @@
   margin: 1rem 0;
 }
 
+/* Override PaperMod's pre code dark defaults (color:#d5d5d6 + !important bg) */
+.post-content pre code {
+  color: #212529 !important;
+  background: #fafafa !important;
+}
+
 .dark .post-content pre,
 .dark .post-content .highlight pre {
   background-color: #0d1117;
   color: #e6edf3;
   border-color: #30363d;
+}
+
+.dark .post-content pre code {
+  color: #e6edf3 !important;
+  background: #0d1117 !important;
 }
 
 /* 行内代码样式 */
