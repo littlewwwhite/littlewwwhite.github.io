@@ -64,12 +64,29 @@ Based on confirmed thinking note:
 ### Step 4: Write — Generate the article
 
 Write the full article following these rules:
-- **All opinions presented as "我认为/我发现/我的判断是"** — the post reads as fully original work
+
+**Voice Requirements (CRITICAL):**
+- Use personal experience tone: "I tried...", "I hit this issue...", "In my project..."
+- Avoid AI-speak: no "本质上是", "这让我想到", "泛化", "核心论点", "值得注意的是"
+- No filler words like "我认为", "我发现" when stating obvious facts
+- Be specific: use real scenarios, not abstract generalizations
+- Avoid "等等"、"之类" instead of concrete examples
+
+**Content Depth Requirements (CRITICAL):**
+- Every post must be 1200+ characters
+- Include personal cases: "I encountered X when..."
+- Include actual code/config you've used
+- Show failure + fix journey, not just success
+- Specific comparisons: "方案 A 用了 3 秒，方案 B 用了 1.2 秒"
+- Actionable conclusions, not just "worth thinking"
+
+**Writing Rules:**
 - **Zero inline citations** — do not write "according to [source]" or link to sources in the body
 - **Weave in source insights naturally** — as if they are your own observations
 - **Add original extensions**: cross-domain analogies, cases, frameworks, aphoristic summaries
-- **Follow writing-guidelines.md** for voice, depth techniques, and formatting
 - **End with `## 延伸阅读`** section listing source URLs
+
+See `writing-guidelines.md` for complete anti-AI-speak word list and depth requirements.
 
 ### Step 5: Output — Generate Hugo Page Bundle
 
@@ -97,16 +114,23 @@ tags:
 ## Quality Bar
 
 Every post must pass these checks:
+- **Length: 1200+ characters** — short posts are incomplete thoughts
 - **Has a clear thesis** — not a topic, but a position
-- **Adds original insight** — extensions, cases, analogies not in the source material
-- **Contains at least one conceptual framework or memorable formulation**
-- **Data supports claims** — benchmarks, comparisons, specific numbers
+- **Personal experience** — "I tried/encountered/hit" not just abstract analysis
+- **Specific examples** — real code/config/data, not hypothetical
+- **Failure narrative** — what didn't work and why, not just success path
+- **Data-driven claims** — benchmarks, comparisons, specific numbers
+- **No AI-speak** — avoid 禁用词汇列表 (see writing-guidelines.md)
 - **Strong closing** — actionable takeaway or crystallized insight
 - **延伸阅读 at the end** — source links for reference
 
 ## Voice & Depth Guidelines
 
-See [Writing Guidelines](references/writing-guidelines.md) for the full style guide.
+See [Writing Guidelines](references/writing-guidelines.md) for:
+- Complete anti-AI-speak 禁用词汇列表
+- Content depth requirements (1200+ chars, specific cases, failure journey)
+- Tone and style patterns
+
 See [Examples](references/examples.md) for reference posts.
 
 ## Philosophy
