@@ -1,5 +1,7 @@
 # Blog Post Examples
 
+**Scope**: Format calibration — what Think notes, Spine tables, and finished articles should look like. For deep progression analysis of real articles, see `progression-patterns.md`.
+
 ## Example 1: Thesis-Driven Analysis (Pattern C)
 
 A post analyzing infrastructure software design for AI Agents — demonstrates avoiding AI-speak and adding depth:
@@ -63,6 +65,47 @@ Welcome to the machine.
 - Blockquote for key insight / aphorism
 - "My take" section with original analysis
 - Strong closing line
+
+## Example: Progression Spine Output (Step 3)
+
+After confirming the thinking note, Claude outputs a Progression Spine before writing:
+
+```markdown
+## 🔗 Progression Spine
+
+Type: 同心圆展开
+
+| # | Section thesis | 升维点 (compared to previous) |
+|---|---|---|
+| 1 | 0.50 是方差最大的合约 | Starting point: single contract, static estimation precision |
+| 2 | 低概率事件，普通模拟看不见 | +Extreme region: from "imprecise" to "invisible to sampling" |
+| 3 | 选举夜的实时更新问题 | +Time dimension: from static snapshot to dynamic information flow |
+| 4 | 相关合约的隐藏炸弹 | +Inter-contract: from single to portfolio, correlation regime change |
+| 5 | 市场为什么有效，即使多数人在猜 | +Participant structure: from mathematical models to social mechanism |
+```
+
+### Why this progression spine works:
+- **Escalation is visible**: Read the 升维点 column top-to-bottom — it tells a story of expanding scope
+- **No parallel sections**: Each section opens a dimension the previous one didn't have
+- **Last section is highest altitude**: "social mechanism" is more abstract than "correlation math"
+- **Sections cannot be reordered**: You need "static problems" before you can appreciate "dynamic problems"
+
+### Anti-example: Flat progression spine (BAD)
+
+```markdown
+## 🔗 Progression Spine
+
+Type: ??? (no clear type — this is the problem)
+
+| # | Section thesis | 升维点 |
+|---|---|---|
+| 1 | Agent 的好处是速度快 | Starting point |
+| 2 | Agent 还能处理多语言 | Another benefit (parallel, not progressive) |
+| 3 | Agent 的部署也很方便 | Yet another benefit (still parallel) |
+| 4 | Agent 的成本在下降 | A fourth benefit |
+```
+
+This is a list of parallel benefits — swapping any two sections changes nothing. It would produce a flat, listy blog post.
 
 ## Example: Think Stage Output
 
