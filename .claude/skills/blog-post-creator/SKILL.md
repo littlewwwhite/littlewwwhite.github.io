@@ -1,6 +1,6 @@
 ---
 name: blog-post-creator
-description: Generate high-quality technical blog posts from raw ideas and reference materials. Thesis-driven, depth-first writing with narrative progression in zjding's voice. Use when user says "write a blog post", "draft a post about", "turn this into a blog", "发博客", "写篇文章", or provides URLs/notes for blog content creation. Do NOT use for quick edits, formatting-only tasks, or translation.
+description: Create and write blog posts — from quick scaffolding to full thesis-driven articles. Use when user says "write a blog post", "draft a post about", "turn this into a blog", "发博客", "写篇文章", "new post", "新文章", "validate post", "检查格式", or provides URLs/notes for blog content creation. Do NOT use for quick edits or translation.
 allowed-tools: Read, Write, Edit, Glob, Bash, WebFetch, AskUserQuestion
 ---
 
@@ -17,7 +17,20 @@ Generate a complete, ready-to-publish blog post from user's raw ideas, notes, an
 | `references/progression-patterns.md` | Step 3 — spine design | 5 annotated real-world progression analyses with transition techniques |
 | `references/learning-log.md` | Step 4 — latest corrections | Style corrections from zjding's real edits — overrides all other rules |
 
-## Workflow
+## Quick Scaffold Mode
+
+When user just wants to create a post skeleton and write conversationally (not a full thesis-driven article):
+
+1. Create Hugo Page Bundle: `content/posts/YYMMDD/index.md`
+2. Fill frontmatter template (title, date, categories, tags)
+3. Help write through conversation — skip Steps 2-3 (Think + Spine)
+4. Run the Quality Bar checks before finishing
+
+**Trigger**: user says "new post", "新文章", "create a post" without providing research material or URLs.
+
+---
+
+## Full Workflow
 
 ### Step 1: Gather — Collect and parse all input
 
@@ -200,6 +213,8 @@ Every post must pass these checks:
 - **Visual aids**: at least 1 mermaid diagram or comparison table when the content involves systems, processes, or multi-item comparisons
 - **Section depth**: every section has 2-4 substantial paragraphs with vivid detail — no thin, abstract-only sections
 - **Closing**: crystallized insight or stops cleanly — no wrap-up paragraph
+- **Image paths**: relative Page Bundle format only (`![alt](1.png)`) — no absolute paths, no `image/` subfolder
+- **Frontmatter**: must have title, date, categories (1-2), tags (2-4)
 - **延伸阅读** at the end
 - **Content review passed**: Step 4.7 review checklist completed — all spine items covered, key source data included, no under-developed sections
 
