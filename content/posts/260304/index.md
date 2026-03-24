@@ -1,5 +1,5 @@
 ---
-title: "AGENTS.md 省下的不是时间，是探索税"
+title: "一个 Markdown 文件让 Agent 快了 28%"
 date: 2026-03-04
 categories:
   - AI

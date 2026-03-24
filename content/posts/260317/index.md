@@ -1,5 +1,5 @@
 ---
-title: "模型不是 Agent，Harness 才是"
+title: "同一个模型，换套壳，排名从 Top 30 跳到 Top 5"
 date: 2026-03-17
 categories:
   - AI
@@ -11,7 +11,7 @@ tags:
   - System Design
 ---
 
-现在大家越来越注意到 Agent runtime 和约束的重要性了，最近看到一个实验：Terminal Bench 2.0 上，同一个 Opus 4.6 模型，在 Claude Code 里跑是一个分数，换一个 harness 跑是另一个分数。一个团队仅靠改 harness——不换模型、不动权重——排名从 Top 30 跳到了 Top 5。
+Terminal Bench 2.0，同一个 Opus 4.6。一个团队仅靠改 harness——不换模型、不动权重——排名从 Top 30 跳到了 Top 5。
 
 这不是个别现象。OpenAI 的 harness engineering 博客描述了一种新的工程形态：五个月产出一百万行代码，没有一行是人手写的。工程师做的事情是设计环境、构建反馈回路、编码架构约束——然后 Agent 负责写代码。他们给这种工作方式起了个名字：harness engineering。
 

@@ -1,5 +1,5 @@
 ---
-title: "Agent 的瓶颈不是智力，是记忆架构"
+title: "两小时，一个 Sonnet，七万星仓库的完整移植"
 date: 2026-03-19
 categories:
   - AI
