@@ -1,5 +1,5 @@
 ---
-title: "睡前启动一个脚本，醒来发现它进化了 700 代"
+title: "630 行 Python，一夜 700 次实验——Autoresearch 把自我进化变成了基础设施"
 date: 2026-03-25
 categories:
   - AI
