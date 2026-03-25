@@ -12,7 +12,7 @@ Generate a complete, ready-to-publish blog post from user's raw ideas, notes, an
 
 | File | Read when | Content |
 |------|-----------|---------|
-| `references/writing-guidelines.md` | Step 4 — before writing | Voice baseline (Part 1-4), style rules & forbidden patterns (Part 2-3), progression architecture (Part 6) |
+| `references/writing-guidelines.md` | Step 4 — before writing | Voice baseline (Part 1-4), style rules & forbidden patterns (Part 2-3), progression architecture (Part 6), narrative depth (Part 7) |
 | `references/examples.md` | Step 2-3 — format calibration | Think note format, Spine table format, article positive/negative examples |
 | `references/progression-patterns.md` | Step 3 — spine design | 5 annotated real-world progression analyses with transition techniques |
 | `references/learning-log.md` | Step 4 — latest corrections | Style corrections from zjding's real edits — overrides all other rules |
@@ -72,6 +72,8 @@ After reading all material, Claude MUST output a **thinking note** before writin
 - Depth comes from "thinking further" — cross-domain analogies, extreme-case reasoning, connecting dots the sources didn't connect
 - Only express disagreement when genuinely warranted
 - The thesis must be YOUR position, not a summary of sources
+- **Author presence (Part 7.1)**: identify at least one angle where zjding has personal experience, a similar project, or a strong independent judgment. If none exists, flag it — consider adding a quick experiment or switching the angle.
+- **Turning point (Part 7.4)**: identify the most counter-intuitive finding or the moment where the obvious approach fails. This becomes the article's narrative pivot.
 
 **After outputting the thinking note, ask the user:**
 > "Here's my thinking. Want to adjust the direction, add your own thoughts, or proceed to writing?"
@@ -98,15 +100,28 @@ Based on confirmed thinking note, complete THREE decisions in order:
 
 Type: [chosen type]
 
-| # | Section thesis | 升维点 (compared to previous) |
-|---|---|---|
-| 1 | [thesis] | Starting point: [what dimension this establishes] |
-| 2 | [thesis] | +[new dimension]: from [previous level] to [new level] |
-| 3 | [thesis] | +[new dimension]: from [previous level] to [new level] |
-| N | [thesis] | +[new dimension]: from [previous level] to [new level] |
+| # | Section thesis | 升维点 (compared to previous) | 叙事手法 |
+|---|---|---|---|
+| 1 | [thesis] | Starting point: [what dimension this establishes] | [告诉/展示/转折/深案例] |
+| 2 | [thesis] | +[new dimension]: from [previous level] to [new level] | [告诉/展示/转折/深案例] |
+| 3 | [thesis] | +[new dimension]: from [previous level] to [new level] | [告诉/展示/转折/深案例] |
+| N | [thesis] | +[new dimension]: from [previous level] to [new level] | [告诉/展示/转折/深案例] |
+
+🔄 转折点位置: Section [N] — [一句话描述：什么预期被打破]
+👤 作者在场位置: Section [N] — [亲历/类比迁移/判断]
+🎯 可执行收尾: [是/否] — [概述 2-3 条动作]
 ```
 
-**Self-check**: Read the "升维点" column top-to-bottom. Does it tell a coherent escalation story? If not, reorder. See `references/progression-patterns.md` for 5 annotated real-world examples.
+**叙事手法标注说明**：
+- **告诉**：直接陈述观点 + 解释（默认手法，不应占全文超过 60%）
+- **展示**：困惑 → 探索 → 揭示的弧线（核心洞察必须用此手法，见 writing-guidelines.md 7.2）
+- **转折**：预期 → 打破 → 新框架（每篇至少一个，见 writing-guidelines.md 7.4）
+- **深案例**：一个完整的故事弧线，代替多个浅例子（见 writing-guidelines.md 7.3）
+
+**Self-check**:
+- 读"升维点"列：是否构成连贯的递进？
+- 读"叙事手法"列：是否全部为"告诉"？→ 至少改一个为"展示"或"转折"
+- 转折点和作者在场位置是否已标注？未标注 = 不通过
 
 **3d. Structure Pattern**: Choose the skeleton from `writing-guidelines.md` "Structure Patterns" section:
 
@@ -123,13 +138,17 @@ Type: [chosen type]
 
 Read `references/writing-guidelines.md` (full file) and `references/learning-log.md` (latest corrections override all other rules). Then write the full article.
 
-**6 Hard Rules (violation = rewrite):**
-1. **First sentence**: concrete fact, number, or counterintuitive claim — never a preamble
-2. **Section headers**: thesis statements, not topic labels
-3. **No forbidden structures**: no 摘要/总结/结语, no 首先…其次…最后…, no 1.1/1.2 subsections
-4. **Transitions mandatory**: every section pair needs explicit connective tissue (see writing-guidelines.md Part 6)
-5. **Last section = highest altitude**: most abstract/impactful insight lands last
-6. **Content richness**: each section must have enough concrete detail, vivid descriptions, and supporting evidence — never just abstract statements (see Content Richness below)
+**9 Hard Rules (violation = rewrite):**
+1. **Title**: creates curiosity without spoiling the conclusion — use 5 varied sentence patterns, never repeat the same pattern in consecutive posts (see writing-guidelines.md 2.0)
+2. **First paragraph**: hook from the toolkit (杀手数据/先破后立/场景投掷/悖论/结果先行) — never a preamble or bare thesis statement (see writing-guidelines.md 2.1)
+3. **Section headers**: thesis statements, not topic labels
+4. **No forbidden structures**: no 摘要/总结/结语, no 首先…其次…最后…, no 1.1/1.2 subsections
+5. **Transitions mandatory**: every section pair needs explicit connective tissue (see writing-guidelines.md Part 6)
+6. **Last section = highest altitude**: most abstract/impactful insight lands last
+7. **Closing**: must contain the article's core thesis at a higher altitude than the opening — not just stop, but crystallize (see writing-guidelines.md 2.3)
+8. **Structural tightness**: every section opening must connect to the previous section (承上 or 启下), every paragraph follows 论断→证据→推论 rhythm (see writing-guidelines.md 6.4)
+9. **Content richness**: each section must have enough concrete detail, vivid descriptions, and supporting evidence — never just abstract statements (see Content Richness below)
+10. **Narrative depth (Part 7)**: author presence ≥ B level, at least one "show don't tell" moment, at least one turning point with 300+ words, no more than 3 parallel shallow examples in a row (see writing-guidelines.md Part 7)
 
 **Content Richness (anti-terse rule):**
 Terse, over-compressed writing is as bad as bloated writing. Each section needs:
@@ -148,14 +167,17 @@ All other voice, style, forbidden-word, depth, and formatting rules: follow `wri
 
 ### Step 4.5: Style Self-Check — Before finalizing
 
-Run these 6 checks against the draft:
+Run these 9 checks against the draft:
 
-1. **Parallel section test**: Read section headers in order — could they be reordered without losing meaning? If yes → parallel, not progressive. Fix.
-2. **Transition check**: Does each section's opening reference or build on the previous section's conclusion? No topic jumps.
-3. **Last section altitude**: Is the final section the most abstract/impactful? If it's a specific technique → reorder.
-4. **First sentence**: Is it a concrete fact or provocative claim? (not "In today's..." or "随着...")
-5. **Forbidden patterns**: Any 摘要/总结/结语/综上所述? Any 赋能/闭环/深耕/值得注意的是? → delete
-6. **Closing**: Crystallized insight or just stops? (good) vs wrap-up paragraph? → delete wrap-up
+1. **Title pattern**: Does the title spoil the conclusion? Is it using the same sentence pattern as the previous post? Check against writing-guidelines.md 2.0.
+2. **Opening hook**: Does the first paragraph use a hook from the toolkit (杀手数据/先破后立/场景投掷/悖论/结果先行)? Is it a thesis statement disguised as a hook? (bad)
+3. **Parallel section test**: Read section headers in order — could they be reordered without losing meaning? If yes → parallel, not progressive. Fix.
+4. **Transition check**: Does each section's opening reference or build on the previous section's conclusion? No topic jumps.
+5. **Red thread test**: Read ONLY the first sentence of each section top-to-bottom. Do they form a coherent argument chain? If they read like unrelated observations → restructure.
+6. **Last section altitude**: Is the final section the most abstract/impactful? If it's a specific technique → reorder.
+7. **Closing thesis**: Does the last paragraph contain a clear core judgment at a higher altitude than the opening hook? Read opening + closing together — do they tell the full story?
+8. **Forbidden patterns**: Any 摘要/总结/结语/综上所述? Any 赋能/闭环/深耕/值得注意的是? → delete
+9. **Paragraph structure**: Spot-check 3 random paragraphs — does each follow 论断→证据→推论? Flag any that are pure fact-listing or pure assertion without evidence.
 
 ### Step 4.7: Content Review — Verify completeness and depth
 
@@ -175,6 +197,32 @@ After writing and style self-check, perform a content review before finalizing. 
 > "Review complete. [N issues found / All checks passed]. Want me to expand any section, or is this ready to publish?"
 
 If the user confirms, proceed to Step 5. If the user requests changes, revise and re-run Step 4.5 + 4.7.
+
+### Step 4.8: 深入浅出核验 — Narrative Depth Final Gate (MANDATORY)
+
+This is the **final quality gate** before output. It checks the five dimensions that separate a "survey paper" from an engaging article. **All 5 checks must pass. Any failure = revise before proceeding.**
+
+**Output to user as a checklist:**
+
+```markdown
+## 🔍 深入浅出核验
+
+| # | 维度 | 检查标准 | 状态 | 具体位置/问题 |
+|---|------|---------|------|-------------|
+| 1 | **作者在场** | 文中至少有 1 段基于亲身经历、类比迁移或独立判断的内容（≥ B 级，见 Part 7.1）。全文不能只分析别人的工作。 | ✅/❌ | Section X: [引用具体段落] |
+| 2 | **展示而非告诉** | 至少 1 个核心洞察通过"困惑→探索→揭示"的弧线呈现，而非直接宣布结论再解释（见 Part 7.2）。 | ✅/❌ | Section X: [洞察是被"发现"还是被"宣布"的] |
+| 3 | **深度优于广度** | 同一节内不存在 3 个以上结构相同的平行浅例子。需要多案例时用 1 个深案例 + 一句话概括替代（见 Part 7.3）。 | ✅/❌ | Section X: [标注平行例子数量] |
+| 4 | **张力与转折** | 至少 1 个转折点（预期被打破）被充分展开（≥ 300 字），而非一带而过。全文不能从头到尾平铺直叙（见 Part 7.4）。 | ✅/❌ | Section X: [转折点描述 + 字数估计] |
+| 5 | **可执行收尾** | 分析/框架类文章：结尾前有"明天就能做"的 2-3 条具体行动。观点/前瞻类文章：结尾有可验证的预测或判断标准（见 Part 7.5）。 | ✅/❌ | [引用具体行动或预测] |
+```
+
+**判定规则：**
+- 5/5 通过 → 进入 Step 5
+- 4/5 通过 → 标注失败项，给出具体修复建议，询问用户是否修复
+- ≤ 3/5 通过 → **必须修复**后才能进入 Step 5，不得跳过
+
+**After outputting the checklist, if any checks failed:**
+> "深入浅出核验发现 [N] 个问题。建议修复：[具体修改方案]。是否修复后再发布？"
 
 ### Step 5: Output — Generate Hugo Page Bundle
 
@@ -205,18 +253,21 @@ Every post must pass these checks:
 - **Progression**: sections form an escalation arc, not a parallel list — each section deepens the previous one
 - **Length**: 2500-4000 Chinese characters for analysis posts (below 2000 = too compressed, above 5000 = losing focus)
 - **Thesis**: one directional position, not a topic
-- **First sentence**: concrete fact or provocative claim — never a preamble
+- **Title**: curiosity-driven, varied sentence pattern, no conclusion spoiling (writing-guidelines.md 2.0)
+- **First paragraph**: hook from the toolkit — never a preamble or bare thesis statement (writing-guidelines.md 2.1)
 - **Section headers**: thesis statements, not topic labels
 - **Transitions**: explicit connective sentences between every pair of sections
 - **No forbidden structures**: no 摘要/总结/结语, no 首先…其次…最后…, no 1.1/1.2 subsections
 - **Specific data**: numbers, comparisons, real code — not vague claims
 - **Visual aids**: at least 1 mermaid diagram or comparison table when the content involves systems, processes, or multi-item comparisons
 - **Section depth**: every section has 2-4 substantial paragraphs with vivid detail — no thin, abstract-only sections
-- **Closing**: crystallized insight or stops cleanly — no wrap-up paragraph
+- **Closing**: core thesis at higher altitude than opening, 1-3 sentences — no wrap-up, no "值得关注" (writing-guidelines.md 2.3)
+- **Structural tightness**: red thread test passes (first sentences of all sections form coherent chain), paragraphs follow 论断→证据→推论 (writing-guidelines.md 6.4)
 - **Image paths**: relative Page Bundle format only (`![alt](1.png)`) — no absolute paths, no `image/` subfolder
 - **Frontmatter**: must have title, date, categories (1-2), tags (2-4)
 - **延伸阅读** at the end
 - **Content review passed**: Step 4.7 review checklist completed — all spine items covered, key source data included, no under-developed sections
+- **深入浅出核验 passed**: Step 4.8 checklist completed — author presence ≥ B, at least 1 show-don't-tell moment, no 3+ parallel shallow examples, at least 1 turning point ≥ 300 words, actionable or verifiable closing
 
 ### Step 6: Learn — Post-write feedback loop (when user edits)
 
