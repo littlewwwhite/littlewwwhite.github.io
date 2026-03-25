@@ -139,7 +139,7 @@ Type: [chosen type]
 Read `references/writing-guidelines.md` (full file) and `references/learning-log.md` (latest corrections override all other rules). Then write the full article.
 
 **9 Hard Rules (violation = rewrite):**
-1. **Title**: creates curiosity without spoiling the conclusion — use 5 varied sentence patterns, never repeat the same pattern in consecutive posts (see writing-guidelines.md 2.0)
+1. **Title**: natural and grounded — like answering "what's this post about?" to a colleague. No storytelling hooks, no number-stacking. Can use paradox, facts, or plain statements. (see writing-guidelines.md 2.0)
 2. **First paragraph**: hook from the toolkit (杀手数据/先破后立/场景投掷/悖论/结果先行) — never a preamble or bare thesis statement (see writing-guidelines.md 2.1)
 3. **Section headers**: thesis statements, not topic labels
 4. **No forbidden structures**: no 摘要/总结/结语, no 首先…其次…最后…, no 1.1/1.2 subsections
