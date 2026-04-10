@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}} — Preview</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0f0f0f;--card:#1a1a1a;--text:#e0e0e0;--muted:#888;--accent:#2563eb;--green:#22c55e;--border:#2a2a2a;--radius:8px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+h1{font-size:1.4rem;font-weight:600;padding:1rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+h1 a{font-size:.75rem;color:var(--muted);text-decoration:none}
+h1 a:hover{color:var(--text)}
+.grid{display:grid;grid-template-columns:1fr 280px;flex:1;overflow:hidden}
+.tabs{display:flex;gap:2px;padding:.75rem 1rem 0;background:var(--bg)}
+.tab{padding:.5rem 1rem;border:none;background:transparent;color:var(--muted);font-size:.85rem;cursor:pointer;border-radius:var(--radius) var(--radius) 0 0;transition:all .15s}
+.tab:hover{color:var(--text)}
+.tab.active{background:var(--card);color:var(--text)}
+.content-area{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.panel{display:none;flex:1;overflow:auto;padding:1rem}
+.panel.active{display:block}
+.panel pre{white-space:pre-wrap;word-wrap:break-word;font-family:'SF Mono',Consolas,monospace;font-size:.85rem;line-height:1.65;color:var(--text);background:var(--card);padding:1rem;border-radius:var(--radius)}
+.char-count{font-size:.7rem;color:var(--muted);text-align:right;margin-top:.35rem}
+.sidebar{border-left:1px solid var(--border);padding:1rem;display:flex;flex-direction:column;gap:.75rem;overflow-y:auto}
+.info-card{background:var(--card);border-radius:var(--radius);padding:.75rem;font-size:.8rem;line-height:1.5}
+.info-card .label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.25rem}
+.actions{margin-top:auto;display:flex;flex-direction:column;gap:.5rem}
+button{width:100%;padding:.6rem;border:none;border-radius:var(--radius);font-size:.85rem;font-weight:500;cursor:pointer;transition:all .15s}
+.btn-copy{background:var(--accent);color:#fff}
+.btn-copy:hover{opacity:.9}
+.btn-copy.copied{background:var(--green)}
+.btn-open{background:var(--border);color:var(--text)}
+.btn-open:hover{opacity:.85}
+.hint{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.4}
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(120%);background:#333;color:#fff;padding:.6rem 1.2rem;border-radius:var(--radius);font-size:.825rem;opacity:0;transition:all .3s ease}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+</style>
+</head>
+<body>
+
+<h1>
+  {{TITLE}}
+  <a href="{{BLOG_URL}}" target="_blank">View on blog &rarr;</a>
+</h1>
+
+<div class="grid">
+  <div class="content-area">
+    <div class="tabs">
+      <button class="tab active" data-tab="article">📄 文章</button>
+      <button class="tab" data-tab="dynamic">💬 动态</button>
+      <button class="tab" data-tab="imagetext">📸 图文</button>
+      <button class="tab" data-tab="video">🎬 短视频</button>
+    </div>
+    <div class="panel active" id="p-article"><pre>{{ARTICLE_CONTENT}}</pre></div>
+    <div class="panel" id="p-dynamic"><pre>{{DYNAMIC_CONTENT}}</pre><div class="char-count" id="cc-dynamic"></div></div>
+    <div class="panel" id="p-imagetext"><pre>{{IMAGETEXT_CONTENT}}</pre><div class="char-count" id="cc-imagetext"></div></div>
+    <div class="panel" id="p-video"><pre>{{VIDEO_CONTENT}}</pre></div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="info-card">
+      <div class="label">Workflow</div>
+      1. Copy content from tab<br>
+      2. Open 爱贝壳 extension<br>
+      3. Select matching tab (文章/动态/短视频)<br>
+      4. Paste and select platforms<br>
+      5. Click sync
+    </div>
+
+    <div class="info-card">
+      <div class="label">Tab Mapping</div>
+      📄 文章 → 爱贝壳「文章」<br>
+      💬 动态 → 爱贝壳「动态」<br>
+      📸 图文 → 爱贝壳「动态」(图文模式)<br>
+      🎬 短视频 → 爱贝壳「短视频」(描述)
+    </div>
+
+    <div class="actions">
+      <button class="btn-copy" id="btnCopy">Copy Current Tab</button>
+      <button class="btn-open" id="btnOpen">Open 爱贝壳</button>
+    </div>
+    <p class="hint">Copy content, then paste into 爱贝壳 to publish across platforms</p>
+  </aside>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  const CONTENT = {
+    article:   `{{ARTICLE_MD_ESCAPED}}`,
+    dynamic:   `{{DYNAMIC_MD_ESCAPED}}`,
+    imagetext: `{{IMAGETEXT_MD_ESCAPED}}`,
+    video:     `{{VIDEO_MD_ESCAPED}}`
+  };
+
+  let activeTab = "article";
+  const $tabs  = document.querySelectorAll(".tab");
+  const $panels = document.querySelectorAll(".panel");
+  const $copy  = document.getElementById("btnCopy");
+  const $open  = document.getElementById("btnOpen");
+  const $toast = document.getElementById("toast");
+
+  // Show char counts
+  ["dynamic","imagetext"].forEach(k => {
+    const el = document.getElementById("cc-" + k);
+    if (el) el.textContent = CONTENT[k].length + " chars";
+  });
+
+  // Tab switching
+  $tabs.forEach(t => t.addEventListener("click", () => {
+    $tabs.forEach(b => b.classList.remove("active"));
+    $panels.forEach(p => p.classList.remove("active"));
+    t.classList.add("active");
+    activeTab = t.dataset.tab;
+    document.getElementById("p-" + activeTab).classList.add("active");
+    $copy.textContent = "Copy Current Tab";
+    $copy.classList.remove("copied");
+  }));
+
+  // Copy
+  $copy.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(CONTENT[activeTab]);
+      $copy.textContent = "Copied!";
+      $copy.classList.add("copied");
+      toast("Copied to clipboard");
+      setTimeout(() => { $copy.textContent = "Copy Current Tab"; $copy.classList.remove("copied"); }, 2000);
+    } catch { toast("Copy failed — check browser permissions"); }
+  });
+
+  // Open 爱贝壳
+  $open.addEventListener("click", () => {
+    window.open("chrome-extension://jejejajkcbhejfiocemmddgbkdlhhngm/options.html", "_blank");
+  });
+
+  function toast(msg){
+    $toast.textContent = msg;
+    $toast.classList.add("show");
+    setTimeout(() => $toast.classList.remove("show"), 2200);
+  }
+})();
+</script>
+</body>
+</html>

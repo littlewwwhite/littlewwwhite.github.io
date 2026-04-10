@@ -283,7 +283,7 @@ Every post must pass these checks:
 - **Section depth**: every section has 2-4 substantial paragraphs with vivid detail — no thin, abstract-only sections
 - **Closing**: core thesis at higher altitude than opening, 1-3 sentences — no wrap-up, no "值得关注" (writing-guidelines.md 2.3)
 - **Structural tightness**: red thread test passes (first sentences of all sections form coherent chain), paragraphs follow 论断→证据→推论 (writing-guidelines.md 6.4)
-- **Image paths**: relative Page Bundle format only (`![alt](1.png)`) — no absolute paths, no `image/` subfolder
+- **Image paths**: relative Page Bundle format only — no absolute paths, no `image/` subfolder. Use `![alt](file.png "caption text")` with Markdown title for figure captions. The title renders as `<figcaption>` via Hugo render hook.
 - **Frontmatter**: must have title, date, categories (1-2), tags (2-4)
 - **延伸阅读** at the end
 - **Content review passed**: Step 4.7 review checklist completed — all spine items covered, key source data included, no under-developed sections
