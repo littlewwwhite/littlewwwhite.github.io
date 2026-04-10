@@ -35,11 +35,31 @@ When user just wants to create a post skeleton and write conversationally (not a
 ### Step 1: Gather — Collect and parse all input
 
 - **URLs**: Fetch content via WebFetch, extract key arguments and data
+- **Images from sources**: When fetching URLs, also identify technical diagrams and architecture images worth reusing (see Image Extraction below)
 - **Pasted text**: Organize into structured notes
 - **File paths**: Read local files
 - **User direction**: Note the angle, scope, and emphasis the user wants
 
-Output: Internal structured notes of all source material.
+Output: Internal structured notes of all source material + candidate image list.
+
+**Image Extraction from Sources:**
+
+When browsing or fetching source articles, actively look for **technical diagrams** (architecture diagrams, flowcharts, data visualizations, comparison charts) that would enrich the blog post. Decorative images, stock photos, and author avatars are not worth extracting.
+
+For each candidate image:
+1. Extract the image URL from the page DOM (via CDP `/eval` or from HTML `<img>` tags)
+2. Download to the post's page bundle directory: `content/posts/YYMMDD/`
+3. Name descriptively: `anthropic-phase2-architecture.png`, not `1.png`
+4. Record the source URL for 延伸阅读 attribution
+
+**Selection criteria:**
+- ✅ Architecture diagrams, system flowcharts, data charts from engineering blogs
+- ✅ Official product screenshots that convey information hard to describe in text
+- ✅ Benchmark/comparison visualizations with concrete data
+- ❌ Decorative illustrations, stock photos, logos
+- ❌ Images that can be better expressed as mermaid diagrams (prefer mermaid when feasible)
+
+**Priority**: mermaid recreation > source image download. Only download source images when the original diagram's complexity or visual richness exceeds what mermaid can express.
 
 ### Step 2: Think — Structured reflection (MUST output to user)
 
@@ -153,7 +173,7 @@ Read `references/writing-guidelines.md` (full file) and `references/learning-log
 **Content Richness (anti-terse rule):**
 Terse, over-compressed writing is as bad as bloated writing. Each section needs:
 - **Vivid detail**: storytelling-level specifics (e.g., "a worker standing next to the steam engine, eyes on the speed, hand on the valve" not just "a worker adjusted the valve")
-- **Visual aids where they help**: use mermaid diagrams for architectures, flows, and feedback loops; use tables for structured comparisons. At least 1 diagram or table per post when the content involves systems, processes, or multi-item comparisons.
+- **Visual aids where they help**: use mermaid diagrams for architectures, flows, and feedback loops; use tables for structured comparisons; use source images when they convey information better than text or mermaid (see Step 1 Image Extraction). At least 1 diagram, table, or source image per post when the content involves systems, processes, or multi-item comparisons.
 - **Concrete examples**: specific tool names, code snippets, real numbers, named projects — not "some teams found that..."
 - **Section depth**: each section should have 2-4 substantial paragraphs. A section with only 1-2 short paragraphs is under-developed — expand with examples, implications, or vivid analogies.
 - **Target length**: 2500-4000 Chinese characters for a typical analysis post. Below 2000 is almost certainly too compressed. Above 5000 risks losing focus.
@@ -189,7 +209,7 @@ After writing and style self-check, perform a content review before finalizing. 
 |-------|---------------|--------|
 | **Key points coverage** | Are all major arguments from the Spine table present in the article? List each spine item and whether it was adequately covered. | ✅/❌ |
 | **Source data used** | Were the important data points, numbers, and quotes from source material included? List the top 3-5 data points and whether they appear. | ✅/❌ |
-| **Diagram/table presence** | Does the article include mermaid diagrams or tables where they would aid understanding? | ✅/❌ |
+| **Diagram/table/image presence** | Does the article include mermaid diagrams, tables, or source images where they would aid understanding? Were Step 1 candidate images used where appropriate? | ✅/❌ |
 | **Section depth** | Is any section noticeably thinner than others? Flag under-developed sections. | ✅/❌ |
 | **Vivid detail** | Does each section have at least one concrete, story-level detail (not just abstract claims)? | ✅/❌ |
 
@@ -259,7 +279,7 @@ Every post must pass these checks:
 - **Transitions**: explicit connective sentences between every pair of sections
 - **No forbidden structures**: no 摘要/总结/结语, no 首先…其次…最后…, no 1.1/1.2 subsections
 - **Specific data**: numbers, comparisons, real code — not vague claims
-- **Visual aids**: at least 1 mermaid diagram or comparison table when the content involves systems, processes, or multi-item comparisons
+- **Visual aids**: at least 1 mermaid diagram, comparison table, or source image when the content involves systems, processes, or multi-item comparisons
 - **Section depth**: every section has 2-4 substantial paragraphs with vivid detail — no thin, abstract-only sections
 - **Closing**: core thesis at higher altitude than opening, 1-3 sentences — no wrap-up, no "值得关注" (writing-guidelines.md 2.3)
 - **Structural tightness**: red thread test passes (first sentences of all sections form coherent chain), paragraphs follow 论断→证据→推论 (writing-guidelines.md 6.4)
