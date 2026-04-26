@@ -31,7 +31,6 @@ body.history-page .main{max-width:min(1520px,calc(100vw - 28px));padding-left:14
 .history-dir-meta{display:flex;gap:6px;flex-wrap:wrap}
 .history-detail-body{padding:12px 14px;display:flex;flex-direction:column;gap:12px}
 .history-section-card{border:0;border-radius:0;padding:0;background:transparent}
-.history-intro{margin:0;padding:12px 14px;border:1px solid rgba(113,112,255,.18);border-radius:14px;background:linear-gradient(180deg,rgba(113,112,255,.10),rgba(113,112,255,.04));color:var(--primary);font-size:.93rem;line-height:1.75;box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
 .history-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:0}
 .history-column{display:grid;gap:10px;align-content:start}
 .history-item{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px 12px 10px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));box-shadow:0 0 0 1px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.02)}
@@ -261,7 +260,7 @@ const HISTORY_APP_DATA = {"sources": [{"source_key": "ai-blogs", "display_name":
       return;
     }
     emptyState.hidden = true;
-    const intro = day.intro ? '<p class="history-intro">' + esc(day.intro) + '</p>' : '';
+    const intro = day.intro ? '<p class="history-detail-subtitle">' + esc(day.intro) + '</p>' : '';
     detailEl.innerHTML =
       '<header class="history-detail-header">' +
         '<h2>' + esc(day.brief_date) + '</h2>' +
