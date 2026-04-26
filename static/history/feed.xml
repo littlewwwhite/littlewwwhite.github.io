@@ -5,68 +5,113 @@
 <link>https://blog.zjding.com/history/</link>
 <description>AI Daily Digest 晨报历史归档，可按天回看，并区分不同来源栏目。</description>
 <language>zh-cn</language>
-<lastBuildDate>Sun, 26 Apr 2026 12:57:50 +0000</lastBuildDate>
+<lastBuildDate>Sun, 26 Apr 2026 13:09:21 +0000</lastBuildDate>
 <item>
 <title>AI Daily Digest 晨报 - 2026-04-26</title>
 <link>https://blog.zjding.com/history/?date=2026-04-26</link>
 <guid isPermaLink="false">ai-daily-digest-2026-04-26</guid>
-<category>AI 博客 Top 5 · GitHub Trending Top 5</category>
+<category>AI 博客 Top 10 · GitHub Trending Top 10</category>
 <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
-<description><![CDATA[<pre>来源：AI 博客 Top 5 · GitHub Trending Top 5
-AI 博客 Top 5（5 条）
-1. GPT-5.4 和 GPT-5.5 的统一模型与能力提升
-OpenAI 正把编码能力并入主模型，意味着未来通用模型会同时更强地承担编程、代理和计算机操作任务。
-GitHub Trending Top 5（5 条）
+<description><![CDATA[<pre>来源：AI 博客 Top 10 · GitHub Trending Top 10
+AI 博客 Top 10（10 条）
+1. OpenAI GPT-5.4 和 GPT-5.5 的模型统一与能力提升
+OpenAI 正把编码与主模型合并，GPT-5.5 在代理式编程和计算机任务上继续增强。
+GitHub Trending Top 10（10 条）
 1. mattpocock/skills
-一个直接公开个人 AI/Claude 技能目录的 Shell 项目，今天新增 2,507 星，适合参考如何组织可复用的 agent skills。</pre>]]></description>
-<content:encoded><![CDATA[<pre>AI 博客 Top 5
+Shell 项目，公开个人 Claude/Agent 技能目录，今天新增 2,507 星，适合参考技能模块化组织方式。</pre>]]></description>
+<content:encoded><![CDATA[<pre>AI 博客 Top 10
 
-1. GPT-5.4 和 GPT-5.5 的统一模型与能力提升
+1. OpenAI GPT-5.4 和 GPT-5.5 的模型统一与能力提升
 来源：simonwillison.net
-看点：OpenAI 正把编码能力并入主模型，意味着未来通用模型会同时更强地承担编程、代理和计算机操作任务。
+看点：OpenAI 正把编码与主模型合并，GPT-5.5 在代理式编程和计算机任务上继续增强。
 链接：https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything
 
-2. GPT-5.5 提示指南
+2. GPT-5.5 提示指南：优化响应时间的技巧
 来源：simonwillison.net
-看点：这篇指南给出了 GPT-5.5 的实战提示策略，尤其适合要让模型“先深想、后输出”的产品与 API 场景。
+看点：官方提示指南强调在长思考场景下优化可见响应节奏，适合 API 与产品落地参考。
 链接：https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything
 
 3. 变异 AI 驱动的病毒
 来源：geohot.github.io
-看点：文章借“AI 病毒”讨论莫拉维克悖论，提醒我们 AI 的能力演进顺序与人类直觉并不一致，值得重新理解机器智能边界。
+看点：借“AI 病毒”讨论莫拉维克悖论，提醒我们重新理解机器能力演化的顺序与边界。
 链接：https://geohot.github.io//blog/jekyll/update/2026/04/25/a-mutating-virus.html
 
-4. llm 0.31 版本发布：支持 GPT-5.5 和新的详细程度参数
-来源：simonwillison.net
-看点：Simon Willison 的 llm CLI 已快速跟进 GPT-5.5，并新增 verbosity 控制，方便开发者更精细地调节输出风格。
-链接：https://simonwillison.net/2026/Apr/24/llm/#atom-everything
+4. 关于 AI 的重大问题的博客奖项
+来源：dwarkesh.com
+看点：通过设立博客奖吸引研究者讨论 AI 大问题，折射出高质量公共讨论的重要性。
+链接：https://www.dwarkesh.com/p/blog-prize
 
-5. 人们并不渴望自动化
+5. AI 生成图像的奇特组合：为什么是这样？
 来源：simonwillison.net
-看点：这篇文章指出公众并不会天然欢迎“软件大脑”接管工作，AI 产品落地除了能力，还要解决心理接受度问题。
+看点：从荒诞生成图像切入，讨论模型理解世界时的错位与评测难题。
+链接：https://simonwillison.net/2026/Apr/25/why-are-you-like-this/#atom-everything
+
+6. C/C++ 依赖管理的新突破
+来源：lcamtuf.substack.com
+看点：聚焦 C/C++ 依赖管理的潜在突破，对长期受构建复杂度困扰的开发者很有参考价值。
+链接：https://lcamtuf.substack.com/p/a-breakthrough-in-cc-dependency-management
+
+7. 防御 RAII 类型中的异常
+来源：devblogs.microsoft.com/oldnewthing
+看点：讨论 C++ 中 scope_exit 这类 RAII 工具的异常防御取舍，适合关注工程稳健性的开发者。
+链接：https://devblogs.microsoft.com/oldnewthing/20260424-00/?p=112266
+
+8. OpenAI 如何颠覆 Oracle
+来源：wheresyoured.at
+看点：从企业软件格局看 OpenAI 对 Oracle 一类传统巨头的冲击，值得关注 AI 对商业软件的替代效应。
+链接：https://www.wheresyoured.at/how-openai-kills-oracle/
+
+9. 公众并不渴望自动化
+来源：simonwillison.net
+看点：指出用户未必天然欢迎 AI 自动化，产品普及除了能力还取决于接受度与体验。
 链接：https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything
 
-GitHub Trending Top 5
+10. llm 工具更新：支持 GPT-5.5 模型和新的详细程度参数
+来源：simonwillison.net
+看点：llm CLI 快速接入 GPT-5.5，并加入 verbosity 控制，方便开发者更细致调节输出风格。
+链接：https://simonwillison.net/2026/Apr/24/llm/#atom-everything
+
+GitHub Trending Top 10
 
 1. mattpocock/skills
-值得关注：一个直接公开个人 AI/Claude 技能目录的 Shell 项目，今天新增 2,507 星，适合参考如何组织可复用的 agent skills。
+值得关注：Shell 项目，公开个人 Claude/Agent 技能目录，今天新增 2,507 星，适合参考技能模块化组织方式。
 链接：https://github.com/mattpocock/skills
 
 2. Alishahryar1/free-claude-code
-值得关注：Python 项目，主打“免费在终端、VSCode 和 Discord 使用 claude-code”，今天新增 1,694 星，说明低门槛 AI coding 入口很受追捧。
+值得关注：Python 项目，主打在终端、VSCode 和 Discord 免费使用 claude-code，今天新增 1,694 星，热度很高。
 链接：https://github.com/Alishahryar1/free-claude-code
 
 3. Z4nzu/hackingtool
-值得关注：一个“All in One”安全工具箱，Python 编写，今天新增 1,724 星，偏安全研究与渗透测试资源整合。
+值得关注：Python 编写的一站式安全工具箱，今天新增 1,724 星，适合渗透测试与安全研究场景。
 链接：https://github.com/Z4nzu/hackingtool
 
 4. abhigyanpatwari/GitNexus
-值得关注：TypeScript 项目，把 GitHub 仓库转成浏览器内运行的知识图谱和 Graph RAG 代码探索引擎，今天新增 667 星，很适合代码理解场景。
+值得关注：TypeScript 项目，可在浏览器中把仓库转成知识图谱并结合 Graph RAG 做代码探索，今天新增 667 星。
 链接：https://github.com/abhigyanpatwari/GitNexus
 
 5. PostHog/posthog
-值得关注：PostHog 的全栈开发者产品平台，Python 为主，覆盖分析、回放、实验和 AI 助手，今天新增 338 星，说明“可观测 + 产品分析 + AI”仍是热方向。
-链接：https://github.com/PostHog/posthog</pre>]]></content:encoded>
+值得关注：Python 为主的开发者产品平台，覆盖分析、回放、实验与 AI 助手，今天新增 338 星，持续受关注。
+链接：https://github.com/PostHog/posthog
+
+6. microsoft/typescript-go
+值得关注：Go 编写的 TypeScript 原生移植开发仓库，背靠微软，代表编译器性能与工程化演进方向。
+链接：https://github.com/microsoft/typescript-go
+
+7. trycua/cua
+值得关注：面向 Computer-Use Agents 的开源基础设施，提供沙箱、SDK 和评测基准，适合桌面智能体训练与评估。
+链接：https://github.com/trycua/cua
+
+8. gastownhall/beads
+值得关注：Go 项目，定位为 coding agent 的“记忆增强”层，帮助代理保留上下文与长期任务信息。
+链接：https://github.com/gastownhall/beads
+
+9. curl/curl
+值得关注：经典 C 语言网络传输工具与 libcurl 库，虽今日仅增 9 星，但仍是基础设施级常青项目。
+链接：https://github.com/curl/curl
+
+10. home-assistant/core
+值得关注：Python 主导的开源家庭自动化核心项目，强调本地控制与隐私优先，今天新增 52 星。
+链接：https://github.com/home-assistant/core</pre>]]></content:encoded>
 </item>
 <item>
 <title>AI Daily Digest 晨报 - 2026-04-25</title>
