@@ -1,0 +1,38 @@
+🌅 AI 晨报｜Top 5 精读
+
+今天的信号很集中：一边是个人 AI 与 Agent 的接口形态在快速从 GUI 转向 API / headless，另一边是系统提示词、权限控制和 agentic workflow 这些“底层工程”开始变成真正的竞争力。
+
+1. 面向个人 AI 的“无界面化”服务正在起势
+来源：simonwillison.net｜评分：15/30
+看点：文章判断，未来很多在线服务会优先把能力暴露给个人 AI，而不是让 Agent 去“点网页”。对用户来说体验更顺，对系统来说也更稳定。
+推荐理由：这篇很适合做趋势判断参考。它点出了一个关键变化：API 不再只是附属能力，而可能重新成为产品胜负手。
+关键词：个人 AI、Headless、API、Agent 接口
+原文：https://simonwillison.net/2026/Apr/19/headless-everything/#atom-everything
+
+2. Claude Opus 4.6 到 4.7 的系统提示词有哪些变化
+来源：simonwillison.net｜评分：15/30
+看点：作者对比了 Anthropic 新旧系统提示词，能直接看到模型在工具使用、安全策略、对话收束方式上的调整。
+推荐理由：如果你在做 Agent、提示词治理或模型行为评估，这类“官方系统提示词 diff”价值很高，能帮助理解模型产品化背后的设计取向。
+关键词：Claude、系统提示词、模型行为、评估
+原文：https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-everything
+
+3. 用 Git 时间线追踪 Claude 系统提示词演化
+来源：simonwillison.net｜评分：15/30
+看点：作者把 Anthropic 公布的提示词历史拆成可版本管理的文件，并用 Git 的 `log`、`diff`、`blame` 去观察演进过程。
+推荐理由：这不是单纯“看提示词”，而是把提示词研究工程化。对做模型审计、行为回归、版本对比的人很有启发。
+关键词：Prompt 版本管理、Git、模型审计、Claude
+原文：https://simonwillison.net/2026/Apr/18/extract-system-prompts/#atom-everything
+
+4. AI Agent 需要的不只是认证，更是细粒度授权
+来源：daringfireball.net｜评分：15/30
+看点：文章讨论企业 Agent 在真实系统中面临的权限边界问题：Agent 代表谁行动、能访问什么、如何避免“Confused Deputy”式越权。
+推荐理由：这是 Agent 落地绕不过去的一环。很多团队已经在做智能助手和自动化，但真正难的是把权限模型补齐，而不是只接个 OAuth。
+关键词：AI Agent、安全、授权、Fine-Grained Authorization
+原文：https://workos.com/blog/agents-need-authorization-not-just-authentication?utm_source=daringfireball&amp;utm_medium=newsletter&amp;utm_campaign=q22026
+
+5. 一次短提示词，如何驱动完整的 Agent 工程任务
+来源：simonwillison.net｜评分：15/30
+看点：作者分享了一个很具体的 agentic engineering 实例：用一条看似简短的指令，为自己的 blog-to-newsletter 工具增加新的内容类型支持。
+推荐理由：这篇胜在实操感强。它让人看到，AI coding 的价值不只是“补全代码”，而是把一个真实需求从 prompt 推进到工作流落地。
+关键词：AI Coding、Agentic Engineering、工作流、内容自动化
+原文：https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything

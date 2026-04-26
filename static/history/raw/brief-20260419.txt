@@ -1,0 +1,38 @@
+🌅 AI 晨报｜Top 5 精读
+
+今天的信号很集中：一边是 LLM 底层表示与训练行为的进一步拆解，另一边是提示词、系统提示与工具链正在继续产品化。对做模型、推理优化、Agent 或 AI 应用的人来说，今天这几篇都很值得扫一遍。
+
+1. LLM 权重为什么适合高斯分布表示？
+来源：johndcook.com｜评分：26/30
+看点：文章围绕 `Gaussian distributed weights for LLMs` 展开，重点关联到 QLoRA、NF4 和 4-bit 量化，讨论为什么大模型权重分布特征会影响压缩与表示方式。
+推荐理由：如果你关心模型压缩、低比特推理、QLoRA 微调，理解“权重分布”这层直觉会很有帮助。
+关键词：LLM 权重、NF4、4-bit floating point、quantization
+原文：https://www.johndcook.com/blog/2026/04/18/qlora/
+
+2. FP4：4 位浮点到底有什么价值？
+来源：johndcook.com｜评分：26/30
+看点：这篇 `4-bit floating point FP4` 聚焦超低精度数值表示，解释 FP4 这类数据类型为什么会在 LLM 推理和训练优化里越来越重要。
+推荐理由：做推理加速、显存优化、边缘部署的人，可以用它快速补齐低精度表示的基本概念框架。
+关键词：floating point、FP4、data types、LLM
+原文：https://www.johndcook.com/blog/2026/04/17/fp4/
+
+3. LLM 在训练过程中是如何变得更“连贯”的？
+来源：gilesthomas.com｜评分：26/30
+看点：`How an LLM becomes more coherent as we train it` 讨论模型在训练推进时，连贯性如何逐步形成，并把这种变化和更早期的序列模型直觉联系起来。
+推荐理由：如果你常看 benchmark，却想更理解“模型能力是怎么长出来的”，这篇会比单纯看分数更有启发。
+关键词：LLM training、coherence、RNN、model evolution
+原文：https://www.gilesthomas.com/2026/04/how-an-llm-becomes-more-coherent-over-training
+
+4. 把 Claude 系统提示词当作一条 Git 时间线来分析
+来源：simonwillison.net｜评分：24/30
+看点：`Claude system prompts as a git timeline` 从系统提示词演化切入，观察模型产品能力、约束和行为边界是如何随版本变化的。
+推荐理由：做 Agent、提示词工程、模型评测或安全对齐的同学，都能从“提示词版本史”里看到很具体的产品与能力信号。
+关键词：Claude、system prompts、LLM、version control
+原文：https://simonwillison.net/2026/Apr/18/extract-system-prompts/#atom-everything
+
+5. Simon Willison 的 Agentic Engineering：给博客转 newsletter 工具加新内容类型
+来源：simonwillison.net｜评分：20/30
+看点：文章展示了一个很实用的 agentic workflow 小案例：如何通过一段不长但设计得当的提示，把内容处理流程自动化到可直接交付。
+推荐理由：如果你在做 AI coding、工作流自动化或内容生成工具，这类“小而真”的范例通常比宏大概念更能直接迁移到实战。
+关键词：tool、prompt engineering、newsletter、workflow
+原文：https://simonwillison.net/guides/agentic-engineering-patterns/adding-a-new-content-type/#atom-everything

@@ -1,0 +1,38 @@
+🌅 AI 晨报｜Top 5 精读
+
+今天的信号很集中：一边是前沿模型能力继续上探，另一边是安全、可信评估和落地防护变得更重要。尤其是 Anthropic Mythos 相关讨论，几乎定义了今天的主线。
+
+1. Anthropic 的 Claude Mythos 因漏洞挖掘能力太强而暂不公开
+来源：daringfireball.net｜评分：26/30
+看点：Anthropic 透露 Claude Mythos 在发现和利用漏洞上的能力非常突出，因此选择暂不面向公众发布。
+推荐理由：这条信息同时体现了模型能力跃迁和安全治理升级，是今天最值得关注的行业风向标。
+关键词：Anthropic、Claude Mythos、漏洞挖掘、AI 安全
+原文：https://red.anthropic.com/2026/mythos-preview/
+
+2. 从零开始训练 LLM：作者在云端做“干预实验”优化模型
+来源：gilesthomas.com｜评分：26/30
+看点：作者围绕一个 1.63 亿参数的 GPT-2 风格模型，记录了在云端训练中如何通过一系列干预手段提升效果。
+推荐理由：如果你关心模型训练的真实工程细节，这篇比抽象方法论更有参考价值，适合技术读者深读。
+关键词：LLM、训练、GPT-2、云端实验
+原文：https://www.gilesthomas.com/2026/04/llm-from-scratch-32j-interventions-trying-to-train-a-better-model-in-the-cloud
+
+3. Meta 新模型 Muse Spark 亮相，meta.ai 工具链也在增强
+来源：simonwillison.net｜评分：25/30
+看点：Meta 推出 Llama 4 之后的新模型 Muse Spark，并在 meta.ai 聊天产品中加入了一些有意思的新工具。
+推荐理由：这条值得看的是“大厂产品化节奏”——不只是发模型，还在同步推进体验层和入口层。
+关键词：Meta AI、Muse Spark、LLM、产品化
+原文：https://simonwillison.net/2026/Apr/8/muse-spark/#atom-everything
+
+4. 面向 AI 代理的包安全防御开始成体系
+来源：nesbitt.io｜评分：25/30
+看点：文章提出锁文件、沙箱、冷却计时器等机制，用来降低 AI 代理处理依赖和执行外部代码时的风险。
+推荐理由：随着 AI 代理更接近真实工作流，安全防线正在从“提醒风险”走向“可执行的工程方案”。
+关键词：AI Agents、Package Security、Lockfiles、Sandboxes
+原文：https://nesbitt.io/2026/04/09/package-security-defenses-for-ai-agents.html
+
+5. 对 Claude Mythos 热度的反向审视：这次发布可能被夸大了
+来源：garymarcus.substack.com｜评分：25/30
+看点：作者从三个角度质疑 Anthropic 对 Mythos 的叙事，提醒外界不要过快把有限信息解读成确定性结论。
+推荐理由：在高热度 AI 叙事里，这篇提供了难得的“降温视角”，有助于把兴奋和判断重新拉开距离。
+关键词：Anthropic、Claude、Mythos、理性评估
+原文：https://garymarcus.substack.com/p/three-reasons-to-think-that-the-claude

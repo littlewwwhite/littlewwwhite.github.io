@@ -1,0 +1,38 @@
+🌅 AI 晨报｜Top 5 精读
+
+今天的信号偏“技术路线 + 社会议题”双线并进：高分内容一边在看 AI 方法与工具演化，一边也在追问决策、伦理与现实成本。前五里，AI 相关内容依然最强，但真正值得看的是它们背后的长期判断。
+
+1. 紧缩政策催生法西斯主义
+来源：garymarcus.substack.com｜评分：26/30
+看点：文章把经济紧缩、社会动荡与技术讨论放到同一张图里看，强调公共投入不足会放大更深层的系统性风险。
+推荐理由：如果你最近只关注模型和产品，这篇能把视角重新拉回“技术之外的真实世界”。
+关键词：neurosymbolic AI, Apple, AI research
+原文：https://garymarcus.substack.com/p/even-more-good-news-for-the-future
+
+2. 使用 eSIM 保留英国手机号的最便宜方法
+来源：garymarcus.substack.com｜评分：26/30
+看点：围绕长期保号、短信 2FA 和 eSIM 的实际选择，讨论如何用更低成本保住关键数字身份。
+推荐理由：这是很接地气的一篇，尤其适合经常出海、换设备或担心账号恢复链路的人。
+关键词：Claude Code, AI advancement, LLM
+原文：https://garymarcus.substack.com/p/the-biggest-advance-in-ai-since-the
+
+3. 阅读清单 2026 年 4 月 11 日
+来源：idiallo.com｜评分：25/30
+看点：一篇横跨工程、城市发展与产业动向的精选清单，适合快速扫一遍近期值得跟进的话题。
+推荐理由：如果你想在最短时间里扩展信息面，这类高质量 reading list 往往比单篇深读更高效。
+关键词：AWS, developer, certification, cloud
+原文：https://idiallo.com/byte-size/we-are-aws-salesmen?src=feed
+
+4. 有时，有权势的人只是会做蠢事
+来源：simonwillison.net｜评分：24/30
+看点：文章直接点出一个常被忽略的事实——身居高位不等于判断可靠，权力也不会自动带来理性。
+推荐理由：它很适合拿来校正我们对“大人物”“大公司”“大叙事”的天然滤镜，读完会更清醒。
+关键词：LLM, laziness, optimization, cost
+原文：https://simonwillison.net/2026/Apr/13/bryan-cantrill/#atom-everything
+
+5. 乐观并非性格缺陷
+来源：simonwillison.net｜评分：24/30
+看点：文章尝试为“乐观”正名，认为积极预期不是幼稚，而是一种面对复杂局面的行动姿态。
+推荐理由：在近期普遍偏悲观的技术舆论里，这篇很适合作为一天开始时的心理校准。
+关键词：Gemma, MLX, audio transcription, LLM
+原文：https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything

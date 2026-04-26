@@ -1,0 +1,38 @@
+🌅 AI 晨报｜Top 5 精读
+
+今天的信号很集中：一边是模型能力和训练机理继续刷新认知，另一边是 Agent 与 AI 安全开始进入更具体、可落地的讨论。若你最近关注本地模型、推理控制或 AI 实战，这 5 篇最值得先看。
+
+1. AI 网络安全并非工作量证明的正确类比
+来源：antirez.com｜评分：26/30
+看点：作者指出，把 AI 找漏洞类比成加密世界里的工作量证明并不成立；增加算力和采样次数，并不能像 PoW 那样“保证”找到问题。
+推荐理由：这篇很适合做 AI 安全认知校准，能帮助你理解为什么 AI 漏洞发现更像状态空间探索，而不是单纯堆计算。
+关键词：AI、安全、漏洞发现、Proof of Work
+原文：http://antirez.com/news/163
+
+2. 我的笔记本上的 Qwen3.6-35B-A3B 画出了比 Claude Opus 4.7 更好的鹈鹕
+来源：simonwillison.net｜评分：25/30
+看点：一个轻松但很有意思的视觉 benchmark：Qwen3.6-35B-A3B 在本地设备上的生成效果，居然压过了 Claude Opus 4.7。
+推荐理由：如果你在跟踪开源模型、多模态能力和本地部署，这篇能快速提供一个很直观的性能感知。
+关键词：Qwen、LLM、多模态、Benchmark、本地模型
+原文：https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything
+
+3. LLM 在训练过程中如何变得更连贯
+来源：gilesthomas.com｜评分：25/30
+看点：通过训练一个小型 GPT-2，作者展示了模型输出如何从“胡言乱语”逐渐过渡到更流畅、更有意义的文本。
+推荐理由：这篇很适合晨读补脑，能帮你从更直观的角度理解 Transformer 在训练中是怎样一点点学会“说人话”的。
+关键词：LLM、训练、连贯性、Transformer、GPT-2
+原文：https://www.gilesthomas.com/2026/04/how-an-llm-becomes-more-coherent-over-training
+
+4. LLM-Anthropic 0.25 发布
+来源：simonwillison.net｜评分：24/30
+看点：新版本加入了对 `claude-opus-4.7` 的支持，还扩展了 `thinking_effort`、`thinking_display` 和 `thinking_adaptive` 等推理控制能力。
+推荐理由：如果你平时会折腾模型调用、Agent 工作流或 AI 开发工具链，这篇属于“直接可用”的更新信息。
+关键词：Anthropic、Claude、LLM 工具、推理控制、AI 开发
+原文：https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything
+
+5. Agentic AI 如何利用 Have I Been Pwned 的 API
+来源：troyhunt.com｜评分：23/30
+看点：文章讨论了 Agentic AI 如何接入 HIBP API，把数据泄露检查这类任务做成更自动化、更有执行力的安全工作流。
+推荐理由：它不是空谈“Agent 改变世界”，而是在讲 AI Agent 怎么结合真实 API 做实事，特别适合做 AI + 安全方向的实践参考。
+关键词：Agentic AI、API、HIBP、自动化、安全
+原文：https://www.troyhunt.com/heres-what-agentic-ai-can-do-with-have-i-been-pwneds-apis/

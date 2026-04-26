@@ -1,0 +1,38 @@
+🌅 AI 晨报｜Top 5 精读
+
+今天的 AI 信号很集中：一边是更实用的模型训练、Agent 调用和语音能力，一边是对模型效果与工具接口的快速验证。适合早上 5 分钟扫一遍，抓住“能直接上手”的变化。
+
+1. 从零手写 LLM：用梯度累积在本地训练出更好的模型
+来源：gilesthomas.com｜评分：26/30
+看点：作者继续“手写 LLM”系列，这次重点讲如何通过 `gradient accumulation` 在本地受限算力下提升训练效果。
+推荐理由：如果你关心小算力训练、实验复现或本地微调，这是很实操的一篇，能直接帮助你优化训练策略。
+关键词：LLM、梯度累积、本地训练、模型训练
+原文：https://www.gilesthomas.com/2026/04/llm-from-scratch-32k-interventions-training-our-best-model-locally-gradient-accumulation
+
+2. Agentic AI 能把 Have I Been Pwned 的 API 玩到什么程度？
+来源：troyhunt.com｜评分：26/30
+看点：用真实安全数据接口演示 Agentic AI 的能力边界，观察模型如何理解、组合并调用 API 完成任务。
+推荐理由：这篇不是空谈 Agent，而是贴近生产世界的“AI + API”案例，对做智能助手、工作流自动化、AI 工具集成的人很有参考价值。
+关键词：Agentic AI、API 调用、AI 工具、安全数据
+原文：https://www.troyhunt.com/heres-what-agentic-ai-can-do-with-have-i-been-pwneds-apis/
+
+3. 我笔记本上的 Qwen3.6-35B-A3B，画鹈鹕竟然比 Claude Opus 4.7 更好
+来源：simonwillison.net｜评分：24/30
+看点：一篇很典型的模型效果对比观察，聚焦 Qwen 与 Claude Opus 在具体任务上的表现差异。
+推荐理由：比起抽象 benchmark，这种具体任务上的“意外胜出”更能提醒我们：模型选型要看场景，不要只看品牌或总榜。
+关键词：Qwen、Claude Opus、模型评测、任务对比
+原文：https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-everything
+
+4. `llm-anthropic 0.25` 发布
+来源：simonwillison.net｜评分：23/30
+看点：Simon Willison 介绍了 `llm-anthropic` 的新版本，涉及 Anthropic 模型在 `llm` 工具链中的调用能力与参数支持。
+推荐理由：如果你平时会在命令行或脚本里接模型，这类轻量工具更新很值得关注，往往直接影响实验效率和接口可玩性。
+关键词：Anthropic、LLM 工具链、Claude、开发者工具
+原文：https://simonwillison.net/2026/Apr/16/llm-anthropic/#atom-everything
+
+5. Gemini 3.1 Flash TTS
+来源：simonwillison.net｜评分：23/30
+看点：Google 的 Gemini 3.1 Flash TTS 提供新的文本转语音能力，适合快速体验语音生成质量与交互可能性。
+推荐理由：语音正在重新变成 AI 产品的一等入口；如果你在做语音助手、播报、陪伴式交互或多模态产品，这条值得留意。
+关键词：Gemini、TTS、文本转语音、多模态、Google
+原文：https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/#atom-everything

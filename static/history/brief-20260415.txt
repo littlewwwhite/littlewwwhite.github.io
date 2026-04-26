@@ -1,0 +1,38 @@
+🌅 AI 晨报｜Top 5 精读
+
+今天的信号很集中：AI 正从“能不能做”走向“怎么安全落地、怎么真正被团队用起来”。除了模型评测，企业级代理授权、网络安全协同和人机协作式助手，都是今天更值得关注的方向。
+
+1. WorkOS FGA：AI 代理的授权层
+来源：daringfireball.net｜评分：24/30
+看点：文章直指企业部署 AI 代理的核心难题不是身份认证，而是细粒度授权；只有把代理的权限边界定义清楚，AI 才能真正进入生产环境。
+推荐理由：这类“AI 基础设施”话题比模型八卦更重要，尤其适合在做企业 Copilot、Agent、自动化工作流的人先读。
+关键词：AI agents、authorization、enterprise deployment
+原文：https://workos.com/blog/agents-need-authorization-not-just-authentication?utm_source=daringfireball&amp;utm_medium=newsletter&amp;utm_campaign=q22026
+
+2. 史蒂夫·耶格的观点：Google 的 AI 采用率与约翰迪尔相当
+来源：simonwillison.net｜评分：25/30
+看点：文章提到大型组织里的 AI 使用往往高度分化：少数人深度依赖，大量人仍在观望，真正难的是组织 adoption，而不是单点能力展示。
+推荐理由：如果你在团队里推动 AI 编程、Agent 或内部工具，这篇很有现实参考价值，能帮助你理解“为什么技术已经可用，但使用率还没起来”。
+关键词：OpenAI、GPT-5.4-Cy、cyber defense、AI safety
+原文：https://simonwillison.net/2026/Apr/14/trusted-access-openai/#atom-everything
+
+3. Meta 正在构建马克·扎克伯格的 AI 版本以与员工互动
+来源：garymarcus.substack.com｜评分：26/30
+看点：Meta 在尝试把高层管理者的表达风格、反馈方式和公开观点做成可交互 AI 角色，用于内部沟通与员工反馈。
+推荐理由：它不只是“做个数字分身”这么简单，而是在提示一个更大的方向：AI 可能会进入组织管理、内部知识传递和决策沟通场景。
+关键词：Claude、LLM、AI safety、evaluation
+原文：https://garymarcus.substack.com/p/claude-mythos-evaluated
+
+4. Troy Hunt 的每周更新 499 期
+来源：simonwillison.net｜评分：24/30
+看点：作者谈到 AI 助手并不一定要完全自主处理工单，更现实也更有效的路径，是先做“辅助式智能”，帮人提速、补全和降低重复劳动。
+推荐理由：这是很典型的“AI 真正好用”的产品思路：先增强人工，再逐步自动化，尤其适合做客服、运营、内部支持系统的人参考。
+关键词：Zig、compiler、release notes、performance
+原文：https://simonwillison.net/2026/Apr/15/juicy-main/#atom-everything
+
+5. Steve Yegge
+来源：simonwillison.net｜评分：23/30
+看点：围绕 AI 在工程团队中的实际采用情况，文章折射出一个现实：工具能力提升很快，但团队文化、习惯迁移和信任建立仍是主要瓶颈。
+推荐理由：如果你关心 AI coding 的下一步，这篇值得和第 2 条一起看——一个讲现象，一个更偏文化与组织层面的长期影响。
+关键词：AI adoption、Google engineers、tech culture、AI development
+原文：https://simonwillison.net/2026/Apr/13/steve-yegge/#atom-everything

@@ -1,0 +1,38 @@
+🌅 AI 晨报｜Top 5 精读
+
+今天的 AI 信号很集中：一边是代理、聊天机器人和 AI 风险的现实反思，另一边是围绕 Claude、Copilot、OpenRouter 这类开发者工具的产品与成本变化。对做模型应用、AI 编码和工具链的人来说，今天很适合补这 5 篇。
+
+1. AI 末日的四骑士
+来源：wheresyoured.at｜评分：23/30
+看点：作者从失业、信息操纵、自主武器到更长期的系统性风险，梳理了 AI 可能带来的四类核心威胁。
+推荐理由：这篇不是泛泛而谈的“AI 焦虑文”，而是把讨论重新拉回到技术落地后的真实外部性，适合做产品、代理和平台的人校准风险视角。
+关键词：AI、existential risk、future of AI
+原文：https://www.wheresyoured.at/four-horsemen-of-the-aipocalypse/
+
+2. AI 代理其实已经“太像人”了
+来源：simonwillison.net｜评分：22/30
+看点：文章引用 Andreas Påhlsson-Notini 的观点，指出很多 AI agent 的问题不在“不像人”，而在于它们把人类常见的敷衍、走捷径和自我合理化也学了过去。
+推荐理由：如果你最近在做 coding agent、workflow agent 或自动化助手，这篇很适合作为产品反思：代理失败，往往不是模型不够强，而是行为模式不够可靠。
+关键词：AI agents、human-like、frustration
+原文：https://simonwillison.net/2026/Apr/21/andreas-pahlsson-notini/#atom-everything
+
+3. Claude Code 正从 Pro 套餐中被移出
+来源：wheresyoured.at｜评分：22/30
+看点：Anthropic 似乎已将新用户的 Claude Code 从 20 美元/月的 Pro 方案中移除，相关能力正向更高阶套餐集中。
+推荐理由：这直接影响 AI 编码工具的使用门槛和团队预算，也说明“模型能力”之外，商业化与配额设计正在成为开发者工具选型的重要变量。
+关键词：Anthropic、Claude Code、AI subscription
+原文：https://www.wheresyoured.at/news-anthropic-removes-pro-cc/
+
+4. 不要把聊天机器人当医疗顾问
+来源：garymarcus.substack.com｜评分：22/30
+看点：文中汇总了 4 项独立研究，结论高度一致：当前聊天机器人在医疗建议场景里仍有明显误导风险。
+推荐理由：这篇很适合所有做 RAG、知识助手和垂直 AI 应用的人看——它提醒我们，高风险场景里“回答得像回事”远远不等于“可以放心上线”。
+关键词：chatbot、medical advice、AI safety
+原文：https://garymarcus.substack.com/p/please-dont-trust-your-chatbot-for
+
+5. llm-openrouter 0.6 发布
+来源：simonwillison.net｜评分：20/30
+看点：新版本加入 `llm openrouter refresh`，可以不等缓存过期就刷新可用模型列表，更快尝试新模型。
+推荐理由：虽然是个小更新，但对经常切换模型、做评测或搭本地/CLI 工作流的人很实用，能明显降低试新模型时的摩擦成本。
+关键词：llm-openrouter、CLI tool、model refresh
+原文：https://simonwillison.net/2026/Apr/20/llm-openrouter/#atom-everything
