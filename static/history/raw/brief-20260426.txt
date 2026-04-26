@@ -1,93 +1,221 @@
 AI 博客 Top 10
 
+今早的 AI 信息流很密集：一边是 OpenAI 围绕 GPT-5.4/5.5 持续推进模型统一、接口开放与使用策略，另一边是工程实践、企业软件格局和公众态度也在同步发生变化。若你既关心模型能力，也关心产品落地与行业走向，今天这 10 篇很值得快速过一遍。
+
 1. OpenAI GPT-5.4 和 GPT-5.5 的模型统一与能力提升
-来源：simonwillison.net
-看点：OpenAI 正把编码与主模型合并，GPT-5.5 在代理式编程和计算机任务上继续增强。
-链接：https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything
+来源：simonwillison.net｜评分：27/30
+看点：OpenAI 将 Codex 与主模型进一步收拢，GPT-5.5 在代理式编程、计算机操作和通用任务上继续增强。
+推荐理由：这篇能帮助你快速理解 OpenAI 正在把“聊天模型”和“干活模型”合流，值得所有关注 Agent 与代码生成的人优先看。
+关键词：GPT-5.4、GPT-5.5、agentic、coding
+原文：https://simonwillison.net/2026/Apr/25/romain-huet/#atom-everything
 
 2. GPT-5.5 提示指南：优化响应时间的技巧
-来源：simonwillison.net
-看点：官方提示指南强调在长思考场景下优化可见响应节奏，适合 API 与产品落地参考。
-链接：https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything
+来源：simonwillison.net｜评分：26/30
+看点：OpenAI 随 GPT-5.5 API 一起给出提示实践，重点讨论如何在长思考任务里改善首屏响应与体感速度。
+推荐理由：对做 AI 应用的人来说，这不是抽象的提示工程，而是直接影响产品可用性和用户耐心的实战方法。
+关键词：prompting、API、latency、UX
+原文：https://simonwillison.net/2026/Apr/25/gpt-5-5-prompting-guide/#atom-everything
 
 3. 变异 AI 驱动的病毒
-来源：geohot.github.io
-看点：借“AI 病毒”讨论莫拉维克悖论，提醒我们重新理解机器能力演化的顺序与边界。
-链接：https://geohot.github.io//blog/jekyll/update/2026/04/25/a-mutating-virus.html
+来源：geohot.github.io｜评分：26/30
+看点：文章借“会变异的 AI 病毒”这一设定，延展到莫拉维克悖论与机器能力演进路径的反直觉特征。
+推荐理由：它不是单纯讲安全，而是在提醒我们：AI 先擅长什么、后擅长什么，可能和人的直觉完全不同。
+关键词：AI、virus、Moravec's paradox
+原文：https://geohot.github.io//blog/jekyll/update/2026/04/25/a-mutating-virus.html
 
 4. 关于 AI 的重大问题的博客奖项
-来源：dwarkesh.com
-看点：通过设立博客奖吸引研究者讨论 AI 大问题，折射出高质量公共讨论的重要性。
-链接：https://www.dwarkesh.com/p/blog-prize
+来源：dwarkesh.com｜评分：23/30
+看点：Dwarkesh 推出面向 AI 重大问题的博客奖项，希望用公开写作吸引研究者投入更核心的长期议题。
+推荐理由：如果你关心 AI 讨论如何从热点追逐转向严肃研究，这篇能看到内容激励机制可能如何影响行业议程。
+关键词：AI、research、blog prize
+原文：https://www.dwarkesh.com/p/blog-prize
 
 5. AI 生成图像的奇特组合：为什么是这样？
-来源：simonwillison.net
-看点：从荒诞生成图像切入，讨论模型理解世界时的错位与评测难题。
-链接：https://simonwillison.net/2026/Apr/25/why-are-you-like-this/#atom-everything
+来源：simonwillison.net｜评分：24/30
+看点：从一张荒诞的 AI 图像切入，讨论模型为何经常能生成“看似合理却细想古怪”的视觉组合。
+推荐理由：它适合用来理解多模态模型的边界：会拼接并不等于真理解，评估方法也不能只看表面效果。
+关键词：image generation、multimodal、evaluation
+原文：https://simonwillison.net/2026/Apr/25/why-are-you-like-this/#atom-everything
 
 6. C/C++ 依赖管理的新突破
-来源：lcamtuf.substack.com
-看点：聚焦 C/C++ 依赖管理的潜在突破，对长期受构建复杂度困扰的开发者很有参考价值。
-链接：https://lcamtuf.substack.com/p/a-breakthrough-in-cc-dependency-management
+来源：lcamtuf.substack.com｜评分：24/30
+看点：文章聚焦 C/C++ 长期棘手的依赖管理问题，指出这一传统工程难题可能迎来更实用的改进路径。
+推荐理由：对基础设施、系统软件和高性能开发者来说，依赖管理一旦改善，能直接改变构建效率与协作成本。
+关键词：C++、dependency management、build systems
+原文：https://lcamtuf.substack.com/p/a-breakthrough-in-cc-dependency-management
 
 7. 防御 RAII 类型中的异常
-来源：devblogs.microsoft.com/oldnewthing
-看点：讨论 C++ 中 scope_exit 这类 RAII 工具的异常防御取舍，适合关注工程稳健性的开发者。
-链接：https://devblogs.microsoft.com/oldnewthing/20260424-00/?p=112266
+来源：devblogs.microsoft.com/oldnewthing｜评分：23/30
+看点：讨论 C++ 中 scope_exit 一类 RAII 工具在异常场景下的防御策略，以及这些防御何时会引入额外复杂度。
+推荐理由：这篇很适合工程师复盘“安全性”和“简洁性”的权衡，尤其对写底层库和通用组件的人有参考价值。
+关键词：C++、RAII、exceptions
+原文：https://devblogs.microsoft.com/oldnewthing/20260424-00/?p=112266
 
 8. OpenAI 如何颠覆 Oracle
-来源：wheresyoured.at
-看点：从企业软件格局看 OpenAI 对 Oracle 一类传统巨头的冲击，值得关注 AI 对商业软件的替代效应。
-链接：https://www.wheresyoured.at/how-openai-kills-oracle/
+来源：wheresyoured.at｜评分：26/30
+看点：文章从企业软件视角出发，推演 OpenAI 及 AI 原生工作流如何动摇传统数据库与企业平台巨头的护城河。
+推荐理由：如果你关注的不只是模型分数，而是 AI 会怎样改写软件价值链，这篇会给你更大的行业坐标系。
+关键词：OpenAI、Oracle、enterprise software
+原文：https://www.wheresyoured.at/how-openai-kills-oracle/
 
 9. 公众并不渴望自动化
-来源：simonwillison.net
-看点：指出用户未必天然欢迎 AI 自动化，产品普及除了能力还取决于接受度与体验。
-链接：https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything
+来源：simonwillison.net｜评分：25/30
+看点：尽管 ChatGPT 渗透率继续上升，文章指出大众对“被自动化”这件事并没有想象中热情，甚至常带抵触。
+推荐理由：做产品的人尤其值得读，因为技术可行不等于用户欢迎，真正的采用阻力往往来自心理与组织层面。
+关键词：automation、ChatGPT、public opinion
+原文：https://simonwillison.net/2026/Apr/24/the-people-do-not-yearn-for-automation/#atom-everything
 
 10. llm 工具更新：支持 GPT-5.5 模型和新的详细程度参数
-来源：simonwillison.net
-看点：llm CLI 快速接入 GPT-5.5，并加入 verbosity 控制，方便开发者更细致调节输出风格。
-链接：https://simonwillison.net/2026/Apr/24/llm/#atom-everything
+来源：simonwillison.net｜评分：26/30
+看点：llm 0.31 新增对 GPT-5.5 的支持，并加入 verbosity 等控制项，方便开发者更细粒度调节输出风格。
+推荐理由：这类工具更新往往最先反映模型能力如何进入真实工作流，适合所有常用 CLI 跑模型的人关注。
+关键词：llm、GPT-5.5、CLI
+原文：https://simonwillison.net/2026/Apr/24/llm/#atom-everything
 
 GitHub Trending Top 10
 
+今天的 GitHub 热点非常偏“开发者效率”和“AI 代理基础设施”。从 Claude 生态、代码知识图谱到桌面 Agent，这些项目都很有当下感。
+
 1. mattpocock/skills
-值得关注：Shell 项目，公开个人 Claude/Agent 技能目录，今天新增 2,507 星，适合参考技能模块化组织方式。
+来源：Shell
+看点：把个人 .claude 目录沉淀成一套可复用技能清单，展示了开发者如何组织 AI 助手的长期记忆与能力模板。
+推荐理由：如果你在思考如何把提示词、工作流和经验真正产品化，这个仓库很适合拿来借鉴结构与方法。
+关键词：Claude、skills、workflow
 链接：https://github.com/mattpocock/skills
 
 2. Alishahryar1/free-claude-code
-值得关注：Python 项目，主打在终端、VSCode 和 Discord 免费使用 claude-code，今天新增 1,694 星，热度很高。
+来源：Python
+看点：尝试把 claude-code 接入终端、VSCode 与 Discord 等入口，让开发者以更低门槛体验 AI 编程助手。
+推荐理由：它代表了社区对“低成本接入高能力编码助手”的强需求，适合关注开发工具分发方式的人。
+关键词：Claude Code、terminal、VSCode
 链接：https://github.com/Alishahryar1/free-claude-code
 
 3. Z4nzu/hackingtool
-值得关注：Python 编写的一站式安全工具箱，今天新增 1,724 星，适合渗透测试与安全研究场景。
+来源：Python
+看点：一个整合多类安全测试功能的工具箱项目，面向渗透测试与安全学习场景提供一站式入口。
+推荐理由：虽然偏老牌思路，但在效率导向的安全实践里，这类“聚合型工具”始终有稳定需求和传播性。
+关键词：security、pentest、toolkit
 链接：https://github.com/Z4nzu/hackingtool
 
 4. abhigyanpatwari/GitNexus
-值得关注：TypeScript 项目，可在浏览器中把仓库转成知识图谱并结合 Graph RAG 做代码探索，今天新增 667 星。
+来源：TypeScript
+看点：在浏览器端直接把 GitHub 仓库或 ZIP 构造成知识图谱，并内置 Graph RAG Agent 做交互式代码探索。
+推荐理由：对代码库理解、技术调研和新成员入门都很有想象空间，尤其适合大型仓库的“读代码”场景。
+关键词：Graph RAG、code intelligence、knowledge graph
 链接：https://github.com/abhigyanpatwari/GitNexus
 
 5. PostHog/posthog
-值得关注：Python 为主的开发者产品平台，覆盖分析、回放、实验与 AI 助手，今天新增 338 星，持续受关注。
+来源：Python
+看点：PostHog 持续强化其一体化开发者平台定位，把分析、实验、回放、特性开关和 AI 助手串进同一套栈里。
+推荐理由：如果你关心 AI 如何嵌入现代产品分析与交付闭环，这个项目能看到非常完整的产品工程路线。
+关键词：analytics、feature flags、AI assistant
 链接：https://github.com/PostHog/posthog
 
 6. microsoft/typescript-go
-值得关注：Go 编写的 TypeScript 原生移植开发仓库，背靠微软，代表编译器性能与工程化演进方向。
+来源：Go
+看点：这是 TypeScript 原生移植方向的开发仓库，意味着生态正在探索更高性能、更底层实现路径。
+推荐理由：任何与编译速度、工具链体验和大规模工程效率相关的变化，都会对前端与全栈开发者产生实际影响。
+关键词：TypeScript、Go、compiler
 链接：https://github.com/microsoft/typescript-go
 
 7. trycua/cua
-值得关注：面向 Computer-Use Agents 的开源基础设施，提供沙箱、SDK 和评测基准，适合桌面智能体训练与评估。
+来源：HTML
+看点：面向 Computer-Use Agents 的开源基础设施，提供沙箱、SDK 和评测基准，支持桌面级操作训练与评估。
+推荐理由：桌面 Agent 是当下非常热的方向，这个项目正好卡在“可训练、可运行、可评测”的关键基础层。
+关键词：Computer-Use Agents、sandbox、benchmark
 链接：https://github.com/trycua/cua
 
 8. gastownhall/beads
-值得关注：Go 项目，定位为 coding agent 的“记忆增强”层，帮助代理保留上下文与长期任务信息。
+来源：Go
+看点：为编码代理提供“记忆升级”，重点解决长任务、多轮协作中上下文遗失与经验沉淀不足的问题。
+推荐理由：Agent 真正难的常常不是一次回答，而是持续工作；这个项目正切中长期记忆这一核心瓶颈。
+关键词：agent memory、coding agent、context
 链接：https://github.com/gastownhall/beads
 
 9. curl/curl
-值得关注：经典 C 语言网络传输工具与 libcurl 库，虽今日仅增 9 星，但仍是基础设施级常青项目。
+来源：C
+看点：经典网络传输工具依然保持高活跃度，覆盖协议广、能力稳，是无数基础设施与自动化链路的底座。
+推荐理由：热门不一定总是新项目，curl 的持续趋势也说明“可靠、可嵌入、可移植”的基础工具价值始终不变。
+关键词：curl、networking、CLI
 链接：https://github.com/curl/curl
 
 10. home-assistant/core
-值得关注：Python 主导的开源家庭自动化核心项目，强调本地控制与隐私优先，今天新增 52 星。
+来源：Python
+看点：Home Assistant 核心仓库继续推进本地优先、隐私优先的家庭自动化体系，兼顾生态广度与可控性。
+推荐理由：在“万物接 AI”的潮流里，它代表另一条重要路线：自动化不一定依赖云端，自治和隐私同样关键。
+关键词：home automation、privacy、local control
 链接：https://github.com/home-assistant/core
+
+papers.cool/arxiv 每日 Top 10
+
+今天的 arXiv 热点集中在 LLM 评测、事件抽取、参数高效微调与社会行为理解，整体很“方法论导向”。如果你在搭评测体系或做企业落地，这一组论文尤其值得标记。
+
+1. Evaluation of Automatic Speech Recognition Using Generative Large Language Models
+来源：Computation and Language
+看点：用生成式大模型替代单纯 WER 来评估语音识别，从语义层面更接近人类判断，并显著提升一致性。
+推荐理由：这篇直指“指标失真”问题，适合所有做 ASR、语义评测或人机对齐的人参考。
+关键词：ASR、LLM evaluation、semantic metrics
+原文：https://papers.cool/arxiv/2604.21928
+
+2. MathDuels: Evaluating LLMs as Problem Posers and Solvers
+来源：Computation and Language, Software Engineering
+看点：把模型同时当成“出题者”和“解题者”，用自对弈方式评估数学能力，避免静态基准逐渐失效。
+推荐理由：它提供了一种更动态的前沿模型评测思路，尤其适合判断模型是否真的在变强，而非只是在刷榜。
+关键词：MathDuels、benchmark、self-play
+原文：https://papers.cool/arxiv/2604.21916
+
+3. GiVA: Gradient-Informed Bases for Vector-Based Adaptation
+来源：Computation and Language, Artificial Intelligence
+看点：提出 GiVA 初始化策略，提升向量式适配方法效率，在保持参数极省的同时把性能拉近甚至追平 LoRA。
+推荐理由：对做微调、部署和成本优化的人来说，这篇很有现实意义，因为它触及训练时间与效果的双重平衡。
+关键词：GiVA、LoRA、PEFT
+原文：https://papers.cool/arxiv/2604.21901
+
+4. Mapping the Political Discourse in the Brazilian Chamber of Deputies: A Multi-Faceted Computational Approach
+来源：Computation and Language, Computers and Society
+看点：分析巴西议会 45 万余篇发言，从语言风格、主题变化和语义聚类多维刻画政治话语演化。
+推荐理由：它展示了计算语言学如何进入真实社会科学问题，适合关注大规模文本分析与公共议题的人。
+关键词：political discourse、stylometry、topic modeling
+原文：https://papers.cool/arxiv/2604.21897
+
+5. EVENT5Ws: A Large Dataset for Open-Domain Event Extraction from Documents
+来源：Computation and Language
+看点：构建开放域事件抽取大规模人工校验数据集，为 5W 维度事件理解提供更扎实的训练与评测基础。
+推荐理由：高质量数据集比模型花活更稀缺，这篇对做信息抽取、应急分析和知识系统的人都很有价值。
+关键词：event extraction、dataset、open-domain
+原文：https://papers.cool/arxiv/2604.21890
+
+6. TingIS: Real-time Risk Event Discovery from Noisy Customer Incidents at Enterprise Scale
+来源：Computation and Language, Artificial Intelligence, Machine Learning
+看点：面向企业真实客服事件流，结合索引、LLM 与降噪流程，实现分钟级风险事件发现与业务归因。
+推荐理由：这是一篇很强的产业落地论文，特别适合研究“LLM 如何进入高吞吐生产系统”的工程实践者。
+关键词：enterprise AI、incident discovery、real-time
+原文：https://papers.cool/arxiv/2604.21889
+
+7. A Multimodal Text- and Graph-Based Approach for Open-Domain Event Extraction from Documents
+来源：Computation and Language, Artificial Intelligence
+看点：提出 MODEE，把文本表征与图结构推理结合起来，改善开放域事件抽取中的文档级理解能力。
+推荐理由：如果你对“只靠 LLM 还不够”的场景感兴趣，这篇很好地说明了结构化建模为何仍然重要。
+关键词：MODEE、multimodal、graph reasoning
+原文：https://papers.cool/arxiv/2604.21885
+
+8. Revisiting Non-Verbatim Memorization in Large Language Models: The Role of Entity Surface Forms
+来源：Computation and Language
+看点：研究实体不同表述形式如何影响大模型事实记忆提取，揭示记忆并非完全独立于名字表面形式。
+推荐理由：它能帮助我们更细致地理解“模型记住了什么”，对知识编辑、事实评测和安全研究都很关键。
+关键词：memorization、entity surface forms、factual QA
+原文：https://papers.cool/arxiv/2604.21882
+
+9. Machine Behavior in Relational Moral Dilemmas: Moral Rightness, Predicted Human Behavior, and Model Decisions
+来源：Computation and Language
+看点：通过关系型道德困境测试模型，发现模型判断更贴近规范性“应该如何做”，却未充分反映社会情境细腻性。
+推荐理由：对 AI 对齐与决策支持系统来说，这种“会讲人情、却未必按人情做决策”的差距非常值得警惕。
+关键词：moral dilemmas、alignment、machine behavior
+原文：https://papers.cool/arxiv/2604.21871
+
+10. SemEval-2026 Task 4: Narrative Story Similarity and Narrative Representation Learning
+来源：Computation and Language
+看点：围绕“叙事相似性”构建共享任务，比较故事级分类与叙事表示学习，观察 LLM 集成与嵌入方法表现。
+推荐理由：这篇适合关注长文本理解、故事表示与评测设计的人，尤其能看到叙事语义这一难题的最新组织方式。
+关键词：narrative similarity、SemEval、representation learning
+原文：https://papers.cool/arxiv/2604.21782
