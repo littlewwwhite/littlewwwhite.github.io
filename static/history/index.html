@@ -1,60 +1,61 @@
 <!doctype html><html lang=zh dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>AI Daily Digest 晨报历史</title>
 <meta name=description content="AI Daily Digest 晨报历史归档"><link rel=canonical href="https://blog.zjding.com/history/"><link crossorigin=anonymous href="/assets/css/stylesheet.a3f707b5b5f1711333d5e5943a827e40ff91e1dd1f5f5832c33073e11c66965d.css" rel="preload stylesheet" as=style><link rel=icon href="https://blog.zjding.com/favicon.ico"><link rel=icon type=image/png sizes=16x16 href="https://blog.zjding.com/favicon-16x16.png"><link rel=icon type=image/png sizes=32x32 href="https://blog.zjding.com/favicon-32x32.png"><link rel=apple-touch-icon href="https://blog.zjding.com/apple-touch-icon.png"><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href="https://blog.zjding.com/history/feed.xml"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel=stylesheet><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel=stylesheet>
 <style>
-.history-shell{display:flex;flex-direction:column;gap:18px;margin:24px 0 32px}
-.history-hero{margin:4px 0 0}
-.history-hero p{margin:.35rem 0}
-.history-toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
-.history-toolbar-links{display:flex;gap:10px;flex-wrap:wrap}
-.history-toolbar-links a,.history-empty a,.history-item-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:var(--entry);color:var(--primary);text-decoration:none;font-size:.95rem}
-.history-toolbar-links a:hover,.history-empty a:hover,.history-item-link:hover{background:var(--code-bg)}
-.history-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
-.history-stat{background:var(--entry);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
-.history-stat-label{color:var(--secondary);font-size:.95rem}
-.history-stat-value{margin-top:8px;font-size:1.8rem;font-weight:700;color:var(--primary)}
-.history-tabs{display:flex;gap:10px;flex-wrap:wrap}
-.history-tab{appearance:none;border:1px solid var(--border);background:var(--entry);color:var(--primary);padding:10px 16px;border-radius:999px;font-size:.95rem;cursor:pointer;transition:.2s ease}
+body.history-page .main{max-width:min(1440px,calc(100vw - 40px));padding-left:20px;padding-right:20px}
+.history-shell{display:flex;flex-direction:column;gap:14px;margin:20px 0 32px}
+.history-topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.history-titleblock h1{margin:0;font-size:clamp(1.8rem,2.4vw,2.4rem);line-height:1.15}
+.history-titleblock p{margin:8px 0 0;color:var(--secondary);font-size:.98rem}
+.history-utility{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.history-utility a,.history-empty a,.history-item-link{display:inline-flex;align-items:center;justify-content:center;padding:7px 12px;border:1px solid var(--border);border-radius:999px;background:var(--entry);color:var(--primary);text-decoration:none;font-size:.9rem}
+.history-utility a:hover,.history-empty a:hover,.history-item-link:hover{background:var(--code-bg)}
+.history-stats-inline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:7px 12px;border:1px solid var(--border);border-radius:999px;background:var(--entry);color:var(--secondary);font-size:.9rem;white-space:nowrap}
+.history-stats-inline strong{color:var(--primary);font-weight:600}
+.history-tabs{display:flex;gap:10px;flex-wrap:wrap;padding-top:4px}
+.history-tab{appearance:none;border:1px solid var(--border);background:var(--entry);color:var(--primary);padding:10px 16px;border-radius:999px;font-size:.95rem;cursor:pointer;transition:.2s ease;font-weight:500}
 .history-tab:hover{background:var(--code-bg)}
 .history-tab.active{background:var(--primary);color:var(--theme);border-color:var(--primary)}
-.history-workspace{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);gap:18px;align-items:start}
-.history-sidebar,.history-detail{background:var(--entry);border:1px solid var(--border);border-radius:var(--radius)}
-.history-sidebar{position:sticky;top:92px;max-height:calc(100vh - 120px);overflow:hidden;display:flex;flex-direction:column}
+.history-workspace{display:grid;grid-template-columns:minmax(250px,300px) minmax(0,1fr);gap:20px;align-items:start}
+.history-sidebar,.history-detail{background:var(--entry);border:1px solid var(--border);border-radius:20px}
+.history-sidebar{position:sticky;top:88px;max-height:calc(100vh - 110px);overflow:hidden;display:flex;flex-direction:column}
 .history-sidebar-header,.history-detail-header{padding:16px 18px;border-bottom:1px solid var(--border)}
-.history-sidebar-header h2,.history-detail-header h2{margin:0;font-size:1.05rem}
-.history-sidebar-subtitle,.history-detail-subtitle,.history-item-meta,.history-item-extra,.history-dir-meta{color:var(--secondary);font-size:.93rem}
-.history-directory{padding:10px;overflow:auto;display:flex;flex-direction:column;gap:10px}
-.history-dir-item{appearance:none;width:100%;text-align:left;border:1px solid var(--border);background:transparent;border-radius:16px;padding:12px 14px;color:var(--primary);cursor:pointer;transition:.2s ease}
-.history-dir-item:hover{background:var(--code-bg)}
+.history-sidebar-header h2,.history-detail-header h2{margin:0;font-size:1.02rem;line-height:1.35}
+.history-sidebar-subtitle,.history-detail-subtitle,.history-item-meta,.history-item-extra,.history-dir-meta{color:var(--secondary);font-size:.92rem}
+.history-sidebar-subtitle,.history-detail-subtitle{margin-top:6px}
+.history-directory{padding:10px;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.history-dir-item{appearance:none;width:100%;text-align:left;border:1px solid transparent;background:transparent;border-radius:16px;padding:12px 14px;color:var(--primary);cursor:pointer;transition:.2s ease}
+.history-dir-item:hover{background:var(--code-bg);border-color:var(--border)}
 .history-dir-item.active{background:var(--code-bg);border-color:var(--primary)}
-.history-dir-title{font-weight:600;margin-bottom:6px;line-height:1.4}
-.history-dir-meta{display:flex;gap:10px;flex-wrap:wrap}
+.history-dir-title{font-weight:600;margin-bottom:4px;line-height:1.35}
+.history-dir-meta{display:flex;gap:8px;flex-wrap:wrap}
 .history-detail-body{padding:18px;display:flex;flex-direction:column;gap:18px}
-.history-section-card{border:1px solid var(--border);border-radius:18px;padding:16px;background:rgba(125,125,125,.04)}
+.history-section-card{border:1px solid var(--border);border-radius:18px;padding:18px;background:rgba(125,125,125,.04)}
 .history-section-top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
-.history-badge{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:var(--code-bg);border:1px solid var(--border);font-size:.9rem}
+.history-badge{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:var(--code-bg);border:1px solid var(--border);font-size:.88rem}
 .history-badge.source-blog{background:rgba(59,130,246,.12)}
 .history-badge.source-github{background:rgba(34,197,94,.12)}
 .history-badge.source-papers{background:rgba(168,85,247,.12)}
 .history-badge.source-other{background:rgba(245,158,11,.12)}
-.history-section-card h3{margin:.15rem 0 .45rem}
 .history-items{display:grid;gap:12px;margin-top:12px}
-.history-item{border:1px solid var(--border);border-radius:14px;padding:14px;background:var(--theme)}
-.history-item h4{margin:0 0 8px;font-size:1.02rem;line-height:1.45}
-.history-item p{margin:.4rem 0;line-height:1.72}
+.history-item{border:1px solid var(--border);border-radius:16px;padding:16px;background:var(--theme)}
+.history-item h4{margin:0 0 8px;font-size:1.06rem;line-height:1.5}
+.history-item p{margin:.45rem 0;line-height:1.82;font-size:.98rem}
 .history-empty{padding:28px 20px;text-align:center;color:var(--secondary)}
-@media (max-width:900px){.history-workspace{grid-template-columns:1fr}.history-sidebar{position:static;max-height:none}}
+@media (max-width:1100px){body.history-page .main{max-width:min(100vw - 24px,1200px);padding-left:12px;padding-right:12px}.history-workspace{grid-template-columns:280px minmax(0,1fr)}}
+@media (max-width:900px){.history-topbar{flex-direction:column;align-items:stretch}.history-utility{justify-content:flex-start}.history-stats-inline{white-space:normal;border-radius:16px}.history-workspace{grid-template-columns:1fr}.history-sidebar{position:static;max-height:none}}
 </style>
-</head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href="https://blog.zjding.com/" accesskey=h title="zjding'Log (Alt + H)">zjding'Log</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href="https://blog.zjding.com/" title="zjding'Log"><span class=active>文章</span></a></li><li><a href="https://blog.zjding.com/archives/" title=归档><span>归档</span></a></li><li><a href="https://blog.zjding.com/categories/" title=Categories><span>分类</span></a></li><li><a href="https://blog.zjding.com/tags/" title=Tags><span>标签</span></a></li><li><a href="https://blog.zjding.com/search/" title=搜索><span>搜索</span></a></li><li><a href="https://blog.zjding.com/about/" title=关于><span>关于</span></a></li></ul></nav></header><main class=main><section class="history-shell">
-<header class="page-header history-hero">
+</head><body class="list history-page" id="top"><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href="https://blog.zjding.com/" accesskey=h title="zjding'Log (Alt + H)">zjding'Log</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href="https://blog.zjding.com/" title="zjding'Log"><span class=active>文章</span></a></li><li><a href="https://blog.zjding.com/archives/" title=归档><span>归档</span></a></li><li><a href="https://blog.zjding.com/categories/" title=Categories><span>分类</span></a></li><li><a href="https://blog.zjding.com/tags/" title=Tags><span>标签</span></a></li><li><a href="https://blog.zjding.com/search/" title=搜索><span>搜索</span></a></li><li><a href="https://blog.zjding.com/about/" title=关于><span>关于</span></a></li></ul></nav></header><main class=main><section class="history-shell">
+<div class="history-topbar">
+<div class="history-titleblock">
 <h1>AI Daily Digest 晨报历史</h1>
-<p>现在改成你要的交互结构：顶部 header tab 负责切换来源类型，左侧目录负责切换日期，右侧显示当天该来源的详细内容。</p>
-<p>后续继续加 papers.cool/arxiv 或更多来源时，只会新增 tab，不需要再改整体页面结构。</p>
-</header>
-<div class="history-toolbar">
-<div class="history-toolbar-links"><a href="feed.xml">订阅 RSS</a><a href="raw/">原始文本归档</a></div>
-<div class="history-toolbar-links"><a href="https://blog.zjding.com/history/">固定入口：/history/</a></div>
+<p>按来源切换，按日期浏览。</p>
 </div>
-<section class="history-stats"><div class="history-stat"><div class="history-stat-label">已归档天数</div><div class="history-stat-value">18</div></div><div class="history-stat"><div class="history-stat-label">来源种类</div><div class="history-stat-value">2</div></div><div class="history-stat"><div class="history-stat-label">已归档条目</div><div class="history-stat-value">94</div></div><div class="history-stat"><div class="history-stat-label">最新日期</div><div class="history-stat-value">2026-04-26</div></div></section>
+<div class="history-utility">
+<div class="history-stats-inline"><span><strong>18</strong> 天</span><span>·</span><span><strong>2</strong> 来源</span><span>·</span><span><strong>94</strong> 条</span><span>·</span><span>更新 <strong>2026-04-26</strong></span></div>
+<a href="feed.xml">RSS</a>
+<a href="raw/">原文</a>
+</div>
+</div>
 <section>
 <div id="history-tabs" class="history-tabs"></div>
 </section>
@@ -141,15 +142,15 @@ const HISTORY_APP_DATA = {"sources": [{"source_key": "ai-blogs", "display_name":
   }
 
   function renderDirectory(source, activeDate){
-    sidebarTitleEl.textContent = source.display_name + ' 日期目录';
-    sidebarSubtitleEl.textContent = '左侧按日期切换，右侧查看当天 ' + source.display_name + ' 的 Top 内容详情。';
+    sidebarTitleEl.textContent = source.display_name;
+    sidebarSubtitleEl.textContent = source.day_count + ' 天归档';
     directoryEl.innerHTML = '';
     source.days.forEach(day => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'history-dir-item' + (day.brief_date === activeDate ? ' active' : '');
       btn.innerHTML = '<div class="history-dir-title">' + esc(formatDateLabel(day.brief_date)) + '</div>' +
-        '<div class="history-dir-meta"><span>' + esc(day.section_title) + '</span><span>' + esc(String(day.item_count)) + ' 条</span></div>';
+        '<div class="history-dir-meta"><span>' + esc(String(day.item_count)) + ' 条</span></div>';
       btn.addEventListener('click', () => {
         setStateInUrl(source.source_key, day.brief_date);
         render();
@@ -185,11 +186,11 @@ const HISTORY_APP_DATA = {"sources": [{"source_key": "ai-blogs", "display_name":
       return;
     }
     emptyState.hidden = true;
-    const intro = day.intro ? '<p class="history-detail-subtitle">' + esc(day.intro) + '</p>' : '<p class="history-detail-subtitle">当前显示 ' + esc(source.display_name) + ' 在这一天的内容。</p>';
+    const intro = day.intro ? '<p class="history-detail-subtitle">' + esc(day.intro) + '</p>' : '';
     detailEl.innerHTML =
       '<header class="history-detail-header">' +
-        '<h2>' + esc(source.display_name + ' · ' + day.brief_date) + '</h2>' +
-        '<div class="history-detail-subtitle">共 ' + esc(String(day.item_count)) + ' 条 · 原始晨报日期 ' + esc(day.brief_date) + '</div>' +
+        '<h2>' + esc(day.brief_date) + '</h2>' +
+        '<div class="history-detail-subtitle">' + esc(source.display_name) + ' · ' + esc(String(day.item_count)) + ' 条</div>' +
       '</header>' +
       '<div class="history-detail-body">' +
         '<section class="history-section-card">' +
