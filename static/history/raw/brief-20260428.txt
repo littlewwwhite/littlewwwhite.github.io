@@ -1,0 +1,221 @@
+AI 博客 Top 10
+
+今天的博客精选里，AI 安全、语音交互和平台治理是最密集的三条主线。除了模型与产品更新，几篇文章也在提醒我们：协作效率、协议条款与基础工程细节，同样决定技术真正落地的质量。
+
+1. 追踪已失效的 OpenAI-Microsoft AGI 条款的历史
+来源：simonwillison.net｜评分：23/30
+看点：梳理 OpenAI 与 Microsoft 协议中 AGI 条款的来龙去脉，聚焦“达到 AGI 后商业权利如何变化”这一关键设定。
+推荐理由：这类历史条款往往比公开表态更能反映大厂真实博弈，适合理解两家公司关系演变。
+关键词：AGI、OpenAI、Microsoft
+原文：https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-everything
+
+2. 集体速度并非个体速度的简单叠加
+来源：blog.jim-nielsen.com｜评分：23/30
+看点：用接力赛类比团队协作，指出组织速度取决于交接、配合与系统摩擦，而不只是个体表现。
+推荐理由：在“AI 提升个人生产率”成为共识后，这篇文章补上了团队层面的冷思考，尤其适合管理者与工程负责人。
+关键词：团队协作、生产力、集体智能
+原文：https://blog.jim-nielsen.com/2026/collective-speed-isnt-the-sum-of individual-speed/
+
+3. Pluralistic：Enshittification 多元宇宙（2026 年 4 月 27 日）
+来源：pluralistic.net｜评分：21/30
+看点：围绕“平台逐渐变差”这一概念展开，讨论它如何成为理解互联网、版权、隐私与社会议题的通用隐喻。
+推荐理由：如果你关注平台生态为何总会滑向劣化，这篇文章提供了一个很强的分析框架。
+关键词：平台、互联网、类比
+原文：https://pluralistic.net/2026/04/27/analogs-and-analogies/
+
+4. Microsoft/VibeVoice
+来源：simonwillison.net｜评分：24/30
+看点：介绍微软开源语音模型 VibeVoice，强调其类 Whisper 能力、MIT 许可与内置说话人分离特性。
+推荐理由：语音模型正从“能用”走向“可集成”，这类轻量且开源的方案很值得开发者尽快关注。
+关键词：语音识别、开源模型、说话人分离
+原文：https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything
+
+5. Google Meet 的语音翻译功能现已在移动设备上推出
+来源：simonwillison.net｜评分：22/30
+看点：Google Meet 的实时语音翻译开始上移动端，跨语言会议的体验首次更接近科幻作品中的即时交流。
+推荐理由：这代表语音翻译正从演示能力转向日常协作场景，对全球化团队尤其重要。
+关键词：Google Meet、实时翻译、移动端
+原文：https://simonwillison.net/2026/Apr/27/speech-translation-in-google-meet-is-now-rolling-out-to-mobile-d/#atom-everything
+
+6. 探究向 C 函数传递过少寄存器参数在各种架构下的后果
+来源：devblogs.microsoft.com/oldnewthing｜评分：22/30
+看点：深入分析寄存器参数不足时，不同处理器架构上的调用行为、错误风险与性能后果。
+推荐理由：这类文章看似底层，却能帮助工程师真正理解 ABI、编译器和架构差异的现实影响。
+关键词：C 语言、寄存器、体系结构
+原文：https://devblogs.microsoft.com/oldnewthing/20260427-00/?p=112271
+
+7. 不要使用 localhost:3000，请使用您自己的自定义域名
+来源：idiallo.com｜评分：21/30
+看点：从演示与内网工具体验切入，说明自定义域名比 localhost 更专业，也更能减少访问和理解成本。
+推荐理由：这是一个投入极小、收益很大的工程习惯改进，适合所有做内部产品和 demo 的团队。
+关键词：自定义域名、开发体验、演示
+原文：https://idiallo.com/blog/say-no-to-localhost3000-use-custom-domains?src=feed
+
+8. Dario Amodei、炒作、AI 安全以及 AI 灾难的“氛围编码”爆炸
+来源：garymarcus.substack.com｜评分：26/30
+看点：批评 AI 产业的乐观叙事掩盖了真实风险，特别点名“氛围编码”式系统可能带来的社会性灾难。
+推荐理由：这是今天分数最高的一篇，适合用来平衡市场情绪，提醒我们别把叙事当成安全保证。
+关键词：AI 安全、炒作、风险
+原文：https://garymarcus.substack.com/p/dario-amodei-hype-ai-safety-and-the
+
+9. Bitwarden 如何加密和解密敏感信息
+来源：miguelgrinberg.com｜评分：23/30
+看点：拆解 Bitwarden 与 Vaultwarden 的加解密机制，展示密码管理器背后的数据保护与自托管逻辑。
+推荐理由：对安全工程、隐私实践和自托管方案感兴趣的人，这篇文章兼具原理与实用价值。
+关键词：Bitwarden、加密、自托管
+原文：https://blog.miguelgrinberg.com/post/how-bitwarden-encrypts-and-decrypts-secrets
+
+10. 报告称三星今年可能出现移动部门首次亏损，归咎于 RAM 危机
+来源：daringfireball.net｜评分：22/30
+看点：聚焦三星移动业务可能出现历史性亏损，背后牵出 RAM 供应与硬件业务压力的连锁影响。
+推荐理由：虽然不属纯 AI 话题，但它提醒我们：上游硬件与成本波动仍在深刻影响终端产品竞争。
+关键词：三星、移动业务、RAM
+原文：https://9to5google.com/2026/04/22/samsung-is-increasingly-worried-about-first-ever-mobile-division-loss-in-ram-crisis-report/
+
+GitHub Trending Top 10
+
+今天 GitHub 热点明显偏向 AI coding agent、工作流自动化与语音模型，说明“给模型装技能”和“让模型真正可用”仍是开发者最兴奋的方向。
+
+1. mattpocock/skills
+来源：Shell｜评分：今日 +5,645★
+看点：收集可直接复用的工程技能包，把个人工作流沉淀成可调用、可迁移的能力模块。
+推荐理由：它踩中了 agent 时代最核心的需求之一——让模型不只会答题，而是会按套路做事。
+关键词：skills、agent、工作流
+链接：https://github.com/mattpocock/skills
+
+2. abhigyanpatwari/GitNexus
+来源：TypeScript｜评分：今日 +1,102★
+看点：纯浏览器侧生成代码知识图谱，并内置 Graph RAG Agent，适合快速理解陌生仓库。
+推荐理由：对代码库探索、知识可视化和本地化 RAG 感兴趣的人，这个项目很有代表性。
+关键词：知识图谱、Graph RAG、代码理解
+链接：https://github.com/abhigyanpatwari/GitNexus
+
+3. ComposioHQ/awesome-codex-skills
+来源：Python｜评分：今日 +638★
+看点：整理了一批面向 Codex CLI 与 API 的实用技能，覆盖自动化工作流和常见开发任务。
+推荐理由：如果你正在搭建 coding agent，这类“技能市场”型仓库能显著加快起步速度。
+关键词：Codex、技能库、自动化
+链接：https://github.com/ComposioHQ/awesome-codex-skills
+
+4. Alishahryar1/free-claude-code
+来源：Python｜评分：今日 +2,949★
+看点：尝试把 Claude Code 的终端、VSCode 与 Discord 使用体验做成更低门槛方案。
+推荐理由：高热度说明大家仍在寻找更便宜、更灵活的 AI 编程入口，值得跟踪其实现方式。
+关键词：Claude Code、终端、开发工具
+链接：https://github.com/Alishahryar1/free-claude-code
+
+5. gastownhall/beads
+来源：Go｜评分：今日 +498★
+看点：主打给 coding agent 增强记忆能力，帮助代理跨任务保留上下文和关键信息。
+推荐理由：长期记忆是 agent 实用化的短板之一，这类项目往往很容易演化成基础设施。
+关键词：记忆、agent、上下文
+链接：https://github.com/gastownhall/beads
+
+6. penpot/penpot
+来源：Clojure｜评分：今日 +166★
+看点：开源设计协作工具，强调设计与代码团队在同一平台内协同工作。
+推荐理由：AI 时代前端与设计边界更模糊，Penpot 这种开放协作平台仍有很强现实价值。
+关键词：设计协作、开源、产品设计
+链接：https://github.com/penpot/penpot
+
+7. davila7/claude-code-templates
+来源：Python｜评分：今日 +154★
+看点：提供 Claude Code 的配置与监控模板，帮助团队更规范地使用编码代理。
+推荐理由：模板化配置往往是团队化落地的第一步，适合想把个人玩法升级成组织能力的人。
+关键词：Claude Code、模板、监控
+链接：https://github.com/davila7/claude-code-templates
+
+8. microsoft/VibeVoice
+来源：Python｜评分：今日 +757★
+看点：微软开源前沿语音 AI 项目，定位清晰，兼顾模型能力与社区可用性。
+推荐理由：它同时出现在博客精选与 GitHub 热榜，说明市场对开源语音基础模型的关注正在上升。
+关键词：语音 AI、微软、开源模型
+链接：https://github.com/microsoft/VibeVoice
+
+9. Z4nzu/hackingtool
+来源：Python｜评分：今日 +1,830★
+看点：整合式安全工具箱，面向渗透测试和攻防学习场景提供“一站式”集合。
+推荐理由：虽然偏老牌思路，但高热度表明安全实战工具仍有稳定需求与传播力。
+关键词：安全工具、渗透测试、攻防
+链接：https://github.com/Z4nzu/hackingtool
+
+10. TauricResearch/TradingAgents
+来源：Python｜评分：今日 +248★
+看点：把多智能体框架用于金融交易研究，试图让不同角色代理协同完成分析与决策。
+推荐理由：金融是 agent 落地最受关注的垂直场景之一，这类项目很适合观察多代理模式的边界。
+关键词：多智能体、量化交易、金融 AI
+链接：https://github.com/TauricResearch/TradingAgents
+
+papers.cool/arxiv 每日 Top 10
+
+今天论文榜单高度集中在 LLM、推理效率、公平性与 RAG，既有很“产品化”的 agent 成本研究，也有偏基础方法和社会影响的工作，整体可读性很强。
+
+1. How Do AI Agents Spend Your Money? Analyzing and Predicting Token Consumption in Agentic Coding Tasks
+来源：Computation and Language , Computers and Society , Human-Computer Interaction , Software Engineering｜评分：Kimi 1★
+看点：系统分析 coding agent 的 token 消耗分布、波动性和可预测性，直指“AI 编程到底贵在哪”。
+推荐理由：如果你在关心 agent 成本、评测和部署预算，这篇几乎是今天最实用的研究之一。
+关键词：agents、token、costs
+原文：https://papers.cool/arxiv/2604.22750
+
+2. Representational Harms in LLM-Generated Narratives Against Global Majority Nationalities
+来源：Computation and Language｜评分：Top 2
+看点：研究 LLM 在叙事生成中如何对全球多数国家和身份产生刻板化、扁平化与失真描绘。
+推荐理由：这篇论文把偏见问题从“分类误差”推进到“文化表征伤害”，很值得做安全和评估的人关注。
+关键词：bias、nationalities、harms
+原文：https://papers.cool/arxiv/2604.22749
+
+3. Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought
+来源：Computation and Language｜评分：Kimi 1★
+看点：提出抽象链式思维，用保留词表中的离散符号替代冗长自然语言 CoT，以显著减少推理 token。
+推荐理由：它抓住了当下最热的问题——如何在不牺牲效果的前提下，把推理做得更便宜、更快。
+关键词：reasoning、CoT、latent
+原文：https://papers.cool/arxiv/2604.22709
+
+4. CRAFT: Clustered Regression for Adaptive Filtering of Training data
+来源：Computation and Language , Artificial Intelligence｜评分：Top 4
+看点：通过聚类与回归式筛选，从超大训练集里挑出更高价值的数据子集，用更低成本完成微调。
+推荐理由：数据筛选是大模型时代的高杠杆环节，这类方法对训练效率和资源利用都有直接意义。
+关键词：training、filtering、selection
+原文：https://papers.cool/arxiv/2604.22693
+
+5. BERAG: Bayesian Ensemble Retrieval-Augmented Generation for Knowledge-based Visual Question Answering
+来源：Computation and Language｜评分：Top 5
+看点：提出 BERAG，把检索文档拆开建模并用贝叶斯方式加权，缓解长上下文里的 lost-in-the-middle 问题。
+推荐理由：RAG 已进入精细化优化阶段，这篇对归因、效率和多模态问答都有可借鉴之处。
+关键词：RAG、retrieval、visual QA
+原文：https://papers.cool/arxiv/2604.22678
+
+6. Identifying and typifying demographic unfairness in phoneme-level embeddings of self-supervised speech recognition models
+来源：Computation and Language｜评分：Top 6
+看点：从音素级嵌入出发，拆分 ASR 对不同人群不公平的来源，区分随机误差与系统性偏差。
+推荐理由：语音模型走向真实世界后，公平性问题只会更关键，这篇提供了更细粒度的诊断视角。
+关键词：ASR、fairness、phoneme
+原文：https://papers.cool/arxiv/2604.22631
+
+7. From graphemic dependence to lexical structure: a Markovian perspective on Dante's Commedia
+来源：Computation and Language｜评分：Top 7
+看点：使用马尔可夫链与符号编码分析《神曲》的局部依赖和词汇结构，展示计算语言学的人文侧应用。
+推荐理由：虽然不属主流 LLM 赛道，但方法简洁、解释性强，是跨学科文本研究的有趣案例。
+关键词：Markov、text analysis、Dante
+原文：https://papers.cool/arxiv/2604.22626
+
+8. Dharma, Data and Deception: An LLM-Powered Rhetorical Analysis of Cow-Urine Health Claims on YouTube
+来源：Computation and Language｜评分：Top 8
+看点：借助多种 LLM 对 YouTube 健康争议信息做修辞分析，识别权威诉求、阴谋叙事和功效宣称等模式。
+推荐理由：它把 LLM 用作大规模社会文本分析工具，对 misinformation 研究很有启发。
+关键词：misinformation、YouTube、rhetoric
+原文：https://papers.cool/arxiv/2604.22606
+
+9. Learning Evidence Highlighting for Frozen LLMs
+来源：Computation and Language , Artificial Intelligence｜评分：Kimi 3★
+看点：提出 HiLight，通过轻量 actor 给关键证据加高亮，让冻结的 LLM 在长上下文中更容易抓住重点。
+推荐理由：无需改动底层大模型就能提升推理效果，这种外围增强路线很有工程吸引力。
+关键词：evidence、highlighting、LLMs
+原文：https://papers.cool/arxiv/2604.22565
+
+10. Using Embedding Models to Improve Probabilistic Race Prediction
+来源：Computation and Language｜评分：Top 10
+看点：用姓名嵌入改进传统 BISG 方法，提升对罕见姓氏人群的种族概率预测效果。
+推荐理由：这篇工作展示了 embedding 如何补齐结构化社会数据方法的短板，兼具方法与应用意义。
+关键词：embedding、race、surname
+原文：https://papers.cool/arxiv/2604.22555
