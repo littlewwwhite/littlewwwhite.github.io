@@ -1,0 +1,221 @@
+AI 博客 Top 10
+
+今天的博客精选一边在追踪 AI 安全、模型幻觉与“vibe coding”争议，一边也在落回工程现实：包管理、CI/CD、并发控制和底层调用约定都成了高频话题。整体看下来，最值得关注的是“如何把新一代 AI 能力真正落到稳健的软件系统里”，而不是只停留在概念热度上。
+
+1. Dario Amodei、炒作、AI 安全与“氛围编码”AI 灾难的爆发
+来源：garymarcus.substack.com｜评分：26/30
+看点：文章集中批评 AI 领域的过度宣传，指出不少“能力跃迁”叙事掩盖了真实安全风险，尤其把“vibe-coded”式开发带来的失控后果拉到台前。
+推荐理由：如果你在判断 AI 项目的真实成熟度，这篇文章能帮你快速校准“营销口径”和“工程现实”之间的落差。
+关键词：AI safety、hype、AI development
+原文：https://garymarcus.substack.com/p/dario-amodei-hype-ai-safety-and-the
+
+2. 引用 Matthew Yglesias
+来源：simonwillison.net｜评分：24/30
+看点：文章借 Matthew Yglesias 的观点强调，AI 更适合提升专业软件团队的生产率，而不是把模糊意图直接当成开发方法论。
+推荐理由：它很适合和最近流行的“全民 vibe coding”叙事对照着看，帮助团队更清楚地界定 AI 编程的有效边界。
+关键词：AI、coding assistance、software development
+原文：https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything
+
+3. 隆重推出 talkie：一款来自 1930 年的 13B 参数复古语言模型
+来源：simonwillison.net｜评分：24/30
+看点：这个 13B 复古语言模型试图复现 1930 年代的语言风格，把“历史语言分布”做成了一个可实验、可调用的现代 LLM 项目。
+推荐理由：它不只是趣味演示，也展示了语言模型在时代风格模拟、数字人文和风格化生成上的新玩法。
+关键词：language model、vintage AI、LLM
+原文：https://simonwillison.net/2026/Apr/28/talkie/#atom-everything
+
+4. microsoft/VibeVoice
+来源：simonwillison.net｜评分：24/30
+看点：微软开源了类 Whisper 的语音模型 VibeVoice，重点卖点是语音转写之外还内置说话人分离，降低了音频处理工作流的集成门槛。
+推荐理由：语音 AI 正在从“能转写”走向“可直接上手做产品”，这篇文章给出了非常贴近开发者的落地视角。
+关键词：speech-to-text、audio model、Whisper
+原文：https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything
+
+5. 非法状态 vs. 不期望的状态
+来源：buttondown.com/hillelwayne｜评分：24/30
+看点：作者把“绝不能出现的非法状态”和“可以短暂存在但不理想的状态”清晰区分开，提醒我们别把所有问题都粗暴塞进类型系统。
+推荐理由：这对做复杂业务建模、状态机设计和数据结构设计的人很有启发，能直接改善系统可维护性。
+关键词：state management、software design、system states
+原文：https://buttondown.com/hillelwayne/archive/illegal-vs-unwanted-states/
+
+6. 开发跨进程读写锁（限制读者数），第一部分：信号量
+来源：devblogs.microsoft.com/oldnewthing｜评分：23/30
+看点：文章从信号量出发拆解跨进程读写锁的实现基础，把并发控制从抽象概念拉回到操作系统原语。
+推荐理由：如果你在做高并发服务、系统编程或基础组件开发，这类底层推演能帮助你少踩很多同步细节坑。
+关键词：cross-process、reader-writer lock、semaphore
+原文：https://devblogs.microsoft.com/oldnewthing/20260428-00/?p=112278
+
+7. 探究向 C 函数传递过少寄存器参数在不同架构下的后果
+来源：devblogs.microsoft.com/oldnewthing｜评分：23/30
+看点：作者比较了不同 CPU 架构下调用约定出错时的表现差异，说明“参数少传一点”这类未定义行为为何会在底层放大成灾难。
+推荐理由：这是那种能帮你建立系统级直觉的文章，尤其适合写 C/C++、编译器相关或调试底层 bug 的读者。
+关键词：C function、register parameters、architecture
+原文：https://devblogs.microsoft.com/oldnewthing/20260427-00/?p=112271
+
+8. pip 26.1 新特性：锁定文件与依赖冷却
+来源：simonwillison.net｜评分：27/30
+看点：pip 26.1 引入 lockfiles 和 dependency cooldowns，两项更新都直指 Python 依赖可复现性与升级稳定性这两个老问题。
+推荐理由：这是今天最实用的一篇，凡是维护 Python 项目、CI 环境或团队依赖策略的人都值得第一时间关注。
+关键词：pip、Python、dependency management
+原文：https://simonwillison.net/2026/Apr/28/pip-261/#atom-everything
+
+9. GitHub Actions 是最薄弱的环节
+来源：nesbitt.io｜评分：24/30
+看点：文章用半调侃的方式点出 GitHub Actions 在真实 CI/CD 流程里的脆弱点，提醒大家不要把工作流平台默认当成可靠基础设施。
+推荐理由：如果你的工程交付越来越依赖自动化流水线，这篇文章很适合拿来做一次平台风险体检。
+关键词：GitHub Actions、CI/CD、workflow
+原文：https://nesbitt.io/2026/04/28/github-actions-is-the-weakest-link.html
+
+10. 追踪已失效的 OpenAI Microsoft AGI 条款的历史
+来源：simonwillison.net｜评分：24/30
+看点：文章梳理了 OpenAI 与微软协议中 AGI 条款的来龙去脉，展示了关键商业安排如何随着行业格局变化而被悄然重写。
+推荐理由：对关注 AI 产业权力结构、平台合作关系和商业化约束的人来说，这是一篇信息密度很高的背景材料。
+关键词：AGI、OpenAI、Microsoft
+原文：https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-everything
+
+GitHub Trending Top 10
+
+今天的 GitHub 热榜明显被 AI 编码技能、语音模型与开发者效率工具占据，说明“给模型配工作流”和“把 AI 真正接到工具链里”仍是最强主线。与此同时，也能看到 API 中间层、音乐生成 UI 和公开 API 索引这类偏落地项目持续吸星。
+
+1. mattpocock/skills
+来源：Shell｜评分：今日 +7,321★
+看点：这个仓库把工程师常用的 Claude/Codex 技能模板系统化整理，核心价值在于把“会用模型”沉淀成“可复用操作手册”。
+推荐理由：对任何想把 AI 编程从个人经验升级为团队流程的人来说，它都非常有参考价值。
+关键词：AI coding、skills、workflow
+链接：https://github.com/mattpocock/skills
+
+2. abhigyanpatwari/GitNexus
+来源：TypeScript｜评分：今日 +1,607★
+看点：GitNexus 主打纯浏览器侧代码知识图谱和 Graph RAG，直接把 GitHub 仓库或 ZIP 变成可探索的代码理解界面。
+推荐理由：这类“零服务端代码认知层”很契合当前代码助手趋势，尤其适合大型仓库的快速上手与知识发现。
+关键词：Graph RAG、code intelligence、knowledge graph
+链接：https://github.com/abhigyanpatwari/GitNexus
+
+3. ComposioHQ/awesome-codex-skills
+来源：Python｜评分：今日 +953★
+看点：项目聚合了大量可直接拿来用的 Codex skills，覆盖 CLI 与 API 自动化场景，强调实操而不是概念。
+推荐理由：如果你正在搭建自己的 AI agent 工具箱，这类精选清单能显著降低试错成本。
+关键词：Codex、automation、developer tools
+链接：https://github.com/ComposioHQ/awesome-codex-skills
+
+4. microsoft/VibeVoice
+来源：Python｜评分：今日 +1,483★
+看点：VibeVoice 定位为开源前沿语音 AI，热度说明语音入口依然是生成式 AI 的高关注方向之一。
+推荐理由：微软背书加开源落地，让它非常适合持续跟踪，尤其适合关注语音交互和多模态产品的人。
+关键词：voice AI、speech、open source
+链接：https://github.com/microsoft/VibeVoice
+
+5. davila7/claude-code-templates
+来源：Python｜评分：今日 +346★
+看点：这是一个围绕 Claude Code 配置与监控的 CLI 工具，核心是在团队里标准化 agent 使用方式。
+推荐理由：随着 AI 编程从尝鲜走向日常，这类“模板化配置层”会越来越像开发团队的新基础设施。
+关键词：Claude Code、CLI、templates
+链接：https://github.com/davila7/claude-code-templates
+
+6. HunxByts/GhostTrack
+来源：Python｜评分：今日 +967★
+看点：GhostTrack 是一个与位置或号码追踪相关的工具，说明 OSINT/安全类项目仍然很容易在热榜获得扩散。
+推荐理由：即便不直接使用，也值得从合规、安全和隐私边界的角度关注它引发的讨论。
+关键词：OSINT、tracking、security
+链接：https://github.com/HunxByts/GhostTrack
+
+7. fspecii/ace-step-ui
+来源：JavaScript｜评分：今日 +162★
+看点：该项目为 ACE-Step 1.5 音乐生成提供专业 UI，并打出“本地、免费、无限制”的开源替代方案定位。
+推荐理由：它反映出生成式音乐正在从模型能力竞争转向产品体验竞争，前端封装层的重要性越来越高。
+关键词：music generation、UI、open source
+链接：https://github.com/fspecii/ace-step-ui
+
+8. public-apis/public-apis
+来源：Python｜评分：今日 +644★
+看点：这个经典仓库持续收录免费 API，虽不新，但在 AI agent 和自动化集成场景里依旧是高价值资源库。
+推荐理由：做原型、做自动化、做多工具编排时，稳定的 API 索引往往比单点新项目更实用。
+关键词：APIs、integration、resource list
+链接：https://github.com/public-apis/public-apis
+
+9. CJackHwang/ds2api
+来源：Go｜评分：今日 +417★
+看点：ds2api 把 DeepSeek 等客户端协议转换成通用 API 形态，兼容 Google、Claude、OpenAI 风格接口，明显瞄准多模型接入层。
+推荐理由：对正在做模型网关、统一 SDK 或多账号调度的人来说，这类中间层项目非常值得关注。
+关键词：API gateway、DeepSeek、middleware
+链接：https://github.com/CJackHwang/ds2api
+
+10. Alishahryar1/free-claude-code
+来源：Python｜评分：今日 +1,741★
+看点：项目聚焦于让 Claude Code 在终端、VSCode 扩展或 Discord 场景中更易接入，热度背后是开发者对低门槛 AI coding 的强需求。
+推荐理由：无论是否采用其方案，它都能帮助你理解当前社区最看重的“可获得性”和“即插即用”体验。
+关键词：Claude Code、terminal、developer productivity
+链接：https://github.com/Alishahryar1/free-claude-code
+
+papers.cool/arxiv 每日 Top 10
+
+今天的 papers.cool 榜单几乎被 LLM 评测、长上下文推理、行为控制和领域基准占满，研究重心很明确：一边继续压榨模型能力上限，一边补齐可信评测和真实部署短板。尤其值得注意的是，多篇论文都在讨论“模型在真实人类语境里到底会怎么表现”，这比单纯刷 benchmark 更接近下一阶段落地。
+
+1. Sentiment and Emotion Classification of Indonesian E-Commerce Reviews via Multi-Task BiLSTM and AutoML Benchmarking
+来源：Computation and Language｜评分：Top 1
+看点：论文围绕印尼电商评论做情感与情绪双任务分类，把传统 TF-IDF+AutoML 与多任务 BiLSTM 并行比较，强调真实低资源语境下的工程可用性。
+推荐理由：它很适合关注多语种 NLP、产业数据清洗和轻量级情感分析落地的人参考。
+关键词：sentiment、emotion、Indonesian
+原文：https://papers.cool/arxiv/2604.24720
+
+2. Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling
+来源：Computation and Language , Machine Learning｜评分：Kimi 1★
+看点：HyLo 提出把已有 Transformer 检查点“升级改造”为混合长上下文架构，在不从零训练的前提下把上下文能力显著拉长，并大幅压缩 KV cache。
+推荐理由：这是长上下文路线里很务实的一篇，对模型后训练、推理成本和架构演进都很有启发。
+关键词：long context、hybrid LLM、KV cache
+原文：https://papers.cool/arxiv/2604.24715
+
+3. Green Shielding: A User-Centric Approach Towards Trustworthy AI
+来源：Computation and Language , Artificial Intelligence｜评分：Top 3
+看点：论文提出 Green Shielding，从“普通用户自然提问的细微变化”出发研究模型行为漂移，并用医疗诊断场景做高风险验证。
+推荐理由：如果你关心可信 AI 和真实部署，这篇论文把“用户交互方式本身就是安全变量”讲得非常透彻。
+关键词：trustworthy AI、medical diagnosis、user behavior
+原文：https://papers.cool/arxiv/2604.24700
+
+4. The Chameleon's Limit: Investigating Persona Collapse and Homogenization in Large Language Models
+来源：Computation and Language｜评分：Top 4
+看点：这篇工作研究多智能体模拟中的“人格塌缩”，指出模型即便被赋予不同 persona，也常会收敛成相似行为模式。
+推荐理由：做 agent 仿真、社会模拟或角色化产品的人，都该认真看待这个多样性失真问题。
+关键词：persona collapse、multi-agent、behavior diversity
+原文：https://papers.cool/arxiv/2604.24698
+
+5. Contextual Linear Activation Steering of Language Models
+来源：Computation and Language｜评分：Top 5
+看点：CLAS 让 activation steering 的强度随上下文动态调整，避免固定 steering 在不同 prompt 上表现失衡的问题。
+推荐理由：对想以较低成本做模型可控化、个性化和行为特化的人来说，这是一条很实用的技术路线。
+关键词：activation steering、controllability、context
+原文：https://papers.cool/arxiv/2604.24693
+
+6. Can LLMs Act as Historians? Evaluating Historical Research Capabilities of LLMs via the Chinese Imperial Examination
+来源：Computation and Language｜评分：Top 6
+看点：论文借中国科举体系构建 ProHist-Bench，专门测试 LLM 在历史研究中的证据推理与深层专业能力，而不只考常识记忆。
+推荐理由：它提醒我们，通用模型离真正的学科级推理仍有明显距离，尤其适合做教育和研究工具的人关注。
+关键词：historical reasoning、benchmark、LLM evaluation
+原文：https://papers.cool/arxiv/2604.24690
+
+7. Benchmarking Source-Sensitive Reasoning in Turkish: Humans and LLMs under Evidential Trust Manipulation
+来源：Computation and Language , Artificial Intelligence｜评分：Top 7
+看点：研究通过土耳其语证据性表达测试模型是否会随信息来源可信度调整判断，结果显示人类与 LLM 之间仍有明显推理差距。
+推荐理由：这类工作把语言学细粒度现象拉进模型评测，非常适合判断“模型是否真的理解语义与语用”。
+关键词：evidentiality、Turkish、reasoning
+原文：https://papers.cool/arxiv/2604.24665
+
+8. DepthKV: Layer-Dependent KV Cache Pruning for Long-Context LLM Inference
+来源：Computation and Language , Artificial Intelligence｜评分：Kimi 2★
+看点：DepthKV 提出按层分配 KV cache 剪枝预算，而不是所有层统一裁剪，从而更高效地释放长上下文推理显存。
+推荐理由：它对推理优化非常直接，尤其适合关注大模型部署、长文档处理与服务成本的人。
+关键词：KV cache、pruning、inference optimization
+原文：https://papers.cool/arxiv/2604.24647
+
+9. K-MetBench: A Multi-Dimensional Benchmark for Fine-Grained Evaluation of Expert Reasoning, Locality, and Multimodality in Meteorology
+来源：Computation and Language , Artificial Intelligence｜评分：Top 9
+看点：K-MetBench 用气象专业场景评估模型在图表理解、逻辑推理、本地文化语境和多模态分析上的真实能力缺口。
+推荐理由：它证明“参数更大”并不自动等于“领域更强”，对行业 agent 的评测设计很有借鉴意义。
+关键词：meteorology、multimodality、expert reasoning
+原文：https://papers.cool/arxiv/2604.24645
+
+10. Looking for the Bottleneck in Fine-grained Temporal Relation Classification
+来源：Computation and Language｜评分：Top 10
+看点：论文重新审视时间关系分类难题，提出先做端点关系判定再解码为区间关系的方案，并在 TempEval-3 上刷新结果。
+推荐理由：时间推理一直是 NLP 里的硬骨头，这篇文章对信息抽取、事件理解和复杂文本推理都有基础价值。
+关键词：temporal relation、classification、information extraction
+原文：https://papers.cool/arxiv/2604.24620

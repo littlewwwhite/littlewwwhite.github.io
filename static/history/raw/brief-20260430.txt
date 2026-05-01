@@ -1,0 +1,221 @@
+AI 博客 Top 10
+
+今天的博客精选一边在拆解 AI 商业化的账本，一边在回到模型、工具和基础设施的底层原理。值得注意的是，最受关注的内容并不只谈“大模型更强”，而是在追问：AI 到底怎样赚钱、怎样落地、以及哪些老工具会被重新定义。
+
+1. 你见过新的 Excel 吗？
+来源：idiallo.com｜评分：26/30
+看点：作者用戏仿口吻把 Excel 写成“真正的颠覆式 AI”，借此反讽行业对新模型的过度迷恋，也提醒我们生产力革命常常来自被低估的成熟工具。
+推荐理由：如果你关心 AI 应用层最终如何进入企业流程，这篇文章能帮你从一个反直觉角度重新理解“工具胜过概念”的趋势。
+关键词：Excel、生产力、LLM
+原文：https://idiallo.com/blog/have-you-seen-the-new-xl-ai-parody?src=feed
+
+2. AI 的经济学说不通
+来源：wheresyoured.at｜评分：26/30
+看点：文章直指训练、推理和基础设施成本高企，认为当前 AI 商业模式很难支撑如此庞大的资本开销，泡沫风险正在累积。
+推荐理由：这不是泛泛而谈的唱衰文，而是理解 OpenAI、Anthropic、NVIDIA 这条产业链为何必须持续讲增长故事的重要背景材料。
+关键词：AI 经济学、NVIDIA、OpenAI
+原文：https://www.wheresyoured.at/ais-economics-dont-make-sense/
+
+3. AI 的经济学说不通 [无广告版]
+来源：wheresyoured.at｜评分：26/30
+看点：内容同样聚焦 AI 商业闭环的不稳固之处，但更适合希望连续阅读、不被页面干扰的读者快速吸收核心论点。
+推荐理由：如果你正在评估 AI 编码工具、模型订阅或 SaaS 定价，这篇文章能帮助你把“产品体验”放回到“单位经济性”里看。
+关键词：AI 经济学、GitHub Copilot、开发者工具
+原文：https://www.wheresyoured.at/ais-economics-dont-make-sense-ad-free/
+
+4. 介绍 talkie：一个来自 1930 年的 13B 规模的复古语言模型
+来源：simonwillison.net｜评分：25/30
+看点：这篇文章介绍了一个带有“复古设定”的 13B 语言模型项目，既有技术趣味，也折射出模型人格、数据风格与历史语境结合的新玩法。
+推荐理由：它值得读，不是因为参数规模，而是因为它展示了语言模型除了追求更强性能，还能在风格控制和叙事体验上继续扩展。
+关键词：复古模型、语言模型、1930s
+原文：https://simonwillison.net/2026/Apr/28/talkie/#atom-everything
+
+5. Reiner Pope – LLM 训练和服务的数学原理
+来源：dwarkesh.com｜评分：25/30
+看点：作者尝试用少量公式和清晰推导，把 LLM 训练与推理服务背后的核心数学直觉讲明白，适合建立系统级认知。
+推荐理由：如果你已经被各种模型新闻轰炸，这篇内容能帮你退回第一性原理，重新理解成本、吞吐与模型规模之间的关系。
+关键词：LLM 训练、LLM 服务、数学
+原文：https://www.dwarkesh.com/p/reiner-pope
+
+6. OpenAI 预测 ChatGPT Plus 订阅量将从 2025 年的 4400 万下降 80% 至 2026 年的 900 万，通过更便宜的订阅来弥补（不知如何实现）
+来源：wheresyoured.at｜评分：25/30
+看点：文章围绕 OpenAI 订阅用户结构的潜在变化展开，指出其可能试图依赖更低价、甚至广告支持的产品层来维持收入增长。
+推荐理由：这为观察 ChatGPT 产品线未来如何分层、如何平衡 ARPU 与覆盖面提供了很具体的信号，尤其适合做市场判断的人看。
+关键词：ChatGPT Plus、OpenAI 预测、订阅收入
+原文：https://www.wheresyoured.at/openai-projects-chatgpt-plus-subscriptions-to-drop-by-80-from-44-million-in-2025-to-9-million-in-2026-made-up-using-cheaper-subscriptions-somehow/
+
+7. 引用 Matthew Yglesias
+来源：simonwillison.net｜评分：24/30
+看点：文章借 Matthew Yglesias 的表态指出，普通用户未必想“亲自 vibe coding”，他们更希望专业公司借助 AI 交付更便宜、更好用的软件。
+推荐理由：这对“人人都该自己写代码”的流行叙事是一次很好的校正，也提醒做 AI 产品的人别把技术能力误当成用户需求。
+关键词：AI、编码助手、软件开发
+原文：https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything
+
+8. OpenAI 审判以公司早期历史的两个截然不同的故事开场
+来源：daringfireball.net｜评分：24/30
+看点：文章转述 OpenAI 与马斯克相关审判中的双方叙事冲突，揭示了 OpenAI 从理想主义研究组织走向商业巨头的历史争议。
+推荐理由：如果你想理解 OpenAI 当下治理、融资和品牌叙事的深层张力，这类历史回溯比单纯新闻快讯更有价值。
+关键词：OpenAI、Musk v. Altman、审判
+原文：https://www.nytimes.com/2026/04/28/technology/openai-trial-elon-musk-sam-altman.html?unlocked_article_code=1.elA.u75G.-STmUe_pILOO
+
+9. LLM 0.32a0 是一个重大的向后兼容重构
+来源：simonwillison.net｜评分：24/30
+看点：新版 LLM Python 库与 CLI 在保持兼容的前提下大幅重构交互方式，为更灵活地接入模型、输入和工作流打下基础。
+推荐理由：对依赖本地工具链、脚本化调用或多模型实验的开发者来说，这类基础工具的演进往往比单个模型发布更影响日常效率。
+关键词：LLM、Python、CLI
+原文：https://simonwillison.net/2026/Apr/29/llm/#atom-everything
+
+10. pip 26.1 的新功能 - 锁定文件和依赖项冷却！
+来源：simonwillison.net｜评分：24/30
+看点：pip 26.1 引入 lockfiles 与 dependency cooldowns 等能力，说明 Python 生态正在更认真地补齐可重复构建与依赖稳定性问题。
+推荐理由：AI 工程最终还是软件工程，谁能更稳地管理环境和供应链，谁就更能把模型能力真正交付到生产环境。
+关键词：pip、依赖管理、lockfiles
+原文：https://simonwillison.net/2026/Apr/28/pip-261/#atom-everything
+
+GitHub Trending Top 10
+
+今天 GitHub 热榜明显偏向 AI Agent、开发工作流和基础设施中间层，既有面向终端与代码智能的工具，也有语音、多代理和数据分析方向的新项目。整体看，开发者正在把“模型能力”快速压缩成可直接复用的工程组件。
+
+1. warpdotdev/warp
+来源：Rust｜评分：今日 +12,822★
+看点：Warp 把终端升级为 agentic 开发环境，不只是执行命令，更试图成为程序员与 AI 协作的统一操作台。
+推荐理由：终端始终是开发者最高频入口之一，谁能重写终端体验，谁就可能占住 AI 编程时代的重要交互层。
+关键词：终端、AI Agent、开发环境
+链接：https://github.com/warpdotdev/warp
+
+2. mattpocock/skills
+来源：Shell｜评分：今日 +7,280★
+看点：这个仓库沉淀了可直接拿来用的工程技能模板，把“如何让智能体干活”结构化成可复制的操作资产。
+推荐理由：它代表了一种很现实的趋势：AI 编程的竞争，不只在模型本身，也在 prompt、流程和技能库的工程封装。
+关键词：技能库、自动化、工程方法
+链接：https://github.com/mattpocock/skills
+
+3. HunxByts/GhostTrack
+来源：Python｜评分：今日 +1,033★
+看点：GhostTrack 主打位置或手机号追踪能力，功能导向非常明确，也因此带有明显的安全与合规讨论空间。
+推荐理由：热度说明安全、侦察与信息收集类工具依然极具传播性，适合把它当作观察开源安全工具情绪的一个风向标。
+关键词：追踪、安全、信息收集
+链接：https://github.com/HunxByts/GhostTrack
+
+4. ComposioHQ/awesome-codex-skills
+来源：Python｜评分：今日 +1,177★
+看点：该仓库聚合了大量面向 Codex CLI 与 API 的实用技能，目标是把工作流自动化从“会写 prompt”升级为“会组装能力”。
+推荐理由：如果你在搭建 coding agent 或内部开发助手，这种 curated skills 集合能显著缩短试错与集成时间。
+关键词：Codex、工作流、自动化
+链接：https://github.com/ComposioHQ/awesome-codex-skills
+
+5. 1jehuang/jcode
+来源：Rust｜评分：今日 +411★
+看点：jcode 是一个 coding agent harness，聚焦让代码智能体在受控环境里稳定执行、评估与迭代。
+推荐理由：Harness 正在成为 agent 成败的关键层，这类项目有助于理解为什么“模型差距”常常不如“执行框架差距”大。
+关键词：Coding Agent、Harness、评测
+链接：https://github.com/1jehuang/jcode
+
+6. abhigyanpatwari/GitNexus
+来源：TypeScript｜评分：今日 +774★
+看点：GitNexus 在浏览器端生成代码知识图谱与 Graph RAG 体验，让用户无需后端服务就能探索仓库结构与关系。
+推荐理由：它把代码智能、知识图谱和前端交互绑在一起，是“轻部署代码理解工具”很有代表性的一个方向。
+关键词：知识图谱、Graph RAG、代码理解
+链接：https://github.com/abhigyanpatwari/GitNexus
+
+7. microsoft/VibeVoice
+来源：Python｜评分：今日 +1,690★
+看点：VibeVoice 主打开源前沿语音 AI，显示大厂正在把语音方向的重要能力逐步释放到开源生态中。
+推荐理由：语音始终是 AI 落地的高频场景之一，微软出手往往意味着生态、基线与后续跟进项目都会迅速增多。
+关键词：语音 AI、开源、微软
+链接：https://github.com/microsoft/VibeVoice
+
+8. CJackHwang/ds2api
+来源：Go｜评分：今日 +465★
+看点：ds2api 充当协议转换中间层，把不同客户端协议统一映射到通用 API，并支持多账户轮换与多种兼容格式。
+推荐理由：这类基础设施项目虽然不显眼，却非常贴近真实部署需求，尤其适合多模型接入、成本优化和服务兼容场景。
+关键词：API 中间层、多模型、协议转换
+链接：https://github.com/CJackHwang/ds2api
+
+9. obra/superpowers
+来源：Shell｜评分：今日 +1,653★
+看点：superpowers 试图把 agentic skills framework 和软件开发方法论结合起来，强调流程设计与能力编排同样重要。
+推荐理由：它的走红说明市场已经开始从“用 AI 写点代码”转向“如何系统化组织 AI 开发团队能力”的更高层问题。
+关键词：Agent 框架、方法论、开发流程
+链接：https://github.com/obra/superpowers
+
+10. ZhuLinsen/daily_stock_analysis
+来源：Python｜评分：今日 +294★
+看点：这是一个由 LLM 驱动的多市场股票分析系统，把行情、新闻、决策仪表盘和推送集成在同一工作流中。
+推荐理由：项目很适合观察垂直场景里“数据源 + LLM + 自动化推送”这一产品模板如何被低成本复用。
+关键词：股票分析、LLM 应用、自动化推送
+链接：https://github.com/ZhuLinsen/daily_stock_analysis
+
+papers.cool/arxiv 每日 Top 10
+
+今天的论文榜单高度集中在 LLM 评测、可解释性、训练目标和代理系统，整体气质非常“从会用到会控”。相比单纯追求更大模型，这批论文更关心如何更真实地评估、约束和改进 AI 系统。
+
+1. DV-World: Benchmarking Data Visualization Agents in Real-World Scenarios
+来源：Computation and Language｜评分：Kimi 2★
+看点：DV-World 把数据可视化 agent 放进真实工作流里评测，覆盖表格操作、可视化演化与意图对齐，明显比沙盒题更接近企业场景。
+推荐理由：随着 agent 从 demo 走向生产，这类“现实世界 benchmark”会比传统基准更能定义真正可交付的能力边界。
+关键词：数据可视化、Agents、Benchmark
+原文：https://papers.cool/arxiv/2604.25914
+
+2. A paradox of AI fluency
+来源：Computation and Language｜评分：Kimi 2★
+看点：论文发现 AI 熟练用户虽然暴露出更多失败，但这些失败往往可见、可修复；新手则更容易陷入“看似成功、实则跑偏”的隐性失败。
+推荐理由：它对 AI 教育、产品设计和提示工程都很有启发，因为关键不只是模型强弱，更是用户是否具备主动协作能力。
+关键词：AI 素养、用户行为、交互研究
+原文：https://papers.cool/arxiv/2604.25905
+
+3. Toward a Functional Geometric Algebra for Natural Language Semantics
+来源：Computation and Language , Artificial Intelligence , Machine Learning｜评分：Kimi 1★
+看点：作者尝试用几何代数重构自然语言语义表示，目标是突破传统线性代数框架在组合性、类型敏感性和可解释性上的局限。
+推荐理由：虽然偏理论，但它提供了一条少见的基础路线：不是继续堆参数，而是从表示与运算体系本身重新思考语言建模。
+关键词：几何代数、语义表示、可解释性
+原文：https://papers.cool/arxiv/2604.25902
+
+4. From Syntax to Emotion: A Mechanistic Analysis of Emotion Inference in LLMs
+来源：Computation and Language｜评分：Top 4
+看点：论文利用稀疏自编码器分析 LLM 内部的情绪识别机制，识别出情绪特征的分阶段形成过程以及不同情绪的表示差异。
+推荐理由：对做可解释 AI、情感计算或安全对齐的人来说，这项工作展示了如何从“模型会做什么”进一步追到“模型为何会这样做”。
+关键词：情绪识别、机制分析、SAE
+原文：https://papers.cool/arxiv/2604.25866
+
+5. Luminol-AIDetect: Fast Zero-shot Machine-Generated Text Detection based on Perplexity under Text Shuffling
+来源：Computation and Language , Artificial Intelligence , Computers and Society｜评分：Top 5
+看点：该方法通过文本打乱后的困惑度变化来识别机器生成文本，强调零样本、跨模型和多语言场景下的鲁棒检测能力。
+推荐理由：在生成式内容泛滥的阶段，检测工具的重要性快速上升，这篇论文提供了一个成本更低、泛化更强的思路。
+关键词：文本检测、零样本、困惑度
+原文：https://papers.cool/arxiv/2604.25860
+
+6. G-Loss: Graph-Guided Fine-Tuning of Language Models
+来源：Computation and Language , Artificial Intelligence , Machine Learning｜评分：Top 6
+看点：G-Loss 把图结构引入语言模型微调损失，希望利用全局语义关系而不只依赖局部邻域，从而学到更稳健的表示。
+推荐理由：这是一个很典型但常被低估的方向：模型效果不一定只靠架构升级，训练目标与损失函数的设计同样可能带来明显提升。
+关键词：微调、图结构、损失函数
+原文：https://papers.cool/arxiv/2604.25853
+
+7. Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses
+来源：Computation and Language , Software Engineering｜评分：Kimi 3★
+看点：论文把 coding-agent harness 的演化过程拆成组件观测、经验观测和决策观测三层，并证明这种可观测性驱动方法能持续提升 benchmark 表现。
+推荐理由：这篇工作几乎是在为“为什么 agent 成功更多取决于 harness 而非裸模型”做系统论证，工程价值非常直接。
+关键词：Coding Agent、Harness、可观测性
+原文：https://papers.cool/arxiv/2604.25850
+
+8. PSI-Bench: Towards Clinically Grounded and Interpretable Evaluation of Depression Patient Simulators
+来源：Computation and Language , Artificial Intelligence｜评分：Top 8
+看点：PSI-Bench 针对抑郁症患者模拟器提出更临床化、可解释的自动评测框架，强调行为多样性与真实度，而非只依赖模糊的 LLM 裁判。
+推荐理由：医疗和心理健康场景容错率低，这类评测工作虽然不显山露水，却是 AI 真正进入高风险行业前必须补上的地基。
+关键词：心理健康、评测框架、可解释性
+原文：https://papers.cool/arxiv/2604.25840
+
+9. MAIC-UI: Making Interactive Courseware with Generative UI
+来源：Computation and Language , Artificial Intelligence , Human-Computer Interaction｜评分：Kimi 1★
+看点：MAIC-UI 让教师在零代码条件下从教材、PPT 或 PDF 快速生成可交互课件，并通过增量编辑把迭代时间压缩到秒级。
+推荐理由：这篇论文把生成式 UI 与教育场景结合得很实在，体现出 AI 不只是生成内容，更能直接重构创作与教学流程。
+关键词：生成式 UI、教育科技、交互课件
+原文：https://papers.cool/arxiv/2604.25806
+
+10. Subliminal Steering: Stronger Encoding of Hidden Signals
+来源：Computation and Language｜评分：Top 10
+看点：论文研究“潜意识式”偏置信号如何通过教师模型生成的数据被学生模型继承，并进一步揭示其可被更精确地编码与转移。
+推荐理由：这对模型对齐、数据安全和训练治理都很关键，因为它提醒我们风险未必只存在于显式指令，也可能藏在训练样本分布里。
+关键词：隐性操控、模型偏置、对齐安全
+原文：https://papers.cool/arxiv/2604.25783

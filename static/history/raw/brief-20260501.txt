@@ -1,0 +1,221 @@
+AI 博客 Top 10
+
+今天的博客精选高度集中在三条主线：一是 LLM 工具链与 agent 交互形态正在快速重构，二是 AI 安全、开源治理与内容真实性的争议持续升温，三是底层原理型长文重新成为高质量阅读重点。整体看，工程实践、制度边界和模型能力评估正在同步推进，信息密度很高。
+
+1. LLM 0.32a0 是一个重大的向后兼容重构
+来源：simonwillison.net｜评分：24/30
+看点：LLM Python 库与 CLI 迎来大幅重构，从“提示-响应”模式向更灵活的交互结构演进，释放了后续 agent 化扩展空间。
+推荐理由：这类基础工具的接口变化往往会外溢到整个开发生态，适合关注本地 LLM 工作流和开发者工具的人优先阅读。
+关键词：LLM library、CLI tool、refactor
+原文：https://simonwillison.net/2026/Apr/29/llm/#atom-everything
+
+2. Codex CLI 0.128.0 增加了 /goal 功能
+来源：simonwillison.net｜评分：23/30
+看点：Codex CLI 新增 /goal，使工具能够围绕目标持续循环执行，而不是一次性响应，明显更接近 agent 执行范式。
+推荐理由：如果你在观察“编码助手”如何向“可持续执行的代理”升级，这篇能快速抓住产品演进方向。
+关键词：Codex CLI、OpenAI、agent
+原文：https://simonwillison.net/2026/Apr/30/codex-goals/#atom-everything
+
+3. llm 0.32a1 发布
+来源：simonwillison.net｜评分：23/30
+看点：0.32a1 重点修复工具调用对话无法从 SQLite 正确恢复的问题，直接补强了状态持久化与恢复能力。
+推荐理由：对本地代理、工具调用日志和可恢复工作流感兴趣的话，这类“小版本修复”往往比功能更新更关键。
+关键词：llm、tool-calling、bug fix
+原文：https://simonwillison.net/2026/Apr/29/llm-3/#atom-everything
+
+4. llm 0.32a0 发布
+来源：simonwillison.net｜评分：23/30
+看点：这篇更像正式发布说明，交代了 0.32a0 的改动范围与版本定位，是理解前述重构的补充入口。
+推荐理由：适合和“重大重构”那篇搭配阅读，帮助你把设计动机、变更边界和版本脉络连起来看。
+关键词：llm、release、alpha
+原文：https://simonwillison.net/2026/Apr/29/llm-2/#atom-everything
+
+5. 关于 Musk 与 OpenAI 诉讼的三点思考
+来源：garymarcus.substack.com｜评分：25/30
+看点：文章从立场并不简单的角度审视 Musk 与 OpenAI 的诉讼，强调其背后是 AI 伦理、组织治理与商业利益的交叉冲突。
+推荐理由：如果你想理解 AI 产业竞争为何越来越演化为法律与治理问题，这篇比单纯新闻更有分析价值。
+关键词：Musk、OpenAI、lawsuit
+原文：https://garymarcus.substack.com/p/three-thoughts-on-the-musk-openai
+
+6. 引用 Andrew Kelley 的观点
+来源：simonwillison.net｜评分：24/30
+看点：Andrew Kelley 认为 LLM 生成内容并非完全不可识别，人类与模型在错误模式、表达气味和贡献风格上存在结构性差异。
+推荐理由：这篇对“AI 内容识别”“开源社区如何界定人类贡献”给出了很强的讨论抓手，适合做治理思考。
+关键词：LLM、open source、detection
+原文：https://simonwillison.net/2026/Apr/30/andrew-kelley/#atom-everything
+
+7. Zig 项目对反 AI 贡献政策的理由
+来源：simonwillison.net｜评分：24/30
+看点：Zig 项目明确限制在 issue、PR 和 bug 讨论中使用 LLM，把“原创性、责任归属与沟通质量”放在优先位置。
+推荐理由：开源社区未来如何接纳或限制 AI 参与，是长期议题；这篇提供了一个极具代表性的治理样本。
+关键词：Zig、anti-LLM policy、contribution
+原文：https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything
+
+8. 大型语言模型训练与服务的数学原理
+来源：dwarkesh.com｜评分：26/30
+看点：文章用公式与图示系统拆解 LLM 训练、推理与部署背后的数学基础，把很多“工程黑盒”摊开来讲清楚。
+推荐理由：这是今天最值得精读的原理型长文之一，适合想把模型训练与服务从直觉理解推进到结构理解的读者。
+关键词：LLM training、math、deep learning
+原文：https://www.dwarkesh.com/p/reiner-pope
+
+9. 英国 AI 安全研究所对 OpenAI GPT-5.5 网络能力的评估
+来源：simonwillison.net｜评分：25/30
+看点：英国 AISI 评估 GPT-5.5 的网络安全能力，指出其在漏洞发现上的表现已接近高水平模型，并且是广泛可用的系统。
+推荐理由：这类外部评测能帮助判断前沿模型在攻防场景中的现实影响，对安全、政策和产品团队都很有参考性。
+关键词：GPT-5.5、cyber capabilities、evaluation
+原文：https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything
+
+10. 反 DDoS 公司向巴西 ISP 发起攻击
+来源：krebsonsecurity.com｜评分：24/30
+看点：一家公司名义上提供反 DDoS 防护，实际上却与大规模攻击活动纠缠在一起，暴露出安全产业链中的灰色地带。
+推荐理由：这不是 AI 主题，但它提醒我们“安全服务商本身也可能成为风险源”，很值得和 AI 安全治理议题放在一起看。
+关键词：DDoS attacks、botnet、Brazil
+原文：https://krebsonsecurity.com/2026/04/anti-ddos-firm-heaped-attacks-on-brazilian-isps/
+
+GitHub Trending Top 10
+
+今天 GitHub 榜单的关键词几乎可以概括为 agent、自动化与实战工具化。除了 AI coding/workflow 相关项目继续吸星，情报收集、公共 API 和 Markdown 生产力工具也表现出很强的即用型需求。
+
+1. warpdotdev/warp
+来源：Rust｜评分：今日 +8,399★
+看点：Warp 把终端升级为 agentic 开发环境，不再只是命令入口，而是开始承载更主动的开发协作体验。
+推荐理由：它代表了“终端 + AI 代理”这一波基础设施级产品方向，值得所有开发工具从业者持续跟进。
+关键词：终端、AI Agent、开发环境
+链接：https://github.com/warpdotdev/warp
+
+2. TauricResearch/TradingAgents
+来源：Python｜评分：今日 +2,023★
+看点：这是一个多代理 LLM 金融交易框架，把研究、决策和策略执行的 agent 结构明确产品化了。
+推荐理由：无论你做量化还是做多智能体系统，这类高热度仓库都很适合作为“垂直 agent”范式样本。
+关键词：多智能体、量化交易、LLM
+链接：https://github.com/TauricResearch/TradingAgents
+
+3. mattpocock/skills
+来源：Shell｜评分：今日 +6,187★
+看点：仓库直接公开作者的 .claude 技能配置，把“可复用提示与操作技能”变成可移植资产。
+推荐理由：这类项目热度飙升，说明开发者正在从单次 prompt 转向可组合、可积累的 agent 技能工程。
+关键词：Skills、Claude、工作流
+链接：https://github.com/mattpocock/skills
+
+4. obra/superpowers
+来源：Shell｜评分：今日 +1,632★
+看点：superpowers 将 agent 技能框架与软件开发方法论打包，强调不仅要有工具，还要有系统化执行方式。
+推荐理由：如果你在搭建团队级 AI 开发流程，这种“框架 + 方法论”型项目参考价值很高。
+关键词：Agent Framework、方法论、软件开发
+链接：https://github.com/obra/superpowers
+
+5. lukilabs/craft-agents-oss
+来源：TypeScript｜评分：今日 +319★
+看点：虽然公开描述不多，但从命名与热度看，项目显然踩中了开源 agent 构建与编排的需求点。
+推荐理由：这类早期高增速仓库往往能提前暴露社区对 agent 平台化能力的真实兴趣。
+关键词：Open Source、Agents、TypeScript
+链接：https://github.com/lukilabs/craft-agents-oss
+
+6. public-apis/public-apis
+来源：Python｜评分：今日 +322★
+看点：经典的免费 API 汇总库持续上榜，说明“把 AI 能力接到真实外部服务”仍是开发者的刚需。
+推荐理由：无论做 demo、原型还是 agent 工具接入，这类资源库始终是效率倍增器。
+关键词：API、资源库、开发效率
+链接：https://github.com/public-apis/public-apis
+
+7. 1jehuang/jcode
+来源：Rust｜评分：今日 +675★
+看点：jcode 定位为 Coding Agent Harness，重点在于为编码代理提供更标准化的执行与测试骨架。
+推荐理由：如果你在找“如何把代码代理做得可控、可评测、可复现”的工程线索，这类 harness 项目值得重点看。
+关键词：Coding Agent、Harness、Rust
+链接：https://github.com/1jehuang/jcode
+
+8. soxoj/maigret
+来源：Python｜评分：今日 +730★
+看点：Maigret 支持从 3000+ 网站按用户名收集公开线索，是一款典型的 OSINT 实战工具。
+推荐理由：它的持续热度说明自动化情报收集依然有强需求，也提醒大家关注隐私暴露与身份关联风险。
+关键词：OSINT、用户名、情报收集
+链接：https://github.com/soxoj/maigret
+
+9. HunxByts/GhostTrack
+来源：Python｜评分：今日 +841★
+看点：GhostTrack 聚焦位置或手机号跟踪类用途，属于争议性较强但传播性极高的实战工具赛道。
+推荐理由：高热度本身就说明这类工具的关注度不低，安全研究、风控和合规团队都应留意其扩散趋势。
+关键词：追踪、安全工具、隐私风险
+链接：https://github.com/HunxByts/GhostTrack
+
+10. iamgio/quarkdown
+来源：Kotlin｜评分：今日 +177★
+看点：Quarkdown 试图把 Markdown 扩展成论文、演示、网站、书籍和知识库的一体化生产格式。
+推荐理由：在 AI 辅助写作越来越普及的背景下，结构化内容生产工具正在重新获得开发者青睐。
+关键词：Markdown、文档生成、知识库
+链接：https://github.com/iamgio/quarkdown
+
+papers.cool/arxiv 每日 Top 10
+
+今天论文榜单的主旋律很明确：一边是在压缩、蒸馏和小模型推理效率上继续深挖，另一边是在 agent、RAG、幻觉检测和医疗场景中加速落地。整体上，研究热点正从“把模型做大”进一步转向“把能力做稳、做省、做可验证”。
+
+1. Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models
+来源：Computation and Language , Artificial Intelligence , Machine Learning｜评分：Kimi 7★
+看点：论文提出首个跨架构 dLLM 蒸馏框架，把不同架构、注意力机制和 tokenizer 之间的知识迁移真正打通。
+推荐理由：扩散式语言模型是否能更小、更快又保持竞争力，是非常前沿的问题，这篇属于值得优先追踪的核心工作。
+关键词：dLLM、蒸馏、跨架构
+原文：https://papers.cool/arxiv/2604.26951
+
+2. Select to Think: Unlocking SLM Potential with Local Sufficiency
+来源：Computation and Language｜评分：Kimi 2★
+看点：作者提出让大模型从“小模型候选答案里做选择”而不是直接生成，从而降低推理成本并提升小模型表现。
+推荐理由：这是“小模型如何借大模型变强但不依赖大模型在线推理”的一个很聪明的方向，应用想象空间很大。
+关键词：SLM、推理增强、蒸馏
+原文：https://papers.cool/arxiv/2604.26940
+
+3. ClawGym: A Scalable Framework for Building Effective Claw Agents
+来源：Computation and Language , Artificial Intelligence , Machine Learning｜评分：Kimi 5★
+看点：ClawGym 试图把本地文件、工具和持久化工作区上的 agent 开发流程，统一到数据合成、训练与评测闭环里。
+推荐理由：如果你关注通用 agent 的训练基础设施，这篇在“可验证任务数据 + bench + rollout 训练”上很有方法论价值。
+关键词：Agent、训练框架、Benchmark
+原文：https://papers.cool/arxiv/2604.26904
+
+4. HealthNLP_Retrievers at ArchEHR-QA 2026: Cascaded LLM Pipeline for Grounded Clinical Question Answering
+来源：Computation and Language , Machine Learning｜评分：Top 4
+看点：论文把 Gemini 2.5 Pro 嵌入多阶段临床问答流水线，在证据检索、答案生成与对齐方面形成完整闭环。
+推荐理由：医疗问答对可追溯性要求极高，这类 grounded pipeline 的工程经验对企业级 AI 落地尤其重要。
+关键词：医疗问答、Grounded QA、临床 NLP
+原文：https://papers.cool/arxiv/2604.26880
+
+5. MoRFI: Monotonic Sparse Autoencoder Feature Identification
+来源：Computation and Language , Machine Learning｜评分：Top 5
+看点：研究用稀疏自编码器分析微调后幻觉增强的潜在方向，并提出可识别相关 latent 的方法。
+推荐理由：这类工作直接连接“新知识注入、幻觉上升、可解释干预”三件事，对对齐和可靠性研究很关键。
+关键词：幻觉、可解释性、SAE
+原文：https://papers.cool/arxiv/2604.26866
+
+6. What Kind of Language is Easy to Language-Model Under Curriculum Learning?
+来源：Computation and Language｜评分：Kimi 1★
+看点：论文研究课程学习如何改变语言模型对不同语言类型结构的归纳偏置，切口相当独特。
+推荐理由：它把语言学类型学与训练策略连接起来，适合关注模型归纳能力与语言普适性的读者。
+关键词：课程学习、语言模型、归纳偏置
+原文：https://papers.cool/arxiv/2604.26844
+
+7. HalluCiteChecker: A Lightweight Toolkit for Hallucinated Citation Detection and Verification in the Era of AI Scientists
+来源：Computation and Language , Artificial Intelligence , Digital Libraries｜评分：Top 7
+看点：这是一个可离线、CPU 可跑的幻觉引用检测工具，专门应对 AI 辅助写作时代的伪造参考文献问题。
+推荐理由：论文写作与审稿场景里，“引用幻觉”已经是现实痛点，这类轻量工具有很强的实际落地潜力。
+关键词：引用幻觉、学术写作、验证工具
+原文：https://papers.cool/arxiv/2604.26835
+
+8. Decoupling Knowledge and Task Subspaces for Composable Parametric Retrieval Augmented Generation
+来源：Computation and Language｜评分：Kimi 2★
+看点：论文把任务能力与文档知识分离到不同子空间，试图提升参数化 RAG 在多文档组合时的稳定性。
+推荐理由：RAG 下一阶段不只是“能检索”，而是“能组合而不串味”，这篇正好击中那个关键难点。
+关键词：RAG、参数化检索、子空间分解
+原文：https://papers.cool/arxiv/2604.26768
+
+9. Domain-Adapted Small Language Models for Reliable Clinical Triage
+来源：Computation and Language , Artificial Intelligence , Machine Learning｜评分：Top 9
+看点：研究显示经过领域适配的小模型可在临床分诊中实现稳定、隐私友好的决策支持，甚至优于部分大模型。
+推荐理由：这是“小模型在高要求垂直场景中真正可用”的强证据，对医疗 AI 产品化尤其有启发。
+关键词：小模型、临床分诊、领域适配
+原文：https://papers.cool/arxiv/2604.26766
+
+10. Swap distance minimization shapes the order of subject, object and verb in languages of the world
+来源：Computation and Language , Physics and Society｜评分：Top 10
+看点：论文从 swap distance minimization 出发解释全球语言中主谓宾顺序的变化规律，具有很强的跨学科味道。
+推荐理由：虽然不是典型 AI 工程论文，但它能帮助理解语言结构偏好，对 NLP 基础研究读者很有意思。
+关键词：语序、语言类型学、跨学科
+原文：https://papers.cool/arxiv/2604.26726
