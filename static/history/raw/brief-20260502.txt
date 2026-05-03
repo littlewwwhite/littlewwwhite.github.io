@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选继续围绕“AI 能力上升，但治理与工程边界更受关注”展开：一边是模型在漏洞挖掘、代码生成上的实用突破，另一边是开源治理、软件质量与公共机构技术路线的明显收紧。今日摘要已生成并同步发布到公开 history/RSS；抓取 92 个源时有 5 个源暂时失败，但不影响本次 Top 5 结论。
+
+1. 英国国家医疗服务体系（NHS）对开源软件的战争
+来源：shkspr.mobi｜评分：27/30
+看点：NHS 正计划关闭几乎所有开源软件仓库，和英国政府过去多年推动开源的路线出现明显逆转。
+推荐理由：这不只是一次机构内部政策调整，而是观察公共部门数字治理、采购逻辑与开源生态关系变化的高信号事件。
+关键词：NHS、开源、政府技术
+原文：https://shkspr.mobi/blog/2026/05/nhs-goes-to-war-against-open-source/
+
+2. 英国 AI 安全研究所对 OpenAI GPT-5.5 网络能力的评估
+来源：simonwillison.net｜评分：26/30
+看点：英国 AI 安全研究所认为 GPT-5.5 在漏洞发现等网络安全任务上的能力已接近此前评估过的高水平模型，而且现在更广泛可用。
+推荐理由：这是理解前沿模型在真实安全攻防中“能做什么”的一手信号，对安全、AI 评测和政策观察都很关键。
+关键词：GPT-5.5、网络能力、AI 安全
+原文：https://simonwillison.net/2026/Apr/30/gpt-55-cyber-capabilities/#atom-everything
+
+3. AI 生成的代码：编译通过不等于正确、安全、可维护的软件
+来源：garymarcus.substack.com｜评分：26/30
+看点：文章强调，能生成可编译且通过测试的代码，并不代表模型产出了真正正确、安全、可维护的工程软件。
+推荐理由：它直指当前 AI 编程热潮中最容易被忽视的问题，适合所有正在把 AI 接入研发流程的团队阅读。
+关键词：AI 代码生成、软件质量、LLM
+原文：https://garymarcus.substack.com/p/a-model-that-produces-code-which
+
+4. Zig 项目对反 AI 贡献政策的理由
+来源：simonwillison.net｜评分：25/30
+看点：Zig 项目明确限制在 issue、PR 和 bug tracker 评论中使用 LLM，甚至把翻译场景也纳入治理边界。
+推荐理由：这是开源社区如何应对 AI 生成内容噪声、维护协作质量与责任归属的代表性案例。
+关键词：Zig、开源、反 LLM 政策
+原文：https://simonwillison.net/2026/Apr/30/zig-anti-ai/#atom-everything
+
+5. Pluralistic：如何不禁止监控定价（2026 年 4 月 30 日）
+来源：pluralistic.net｜评分：25/30
+看点：文章批评马里兰州消费者保护法在限制“监控定价”方面漏洞很多，折射出数据滥用与技术监管的现实困境。
+推荐理由：如果你关注平台治理、消费者权益和技术立法，这篇文章提供了非常具体的政策观察切口。
+关键词：监控定价、消费者保护、技术政策
+原文：https://pluralistic.net/2026/04/30/something-must-be-done/
+
+GitHub Trending Top 5
+
+今天 GitHub Trending 的重心很明确：AI Agent、交易自动化、个人情报收集和新一代开发环境继续吸走最多关注。前五项目里，Python 与 Rust 依旧强势，说明“能落地的自动化工具链”仍是社区主线。
+
+1. TauricResearch/TradingAgents
+来源：Python｜评分：今日 +2,112★
+看点：这是一个多智能体金融交易框架，试图把 LLM Agent 直接接入研究、决策与执行链路。
+推荐理由：它把 AI Agent 从“聊天”推进到“可操作工作流”，非常适合观察 agent 在高反馈场景中的真实价值。
+关键词：多智能体、量化交易、金融 AI
+原文：https://github.com/TauricResearch/TradingAgents
+
+2. soxoj/maigret
+来源：Python｜评分：今日 +535★
+看点：该项目可从 3000 多个站点按用户名汇总个人公开痕迹，用于 OSINT 式资料拼接。
+推荐理由：无论是安全研究、背景调查还是个人数字足迹管理，它都展示了自动化情报收集工具的成熟度。
+关键词：OSINT、用户名搜索、情报收集
+原文：https://github.com/soxoj/maigret
+
+3. warpdotdev/warp
+来源：Rust｜评分：今日 +3,401★
+看点：Warp 把终端重新定义为 agentic development environment，强调 AI 协同开发而不是单纯命令行外壳。
+推荐理由：开发工具正在从“执行器”演化为“协作者”，Warp 是这一趋势最有代表性的产品之一。
+关键词：终端、Agent 开发环境、Rust
+原文：https://github.com/warpdotdev/warp
+
+4. 1jehuang/jcode
+来源：Rust｜评分：今日 +403★
+看点：这是一个面向 Coding Agent 的 harness，核心价值在于为代码代理提供更稳定的运行与评估支架。
+推荐理由：如果你关心自动编程、agent benchmark 或代码工作流自动化，这类基础设施项目值得尽早跟踪。
+关键词：Coding Agent、评测框架、Rust
+原文：https://github.com/1jehuang/jcode
+
+5. mattpocock/skills
+来源：Shell｜评分：今日 +3,645★
+看点：项目收集了大量面向真实工程师场景的技能模板，直接来自作者自己的 .claude 工作目录。
+推荐理由：它体现了“把经验沉淀成可复用技能包”的方法论，对 AI 辅助开发流程设计很有启发。
+关键词：技能库、工程实践、AI 工作流
+原文：https://github.com/mattpocock/skills
+
+papers.cool/arxiv 每日 Top 5
+
+今日 papers.cool/arxiv 前五明显偏向 NLP 与推理评测，既有语言理论层面的基础问题，也有面向表格推理、数据过滤和 persona agent 的实证研究。整体看，研究重点正从“模型会不会做”转向“模型到底在做什么、为什么会这样做”。
+
+1. On the Proper Treatment of Units in Surprisal Theory
+来源：Computation and Language｜评分：Kimi 1★
+看点：论文重新梳理 surprisal theory 中“单位”该如何定义，指出词、token 与实验分析单位长期被混用的问题。
+推荐理由：它触及语言模型评估中一个非常基础但影响广泛的理论前提，适合做 NLP 认知建模和可解释性研究的人关注。
+关键词：surprisal、tokenization、units
+原文：https://papers.cool/arxiv/2604.28147
+
+2. TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering
+来源：Computation and Language , Artificial Intelligence , Machine Learning｜评分：Top 2
+看点：TopBench 聚焦表格问答中的“隐式预测”任务，要求模型不只检索，还要识别真实意图并完成预测性推理。
+推荐理由：它补上了当前表格问答 benchmark 对真实业务问题覆盖不足的短板，对 agent 和结构化推理评测都很有价值。
+关键词：TopBench、表格问答、预测推理
+原文：https://papers.cool/arxiv/2604.28076
+
+3. Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling
+来源：Computation and Language , Artificial Intelligence｜评分：Top 3
+看点：论文发现，对德语这类高资源非英语语料来说，反复训练高质量过滤数据往往优于一次性吞入更杂更多的数据。
+推荐理由：这对非英语 LLM 的数据工程、训练预算配置和语料筛选策略都有直接启发。
+关键词：data filtering、German、language modeling
+原文：https://papers.cool/arxiv/2604.28075
+
+4. Stable Behavior, Limited Variation: Persona Validity in LLM Agents for Urban Sentiment Perception
+来源：Computation and Language , Social and Information Networks｜评分：Top 4
+看点：研究发现 persona prompting 能带来稳定复现，但不同 persona 之间的行为差异其实相当有限。
+推荐理由：这对“角色设定是否真的让 LLM 更像人”给出了冷静证据，适合关注 agent 仿真与社会计算的人阅读。
+关键词：persona、urban sentiment、agents
+原文：https://papers.cool/arxiv/2604.28048
+
+5. Ease of dependency distance minimization in star-like structures
+来源：Computation and Language , Physics and Society｜评分：Top 5
+看点：论文讨论星形句法结构中的 dependency distance minimization，认为相关优化问题比过去设想得更简单。
+推荐理由：它虽偏理论，但对理解语言结构优化、句法建模和认知语言学中的“竞争原则”很有价值。
+关键词：dependency distance、syntax、optimization
+原文：https://papers.cool/arxiv/2604.28034
