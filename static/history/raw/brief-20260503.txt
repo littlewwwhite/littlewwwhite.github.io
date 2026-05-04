@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选集中在两个主线：一是 AI 写代码已经越过“能跑起来”的门槛，但距离“值得上线”还有明显鸿沟；二是开源依赖维护与治理机制正在成为工程社区的新焦点。今晨实际扫描了 87/92 个源，5 个 RSS 源暂时不可用，但当日精选与历史站点/RSS 已正常生成并发布。
+
+1. AI 生成的代码：编译通过不等于软件质量合格
+来源：garymarcus.substack.com｜评分：26/30
+看点：文章指出，能通过编译和测试的 AI 代码，并不自动等于正确、安全、可维护、架构合理的软件。
+推荐理由：这篇内容直接击中 AI 编程落地中的核心误区，适合所有正在引入 Copilot/Agent 工作流的团队。
+关键词：AI代码生成、软件质量、LLM
+原文：https://garymarcus.substack.com/p/a-model-that-produces-code-which
+
+2. 为维护者打造的 GitHub：为依赖项提供与 Fork 相同的待遇
+来源：nesbitt.io｜评分：26/30
+看点：作者提出让依赖管理拥有类似 GitHub Fork 的能力，帮助维护者在上游停摆时继续可控演进。
+推荐理由：它提供了一个很有启发性的包管理设计方向，直面“依赖被卡脖子”的长期工程痛点。
+关键词：GitHub、维护者、依赖管理
+原文：https://nesbitt.io/2026/05/02/a-github-for-maintainers.html
+
+3. 软件包管理器中的修补与 Fork：当上游项目“幽灵化”时该怎么办
+来源：nesbitt.io｜评分：26/30
+看点：文章进一步讨论 patch 与 fork 应如何进入包管理器，缓解上游失活后的安全修复与技术债问题。
+推荐理由：如果你关心供应链安全、内部镜像、长期维护版本，这篇比泛泛而谈的开源治理文章更可执行。
+关键词：包管理器、Patching、Forking
+原文：https://nesbitt.io/2026/05/01/patching-and-forking-in-package-managers.html
+
+4. Meta 解决了其肯尼亚承包商观看 AI 眼镜佩戴者如厕画面的问题
+来源：daringfireball.net｜评分：25/30
+看点：Meta AI 眼镜背后的人工审核流程再次暴露隐私与数据治理风险，尤其是敏感场景录像的处理问题。
+推荐理由：这不仅是 AI 硬件新闻，更是所有做多模态采集、视频审核、端云协同产品团队必须关注的警示案例。
+关键词：Meta、AI眼镜、隐私
+原文：https://www.bbc.com/news/articles/c5y7yvgy0w6o
+
+5. 英国国家医疗服务体系（NHS）向开源宣战
+来源：shkspr.mobi｜评分：25/30
+看点：文章批评 NHS 收缩开源仓库的做法，认为这会削弱透明度、协作效率和公共技术创新能力。
+推荐理由：公共部门与大型组织如何对待开源，往往会深刻影响行业生态，这篇能帮助理解“开源退潮”的制度层原因。
+关键词：NHS、开源、政府技术
+原文：https://shkspr.mobi/blog/2026/05/nhs-goes-to-war-against-open-source/
+
+GitHub Trending Top 5
+
+今天的 GitHub 热点明显偏向 Agent、自动化与实战工具链，涨幅最高的项目几乎都围绕多智能体编排、交易代理或情报采集展开。整体看下来，开发者关注点正在从“单模型能力”继续转向“可执行工作流”。
+
+1. TauricResearch/TradingAgents
+来源：Python｜评分：今日 +2,225★
+看点：这是一个多智能体 LLM 金融交易框架，把研究、决策与执行组织成代理协同流程。
+推荐理由：它代表了 Agent 在高价值垂直场景中的典型落地方式，适合关注量化、自动决策和金融 AI 的读者。
+关键词：多智能体、量化交易、金融AI
+原文：https://github.com/TauricResearch/TradingAgents
+
+2. ruvnet/ruflo
+来源：TypeScript｜评分：今日 +1,299★
+看点：项目主打面向 Claude 的智能体编排平台，强调自治工作流、群体协作和企业级架构。
+推荐理由：如果你正在搭建 Agent 平台层而不只是写单个机器人，这类 orchestration 项目很值得持续跟踪。
+关键词：Agent编排、Claude、工作流
+原文：https://github.com/ruvnet/ruflo
+
+3. soxoj/maigret
+来源：Python｜评分：今日 +1,064★
+看点：该工具可按用户名跨 3000 多个站点收集线索，适合 OSINT 与公开网络画像整理。
+推荐理由：它在安全研究、调查分析、品牌监控等场景都很实用，热度上涨说明情报自动化需求仍然强劲。
+关键词：OSINT、用户名搜索、情报收集
+原文：https://github.com/soxoj/maigret
+
+4. browserbase/skills
+来源：JavaScript｜评分：今日 +346★
+看点：这是一个带网页浏览能力的 Claude Agent SDK，把浏览器交互直接纳入 Agent 工具链。
+推荐理由：对做网页自动化、浏览器代理、任务执行型 AI 产品的开发者来说，这类基础设施价值很高。
+关键词：Claude Agent、浏览器自动化、SDK
+原文：https://github.com/browserbase/skills
+
+5. Flowseal/zapret-discord-youtube
+来源：Batchfile｜评分：今日 +181★
+看点：这是一个围绕 Discord 与 YouTube 使用场景传播很快的脚本型项目，说明网络访问与绕过限制类工具仍有强需求。
+推荐理由：尽管信息相对简略，但其短时热度上升明显，适合把它视为一个正在发酵的用户需求信号。
+关键词：脚本工具、网络访问、Discord
+原文：https://github.com/Flowseal/zapret-discord-youtube
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜以 NLP 与 LLM 方法论为主，重点从“语言单位怎么定义”一路延伸到表格推理、数据过滤与 persona 有效性评估。相比单纯堆参数，这批论文更像是在追问：我们的建模假设到底是否站得住。
+
+1. On the Proper Treatment of Units in Surprisal Theory
+来源：Computation and Language｜评分：Kimi 1★
+看点：论文重新梳理 surprisal theory 中“单位”定义的问题，主张把 tokenization 视为实现细节而非科学原语。
+推荐理由：这对做语言模型评测、认知建模和 token-level 分析的人非常关键，属于概念层面但影响很深的工作。
+关键词：surprisal、tokenization、语言建模
+原文：https://papers.cool/arxiv/2604.28147
+
+2. TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering
+来源：Computation and Language｜评分：Top 2
+看点：论文提出 TopBench，用来测试模型在表格问答中识别隐含预测意图并完成推理的能力。
+推荐理由：它切中的不是“查表”，而是更接近真实业务分析的预测式问答，对 agentic analytics 很有参考价值。
+关键词：表格问答、隐式预测、推理基准
+原文：https://papers.cool/arxiv/2604.28076
+
+3. Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling
+来源：Computation and Language｜评分：Top 3
+看点：研究发现，对德语等非英语高资源语种而言，重复高质量过滤数据往往优于一次性吞入更大但更杂的数据。
+推荐理由：这对多语种预训练、数据配比和训练预算分配都有直接启发，尤其适合资源效率导向的团队。
+关键词：数据过滤、德语模型、训练效率
+原文：https://papers.cool/arxiv/2604.28075
+
+4. Stable Behavior, Limited Variation: Persona Validity in LLM Agents for Urban Sentiment Perception
+来源：Computation and Language｜评分：Top 4
+看点：论文检验 persona prompting 在城市情绪感知任务中的有效性，发现行为虽稳定，但跨 persona 差异有限。
+推荐理由：它为“给 Agent 设人设到底有没有用”提供了实证证据，值得所有做模拟社会与多代理实验的人关注。
+关键词：Persona、LLM Agent、城市感知
+原文：https://papers.cool/arxiv/2604.28048
+
+5. Ease of dependency distance minimization in star-like structures
+来源：Computation and Language｜评分：Top 5
+看点：论文讨论星状句法结构中的依存距离最小化问题，说明该优化地形比此前想象得更简单。
+推荐理由：虽然偏理论，但它触及语言结构优化与认知解释的基础问题，适合关注计算语言学与形式分析的读者。
+关键词：依存距离、句法结构、优化
+原文：https://papers.cool/arxiv/2604.28034
