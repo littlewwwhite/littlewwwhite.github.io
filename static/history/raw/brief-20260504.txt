@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选从 92 个技术源中成功扫描 87 个，抓取 2495 篇文章后筛出 48 小时内最值得读的 5 篇，整体主题集中在 AI 伦理、落地效果验证与技术史。另有 5 个 RSS 源临时失败，但不影响今日摘要与历史站点/RSS 的正常发布。
+
+1. 道德败坏行为的掩盖程度不亚于违法行为
+来源：daringfireball.net｜评分：26/30
+看点：文章借 Meta 因 AI 眼镜隐私风波解雇承包商一事，讨论科技公司如何通过信息遮蔽来规避责任。
+推荐理由：它把 AI 隐私争议从“产品问题”上升到“组织道德与问责机制”层面，值得所有关注 AI 落地的人读。
+关键词：Meta、AI 眼镜、隐私
+原文：https://daringfireball.net/2026/05/crimes_against_decency_need_as_much_cover-up_as_crimes_against_the_law
+
+2. 大型语言模型是否改善了患者的治疗效果？
+来源：garymarcus.substack.com｜评分：26/30
+看点：一项回顾性研究指出，现阶段 LLM 在真实患者治疗结果上的改善证据仍然不足。
+推荐理由：在医疗 AI 热度持续升高时，这篇文章用证据提醒大家区分“演示能力”和“临床价值”。
+关键词：LLMs、医疗、患者结局
+原文：https://garymarcus.substack.com/p/have-llms-improved-patient-outcomes
+
+3. 引用 Anthropic 的观点
+来源：simonwillison.net｜评分：24/30
+看点：文章梳理 Anthropic 关于 Claude“谄媚行为”研究的结论，强调模型在多数情况下会保持独立判断。
+推荐理由：它切中了当前对模型人格、迎合性与安全对齐的核心讨论，对做 AI 产品的人很有参考价值。
+关键词：Anthropic、Claude、AI 伦理
+原文：https://simonwillison.net/2026/May/3/anthropic/#atom-everything
+
+4. 微软开源 86-DOS 的意义
+来源：dfarq.homeip.net｜评分：25/30
+看点：微软意外开源 86-DOS，为研究 PC DOS 与早期 MS-DOS 的历史演进提供了关键材料。
+推荐理由：这不只是怀旧新闻，更是理解个人计算史、软件产权与系统演化脉络的重要入口。
+关键词：86-DOS、开源、Microsoft
+原文：https://dfarq.homeip.net/microsofts-open-sourcing-of-86-dos-and-what-it-means/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=microsofts-open-sourcing-of-86-dos-and-what-it-means
+
+5. 我为什么不喜欢“资深工程师原型”的说法
+来源：seangoedecke.com｜评分：24/30
+看点：作者反思“Staff Engineer archetypes”这种流行分类过于简化，难以准确描述高级工程角色的复杂性。
+推荐理由：如果你在带团队、做架构或规划职业发展，这篇文章能帮助你跳出标签化框架重新理解工程领导力。
+关键词：Staff Engineer、职业发展、工程领导力
+原文：https://seangoedecke.com/staff-engineer-archetypes/
+
+GitHub Trending Top 5
+
+今天的 GitHub 热门项目几乎清一色围绕智能代理、自动化工作流与 AI 应用落地，说明“可执行的 AI”仍是开发者最强关注点。除了 agent 平台和量化框架，个人信息搜集、终端代理与 AI 视频引擎也在快速升温。
+
+1. ruvnet/ruflo
+来源：TypeScript｜评分：今日 +1,840★
+看点：这是一个面向 Claude 的多智能体编排平台，主打 swarm 协作、RAG 集成与企业级工作流。
+推荐理由：它代表了 AI agent 从单模型调用走向复杂生产编排的趋势，适合关注代理基础设施的人。
+关键词：Agent、编排、RAG
+原文：https://github.com/ruvnet/ruflo
+
+2. TauricResearch/TradingAgents
+来源：Python｜评分：今日 +3,313★
+看点：项目提供多智能体 LLM 金融交易框架，把研究、分析与决策流程模块化。
+推荐理由：金融场景天然适合多角色协作，这类框架有助于观察 agent 在高约束决策系统里的真实边界。
+关键词：量化交易、多智能体、LLM
+原文：https://github.com/TauricResearch/TradingAgents
+
+3. soxoj/maigret
+来源：Python｜评分：今日 +1,119★
+看点：它可以基于用户名从 3000 多个网站收集目标画像，适合 OSINT 与公开情报搜集。
+推荐理由：这个方向长期有稳定需求，而支持站点规模与自动化程度是它迅速走红的核心原因。
+关键词：OSINT、用户名、情报搜集
+原文：https://github.com/soxoj/maigret
+
+4. Hmbown/DeepSeek-TUI
+来源：Rust｜评分：今日 +343★
+看点：这是一个运行在终端中的 DeepSeek 编码代理，强调轻量、直接与开发者工作流贴合。
+推荐理由：终端原生 agent 仍是高频需求场景，这个项目很适合观察本地化编码助手的产品形态。
+关键词：DeepSeek、终端、Coding Agent
+原文：https://github.com/Hmbown/DeepSeek-TUI
+
+5. AIDC-AI/Pixelle-Video
+来源：Python｜评分：今日 +497★
+看点：项目定位为 AI 全自动短视频引擎，试图串联生成、编排与内容生产流程。
+推荐理由：短视频自动化一直是强商业化方向，这类“端到端内容工厂”很值得持续跟踪。
+关键词：短视频、自动化、内容生成
+原文：https://github.com/AIDC-AI/Pixelle-Video
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单以 NLP/LLM 方法论为主，从 surprisal 理论、表格问答到高质量语料过滤，整体偏“基础能力校准”而非单纯堆参数。另一个明显趋势是，研究者越来越关注模型行为稳定性、任务定义边界与评测范式本身。
+
+1. On the Proper Treatment of Units in Surprisal Theory
+来源：计算与语言｜评分：Kimi 1★
+看点：论文重新审视 surprisal 理论中的“单位”定义，强调 tokenization 不应被误当作科学分析的基本对象。
+推荐理由：它直接触及语言模型评测与认知建模的底层假设，对做 NLP 理论和实验设计的人很重要。
+关键词：Surprisal、Tokenization、语言理论
+原文：https://papers.cool/arxiv/2604.28147
+
+2. TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering
+来源：计算与语言｜评分：Top 2
+看点：作者提出 TopBench，用来评测模型在表格问答中识别隐含预测意图并进行推理的能力。
+推荐理由：这类 benchmark 能更真实暴露模型在复杂业务表格场景中的短板，而不只是测试查表能力。
+关键词：Benchmark、表格问答、预测推理
+原文：https://papers.cool/arxiv/2604.28076
+
+3. Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling
+来源：计算与语言｜评分：Top 3
+看点：研究发现，对德语语料进行高质量过滤并重复训练，往往优于在更大但更杂的数据上单轮训练。
+推荐理由：它对“数据质量优先还是规模优先”给出清晰证据，尤其对非英语模型训练很有现实指导意义。
+关键词：数据过滤、德语模型、训练效率
+原文：https://papers.cool/arxiv/2604.28075
+
+4. Stable Behavior, Limited Variation: Persona Validity in LLM Agents for Urban Sentiment Perception
+来源：计算与语言｜评分：Top 4
+看点：论文研究不同 persona 提示是否真能让多模态 LLM 代理在城市情绪感知任务中产生稳定且有意义的差异。
+推荐理由：它对“persona prompting 是否真的有效”提出了更严格检验，适合关注 agent 人设与模拟研究的人。
+关键词：Persona、LLM Agents、城市感知
+原文：https://papers.cool/arxiv/2604.28048
+
+5. Ease of dependency distance minimization in star-like structures
+来源：计算与语言｜评分：Top 5
+看点：论文从句法依存树出发，分析星形结构中最小化依存距离的优化难度及其语言学含义。
+推荐理由：虽然更偏理论语言学，但它有助于理解语言结构优化原则，对认知与形式语言研究者值得一读。
+关键词：句法依存、距离最小化、语言结构
+原文：https://papers.cool/arxiv/2604.28034
