@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选仍然被 OpenAI、代理系统与责任边界主导：从 YC 与 OpenAI 的利益关系，到马斯克诉 OpenAI 的核心争点，再到自主代理在现实世界里的失控风险，争议密度很高。今晨已成功扫描 88/92 个源并完成历史站点与 RSS 发布，另有 4 个 RSS 源临时失败，但不影响今日精选产出。
+
+1. Y Combinator 对 OpenAI 的持股
+来源：daringfireball.net｜评分：26/30
+看点：文章追问 Paul Graham 为 Sam Altman 背书时，是否应充分披露其与 OpenAI 的直接利益关联。
+推荐理由：它把“信任”“声誉”“资本关系”三者放到同一张桌面上讨论，很适合用来理解 AI 舆论场的隐性结构。
+关键词：OpenAI、Y Combinator、利益披露
+原文：https://daringfireball.net/2026/05/y_combinators_stake_in_openai
+
+2. 马斯克诉 OpenAI 案中，什么（或应该）是重要的
+来源：garymarcus.substack.com｜评分：26/30
+看点：文章尝试从法律与治理视角重新梳理 Musk-OpenAI 诉讼真正值得关注的核心问题。
+推荐理由：这不是单纯吃瓜文，而是帮助读者识别案件中哪些争点会真正影响未来 AI 公司治理。
+关键词：Musk、OpenAI、AI ethics
+原文：https://garymarcus.substack.com/p/what-matters-or-should-matter-at
+
+3. 突破性进展：自主代理系统一团糟
+来源：garymarcus.substack.com｜评分：26/30
+看点：作者尖锐指出当前 Autonomous Agents 在可靠性、可控性和实际落地上仍存在系统性缺陷。
+推荐理由：在市场热情高涨时，这类反向证据尤其重要，能帮助团队避免把实验性能力误判为生产级能力。
+关键词：autonomous agents、AI、performance
+原文：https://garymarcus.substack.com/p/breaking-autonomous-agents-are-a
+
+4. 不是 AI 删了你的数据库，是你自己
+来源：idiallo.com｜评分：25/30
+看点：文章借“AI 代理删库”案例反驳甩锅逻辑，指出真正的问题是系统暴露了危险的生产接口。
+推荐理由：它把 AI 安全问题重新落到工程责任与系统设计基本功上，极具现实警示意义。
+关键词：AI、database、data loss
+原文：https://idiallo.com/blog/ai-didnt-delete-your-database-you-did?src=feed
+
+5. Redis 数组类型：一段漫长开发的简史
+来源：antirez.com｜评分：25/30
+看点：antirez 回顾 Redis 新数组类型从设计到合并的长期开发过程，展现底层数据结构演进的真实节奏。
+推荐理由：如果你关心数据库内核、数据结构权衡与长期工程打磨，这篇一手开发者叙述很值得看。
+关键词：Redis、array type、data structures
+原文：http://antirez.com/news/164
+
+GitHub Trending Top 5
+
+今天 GitHub Trending 明显偏向 AI Agent 与开发者工具，终端代理、多智能体编排和垂直研究助手最吸睛。除一项文档签署工具与一个 VSCode 主题外，其余几乎都在争夺“AI 工作流入口”。
+
+1. Hmbown/DeepSeek-TUI
+来源：Rust｜评分：今日 +2434★
+看点：这是一个运行在终端中的 DeepSeek 编码代理，强调本地开发流里的轻量交互体验。
+推荐理由：CLI 形态正在成为 AI coding agent 的关键战场，这类项目很能反映开发者真实需求。
+关键词：终端代理、DeepSeek、编码助手
+原文：https://github.com/Hmbown/DeepSeek-TUI
+
+2. ruvnet/ruflo
+来源：TypeScript｜评分：今日 +2432★
+看点：项目主打 Claude 多智能体编排，覆盖自治工作流、RAG 集成与企业级架构能力。
+推荐理由：它代表了“从单代理到代理群”的平台化趋势，值得关注 orchestration 层如何产品化。
+关键词：多智能体、Claude、工作流编排
+原文：https://github.com/ruvnet/ruflo
+
+3. virattt/dexter
+来源：TypeScript｜评分：今日 +659★
+看点：这是一个面向金融研究场景的自治代理，专注做深度投研而非通用聊天。
+推荐理由：垂直领域 Agent 比通用 Agent 更容易验证价值，这类项目最能检验 AI 在专业任务中的真实上限。
+关键词：金融研究、自治代理、深度分析
+原文：https://github.com/virattt/dexter
+
+4. docusealco/docuseal
+来源：Ruby｜评分：今日 +927★
+看点：开源 DocuSign 替代方案，覆盖电子文档创建、填写与签署流程。
+推荐理由：虽然不是 AI 项目，但它体现了开源 SaaS 在高频办公场景中持续替代传统闭源产品的能力。
+关键词：电子签署、开源 SaaS、文档流程
+原文：https://github.com/docusealco/docuseal
+
+5. bwya77/vscode-dark-islands
+来源：PowerShell｜评分：今日 +321★
+看点：这是一个基于 easemate IDE 与 JetBrains Islands 风格的 VSCode 主题项目。
+推荐理由：开发环境美学虽小，但往往最能快速积累用户共鸣，适合关注工具链外围生态的人留意。
+关键词：VSCode、主题、开发体验
+原文：https://github.com/bwya77/vscode-dark-islands
+
+papers.cool/arxiv 每日 Top 5
+
+今天 papers.cool/arxiv 的前排论文以 NLP/Agent/应用型 LLM 为主，既有 Text-to-SQL 代理能力突破，也有多智能体强化学习与社交文本检测等更具体的任务研究。整体看，研究热点正在从“模型会不会”继续转向“系统怎么组织、怎么验证、怎么解释”。
+
+1. FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents
+来源：Computation and Language｜评分：Top 1
+看点：论文提出 FlexSQL，让代理在推理过程中随时探索 schema、检查数据并执行验证查询，以提升复杂数据库问答能力。
+推荐理由：它把 Text-to-SQL 从一次性检索管线推进到可回溯、可验证的代理式执行，对企业数据分析场景很有参考价值。
+关键词：Text-to-SQL、Agent、数据库推理
+原文：https://papers.cool/arxiv/2605.02815
+
+2. Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces
+来源：Computation and Language｜评分：Top 2
+看点：论文研究如何用 orchestration traces 为多智能体系统做强化学习，重点拆解何时分工、如何通信、如何聚合与何时停止。
+推荐理由：这是少见直接命中“多代理调度层学习”问题的工作，对所有在做 agent swarm 的团队都很有启发。
+关键词：多智能体、强化学习、orchestration
+原文：https://papers.cool/arxiv/2605.02801
+
+3. mdok-style at SemEval-2026 Task 10: Finetuning LLMs for Conspiracy Detection
+来源：Computation and Language , Artificial Intelligence｜评分：Top 3
+看点：论文通过数据增强与自训练微调 Qwen3-32B，用于识别 Reddit 评论中的阴谋论表达，并取得较强竞赛成绩。
+推荐理由：它展示了中大模型在小样本、敏感内容分类任务中的实用打法，适合做内容安全与舆情分析的人参考。
+关键词：conspiracy detection、Qwen3、文本分类
+原文：https://papers.cool/arxiv/2605.02712
+
+4. mdok-style at SemEval-2026 Task 9: Finetuning LLMs for Multilingual Polarization Detection
+来源：Computation and Language , Artificial Intelligence｜评分：Top 4
+看点：论文使用 QLoRA 微调中型 LLM，处理 22 种语言的极化表达检测，并通过多种文本变体增强鲁棒性。
+推荐理由：多语种、跨文化、跨事件的极化识别非常贴近真实平台治理需求，方法上也具有较高迁移价值。
+关键词：multilingual、polarization、QLoRA
+原文：https://papers.cool/arxiv/2605.02695
+
+5. Fuzzy Fingerprinting Encoder Pre-trained Language Models for Emotion Recognition in Conversations: Human Assessment and Validity Study
+来源：Computation and Language , Artificial Intelligence｜评分：Top 5
+看点：论文将 Fuzzy Fingerprints 引入对话情绪识别，希望在保持高性能的同时提升模型判定可解释性。
+推荐理由：情绪识别常受类别不平衡与黑箱推断困扰，这项工作提供了把解释能力带回分类流程的有价值思路。
+关键词：emotion recognition、可解释性、fuzzy fingerprints
+原文：https://papers.cool/arxiv/2605.02665
