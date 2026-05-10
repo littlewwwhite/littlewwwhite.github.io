@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今晨已生成最新 AI 博客摘要，并完成 history 站点与 RSS 历史页更新发布。92 个源中有 88 个抓取成功、4 个 RSS 源临时失败，但不影响本次 Top 5 精选；今日主题明显集中在本地模型、AI 治理与 AI 辅助工程实践。
+
+1. 本地模型：专注与打磨
+来源：lucumr.pocoo.org｜评分：26/30
+看点：文章认为本地运行的 AI 模型正接近实用拐点，关键瓶颈已从“能不能跑”转向“体验是否足够顺滑”。
+推荐理由：如果你关心端侧模型、开发者工作流和 AI 普惠化，这篇文章很适合作为趋势判断的起点。
+关键词：本地模型、LLM、开发体验
+原文：https://lucumr.pocoo.org/2026/5/8/local-models/
+
+2. 速度与合规的战争已至
+来源：joanwestenberg.com｜评分：26/30
+看点：文章直指 AI 演进速度已经远超监管制定节奏，创新与合法性之间的冲突会长期存在。
+推荐理由：对做 AI 产品、政策研究或企业合规的人来说，这是一篇理解“监管追不上模型”的高价值短文。
+关键词：AI 法案、欧盟监管、GPT-4
+原文：https://www.joanwestenberg.com/the-war-between-fast-and-legitimate-is-here/
+
+3. 关于 xAI/Anthropic 数据中心交易的笔记
+来源：simonwillison.net｜评分：25/30
+看点：文章聚焦 Anthropic 与 xAI 相关算力合作，显示大模型竞争正进一步转向数据中心与基础设施层。
+推荐理由：想理解下一阶段 AI 护城河为何越来越像“算力与供应链战争”，这篇很值得看。
+关键词：AI 基础设施、数据中心、Anthropic
+原文：https://simonwillison.net/2026/May/7/xai-anthropic/#atom-everything
+
+4. 幕后：利用 Claude Mythos 预览加固 Firefox
+来源：simonwillison.net｜评分：25/30
+看点：Mozilla 借助 Claude Mythos 发现并修复大量 Firefox 安全漏洞，展示了 AI 在安全审计中的实际生产力。
+推荐理由：这是少见的“AI 真正进入漏洞发现工作流”的一手案例，对安全和开源维护者都很有参考价值。
+关键词：Firefox、安全加固、漏洞发现
+原文：https://simonwillison.net/2026/May/7/firefox-claude-mythos/#atom-everything
+
+5. AI 使能力较弱的工程师危害减小
+来源：seangoedecke.com｜评分：25/30
+看点：文章认为 AI 工具并不只放大强者，也能显著降低弱工程师制造问题的概率，改善团队下限。
+推荐理由：它从团队生产率而非个人炫技角度讨论 AI，很适合工程管理者和技术负责人阅读。
+关键词：软件工程、生产力、能力差距
+原文：https://seangoedecke.com/ai-makes-weak-engineers-less-harmful/
+
+GitHub Trending Top 5
+
+今天 GitHub 热榜继续被 AI Agent、推理加速和免费接入层项目占据，工程化落地明显强于纯概念演示。值得注意的是，终端代理与 Agent 技能库两类项目都在快速吸星，说明开发者正从“试模型”转向“搭工作流”。
+
+1. anthropics/financial-services
+来源：Python｜评分：今日 +3,660★
+看点：Anthropic 发布面向金融服务场景的代码与方案集合，明显瞄准高合规行业的 AI 落地。
+推荐理由：金融一直是最难落地的行业之一，这类官方项目往往能代表下一波企业级应用方向。
+关键词：金融 AI、Anthropic、企业落地
+原文：https://github.com/anthropics/financial-services
+
+2. addyosmani/agent-skills
+来源：Shell｜评分：今日 +1,893★
+看点：该项目沉淀了一套面向 AI 编码代理的生产级技能模板，帮助 Agent 更稳定地完成工程任务。
+推荐理由：如果你在搭建 Coding Agent 或提示词工作流，这是可直接复用的方法库。
+关键词：Agent 技能、工程模板、自动化
+原文：https://github.com/addyosmani/agent-skills
+
+3. Hmbown/DeepSeek-TUI
+来源：Rust｜评分：今日 +3,731★
+看点：这是一个运行在终端里的 DeepSeek 编码代理，把模型能力直接嵌入 CLI 工作流。
+推荐理由：终端 Agent 是今年最有实操感的方向之一，这个项目很适合观察本地开发体验的演进。
+关键词：终端代理、DeepSeek、Rust
+原文：https://github.com/Hmbown/DeepSeek-TUI
+
+4. z-lab/dflash
+来源：Python｜评分：今日 +379★
+看点：项目聚焦 Block Diffusion for Flash Speculative Decoding，核心价值在于提升推理速度与吞吐。
+推荐理由：推理优化是 AI 基础设施竞争的核心，这类解码加速项目很可能快速进入主流栈。
+关键词：推理解码、Speculative Decoding、性能优化
+原文：https://github.com/z-lab/dflash
+
+5. decolua/9router
+来源：JavaScript｜评分：今日 +1,052★
+看点：项目提供多供应商接入与自动回退层，试图把 Claude、GPT、Gemini 等统一到一个免费或低成本入口。
+推荐理由：对频繁切换模型和控制成本的开发者来说，这类“多模型路由层”非常有现实吸引力。
+关键词：多模型路由、免费编码、供应商回退
+原文：https://github.com/decolua/9router
+
+papers.cool/arxiv 每日 Top 5
+
+今日论文榜单高度聚焦 MoE 模块化、RL 优化与 Agent 长程决策，研究热点和产业落点都很贴近当前 LLM 系统工程。今日 history 站点与 RSS feed 已同步发布，论文部分抓取正常。
+
+1. EMO: Pretraining Mixture of Experts for Emergent Modularity
+来源：Computation and Language｜评分：Kimi 3★
+看点：论文提出一种更具模块化特性的 MoE 预训练方法，使专家子集能独立使用且性能损失更小。
+推荐理由：它直击“大模型太重、难裁剪”的部署痛点，对稀疏模型和内存受限推理都很关键。
+关键词：MoE、模块化、预训练
+原文：https://papers.cool/arxiv/2605.06663
+
+2. Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients
+来源：Computation and Language｜评分：Kimi 2★
+看点：论文提出只依赖正样本 rollout 的 POPO，试图在稀疏二值奖励环境中替代 GRPO 式正负采样。
+推荐理由：这对当前火热的 RLVR 和推理模型训练路线很有启发，尤其适合关注后训练优化的人。
+关键词：RLVR、POPO、策略优化
+原文：https://papers.cool/arxiv/2605.06650
+
+3. StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction
+来源：Computation and Language, Artificial Intelligence｜评分：Top 3
+看点：论文为 Agent 强化学习引入显式策略级轨迹抽象，改善长程任务中的探索与归因问题。
+推荐理由：如果你关注 WebShop、ALFWorld 一类 Agent benchmark，这篇是很值得跟进的新方法。
+关键词：Agent 强化学习、轨迹抽象、长程决策
+原文：https://papers.cool/arxiv/2605.06642
+
+4. Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents
+来源：Computation and Language｜评分：Kimi 1★
+看点：论文系统评估 Deep Research Agent 的引用质量，发现“链接能打开”并不等于“事实真准确”。
+推荐理由：这是对研究型 Agent 非常关键的基础评测工作，直接关系到报告型产品的可信度。
+关键词：引用验证、Research Agent、事实核查
+原文：https://papers.cool/arxiv/2605.06635
+
+5. Parser agreement and disagreement in L2 Korean UD: Implications for human-in-the-loop annotation
+来源：Computation and Language｜评分：Top 5
+看点：论文利用双解析器一致性来简化韩语二语语法标注流程，强调人机协同标注的可行性。
+推荐理由：虽然不属最热门的大模型赛道，但它展示了 NLP 传统任务在 human-in-the-loop 框架下的扎实进展。
+关键词：句法分析、人工在环、韩语标注
+原文：https://papers.cool/arxiv/2605.06625
