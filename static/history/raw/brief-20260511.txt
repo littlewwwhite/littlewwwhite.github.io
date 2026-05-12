@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选高度聚焦 AI 落地的现实摩擦：一边是 Meta 用员工交互数据训练智能体，另一边是媒体在 AI 引用链条上的失真风险。值得一提的是，本轮从 92 个源抓取时有 5 个 RSS 暂时不可用，但不影响今日 Top 5 的整体质量与趋势判断。
+
+1. Meta 将开始捕获员工鼠标移动和键盘输入以用于 AI 训练数据
+来源：daringfireball.net｜评分：25/30
+看点：Meta 正在通过员工电脑上的真实操作数据训练 AI 代理，目标是提升其执行复杂工作流的能力。
+推荐理由：这篇文章同时触及 AI agent 能力边界、企业数据治理与员工隐私三重敏感议题。
+关键词：AI、Meta、隐私
+原文：https://www.reuters.com/sustainability/boards-policy-regulation/meta-start-capturing-employee-mouse-movements-keystrokes-ai-training-data-2026-04-21/
+
+2. 引用《纽约时报》编辑的说明
+来源：simonwillison.net｜评分：24/30
+看点：《纽约时报》因误把 AI 生成总结当成直接引语而更正文稿，暴露新闻生产中的核验漏洞。
+推荐理由：它非常具体地说明了生成式 AI 进入编辑链路后，事实核查流程必须如何升级。
+关键词：AI、媒体、核验
+原文：https://simonwillison.net/2026/May/10/new-york-times-editors-note/#atom-everything
+
+3. 对 AI 进展的过度恐慌
+来源：garymarcus.substack.com｜评分：23/30
+看点：文章借 METR 的时间跨度图讨论公众对 AI 进展速度与风险的担忧是否被放大。
+推荐理由：适合用来校准近期市场与舆论对“AI 突破”的情绪化判断，避免只看标题做结论。
+关键词：AI、进展、预测
+原文：https://garymarcus.substack.com/p/misplaced-panic-over-ai-progress
+
+4. 左翼的 AI 主张
+来源：seangoedecke.com｜评分：24/30
+看点：作者尝试从左翼政治立场出发，为支持 AI 提供一套不同于科技资本叙事的论证框架。
+推荐理由：它提供了技术讨论之外的政治与价值视角，有助于理解 AI 争论为何越来越意识形态化。
+关键词：AI、左翼、伦理
+原文：https://seangoedecke.com/the-left-wing-case-for-ai/
+
+5. 每周更新 503
+来源：troyhunt.com｜评分：24/30
+看点：文章围绕 Instructure 可能面临的数据泄露与勒索威胁，讨论企业在危机前夕的沉默与应对。
+推荐理由：安全事件中的“未表态”本身就是信号，适合关注数据泄露、危机公关和网络安全的人快速扫描。
+关键词：数据泄露、网络安全、勒索
+原文：https://www.troyhunt.com/weekly-update-503/
+
+GitHub Trending Top 5
+
+今天的 GitHub 热点明显偏向 AI agent 基础设施、自动化金融和反检测浏览器，实用型工程项目热度很高。整体上看，大家关注的不是单点模型，而是“把模型接进真实世界”的完整栈。
+
+1. bytedance/UI-TARS-desktop
+来源：TypeScript｜评分：今日 +669★
+看点：这是一个开源多模态 AI Agent 桌面栈，强调把前沿模型与 agent 基建真正连起来。
+推荐理由：如果你在关注桌面级智能体、GUI 自动化或多模态执行框架，这是今天最值得跟进的项目之一。
+关键词：多模态、Agent、桌面
+原文：https://github.com/bytedance/UI-TARS-desktop
+
+2. anthropics/financial-services
+来源：Python｜评分：今日 +1,449★
+看点：Anthropic 推出的金融服务相关项目强势上榜，显示垂直行业 AI 应用开始获得大量开发者关注。
+推荐理由：金融是高价值也高约束的场景，这类官方项目往往能反映企业级 AI 落地的新范式。
+关键词：金融、Anthropic、企业AI
+原文：https://github.com/anthropics/financial-services
+
+3. addyosmani/agent-skills
+来源：Shell｜评分：今日 +1,065★
+看点：该仓库收集面向 AI 编码代理的生产级工程技能，核心是把 agent 使用经验沉淀成可复用能力。
+推荐理由：对正在构建或使用 coding agent 的团队来说，这类“技能层”资产比单次 prompt 更有复利价值。
+关键词：Agent、工程化、技能库
+原文：https://github.com/addyosmani/agent-skills
+
+4. CloakHQ/CloakBrowser
+来源：Python｜评分：今日 +496★
+看点：这是一个主打通过各种 bot detection 测试的隐身 Chromium，可作为 Playwright 的替代方案。
+推荐理由：无论是自动化测试、数据采集还是 agent 浏览器执行，反指纹能力都越来越关键。
+关键词：浏览器自动化、反检测、Chromium
+原文：https://github.com/CloakHQ/CloakBrowser
+
+5. HKUDS/AI-Trader
+来源：Python｜评分：今日 +163★
+看点：项目主打全自动、agent-native 的交易框架，把 AI 决策直接嵌入交易流程。
+推荐理由：它代表了“AI agent 直接接管高反馈真实系统”的高风险高回报方向，值得观察其设计思路。
+关键词：量化交易、Agent、自动化
+原文：https://github.com/HKUDS/AI-Trader
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单继续由大模型系统设计与强化学习主导，关键词是模块化、正样本优化、长程 agent 策略和研究型智能体的引用可靠性。相比单纯追求更大模型，这些工作更关注如何让系统更稳、更省、更可验证。
+
+1. EMO: Pretraining Mixture of Experts for Emergent Modularity
+来源：计算与语言｜评分：Kimi 8★
+看点：论文提出 EMO，通过训练时约束专家选择，让 MoE 自发形成可组合、可裁剪的模块化结构。
+推荐理由：它直接回应了大模型部署中的核心难题：如何在保性能的同时按需启用少量专家以节省资源。
+关键词：MoE、模块化、预训练
+原文：https://papers.cool/arxiv/2605.06663
+
+2. Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients
+来源：计算与语言｜评分：Kimi 5★
+看点：作者提出 POPO，只依赖正样本 rollout 做策略优化，同时隐式形成对负样本的抑制作用。
+推荐理由：这是对当前 RLVR/GRPO 路线的重要改写，可能影响下一波推理模型训练配方。
+关键词：强化学习、POPO、推理优化
+原文：https://papers.cool/arxiv/2605.06650
+
+3. StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction
+来源：计算与语言、人工智能｜评分：Kimi 4★
+看点：StraTA 为 agentic RL 引入显式策略抽象，用层级式 rollout 改善长程任务中的探索与归因。
+推荐理由：对 WebShop、ALFWorld 这类长链任务有效，说明“先有策略再执行”可能是 agent 训练的关键一步。
+关键词：Agentic RL、策略抽象、长程任务
+原文：https://papers.cool/arxiv/2605.06642
+
+4. Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents
+来源：计算与语言｜评分：Kimi 2★
+看点：论文构建了一个可复现实验框架，系统评估深度研究型智能体生成报告时引用链接是否可访问、相关和真实。
+推荐理由：研究结果指出“引用看起来像真的”不等于“事实真的可靠”，非常适合所有做 research agent 的团队关注。
+关键词：Research Agent、引用验证、事实准确性
+原文：https://papers.cool/arxiv/2605.06635
+
+5. Parser agreement and disagreement in L2 Korean UD: Implications for human-in-the-loop annotation
+来源：计算与语言｜评分：Top 5
+看点：论文研究两种解析器在韩语二语 UD 标注中的一致与分歧，并据此优化 human-in-the-loop 标注流程。
+推荐理由：虽然不属最热门大模型话题，但对低资源语言、语料构建和半自动标注工作流很有参考价值。
+关键词：韩语、句法标注、人机协同
+原文：https://papers.cool/arxiv/2605.06625
