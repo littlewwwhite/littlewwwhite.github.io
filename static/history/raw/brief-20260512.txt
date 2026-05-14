@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选继续被“AI 真正创造什么价值”主线贯穿：一边是编码助手开始从“提速”转向“降低维护成本”，另一边是 AI 内容泛滥正在反噬信息生态。本轮共扫描 92 个源中的 88 个，4 个 RSS 源临时失败，但不影响今日 Top 5 产出与历史站点/RSS 发布。
+
+1. 詹姆斯·肖尔的观点：AI 编码助手必须降低维护成本
+来源：simonwillison.net｜评分：24/30
+看点：文章把 AI 编码助手的评价标准从“写得更快”拉回到“后续维护是否更便宜”。
+推荐理由：这是判断 AI 开发工具是否真正可持续的关键视角，对团队决策尤其有参考价值。
+关键词：AI 编码助手、维护成本、开发效率
+原文：https://simonwillison.net/2026/May/11/james-shore/#atom-everything
+
+2. 车间里的学习：Shopify 的内部 AI 编码助手 River
+来源：simonwillison.net｜评分：24/30
+看点：Shopify 把内部 AI 助手 River 放进公开 Slack 频道运行，用公开协作替代私聊式 AI 使用。
+推荐理由：它展示了企业内部部署 AI 助手时，如何把知识沉淀、透明协作和组织学习一起做出来。
+关键词：内部工具、协作开发、Shopify
+原文：https://simonwillison.net/2026/May/11/learning-on-the-shop-floor/#atom-everything
+
+3. 你的AI使用正在击垮我的大脑：僵尸互联网的兴起
+来源：simonwillison.net｜评分：24/30
+看点：作者认为 AI 生成内容已经开始系统性污染网络信息环境，并增加人类筛选信息的精神负担。
+推荐理由：这篇文章对“AI 内容洪流”提出了强烈而具体的批评，适合校准我们对内容质量危机的判断。
+关键词：AI 写作、信息污染、认知负担
+原文：https://simonwillison.net/2026/May/11/zombie-internet/#atom-everything
+
+4. 我们无法就 AI 达成一致
+来源：idiallo.com｜评分：24/30
+看点：文章梳理了行业对 AI 截然相反的评价，从高产增益到“毫无用处”并存，反映出 AI 影响高度情境化。
+推荐理由：如果你在判断 AI 投入是否值得，这篇文章能帮助你理解争议背后的真实分歧在哪里。
+关键词：AI 影响、采用分歧、未来工作
+原文：https://idiallo.com/blog/we-are-not-going-to-agree-on-ai?src=feed
+
+5. iOS 26.5 包含端到端加密 RCS 消息的 Beta 支持
+来源：daringfireball.net｜评分：24/30
+看点：苹果开始在 iPhone 上推进端到端加密 RCS，为跨平台消息安全补上关键一环。
+推荐理由：它不只是产品更新，更代表主流通信协议在安全与互通上的重要进展。
+关键词：RCS、端到端加密、iOS
+原文：https://www.apple.com/newsroom/2026/05/end-to-end-encrypted-rcs-messaging-begins-rolling-out-today-in-beta/
+
+GitHub Trending Top 5
+
+今天的 GitHub 热榜明显偏向 AI Agent、自动化浏览器和新手友好的“vibe coding”基础设施，项目整体更强调可落地与可上手。前五项目全部拿到当日明显增星，说明社区关注度很集中。
+
+1. bytedance/UI-TARS-desktop
+来源：TypeScript｜评分：今日 +956★
+看点：这是一个开源多模态 AI Agent 技术栈，目标是把先进模型与 Agent 基础设施真正连接起来。
+推荐理由：字节系出手做桌面级 Agent 栈，兼具工程参考价值和生态风向标意义。
+关键词：多模态、AI Agent、基础设施
+原文：https://github.com/bytedance/UI-TARS-desktop
+
+2. CloakHQ/CloakBrowser
+来源：Python｜评分：今日 +1320★
+看点：项目主打“隐身 Chromium”，号称能通过各类 bot detection 测试，并兼容 Playwright 替换。
+推荐理由：无论是自动化测试、数据抓取还是 Agent 浏览器执行层，这类反检测能力都极具现实吸引力。
+关键词：浏览器自动化、反检测、Playwright
+原文：https://github.com/CloakHQ/CloakBrowser
+
+3. yikart/AiToEarn
+来源：TypeScript｜评分：今日 +427★
+看点：这是一个直接围绕“用 AI 赚钱”主题构建的项目，定位清晰且传播性很强。
+推荐理由：它抓住了 AI 应用层最具大众吸引力的话题，适合观察轻量 AI 产品化方向。
+关键词：AI 变现、应用层、创业
+原文：https://github.com/yikart/AiToEarn
+
+4. playcanvas/supersplat
+来源：TypeScript｜评分：今日 +531★
+看点：这是一个 3D Gaussian Splat 编辑器，切入点是近年很热的三维重建与新型可视化表达。
+推荐理由：如果你关注空间计算、3D 内容生产或视觉 AI 工具链，这个项目很值得跟进。
+关键词：3D、Gaussian Splat、可视化
+原文：https://github.com/playcanvas/supersplat
+
+5. datawhalechina/easy-vibe
+来源：JavaScript｜评分：今日 +812★
+看点：项目聚焦 2026 年的 vibe coding 入门教学，强调从零开始掌握现代编码方式。
+推荐理由：当 AI 编程进入大众教育阶段，这类课程型仓库往往能快速沉淀出最实用的学习路径。
+关键词：Vibe Coding、编程教育、新手入门
+原文：https://github.com/datawhalechina/easy-vibe
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单高度集中在 LLM 推理时扩展、可信问答、Agent 记忆机制和 Text-to-SQL 推理优化，整体风格非常“后训练与推理工程化”。其中排名第一的工作把“让 LLM 自动发现更好的 TTS 策略”做成了低成本可验证框架，最具方法论冲击力。
+
+1. LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling
+来源：Computation and Language｜评分：Kimi 12★
+看点：论文提出 AutoTTS，让模型自动发现更优的 test-time scaling 策略，而不是靠研究者手工设计推理启发式。
+推荐理由：它把“推理时扩展”从经验调参推进到可搜索、可验证、低成本迭代的新阶段。
+关键词：测试时扩展、Agent 搜索、推理策略
+原文：https://papers.cool/arxiv/2605.08083
+
+2. Conformal Path Reasoning: Trustworthy Knowledge Graph Question Answering via Path-Level Calibration
+来源：Computation and Language｜评分：Kimi 1★
+看点：这项工作把 conformal prediction 引入知识图谱问答路径校准，强调覆盖率保证与更紧凑答案集。
+推荐理由：它兼顾可解释性与可信性，适合关注高可靠问答系统和结构化推理的人重点阅读。
+关键词：知识图谱问答、可信推理、路径校准
+原文：https://papers.cool/arxiv/2605.08077
+
+3. The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents
+来源：Computation and Language｜评分：Kimi 2★
+看点：论文发现更长记忆未必提升 Agent 协作，反而可能在多智能体博弈中削弱合作意愿。
+推荐理由：这直接挑战了“大上下文一定更强”的常见直觉，对 Agent 设计和记忆机制优化很有启发。
+关键词：记忆诅咒、多智能体、合作行为
+原文：https://papers.cool/arxiv/2605.08060
+
+4. CA-SQL: Complexity-Aware Inference Time Reasoning for Text-to-SQL via Exploration and Compute Budget Allocation
+来源：Computation and Language , Artificial Intelligence｜评分：Kimi 1★
+看点：论文针对 Text-to-SQL 难题动态分配探索宽度和算力预算，在 BIRD 基准上取得很强表现。
+推荐理由：这是把推理时计算预算真正用于结构化任务求解的代表性工作，实用价值很高。
+关键词：Text-to-SQL、推理预算、探索搜索
+原文：https://papers.cool/arxiv/2605.08057
+
+5. Accurate and Efficient Statistical Testing for Word Semantic Breadth
+来源：Computation and Language｜评分：Kimi 1★
+看点：研究提出更准确高效的词语语义广度统计检验方法，减少方向差异带来的假阳性。
+推荐理由：它虽然不如 Agent 论文吸睛，但对词义建模、词典构建和语言分析基础方法很重要。
+关键词：语义广度、统计检验、词向量
+原文：https://papers.cool/arxiv/2605.08048
