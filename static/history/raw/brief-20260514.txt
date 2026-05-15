@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选集中在 AI 安全误报、太空算力基础设施、漏洞治理与开发工具演进这几条主线。92 个源里成功抓取 88 个，4 个源临时失败，但不影响本次 Top 5 的代表性；整体上看，AI 正同时重塑安全流程、算力想象力和个人工具链。
+
+1. curl 的披露政策如何从源头过滤 AI 扫描器的发现
+来源：nesbitt.io｜评分：26/30
+看点：文章拆解了 AI 安全扫描器如何把非安全问题误报成漏洞，以及 curl 团队如何靠披露流程在公开前完成“降噪”。
+推荐理由：如果你在做安全响应、漏洞分级或 AI 辅助审计，这篇能帮助你校准“AI 发现”与“真实风险”的边界。
+关键词：curl、AI 扫描器、漏洞披露
+原文：https://nesbitt.io/2026/05/12/not-a-security-issue.html
+
+2. 2026 年 5 月补丁星期二：AI 平台同样易受社交工程攻击，但擅长发现代码漏洞
+来源：krebsonsecurity.com｜评分：24/30
+看点：本月补丁潮显示 AI 系统一样会被社工攻击利用，但在发现人工代码漏洞方面已成为高价值助手。
+推荐理由：它把“AI 是攻击面也是防御面”这件事讲得很清楚，适合安全、平台和工程管理者同步认知。
+关键词：补丁星期二、社交工程、漏洞发现
+原文：https://krebsonsecurity.com/2026/05/patch-tuesday-may-2026-edition/
+
+3. 太空中的 AI 数据中心不存在散热问题
+来源：seangoedecke.com｜评分：24/30
+看点：作者反驳“太空数据中心难散热”的常见印象，认为真空和宇宙背景反而可能提供天然散热优势。
+推荐理由：这是少见的“AI 基础设施想象力”文章，能帮助你从地面机房惯性思维跳到更长期的算力布局。
+关键词：AI 数据中心、太空、散热
+原文：https://seangoedecke.com/space-ai-datacenters-do-not-have-a-cooling-problem/
+
+4. llm 0.32a2 版本发布
+来源：simonwillison.net｜评分：23/30
+看点：llm 工具的新 Alpha 版开始更系统地支持 OpenAI 的 /v1/responses 接口与交错推理能力。
+推荐理由：对经常折腾 LLM CLI、代理编排和推理工作流的人来说，这类底层接口变化很可能直接影响你的工具链。
+关键词：LLM、OpenAI、推理接口
+原文：https://simonwillison.net/2026/May/12/llm/#atom-everything
+
+5. Open Link in Unloaded Tab：一款小巧的 Firefox 扩展
+来源：evanhahn.com｜评分：24/30
+看点：这个扩展让链接能以“未加载标签页”方式打开，兼顾会话组织与资源节省。
+推荐理由：虽然不是大模型话题，但它代表了高质量小工具如何精准解决浏览器效率痛点，适合重度研究与信息摄取用户。
+关键词：Firefox 扩展、效率工具、标签管理
+原文：https://evanhahn.com/open-link-in-unloaded-tab-for-firefox/
+
+GitHub Trending Top 5
+
+今天 GitHub 热门几乎被 AI Agent、记忆系统和个人智能体相关项目占据，说明“可持续记忆 + 可执行工作流”仍是开发者最兴奋的方向。榜单里既有面向终端用户的超级助手，也有面向开发者的 agent 基础设施。
+
+1. tinyhumansai/openhuman
+来源：Rust｜评分：今日 +1,696★
+看点：这是一个强调私有化、简洁性和高能力上限的个人 AI 超级智能体项目。
+推荐理由：如果你关注本地优先、个人数据主权和通用 AI 助手产品形态，这是非常值得跟进的信号项目。
+关键词：个人智能体、隐私、Rust
+原文：https://github.com/tinyhumansai/openhuman
+
+2. rohitg00/agentmemory
+来源：TypeScript｜评分：今日 +1,379★
+看点：项目主打为 AI 编码代理提供持久记忆，并直接对标真实世界 benchmark。
+推荐理由：Agent 从“会做事”走向“记得事”是关键跃迁，这类基础设施很可能成为下一波代理框架的标配。
+关键词：Agent Memory、持久记忆、编码代理
+原文：https://github.com/rohitg00/agentmemory
+
+3. obra/superpowers
+来源：Shell｜评分：今日 +1,401★
+看点：这是一个把 agentic skills 和软件开发方法论结合起来的框架，强调技能化与流程化协作。
+推荐理由：它不只是代码仓库，更像是对“如何让 AI 真正在工程里稳定产出”的实践总结。
+关键词：Agentic Skills、开发方法论、自动化
+原文：https://github.com/obra/superpowers
+
+4. yikart/AiToEarn
+来源：TypeScript｜评分：今日 +981★
+看点：项目定位直接，围绕“用 AI 赚钱”组织工具、流程或场景，明显贴近大众应用叙事。
+推荐理由：这类项目热度高，反映了 AI 应用正在从能力展示走向明确的收益导向。
+关键词：AI 应用、变现、TypeScript
+原文：https://github.com/yikart/AiToEarn
+
+5. influxdata/telegraf
+来源：Go｜评分：今日 +13★
+看点：老牌可观测性代理继续上榜，说明数据采集、处理与写入仍是工程基础设施的刚需。
+推荐理由：虽然不是新项目，但它提醒人们：再强的 AI 系统也离不开稳定的监控、指标和日志底座。
+关键词：可观测性、指标采集、Go
+原文：https://github.com/influxdata/telegraf
+
+papers.cool/arxiv 每日 Top 5
+
+今天论文榜单的重心很鲜明：Agent 长期记忆、检索增强、社会语境下的 LLM 审计，以及语言模型内部记忆机制。相比追新模型，今天更值得关注的是“让模型更会记、更会检索、更可解释”。
+
+1. LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues
+来源：计算与语言｜评分：Kimi 5★
+看点：这篇工作提出面向 Web Agent 长期记忆能力的新基准，专门测试代理能否积累环境经验并像“老同事”一样做判断。
+推荐理由：如果你在做 AI Agent、记忆系统或 benchmark，这可能会成为评估长期经验建模的重要参考坐标。
+关键词：长期记忆、Web Agent、Benchmark
+原文：https://papers.cool/arxiv/2605.12493
+
+2. Task-Adaptive Embedding Refinement via Test-time LLM Guidance
+来源：计算与语言、信息检索、机器学习｜评分：Kimi 2★
+看点：论文用生成式 LLM 在测试时引导查询改写，让 embedding 模型在零样本检索和分类任务中临时适配目标任务。
+推荐理由：它提供了一条比“全量上大模型”更轻的路线，对企业检索、搜索与分类系统很有现实价值。
+关键词：Embedding、检索增强、测试时优化
+原文：https://papers.cool/arxiv/2605.12487
+
+3. The Algorithmic Caricature: Auditing LLM-Generated Political Discourse Across Crisis Events
+来源：计算与语言、人工智能、计算机与社会｜评分：Top 3
+看点：作者从群体层面审计危机事件中的 LLM 政治文本，指出其流畅但缺乏真实人群分布特征，形成“算法 caricature”。
+推荐理由：这篇适合做安全治理、内容平台和社会计算的人读，因为它把“真假检测”提升到了“群体真实性审计”层面。
+关键词：政治话语、危机事件、社会审计
+原文：https://papers.cool/arxiv/2605.12452
+
+4. A Causal Language Modeling Detour Improves Encoder Continued Pretraining
+来源：计算与语言、人工智能｜评分：Top 4
+看点：论文发现编码器继续预训练时，先绕道做一段 CLM 再回到 MLM，能在生物医学任务上带来更好效果。
+推荐理由：对做领域适配、继续预训练和 encoder 优化的人来说，这是一个简单但可能高回报的训练技巧。
+关键词：继续预训练、CLM、Encoder
+原文：https://papers.cool/arxiv/2605.12438
+
+5. Geometric Factual Recall in Transformers
+来源：计算与语言｜评分：Top 5
+看点：论文从理论和实验上解释 Transformer 如何以几何方式记住事实关联，而不只是把权重矩阵当作键值记忆。
+推荐理由：如果你关心模型记忆、可解释性和多跳推理容量，这篇对理解“事实究竟存在哪里”很有启发。
+关键词：Transformer 记忆、事实召回、几何表示
+原文：https://papers.cool/arxiv/2605.12426
