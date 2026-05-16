@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+本次抓取虽有少量 RSS 源超时/403，但已正常完成筛选；今日焦点集中在 AI 安全、本地化 AI 与代理基础设施，整体信息密度很高。
+
+1. 欧盟官员支持成立儿童人工智能安全研究所
+来源：daringfireball.net｜评分：26/30
+看点：欧盟推动建立面向儿童 AI 产品的独立安全研究所，强调标准化测试与公开问责。
+推荐理由：这篇文章直接切中 AI 监管、儿童保护与产品责任三大热点，值得长期跟踪。
+关键词：AI safety、children、institute、regulation
+原文：https://www.euronews.com/next/2026/05/12/margrethe-vestager-backs-new-ai-safety-institute-for-children-after-decade-regulating-big-
+
+2. Geoffrey Fowler与青少年AI安全研究所的成立
+来源：daringfireball.net｜评分：26/30
+看点：Common Sense Media 旗下新机构正式招募核心成员，目标是系统评测儿童使用的 AI 产品。
+推荐理由：这是儿童 AI 安全从倡议走向组织化落地的重要信号，兼具政策和产业意义。
+关键词：AI safety、children、institute、research
+原文：https://geoffreyfowler.substack.com/p/what-is-ai-doing-to-our-kids-im-going
+
+3. 关于DS4的几点看法
+来源：antirez.com｜评分：26/30
+看点：文章认为 DS4 的流行反映出“本地单模型集成”与高效推理的真实需求正在爆发。
+推荐理由：对本地 AI、量化部署和消费级硬件跑大模型的趋势判断很有参考价值。
+关键词：DwarfStar 4、local AI、single-model integration、LLM
+原文：http://antirez.com/news/165
+
+4. 研究人员利用Mythos预览发现绕过M5内存完整性强制执行的macOS内核漏洞
+来源：daringfireball.net｜评分：26/30
+看点：苹果新一代内存完整性机制被证明存在可绕过的内核级漏洞。
+推荐理由：安全研究、移动端防护与芯片级防御机制的读者都应该关注。
+关键词：macOS、kernel exploit、MIE、memory integrity
+原文：https://blog.calif.io/p/first-public-kernel-memory-corruption
+
+5. 托管代理是新的Lambda
+来源：martinalderson.com｜评分：26/30
+看点：托管代理正在成为新的云执行范式，但平台锁定风险也同步上升。
+推荐理由：对做 AI 基础设施、Agent 产品和云平台选型的人来说，这篇很有现实启发。
+关键词：managed agents、cloud、serverless、Lambda
+原文：https://martinalderson.com/posts/managed-agents-are-the-new-lambda/?utm_source=rss&utm_medium=rss&utm_campaign=feed
+
+GitHub Trending Top 5
+
+今天的 GitHub 热榜几乎被 AI/Agent 工具包占满，尤其是“个人 AI”“记忆”“技能框架”方向，增长非常猛。
+
+1. ruvnet/RuView
+来源：Rust｜评分：今日 +1,715★
+看点：把普通 WiFi 信号变成空间感知、生命体征监测和存在检测。
+推荐理由：无摄像头的感知方案很有想象力，兼具硬件、隐私和 AI 应用价值。
+关键词：WiFi、空间感知、隐私
+原文：https://github.com/ruvnet/RuView
+
+2. tinyhumansai/openhuman
+来源：Rust｜评分：今日 +3,329★
+看点：主打“个人 AI 超级智能”的私有化系统。
+推荐理由：热度极高，说明“本地、私密、强能力”的 AI 产品需求正在快速升温。
+关键词：个人AI、私有化、智能体
+原文：https://github.com/tinyhumansai/openhuman
+
+3. rohitg00/agentmemory
+来源：TypeScript｜评分：今日 +1,879★
+看点：面向 AI 编程代理的持久记忆系统。
+推荐理由：代理记忆是下一波 AI 工具链核心能力之一，这个项目很贴近真实需求。
+关键词：记忆、编程代理、基准测试
+原文：https://github.com/rohitg00/agentmemory
+
+4. obra/superpowers
+来源：Shell｜评分：今日 +1,780★
+看点：一个面向 Agent 技能与软件开发方法论的框架。
+推荐理由：如果你关注“AI 如何真正参与开发流程”，这个项目很值得拆解。
+关键词：技能框架、开发方法、Agent
+原文：https://github.com/obra/superpowers
+
+5. K-Dense-AI/scientific-agent-skills
+来源：Python｜评分：今日 +654★
+看点：提供研究、科学、工程、分析、金融和写作的一组现成 Agent Skills。
+推荐理由：适合直接拿来做科研/分析型 Agent 的能力底座。
+关键词：Agent Skills、科研、写作
+原文：https://github.com/K-Dense-AI/scientific-agent-skills
+
+papers.cool/arxiv 每日 Top 5
+
+今天 papers.cool/arxiv 的前排以 NLP、低资源语言、推理稳定性和多智能体协作为主，AI 方法论味道很浓。
+
+1. WARDEN: Endangered Indigenous Language Transcription and Translation with 6 Hours of Training Data
+来源：Computation and Language , Artificial Intelligence｜评分：Top 1
+看点：只用 6 小时标注数据就做濒危语言转写与翻译，展示了低资源场景的工程新解法。
+推荐理由：对小数据、低资源语言和实用 LLM 系统设计都很有启发。
+关键词：transcription、translation、low-resource、language
+原文：https://papers.cool/arxiv/2605.13846
+
+2. Good Agentic Friends Do Not Just Give Verbal Advice: They Can Update Your Weights
+来源：Computation and Language｜评分：Kimi 1★
+看点：提出一种不用文本、而是通过权重扰动进行多智能体通信的新范式。
+推荐理由：这是对 agent 协作方式的激进探索，兼顾效率与研究新颖性。
+关键词：agentic、weights、communication、LoRA
+原文：https://papers.cool/arxiv/2605.13839
+
+3. Negation Neglect: When models fail to learn negations in training
+来源：Computation and Language , Artificial Intelligence , Machine Learning｜评分：Kimi 2★
+看点：模型在“带否定语义的数据微调”后，反而更容易学成相反结论。
+推荐理由：直接关系到训练数据标注、对齐安全和模型行为可控性。
+关键词：negation、training、safety、behavior
+原文：https://papers.cool/arxiv/2605.13829
+
+4. An LLM-Based System for Argument Reconstruction
+来源：Computation and Language｜评分：Top 4
+看点：用多阶段 LLM 流水线把自然语言重建成抽象论证图。
+推荐理由：适合关注可解释推理、论证抽取和结构化 NLP 的读者。
+关键词：argument、reconstruction、graph、LLM
+原文：https://papers.cool/arxiv/2605.13793
+
+5. Where Does Reasoning Break? Step-Level Hallucination Detection via Hidden-State Transport Geometry
+来源：Computation and Language , Artificial Intelligence｜评分：Top 5
+看点：把多步推理幻觉检测下沉到 hidden state 轨迹层，定位首次出错步骤。
+推荐理由：对推理可靠性、过程监督和幻觉定位很有研究价值。
+关键词：hallucination、reasoning、hidden-state、transport
+原文：https://papers.cool/arxiv/2605.13772
