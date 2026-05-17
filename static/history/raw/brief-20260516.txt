@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今晨从 Karpathy 推荐的技术博客源中完成最新一轮筛选，92 个源里有 88 个成功抓取、4 个源因超时或访问限制暂时失败，但不影响今日结果。今日信号集中在本地 AI、AI 政策、苹果安全边界与开发工具栈迁移；历史站点与公开 RSS 也已同步发布更新。
+
+1. 关于 DS4 的几句话
+来源：antirez.com｜评分：26/30
+看点：DS4 的走红说明“能在本地跑起来”的大模型与量化方案，正在把高质量个人 AI 体验推向实用阶段。
+推荐理由：这篇文章直接点出了本地 AI 爆发背后的产品与工程条件，适合判断下一波端侧机会。
+关键词：AI、LLM、本地推理
+原文：http://antirez.com/news/165
+
+2. 美国的 AI 政策是一团糟。以下是该怎么办。
+来源：garymarcus.substack.com｜评分：26/30
+看点：文章认为美国已经堆积了大量彼此割裂的 AI 法案，却缺少统一、清晰、可执行的治理框架。
+推荐理由：如果你关心 AI 产业走向与监管落地，这篇能帮助快速理解政策混乱为何会直接拖慢创新。
+关键词：AI 政策、监管、立法
+原文：https://garymarcus.substack.com/p/us-ai-policy-is-a-clumsy-mess-heres
+
+3. 高级版：如果我们正处于 AI 泡沫中，会怎样？(第一部分)
+来源：wheresyoured.at｜评分：25/30
+看点：作者质疑把当前模型能力线性外推到 AGI 的叙事，认为很多对 AI 社会后果的推断建立在过度乐观假设之上。
+推荐理由：在市场与舆论都偏亢奋的阶段，这类反思对校准预期、避免被宏大叙事带偏很有价值。
+关键词：AI 泡沫、AGI、未来判断
+原文：https://www.wheresyoured.at/premium-what-if-were-in-an-ai-bubble-part-1/
+
+4. 研究人员在 Mythos 预览的辅助下，宣布绕过 M5 内存完整性强制的 macOS 内核漏洞
+来源：daringfireball.net｜评分：26/30
+看点：研究人员展示了针对 Apple M5/A19 的 macOS 内核利用路径，能够绕过硬件辅助的内存完整性保护。
+推荐理由：苹果安全机制一直被视为行业高水位，这类公开突破对安全研究、攻防评估和平台信任都很关键。
+关键词：macOS、内核漏洞、内存完整性
+原文：https://blog.calif.io/p/first-public-kernel-memory-corruption
+
+5. 不再那么锁定
+来源：simonwillison.net｜评分：24/30
+看点：从 Bun 由 Zig 转向 Rust，到遗留移动应用被代码代理重写，文章展示了软件开发中的“技术锁定”正在减弱。
+推荐理由：这对工程团队很有现实意义，说明语言、框架和代码资产的切换成本正在被 AI 与新工具快速压低。
+关键词：Bun、Rust、技术栈迁移
+原文：https://simonwillison.net/2026/May/14/not-so-locked-in/#atom-everything
+
+GitHub Trending Top 5
+
+今天的 GitHub 热门几乎被 AI Agent、研究工作流和端侧语音方向占据，整体上仍是“更可用的智能体”与“更本地化的能力”两条主线。榜单里既有开发方法论，也有感知与语音等更贴近产品化的项目。
+
+1. ruvnet/RuView
+来源：Rust｜评分：今日 +1,859★
+看点：项目试图把普通 WiFi 信号转化为空间感知、生命体征监测和存在检测能力，不依赖摄像头。
+推荐理由：它代表了“无像素感知”这条很有想象力的方向，兼具隐私价值与边缘智能落地潜力。
+关键词：WiFi 感知、空间智能、隐私
+原文：https://github.com/ruvnet/RuView
+
+2. obra/superpowers
+来源：Shell｜评分：今日 +1,648★
+看点：这是一个面向 Agentic 开发的技能框架与软件开发方法论，强调让智能体真正融入工程流程。
+推荐理由：如果你正在搭建 AI 编程工作流，这类框架往往比单点模型能力更能决定团队效率上限。
+关键词：Agent、开发方法论、技能框架
+原文：https://github.com/obra/superpowers
+
+3. tinyhumansai/openhuman
+来源：Rust｜评分：今日 +1,271★
+看点：项目主打私有化、简洁且强大的个人 AI 超级助手，强调个人控制权与本地可用性。
+推荐理由：它切中了当前用户最在意的两点：一是“真能用”，二是“数据别离开我”。
+关键词：个人 AI、隐私、本地助手
+原文：https://github.com/tinyhumansai/openhuman
+
+4. supertone-inc/supertonic
+来源：Swift｜评分：今日 +719★
+看点：这是一个基于 ONNX 的端侧多语言 TTS 方案，强调运行速度快且可原生部署。
+推荐理由：语音交互正在重新成为入口能力，能在设备上高速运行的 TTS 基础设施值得长期关注。
+关键词：TTS、端侧推理、多语言
+原文：https://github.com/supertone-inc/supertonic
+
+5. K-Dense-AI/scientific-agent-skills
+来源：Python｜评分：今日 +646★
+看点：项目提供可直接使用的 Agent Skills，覆盖科研、工程、分析、金融和写作等多个场景。
+推荐理由：它说明行业正在从“造 Agent”走向“沉淀可复用技能库”，这对实用化最关键。
+关键词：科研 Agent、技能库、工作流
+原文：https://github.com/K-Dense-AI/scientific-agent-skills
+
+papers.cool/arxiv 每日 Top 5
+
+今日论文榜单延续了 Agent 检索、模型记忆、语音智能体评测和长对话一致性等热门方向。相比纯能力堆叠，研究重心明显更偏向“让系统在真实任务里更稳、更准、更可验证”。
+
+1. Is Grep All You Need? How Agent Harnesses Reshape Agentic Search
+来源：Computation and Language｜评分：Kimi 1★
+看点：论文系统比较 grep 与向量检索在多种 Agent harness 和工具调用形态下的表现，发现传统 grep 往往并不落下风。
+推荐理由：这对做 Agent/RAG 的团队非常重要，它提醒大家别被“向量检索默认更先进”的直觉绑架。
+关键词：grep、Agent Search、检索
+原文：https://papers.cool/arxiv/2605.15184
+
+2. Text Knows What, Tables Know When: Clinical Timeline Reconstruction via Retrieval-Augmented Multimodal Alignment
+来源：Computation and Language｜评分：Top 2
+看点：论文把临床文本与结构化 EHR 表格对齐，用多模态检索增强方式重建更精确的患者时间线。
+推荐理由：医疗 AI 最怕时间信息失真，这项工作展示了多模态对齐如何真正改善高价值场景中的可用性。
+关键词：临床时间线、多模态对齐、医疗 AI
+原文：https://papers.cool/arxiv/2605.15168
+
+3. MeMo: Memory as a Model
+来源：Computation and Language｜评分：Kimi 7★
+看点：MeMo 通过独立的记忆模型吸收新知识，而不直接修改主 LLM 参数，兼顾可插拔、抗遗忘与检索鲁棒性。
+推荐理由：这正击中了企业知识更新的痛点，是“怎么让模型持续学新东西”这个问题上的强信号论文。
+关键词：模型记忆、知识更新、检索增强
+原文：https://papers.cool/arxiv/2605.15156
+
+4. From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents
+来源：Computation and Language｜评分：Top 4
+看点：作者把文本工具调用基准转换成可验证的语音工具调用评测，用来衡量语音 Agent 在真实语音输入下的表现差距。
+推荐理由：语音 Agent 正快速进入产品层，这篇论文补上了“如何严谨评测”这一块关键基础设施。
+关键词：语音 Agent、工具调用、评测框架
+原文：https://papers.cool/arxiv/2605.15104
+
+5. Improving Multi-turn Dialogue Consistency with Self-Recall Thinking
+来源：Computation and Language｜评分：Kimi 1★
+看点：SRT 让模型在长对话中主动回忆关键历史轮次，从而提升一致性、降低延迟并减少无关上下文干扰。
+推荐理由：长对话稳定性是客服、助手和陪伴场景的核心短板，这类方法非常贴近实际部署需求。
+关键词：多轮对话、自回忆推理、一致性
+原文：https://papers.cool/arxiv/2605.15102
