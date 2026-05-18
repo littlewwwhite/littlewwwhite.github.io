@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选继续围绕 LLM 落地、模型可控性与 AI 外部环境展开：一边是资深工程师把大模型真正嵌入开发流，一边是对模型操控、政策治理与产业泡沫的冷静再审视。今晨摘要已成功生成并发布历史站点/RSS；抓取阶段有 4 个 RSS 源暂时不可用，但不影响今日 Top 5 产出。
+
+1. 作为一名资深工程师，我于 2026 年如何使用大型语言模型
+来源：seangoedecke.com｜评分：26/30
+看点：作者系统总结了 LLM 在代码补全、陌生代码修改、一次性研究脚本、快速学习新技术和疑难排障中的实际用法。
+推荐理由：这不是抽象讨论，而是高年资工程师真实工作流里的可复制经验，特别适合关注“AI 如何真正提效”的读者。
+关键词：LLM、资深工程师、AI 工具
+原文：https://seangoedecke.com/how-i-use-llms-in-2026/
+
+2. DeepSeek-V4-Flash 使 LLM 引导再次变得有趣
+来源：seangoedecke.com｜评分：26/30
+看点：文章讨论通过干预模型激活来“引导”输出行为，并认为 DeepSeek-V4-Flash 让这一方向重新具备研究与实践价值。
+推荐理由：如果你关注模型可控性、推理行为塑形或底层机制探索，这篇内容的信息密度很高。
+关键词：LLM 引导、DeepSeek V4 Flash、激活值
+原文：https://seangoedecke.com/steering-vectors/
+
+3. 美国的 AI 政策是一团糟，以下是解决之道
+来源：garymarcus.substack.com｜评分：26/30
+看点：文章直指美国联邦与州层面 AI 法案激增却缺乏统一框架，导致政策环境碎片化、产业预期混乱。
+推荐理由：理解技术趋势不能只看模型和产品，监管框架往往决定未来几年真正的落地节奏。
+关键词：AI 政策、监管、政策框架
+原文：https://garymarcus.substack.com/p/us-ai-policy-is-a-clumsy-mess-heres
+
+4. Eric Jang：从零开始构建 AlphaGo
+来源：dwarkesh.com｜评分：25/30
+看点：文章借 Eric Jang 的视角回到 AlphaGo，重看搜索、经验学习和自我博弈这些“智能原语”如何协同工作。
+推荐理由：在当下大模型热潮中，回顾 AlphaGo 这样的里程碑系统，有助于重新理解智能系统设计的基本面。
+关键词：AlphaGo、智能原语、自我博弈
+原文：https://www.dwarkesh.com/p/eric-jang
+
+5. 如果我们正处于 AI 泡沫之中？（第一部分）
+来源：wheresyoured.at｜评分：25/30
+看点：作者反驳了若干关于 AGI、失业冲击和软件公司前景的线性外推，主张对 AI 发展保持更审慎判断。
+推荐理由：这篇文章很适合为“AI 万能论”降温，帮助你在喧闹叙事之外建立更稳健的认知坐标。
+关键词：AI 泡沫、AGI、外推偏差
+原文：https://www.wheresyoured.at/premium-what-if-were-in-an-ai-bubble-part-1/
+
+GitHub Trending Top 5
+
+GitHub 今日热榜明显偏向 agent、生成式工具链与高性能基础设施，既有 Bun 这样的成熟底座，也有面向科研和开发流程的 agent 技能框架快速升温。整体看，AI 应用层与开发者生产力工具仍是最强主线。
+
+1. oven-sh/bun
+来源：Rust｜评分：今日 +397★
+看点：Bun 持续强化“一体化 JavaScript 运行时+构建+测试+包管理”定位，是高性能 JS 基础设施的代表项目。
+推荐理由：无论是前端、全栈还是工具链开发者，Bun 的生态演进都值得持续跟踪。
+关键词：JavaScript 运行时、构建工具、性能
+原文：https://github.com/oven-sh/bun
+
+2. K-Dense-AI/scientific-agent-skills
+来源：Python｜评分：今日 +673★
+看点：这是一个面向科研、工程、分析、金融与写作场景的现成 Agent Skills 集合，强调可直接复用的能力模块。
+推荐理由：如果你在搭建垂直领域 AI agent，这类“技能层”资产的复用价值很高。
+关键词：Agent Skills、科研自动化、工作流
+原文：https://github.com/K-Dense-AI/scientific-agent-skills
+
+3. obra/superpowers
+来源：Shell｜评分：今日 +1,305★
+看点：项目主打 agentic skills framework 与软件开发方法论，把智能体能力和工程流程进行体系化打包。
+推荐理由：它的热度说明“如何组织 AI 开发流程”正在成为比“单个模型多强”更重要的话题。
+关键词：Agent 框架、开发方法论、自动化
+原文：https://github.com/obra/superpowers
+
+4. Anil-matcha/Open-Generative-AI
+来源：JavaScript｜评分：今日 +317★
+看点：该项目提供开源、自托管的 AI 图像与视频生成工作室，集成 200+ 模型并强调自由度与无内容过滤。
+推荐理由：对于关注本地部署、多模型编排和创作工具链的人来说，这类平台型项目很有参考价值。
+关键词：视频生成、图像生成、自托管
+原文：https://github.com/Anil-matcha/Open-Generative-AI
+
+5. supertone-inc/supertonic
+来源：Swift｜评分：今日 +749★
+看点：这是一个基于 ONNX、强调端侧高速运行和多语言支持的 TTS 项目，主打设备本地语音合成。
+推荐理由：语音交互正在回到端上执行，这类兼顾速度、隐私和体验的项目值得重点关注。
+关键词：TTS、端侧推理、多语言
+原文：https://github.com/supertone-inc/supertonic
+
+papers.cool/arxiv 每日 Top 5
+
+今天的 papers.cool/arxiv 榜单几乎被 LLM agent、记忆机制、对话一致性与多模态评测占据，研究热点非常集中在“让模型更会找、更会记、更会调用工具”。从题目和 Kimi 星标看，agent 检索框架与外挂记忆模块最受关注。
+
+1. Is Grep All You Need? How Agent Harnesses Reshape Agentic Search
+来源：计算与语言｜评分：Kimi 5★
+看点：论文系统比较 grep 与向量检索在 agent 搜索流程中的表现，并指出检索策略与 agent harness 设计深度耦合。
+推荐理由：这是当前 agent 检索栈里非常“接地气”的问题，直接关系到工具调用与长上下文任务的真实效果。
+关键词：agent 搜索、grep 检索、tool calling
+原文：https://papers.cool/arxiv/2605.15184
+
+2. Text Knows What, Tables Know When: Clinical Timeline Reconstruction via Retrieval-Augmented Multimodal Alignment
+来源：计算与语言｜评分：Kimi 2★
+看点：论文把临床文本与结构化 EHR 表格对齐，用检索增强的多模态方法重建更精确的病程时间线。
+推荐理由：这是医疗 AI 中很典型的“文本语义丰富但时间不准、表格时间准但信息不全”的融合范式，方法论价值突出。
+关键词：临床时间线、多模态对齐、检索增强
+原文：https://papers.cool/arxiv/2605.15168
+
+3. MeMo: Memory as a Model
+来源：计算与语言｜评分：Kimi 9★
+看点：MeMo 试图把新知识编码进独立记忆模型，而不直接改动主 LLM 参数，从而降低遗忘并增强即插即用性。
+推荐理由：外挂记忆是大模型实用化的重要方向，这篇工作对长期知识更新与闭源模型扩展都很有启发。
+关键词：记忆模型、知识更新、检索鲁棒性
+原文：https://papers.cool/arxiv/2605.15156
+
+4. From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents
+来源：计算与语言｜评分：Top 4
+看点：论文把文本工具调用基准转换成语音场景评测，研究语音输入下工具调用 agent 的性能变化与误差来源。
+推荐理由：随着语音 agent 升温，如何可验证地评估其 tool calling 能力会越来越关键，这篇工作补上了方法缺口。
+关键词：语音代理、工具调用评测、多模态基准
+原文：https://papers.cool/arxiv/2605.15104
+
+5. Improving Multi-turn Dialogue Consistency with Self-Recall Thinking
+来源：计算与语言｜评分：Kimi 1★
+看点：论文提出 Self-Recall Thinking，让模型在多轮对话中主动回忆关键历史轮次，以改善长程依赖和一致性问题。
+推荐理由：多轮对话记忆始终是产品级助手的核心瓶颈，这类内生回忆机制很值得持续关注。
+关键词：多轮对话、自回忆、上下文一致性
+原文：https://papers.cool/arxiv/2605.15102
