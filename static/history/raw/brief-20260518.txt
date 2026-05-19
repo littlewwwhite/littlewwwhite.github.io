@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选继续围绕 AI 能力边界、工程落地与训练基础设施展开，既有对生成式 AI 路线的反思，也有一线工程师和训练研究者的实战经验。博客抓取过程中有 4 个 RSS 源暂时超时或报错，但不影响今日 Top 5 生成；历史站点与公开 RSS 也已同步发布。
+
+1. 生成式AI的幻觉：大规模超扩展的疯狂与世界模型及神经符号AI的未来
+来源：garymarcus.substack.com｜评分：27/30
+看点：文章系统质疑只靠更大数据与算力堆出来的生成式 AI 路线，主张下一阶段应转向世界模型与神经符号推理。
+推荐理由：如果你想判断当前 AI 热潮里哪些是短期泡沫、哪些可能成为下一代基础能力，这篇是高价值参照。
+关键词：生成式AI、世界模型、神经符号AI
+原文：https://garymarcus.substack.com/p/the-illusion-of-generative-ai-the
+
+2. 2026年，我作为首席工程师如何使用大型语言模型
+来源：seangoedecke.com｜评分：26/30
+看点：作者总结了 LLM 在资深工程师日常中的真实用法，包括代码补全、陌生代码改动、一次性研究脚本和问题排查。
+推荐理由：它不是空泛谈“AI 提效”，而是把工程岗位里哪些环节真正适合 LLM 讲得很具体。
+关键词：LLM、首席工程师、AI工具
+原文：https://seangoedecke.com/how-i-use-llms-in-2026/
+
+3. 关于预训练并行化和训练失败的笔记
+来源：dwarkesh.com｜评分：26/30
+看点：文章聚焦大模型预训练中的并行化策略、扩展瓶颈与失败案例，讨论如何提升训练效率和成功率。
+推荐理由：对关注模型训练基础设施、扩容成本和实验稳定性的读者来说，这类一手经验非常稀缺。
+关键词：预训练、并行化、LLM训练
+原文：https://www.dwarkesh.com/p/notes-on-pretraining-parallelisms
+
+4. AI是技术，不是产品
+来源：daringfireball.net｜评分：26/30
+看点：作者强调 AI 更像一种底层技术能力，而不是天然成立的独立产品形态。
+推荐理由：这能帮助产品和创业团队避免“为了 AI 而 AI”的包装思路，更清楚地界定技术与用户价值。
+关键词：AI、技术、产品
+原文：https://daringfireball.net/2026/05/ai_is_technology_not_a_product
+
+5. Reddit阻止部分用户从移动设备访问其网站
+来源：daringfireball.net｜评分：24/30
+看点：Reddit 正通过移动端弹窗与限制访问策略，把部分用户从网页强行引导到官方 App。
+推荐理由：这不只是平台策略新闻，也折射出内容平台对入口控制、分发权和用户选择权的新一轮收紧。
+关键词：Reddit、移动应用、访问限制
+原文：https://arstechnica.com/information-technology/2026/05/why-reddit-blocked-my-daily-visit-to-its-mobile-website/
+
+GitHub Trending Top 5
+
+今天的 GitHub 热门项目明显偏向 AI 原生工具链、开发者基础设施和开源替代方案。榜单里既有“个人 AI 助手”叙事，也有让软件更适配 Agent 工作流的基础项目。
+
+1. tinyhumansai/openhuman
+来源：Rust｜评分：今日 +1,690★
+看点：这是一个主打私有化、简洁但能力很强的个人 AI 超级助手项目。
+推荐理由：它踩中了“本地/私有 AI 助手”与“个人代理”两条同时升温的赛道，值得持续跟踪。
+关键词：个人AI、隐私、本地助手
+原文：https://github.com/tinyhumansai/openhuman
+
+2. HKUDS/CLI-Anything
+来源：Python｜评分：今日 +238★
+看点：项目试图把各类软件都变成 Agent-Native 的 CLI 接口，方便智能体统一调用与编排。
+推荐理由：如果你关心 AI Agent 的工具生态与可操作性标准，这类基础设施项目很可能成为关键中间层。
+关键词：CLI、Agent、软件接口
+原文：https://github.com/HKUDS/CLI-Anything
+
+3. calcom/cal.diy
+来源：TypeScript｜评分：今日 +433★
+看点：这是面向所有人的开源日程调度基础设施，强调可自托管与可定制。
+推荐理由：在 SaaS 成本与数据控制越来越受关注的背景下，开源调度基础设施有很强的落地价值。
+关键词：日程调度、开源SaaS、自托管
+原文：https://github.com/calcom/cal.diy
+
+4. oven-sh/bun
+来源：Rust｜评分：今日 +910★
+看点：Bun 继续保持高热度，作为集运行时、打包器、测试器和包管理器于一体的高速 JavaScript 工具链持续吸星。
+推荐理由：它已不再只是“新秀替代品”，而是在前端与全栈工程体系里逐步形成平台级影响力。
+关键词：JavaScript运行时、性能、开发工具链
+原文：https://github.com/oven-sh/bun
+
+5. Anil-matcha/Open-Generative-AI
+来源：JavaScript｜评分：今日 +703★
+看点：项目提供 AI 图片与视频生成平台的开源替代方案，整合 200+ 模型并支持自托管。
+推荐理由：在多模态生成需求快速上涨的阶段，能同时覆盖图像、视频、开源与无内容过滤的方案天然有传播性。
+关键词：生成式AI、视频生成、自托管
+原文：https://github.com/Anil-matcha/Open-Generative-AI
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单集中在 Agent 检索、医学多模态时间线、LLM 外挂记忆、语音工具调用与多轮对话一致性，整体上很偏“让模型在真实任务里更可靠”。从研究走向看，大家已经不满足于单纯提升基准分数，而是在系统性补齐可用性与可验证性。
+
+1. Is Grep All You Need? How Agent Harnesses Reshape Agentic Search
+来源：Computation and Language｜评分：Kimi 6★
+看点：论文比较 grep 与向量检索在 Agent 搜索中的表现，指出具体 Agent harness 与工具调用形态会显著影响结果。
+推荐理由：它直接切中当下 Agent 系统最实际的问题之一：检索策略和工具接口到底怎样影响最终任务完成率。
+关键词：Agent检索、Grep、工具调用
+原文：https://papers.cool/arxiv/2605.15184
+
+2. Text Knows What, Tables Know When: Clinical Timeline Reconstruction via Retrieval-Augmented Multimodal Alignment
+来源：Computation and Language / Artificial Intelligence / Machine Learning｜评分：Kimi 4★
+看点：研究把临床文本与结构化 EHR 表格对齐，用检索增强的多模态方法提升患者时间线重建精度。
+推荐理由：这类把大模型真正嵌入医疗时序理解的工作，往往比通用 benchmark 提升更接近真实影响。
+关键词：临床时间线、多模态对齐、医疗AI
+原文：https://papers.cool/arxiv/2605.15168
+
+3. MeMo: Memory as a Model
+来源：Computation and Language / Artificial Intelligence / Machine Learning｜评分：Kimi 10★
+看点：MeMo 提出把新增知识编码进独立记忆模型，而不直接改动主 LLM 参数，以降低遗忘并提升可插拔性。
+推荐理由：对于希望让模型持续吸收新知识、又不想频繁重训主模型的团队，这是很有启发性的架构方向。
+关键词：模型记忆、知识更新、可插拔LLM
+原文：https://papers.cool/arxiv/2605.15156
+
+4. From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents
+来源：Computation and Language｜评分：Top 4
+看点：论文把文本工具调用基准转成可控语音版本，用来评估语音 Agent 在真实噪声场景下的工具使用能力。
+推荐理由：随着语音助手和实时 Agent 升温，这类“可复现、可验证”的评测框架会越来越重要。
+关键词：语音Agent、工具调用、评测框架
+原文：https://papers.cool/arxiv/2605.15104
+
+5. Improving Multi-turn Dialogue Consistency with Self-Recall Thinking
+来源：Computation and Language / Artificial Intelligence｜评分：Kimi 3★
+看点：论文提出 Self-Recall Thinking，让模型在多轮对话中主动召回关键历史上下文，以提升一致性并降低延迟。
+推荐理由：它回应了长对话系统最常见的痛点之一：信息越长越散、上下文越多越慢。
+关键词：多轮对话、自回忆推理、一致性
+原文：https://papers.cool/arxiv/2605.15102
