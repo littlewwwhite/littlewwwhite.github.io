@@ -153,6 +153,7 @@ params:
   # 添加 Mermaid 支持
   mermaid:
     enable: true
+    renderer: "mermaid" # 可改为 "beautiful-mermaid"，仅增强 flowchart/sequence/class/er/xychart 等常用图
     theme:
       light: "default" # 亮色主题
       dark: "dark" # 暗色主题

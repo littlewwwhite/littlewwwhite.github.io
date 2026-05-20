@@ -74,33 +74,50 @@
 
 {{- /* Mermaid 支持 */ -}}
 {{ if .Page.Store.Get "hasMermaid" }}
+{{- $mermaidRenderer := default "mermaid" .Site.Params.mermaid.renderer -}}
+{{- if eq $mermaidRenderer "beautiful-mermaid" }}
+<script defer src="/js/beautiful-mermaid.bundle.js"></script>
+{{- else }}
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
 <script>
-  // 初始化 mermaid 配置 - 固定使用默认主题
   document.addEventListener('DOMContentLoaded', function() {
+    const isDark = document.body.classList.contains('dark');
+    const themeVars = getComputedStyle(document.body);
+    const color = (name) => themeVars.getPropertyValue(name).trim();
     mermaid.initialize({
       startOnLoad: true,
-      theme: 'default', // 固定使用默认主题
+      theme: 'base',
       flowchart: {
         useMaxWidth: true,
         htmlLabels: true,
         curve: 'basis',
       },
       themeVariables: {
-        fontFamily: 'var(--font-family)',
+        background: color('--theme'),
+        mainBkg: color('--entry'),
+        secondBkg: color('--code-bg'),
+        tertiaryColor: color('--theme'),
+        primaryColor: color('--entry'),
+        primaryTextColor: color('--content'),
+        primaryBorderColor: color('--border'),
+        secondaryColor: color('--code-bg'),
+        secondaryTextColor: color('--content'),
+        secondaryBorderColor: color('--border'),
+        tertiaryTextColor: color('--content'),
+        tertiaryBorderColor: color('--border'),
+        lineColor: color('--secondary'),
+        textColor: color('--content'),
+        clusterBkg: color('--code-bg'),
+        clusterBorder: color('--border'),
+        edgeLabelBackground: color('--code-bg'),
+        fontFamily: color('--font-family'),
         fontSize: '16px',
-        primaryColor: '#333',
-        primaryTextColor: '#333',
-        primaryBorderColor: '#999',
-        lineColor: '#666',
-        secondaryColor: '#f9f9f9',
-        tertiaryColor: '#fff',
+        darkMode: isDark,
       },
       securityLevel: 'loose',
     });
-    
-    // 不再需要监听主题切换，因为我们固定使用默认主题
   });
 </script>
+{{- end }}
 {{ end }}
 {{- /* Head custom content area end */ -}}
