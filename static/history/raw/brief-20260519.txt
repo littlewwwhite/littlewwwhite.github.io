@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选集中在三个方向：一是生成式 AI 路线之争持续升温，业界开始更严肃地讨论世界模型、神经符号方法与超大算力投入的边界；二是 OpenAI 相关法律与治理议题仍有高热度；三是安全与工程岗位都在被 AI 重塑。另有 4 个 RSS 源抓取临时失败，但不影响今日精选与历史站点/RSS 更新。
+
+1. 生成式 AI 的幻象，大规模超算投入的疯狂，以及对世界模型和神经符号 AI 的呼吁
+来源：garymarcus.substack.com｜评分：26/30
+看点：文章系统质疑当前生成式 AI 的能力上限与超大规模堆算力逻辑，主张把注意力转向世界模型和神经符号 AI。
+推荐理由：如果你想理解“为什么越来越多人开始反思现有大模型路线”，这篇是非常有代表性的立场文。
+关键词：生成式AI、世界模型、神经符号AI
+原文：https://garymarcus.substack.com/p/the-illusion-of-generative-ai-the
+
+2. 陪审团一致驳回埃隆·马斯克对萨姆·奥特曼的诉讼
+来源：daringfireball.net｜评分：25/30
+看点：围绕 OpenAI 与萨姆·奥特曼的高关注度诉讼被陪审团一致驳回，核心原因是超过诉讼时效。
+推荐理由：这起案件是观察 AI 公司治理、创始人关系与产业权力结构的重要窗口。
+关键词：OpenAI、马斯克、法律
+原文：https://www.nytimes.com/live/2026/05/18/technology/openai-trial-verdict-altman-musk?unlocked_article_code=1.jVA.Cc2V.IwYuu2r4SJfQ
+
+3. 世纪 AI 审判以一声叹息告终
+来源：garymarcus.substack.com｜评分：24/30
+看点：作者认为这场本可揭示更多行业内幕的 AI 审判，最终以低烈度收场，许多关键问题没有被真正展开。
+推荐理由：它补充了上一条新闻的“后视角”，更适合想理解事件行业含义而不只看结果的人。
+关键词：AI审判、行业治理、结果复盘
+原文：https://garymarcus.substack.com/p/the-ai-trial-of-the-century-ends
+
+4. CISA 管理员在 GitHub 上泄露 AWS GovCloud 密钥
+来源：krebsonsecurity.com｜评分：26/30
+看点：CISA 相关承包商在 GitHub 暴露高权限 AWS GovCloud 凭证与内部流程信息，暴露出严重云安全管理问题。
+推荐理由：这是今天最值得安全团队与平台工程团队复盘的真实案例之一，直接涉及凭证治理与供应链风险。
+关键词：云安全、凭证泄露、CISA
+原文：https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/
+
+5. 别再称自己为软件工程师，你现在是 AI 赋能工程师
+来源：idiallo.com｜评分：25/30
+看点：文章讨论 AI 时代的软件工程角色迁移，认为工程师正在从“纯编码者”转向“AI 工具增强型问题解决者”。
+推荐理由：这篇很适合用来校准个人职业认知，尤其是工程师如何重构技能栈与竞争力。
+关键词：软件工程、AI工具、职业转型
+原文：https://idiallo.com/blog/you-are-an-ai-enabled-engineer-now?src=feed
+
+GitHub Trending Top 5
+
+今天的 GitHub 热门项目高度聚焦 AI Agent、研究工作流和本地推理体验，说明“让软件和研究过程原生适配 Agent”正在快速成为开发者共识。榜单里既有个人智能体，也有面向科研、CLI 与端侧语音的新基础设施。
+
+1. tinyhumansai/openhuman
+来源：Rust｜评分：今日 +3,941★
+看点：这是一个强调私有化、简洁和高能力的个人 AI 超级助手项目，切中“本地/自主智能体”热点。
+推荐理由：高涨幅说明市场对可控、个人化 AI Agent 的需求非常强，值得持续跟踪产品形态。
+关键词：AI助手、隐私、本地智能体
+原文：https://github.com/tinyhumansai/openhuman
+
+2. Imbad0202/academic-research-skills
+来源：Python｜评分：今日 +1,439★
+看点：项目把学术研究流程拆成 research、write、review、revise、finalize，明显是在为 Claude Code/Agent 时代重构科研工作流。
+推荐理由：如果你关心“AI 如何真正进入知识工作流程”，这个项目是非常直观的样本。
+关键词：学术研究、Agent工作流、Claude
+原文：https://github.com/Imbad0202/academic-research-skills
+
+3. HKUDS/CLI-Anything
+来源：Python｜评分：今日 +1,049★
+看点：项目主张“让所有软件都变成 Agent-Native”，通过 CLI 统一接入各种软件能力。
+推荐理由：它代表了一个重要方向：CLI 不再只是命令入口，而是 Agent 编排软件世界的公共层。
+关键词：CLI、软件代理化、开发工具
+原文：https://github.com/HKUDS/CLI-Anything
+
+4. K-Dense-AI/scientific-agent-skills
+来源：Python｜评分：今日 +609★
+看点：这是一个面向科研、工程、分析、金融和写作的可复用 Agent Skills 集合，强调现成可用。
+推荐理由：对想快速搭建垂直 Agent 能力的人来说，这类“技能仓库”比从零造轮子更有现实价值。
+关键词：Agent技能、科研、自动化
+原文：https://github.com/K-Dense-AI/scientific-agent-skills
+
+5. supertone-inc/supertonic
+来源：Swift｜评分：今日 +715★
+看点：项目提供基于 ONNX 的本地多语种 TTS，强调低延迟和端侧运行。
+推荐理由：语音正在成为 AI 产品的重要交互层，端侧 TTS 的成熟会直接影响下一波应用体验。
+关键词：语音合成、端侧AI、ONNX
+原文：https://github.com/supertone-inc/supertonic
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单一半在讲 Agent 与 LLM 组织方式，另一半则反映出生成式 AI 正加速渗透到能源、公用事业与社会科学模拟等传统领域。除了应用型论文，关于“语言模型像不像人类语言系统”的机制研究也值得特别关注。
+
+1. A Generative AI Framework for Intelligent Utility Billing CO 2 Analytics and Sustainable Resource Optimisation
+来源：计算与语言 / 人工智能｜评分：Kimi 2★
+看点：论文尝试把账单生成、碳排分析、负载调度和资源优化整合进一个生成式 AI 公用事业框架。
+推荐理由：它展示了生成式 AI 如何从聊天界面走向能源与公用事业这种高约束真实场景。
+关键词：生成式AI、能源、公用事业
+原文：https://papers.cool/arxiv/2605.16250
+
+2. A Unified Generative-AI Framework for Smart Energy Infrastructure: Intelligent Gas Distribution, Utility Billing, Carbon Analytics, and Quantum-Inspired Optimisation
+来源：计算与语言 / 人工智能｜评分：Top 2
+看点：这篇进一步把智能燃气分配、账单、碳分析与量子启发式优化放进统一智能能源基础设施框架。
+推荐理由：适合关注“AI+能源基础设施”交叉方向的人，能看到产业级系统整合的思路。
+关键词：智能能源、碳分析、优化
+原文：https://papers.cool/arxiv/2605.16232
+
+3. Artificial Aphasias in Lesioned Language Models
+来源：计算与语言｜评分：Kimi 1★
+看点：研究者通过“损伤”语言模型参数并对照失语症症状，分析模型内部语言功能分工。
+推荐理由：这是理解大模型可解释性与类脑语言机制差异的一篇很有想法的工作。
+关键词：语言模型、失语症、可解释性
+原文：https://papers.cool/arxiv/2605.16222
+
+4. Argus: Evidence Assembly for Scalable Deep Research Agents
+来源：计算与语言 / 人工智能｜评分：Kimi 1★
+看点：Argus 用 Searcher 与 Navigator 协作，把深度研究从单路径搜索改造成“证据拼图式”组装。
+推荐理由：对 Agent 圈尤其重要，因为它直指多智能体检索、证据聚合和长上下文效率瓶颈。
+关键词：研究Agent、多智能体、证据聚合
+原文：https://papers.cool/arxiv/2605.16217
+
+5. Improving Cross-Cultural Survey Simulation with Calibrated Value Personas
+来源：计算与语言 / 计算机与社会｜评分：Top 5
+看点：论文提出基于价值观画像而非简单人口学特征的方式，改进 LLM 对跨文化调查结果的模拟能力。
+推荐理由：这对社会科学、市场研究和 AI 对齐都很关键，因为它触及模型如何更真实地反映多元人群。
+关键词：跨文化、人格画像、调查模拟
+原文：https://papers.cool/arxiv/2605.16193
