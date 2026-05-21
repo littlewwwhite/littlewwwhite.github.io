@@ -1,10 +1,10 @@
 ---
-name: blog-post-creator
-description: Create and write blog posts — from quick scaffolding to full thesis-driven articles. Use when user says "write a blog post", "draft a post about", "turn this into a blog", "发博客", "写篇文章", "new post", "新文章", "validate post", "检查格式", or provides URLs/notes for blog content creation. Do NOT use for quick edits or translation.
+name: blog-create
+description: Create and write blog posts — from quick scaffolding to full thesis-driven articles. Use when user says "/blog-create", "write a blog post", "draft a post about", "turn this into a blog", "发博客", "写篇文章", "new post", "新文章", "validate post", "检查格式", or provides URLs/notes/images for blog content creation. Do NOT use for quick edits or translation.
 allowed-tools: Read, Write, Edit, Glob, Bash, WebFetch, AskUserQuestion
 ---
 
-# Blog Post Creator
+# Blog Create
 
 Generate a complete, ready-to-publish blog post from user's raw ideas, notes, and reference materials. User provides direction; Claude handles digestion, thinking, and writing.
 
@@ -32,43 +32,120 @@ When user just wants to create a post skeleton and write conversationally (not a
 
 ## Full Workflow
 
-### Step 1: Gather — Collect and parse all input
+### Step 1: Gather — Classify inputs by maturity
 
-- **URLs**: Fetch content via WebFetch, extract key arguments and data
-- **Images from sources**: When fetching URLs, also identify technical diagrams and architecture images worth reusing (see Image Extraction below)
-- **Pasted text**: Organize into structured notes
-- **File paths**: Read local files
-- **User direction**: Note the angle, scope, and emphasis the user wants
+Sort every input into ONE of three classes. The class determines how it feeds later steps.
 
-Output: Internal structured notes of all source material + candidate image list.
+**Class 1 — External sources** (third-party material, mature)
+- URLs → fetch via WebFetch, extract key arguments and data
+- Third-party diagrams from fetched pages → see Image Extraction below
+- Handling: digest → extract → weave into article
 
-**Image Extraction from Sources:**
+**Class 2 — Mature user notes** (self-authored, already organized)
+- Pasted text that reads as a structured draft, outline, or finished notes
+- File paths pointing to user's own writing or research documents
+- Handling: minimal digestion — preserve structure, measure words, treat as scaffolding rather than raw material. Do not paraphrase for its own sake.
 
-When browsing or fetching source articles, actively look for **technical diagrams** (architecture diagrams, flowcharts, data visualizations, comparison charts) that would enrich the blog post. Decorative images, stock photos, and author avatars are not worth extracting.
+**Class 3 — User seeds** (self-originated but underspecified, needs elaboration)
+- Standalone opinions / stance fragments: "我觉得…", "核心是…", "想写一下 X"
+- Local images, screenshots, photos dropped in without enough context on what to say about them
+- Half-thoughts, rough directions, incomplete framings
+- Handling: triggers Midwife Mode (Step 1.7) — a short elaboration dialogue before Step 2. Seeds upgraded through this dialogue feed Step 2 as first-class material, NOT as the old "user direction" footnote.
 
-For each candidate image:
-1. Extract the image URL from the page DOM (via CDP `/eval` or from HTML `<img>` tags)
-2. Download to the post's page bundle directory: `content/posts/YYMMDD/`
+Output: internal structured notes of Class 1 + Class 2 material; candidate image list (source-extracted AND user-provided); list of Class 3 seeds awaiting elaboration.
+
+**Image Extraction — covers both source-extracted and user-provided:**
+
+_From sources (Class 1 path)_: actively look for **technical diagrams** (architecture, flowcharts, data viz, comparison charts) worth reusing. Skip decorative images, stock photos, author avatars.
+
+For each Class 1 source (especially GitHub repos), proactively check these locations **before** falling back to mermaid:
+- Repo's `assets/`, `docs/`, `docs/images/`, `.github/assets/` directories
+- README's embedded `<img>` tags or markdown image references
+- Linked design docs / blog posts on the project's website
+- Use `gh api repos/{owner}/{name}/contents/{path}` or `gh repo view` if WebFetch is blocked
+
+For each source-extracted candidate:
+1. Extract the image URL from the page DOM (via CDP `/eval` or HTML `<img>` tags) OR from the GitHub raw URL pattern (`https://raw.githubusercontent.com/{owner}/{repo}/{branch}/path/to/image`)
+2. Download to the post's Page Bundle: `content/posts/YYMMDD/`
 3. Name descriptively: `anthropic-phase2-architecture.png`, not `1.png`
 4. Record the source URL for 延伸阅读 attribution
 
-**Selection criteria:**
+_From user (Class 3 path)_: user-dropped local images, screenshots, or photos.
+1. Copy / move to `content/posts/YYMMDD/` alongside `index.md`
+2. Rename descriptively based on stated intent (ask in Midwife Mode if unclear)
+3. Record in candidate image list with provenance = "user-provided"
+4. In Step 3 Spine, pre-allocate its section placement based on the Midwife-Mode placement hint
+
+**Selection criteria (for source-extracted only):**
 - ✅ Architecture diagrams, system flowcharts, data charts from engineering blogs
-- ✅ Official product screenshots that convey information hard to describe in text
+- ✅ Official product screenshots conveying information hard to describe in text
 - ✅ Benchmark/comparison visualizations with concrete data
 - ❌ Decorative illustrations, stock photos, logos
-- ❌ Images that can be better expressed as mermaid diagrams (prefer mermaid when feasible)
+- ❌ Images better expressed as mermaid (prefer mermaid when feasible)
 
-**Priority**: mermaid recreation > source image download. Only download source images when the original diagram's complexity or visual richness exceeds what mermaid can express.
+**Priority**: mermaid recreation > source image download. Exception: user-provided images (Class 3) are kept as-is — do not "upgrade" them to mermaid without asking.
+
+### Step 1.5: Input Inventory — Classify and recommend mode (MUST output to user)
+
+After classifying, output a compact inventory before any further processing:
+
+```markdown
+## 📥 Input Inventory
+
+| Class | Count | Items |
+|---|---|---|
+| 1. External sources | N | [titles or short labels] |
+| 2. Mature notes | N | [short labels] |
+| 3. Seeds | N | [opinion fragments / image filenames] |
+
+**Recommended mode**: [Digest / Midwife / Hybrid]
+
+Reasoning: [one line]
+```
+
+Mode decision rules:
+- **0 Class 3** → **Digest Mode**: skip Step 1.7, go straight to Step 2 Thinking
+- **Only Class 3** (no Class 1 or 2 material) → **Midwife Mode**: run Step 1.7, then Step 2 uses the elaborated seeds as the primary material
+- **Class 3 + Class 1/2** → **Hybrid Mode**: run Step 1.7 on the seeds first, then merge elaborated seeds with source/notes in Step 2
+
+**After outputting the inventory, ask the user:**
+> "Inventory confirmed? Proceed with [recommended mode], or switch to [alternative]?"
+
+User confirms → proceed. User overrides → use their chosen mode.
+
+### Step 1.7: Midwife Mode — Elaborate seeds (skip in Digest Mode)
+
+For each Class 3 seed, run a focused 2-3 round dialogue via AskUserQuestion. Never spam questions; skip rounds that would be redundant given earlier answers.
+
+**For opinion / stance seeds:**
+- Round 1: "You said '[seed]'. What's the specific claim the article should land on? (directional thesis, not a topic)"
+- Round 2: "What evidence or experience backs this — your own projects, data you've seen, or material we should fetch?"
+- Round 3: "What's the counterargument you want to preempt? (feeds the Step 3 turning point)"
+
+**For image seeds:**
+- Round 1: "What does this image show, and what's the single takeaway you want the reader to see?"
+- Round 2: "Where in the article's arc — setup, evidence, or punchline?"
+- Round 3 (only if mermaid could plausibly replace it): "Keep the original image, or redraw as mermaid for better text integration?"
+
+**Exit condition per seed**: (a) one-sentence thesis contribution, (b) supporting evidence, (c) clear placement hint. When all seeds satisfy this, exit Step 1.7.
+
+Output of Step 1.7: upgraded seeds promoted into the working notes. In Step 2 the thinking note explicitly labels them under `🧭 User's Stance` (see Step 2) so they anchor the thesis rather than dissolve into "user direction."
 
 ### Step 2: Think — Structured reflection (MUST output to user)
 
-After reading all material, Claude MUST output a **thinking note** before writing. This is the critical step that prevents "rewrite syndrome."
+After reading all material (and completing Step 1.7 if applicable), Claude MUST output a **thinking note** before writing. This is the critical step that prevents "rewrite syndrome."
 
 ```markdown
-## 📌 Source Key Points
+## 🧭 User's Stance  ← include when mode is Midwife or Hybrid; omit in pure Digest
+- Elaborated thesis seed: [one-sentence claim from Step 1.7]
+- Evidence the user owns: [personal project / data / experience]
+- Counterargument to preempt: [for Step 3 turning point]
+- Image seeds and their placement hints: [file.png → Section N punchline]
+
+## 📌 Source Key Points  ← include when Class 1 or Class 2 material exists
 - Article A argues X
 - Article B argues Y
+- Mature note Z contributes: [its core claim or structure]
 - Key data: [specific numbers/benchmarks from sources]
 
 ## 🤔 Reflections & Extensions
@@ -79,7 +156,10 @@ After reading all material, Claude MUST output a **thinking note** before writin
 
 ## 🎯 My Article Thesis
 - Not "sources say X" but "I believe Z"
-- Z is supported by digesting sources + my own extensions
+- Mode-specific derivation:
+  - Digest mode: Z emerges from synthesizing sources + my extensions
+  - Midwife mode: Z = the elaborated User's Stance seed, refined for sharpness
+  - Hybrid mode: Z starts from User's Stance; sources support / refute / extend it — they do NOT dilute it
 - Proposed structure: [Pattern A/B/C from writing guidelines]
 
 ## 📎 References for 延伸阅读
@@ -91,7 +171,8 @@ After reading all material, Claude MUST output a **thinking note** before writin
 - Default stance is **agreement + extension**, not forced criticism
 - Depth comes from "thinking further" — cross-domain analogies, extreme-case reasoning, connecting dots the sources didn't connect
 - Only express disagreement when genuinely warranted
-- The thesis must be YOUR position, not a summary of sources
+- The thesis must be YOUR (or the elaborated user's) position, not a summary of sources
+- In Midwife/Hybrid mode: resist the reflex to "improve" the user's stance into something more balanced — a sharp, opinionated seed is exactly what makes the article the user's
 - **Author presence (Part 7.1)**: identify at least one angle where zjding has personal experience, a similar project, or a strong independent judgment. If none exists, flag it — consider adding a quick experiment or switching the angle.
 - **Turning point (Part 7.4)**: identify the most counter-intuitive finding or the moment where the obvious approach fails. This becomes the article's narrative pivot.
 
@@ -182,6 +263,18 @@ Terse, over-compressed writing is as bad as bloated writing. Each section needs:
 - Zero inline citations — weave source insights as your own observations
 - Add original extensions: cross-domain analogies, frameworks, aphoristic summaries
 - End with `## 延伸阅读` section listing source URLs
+
+**Inline source anchoring (in addition to 延伸阅读):**
+For every major project analyzed in depth, embed at least one inline anchor in the body — not just at the end. This grounds claims in verifiable artifacts and lets readers jump straight to the evidence. Pick the lightest-weight form that fits:
+
+| Anchor type | When to use | Example |
+|---|---|---|
+| **Project original diagram** | When the project ships an architecture/flow image that supports your claim | `![Mirage 架构图...](mirage-architecture.svg "...")` next to the paragraph it illustrates |
+| **Docs deep link** | When citing a specific concept, API, or config the project documents | `（完整 resource 列表见 [Mirage 官方文档](https://docs.mirage.strukto.ai)）` |
+| **Source code path link** | When quoting / paraphrasing a class signature, function, or test file | `把 Mirage 的 [Workspace](https://github.com/.../workspace.py) 类签名拉出来看` |
+| **Sibling blog reference** | When a related post on the same topic strengthens or contrasts your point | inline link in the paragraph that makes the contrast |
+
+Rule of thumb: aim for **≥ 1 inline anchor per major project per article**. Save 延伸阅读 for high-level "go here to learn more" pointers; use inline anchors for "this exact claim ← this exact source."
 
 All other voice, style, forbidden-word, depth, and formatting rules: follow `writing-guidelines.md` Parts 1-6.
 

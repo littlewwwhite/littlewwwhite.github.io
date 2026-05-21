@@ -36,3 +36,14 @@ pycache-*
 
 # Publish skill output (ephemeral)
 _dist/
+.omx/
+
+# Local environment / dependencies
+node_modules/
+.playwright-mcp/
+.claude/settings.local.json
+content/posts/.claude/
+
+# Stray screenshots / debug artifacts
+tweet-screenshot.png
+*-screenshot.png
