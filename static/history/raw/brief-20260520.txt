@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今晨从 92 个技术博客源中成功抓取 88 个，筛出 48 小时内最值得读的 5 篇；其中 4 个 RSS 源临时失败，但不影响精选结果与历史站点/RSS 已完成发布。今天的主线很清晰：Gemini 3.5 Flash 加速落地、头部 AI 人才继续向 Anthropic 集聚，同时安全与开发工具侧也有高价值动态。
+
+1. Gemini 3.5 Flash：更昂贵但谷歌计划将其用于一切
+来源：simonwillison.net｜评分：27/30
+看点：Gemini 3.5 Flash 已从发布走向大规模产品化，正在被谷歌放入 Gemini 应用和 AI Mode 等核心入口。
+推荐理由：这篇能帮助判断谷歌轻量模型的部署节奏，以及“成本上升但覆盖更广”背后的平台战略。
+关键词：Gemini 3.5 Flash、Google I/O、LLM
+原文：https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything
+
+2. Andrej Karpathy 加入 Anthropic
+来源：daringfireball.net｜评分：27/30
+看点：Karpathy 宣布加入 Anthropic，意味着大模型竞争正在从产品竞速进一步延伸到顶尖研究人才争夺。
+推荐理由：顶级研究者的流向往往会提前揭示未来 12-24 个月的重要技术押注与组织重心。
+关键词：Andrej Karpathy、Anthropic、LLMs
+原文：https://x.com/karpathy/status/2056753169888334312
+
+3. CISA 管理员在 GitHub 上泄露 AWS GovCloud 密钥
+来源：krebsonsecurity.com｜评分：26/30
+看点：CISA 相关高权限 GovCloud 凭证被公开到 GitHub，暴露出政府级云环境在构建、测试和权限管理上的严重风险。
+推荐理由：这是极具警示意义的真实安全案例，对云凭证治理、代码仓库审计和政府 IT 安全都很有参考价值。
+关键词：CISA、AWS GovCloud、GitHub
+原文：https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/
+
+4. 每周更新 504
+来源：troyhunt.com｜评分：26/30
+看点：文章围绕数据泄露与勒索事件中的“付费还是不付费”决策展开，并以 Grafana 的做法说明企业应对差异。
+推荐理由：适合安全负责人和工程管理者了解现实世界里勒索事件处置的策略取舍与代价。
+关键词：data breach、ransomware、Grafana
+原文：https://www.troyhunt.com/weekly-update-504/
+
+5. llm-gemini 0.32 版本发布
+来源：simonwillison.net｜评分：24/30
+看点：llm-gemini 0.32 新增对 Gemini 3.5 Flash 的支持，让开发者能更快把谷歌最新模型接入本地/脚本化工作流。
+推荐理由：对使用 LLM CLI、自动化脚本或本地开发工具链的人来说，这是一个可立即落地的更新。
+关键词：llm-gemini、release、Gemini 3.5 Flash
+原文：https://simonwillison.net/2026/May/19/llm-gemini-2/#atom-everything
+
+GitHub Trending Top 5
+
+今天 GitHub 热点明显偏向 AI Agent、开发者工作流和个人智能体基础设施。榜单整体信号很强：大家不再只讨论模型，而是在快速沉淀“可执行的软件形态”。
+
+1. tinyhumansai/openhuman
+来源：Rust｜评分：今日 +3,973★
+看点：这是一个主打私有化、简洁且高能力的个人 AI 超级智能体项目，强调把 AI 真正变成“个人系统”。
+推荐理由：它同时踩中本地优先、隐私保护和个人 Agent 三个高热方向，值得持续观察产品化路径。
+关键词：个人智能体、隐私、本地优先
+原文：https://github.com/tinyhumansai/openhuman
+
+2. HKUDS/CLI-Anything
+来源：Python｜评分：今日 +1,038★
+看点：项目希望把各类软件都改造成 Agent-Native 的 CLI 接口，为通用软件代理提供统一控制层。
+推荐理由：如果 Agent 未来要真正操作软件生态，CLI 统一层会是非常关键的基础设施。
+关键词：Agent-Native、CLI、软件自动化
+原文：https://github.com/HKUDS/CLI-Anything
+
+3. Imbad0202/academic-research-skills
+来源：Python｜评分：今日 +3,164★
+看点：该仓库为 Claude Code 提供完整的学术研究技能链条，覆盖 research、write、review、revise、finalize。
+推荐理由：它把“研究工作流模板化”做得很具体，适合关注 AI 辅助科研和知识工作自动化的人。
+关键词：Claude Code、科研工作流、写作
+原文：https://github.com/Imbad0202/academic-research-skills
+
+4. obra/superpowers
+来源：Shell｜评分：今日 +1,623★
+看点：这是一个面向 Agentic 开发的技能框架与软件开发方法论，强调可复用能力与工程协作。
+推荐理由：相比单点工具，它更接近“如何组织 AI 开发团队能力”的答案，方法论价值高。
+关键词：Agentic 开发、技能框架、方法论
+原文：https://github.com/obra/superpowers
+
+5. anthropics/claude-plugins-official
+来源：Python｜评分：今日 +171★
+看点：Anthropic 官方维护的 Claude Code 高质量插件目录，意味着插件生态正在被正式化和标准化。
+推荐理由：官方插件目录通常会成为生态风向标，能直接反映 Claude 工具链下一步重点。
+关键词：Anthropic、Claude Code、插件生态
+原文：https://github.com/anthropics/claude-plugins-official
+
+papers.cool/arxiv 每日 Top 5
+
+今天论文榜单集中在长上下文注意力、Agent 基础设施、事实性评测和工具使用强化学习，研究风向相当务实。整体看，学界正在把注意力从“会不会”转向“如何更稳、更快、更可验证”。
+
+1. DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention
+来源：Computation and Language / Artificial Intelligence / Machine Learning｜评分：Kimi 6★
+看点：论文提出可微、可自适应的稀疏层级注意力机制，在高稀疏度下仍能保持接近全注意力的效果，并改善长上下文建模。
+推荐理由：对长上下文 LLM 推理和训练成本敏感的团队，这是一条很值得跟进的架构优化路线。
+关键词：长上下文、稀疏注意力、推理加速
+原文：https://papers.cool/arxiv/2605.18753
+
+2. Code as Agent Harness
+来源：Computation and Language / Artificial Intelligence｜评分：Kimi 6★
+看点：这是一篇系统化综述，提出“代码即 Agent Harness”的统一视角，把代码看作代理推理、行动、验证与协作的执行底座。
+推荐理由：非常适合做 Agent 平台、编程助手或多智能体系统的人用来校准自己的系统设计框架。
+关键词：Agent、代码执行、系统综述
+原文：https://papers.cool/arxiv/2605.18747
+
+3. Predictable Confabulations: Factual Recall by LLMs Scales with Model Size and Topic Frequency
+来源：Computation and Language / Artificial Intelligence / Machine Learning｜评分：Kimi 1★
+看点：论文用大规模实证说明，LLM 的事实召回能力与模型规模及训练数据中的主题频率存在可刻画的缩放关系。
+推荐理由：这对理解幻觉、知识覆盖与训练数据构成之间的关系很有价值，也有助于更理性地解释模型表现。
+关键词：事实召回、缩放规律、幻觉
+原文：https://papers.cool/arxiv/2605.18732
+
+4. EnvFactory: Scaling Tool-Use Agents via Executable Environments Synthesis and Robust RL
+来源：Computation and Language / Machine Learning｜评分：Kimi 1★
+看点：论文提出自动探索可执行工具环境并生成多轮轨迹的框架，以更少环境获得更好的 Agentic RL 训练效率。
+推荐理由：如果你关心工具使用型 Agent 的训练数据与环境构造，这是非常直接且实用的一条路线。
+关键词：Tool-Use Agents、Agentic RL、环境合成
+原文：https://papers.cool/arxiv/2605.18703
+
+5. Language-Switching Triggers Take a Latent Detour Through Language Models
+来源：Computation and Language｜评分：Top 5
+看点：研究揭示语言切换型后门攻击在模型内部通过潜在子空间传播，并非简单显式特征触发。
+推荐理由：它帮助安全研究者更深入理解 LLM 后门机制，也提醒现有中间表示检测方法可能存在盲区。
+关键词：后门攻击、可解释性、语言模型安全
+原文：https://papers.cool/arxiv/2605.18646
