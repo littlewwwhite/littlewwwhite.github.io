@@ -1,3 +1,7 @@
+/* input: PaperMod article markup, theme variables, and generated Hugo image figures */
+/* output: Project-level article styling overrides */
+/* pos: Loaded after PaperMod CSS to normalize zjding blog presentation details */
+
 /* Mermaid diagrams */
 .mermaid-wrapper {
   position: relative;
@@ -170,6 +174,39 @@
 
 .post-content table tbody tr:hover {
   background: color-mix(in srgb, var(--content-surface) 72%, transparent);
+}
+
+/* Figures and captions */
+.post-content figure {
+  margin: 1.75rem auto 2rem;
+}
+
+.post-content p > figure {
+  margin-top: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.post-content figure img {
+  display: block;
+  margin: 0 auto;
+}
+
+.post-content figure > figcaption {
+  max-width: min(100%, 44rem);
+  margin: 0.65rem auto 0;
+  color: var(--secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.post-content figure > figcaption > p {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 
 /* Heading hierarchy */
