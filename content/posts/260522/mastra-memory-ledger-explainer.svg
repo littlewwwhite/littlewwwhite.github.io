@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mastra 账本式记忆讲解图</title>
+  <desc id="desc">对比普通摘要压缩和账本式压缩，说明有损观察必须保留回到原文的路径。</desc>
+  <defs>
+    <marker id="arrow-dark" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#15803d"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#dc2626"/>
+    </marker>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.11"/>
+    </filter>
+    <style>
+      .bg { fill: #fbfaf7; }
+      .panel { fill: #ffffff; stroke: #e2e8f0; stroke-width: 2; rx: 24; filter: url(#soft-shadow); }
+      .left { fill: #fff1f2; stroke: #fecdd3; stroke-width: 2; rx: 22; }
+      .right { fill: #f0fdf4; stroke: #bbf7d0; stroke-width: 2; rx: 22; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 18; }
+      .bad { fill: #fff7f7; stroke: #fb7185; stroke-width: 2; rx: 18; }
+      .good { fill: #f7fee7; stroke: #84cc16; stroke-width: 2; rx: 18; }
+      .blue { fill: #eff6ff; stroke: #60a5fa; stroke-width: 2; rx: 18; }
+      .amber { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2; rx: 18; }
+      .title { font: 700 38px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #111827; }
+      .subtitle { font: 400 20px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #475569; }
+      .h { font: 700 25px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #111827; }
+      .t { font: 500 18px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #334155; }
+      .small { font: 400 15px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #64748b; }
+      .note { font: 700 17px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #166534; }
+      .warn { font: 700 17px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #b91c1c; }
+      .arrow { stroke: #334155; stroke-width: 3; fill: none; marker-end: url(#arrow-dark); }
+      .arrow-green { stroke: #15803d; stroke-width: 3; fill: none; marker-end: url(#arrow-green); }
+      .arrow-red { stroke: #dc2626; stroke-width: 3; fill: none; marker-end: url(#arrow-red); }
+      .dash { stroke-dasharray: 9 8; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1440" height="900"/>
+  <rect class="panel" x="56" y="48" width="1328" height="804"/>
+
+  <text class="title" x="100" y="110">压缩不是摘要：是把过去改造成可执行账本</text>
+  <text class="subtitle" x="100" y="145">普通摘要会替代事实；账本式记忆只替代上下文位置，事实仍可回溯。</text>
+
+  <rect class="left" x="96" y="195" width="585" height="510"/>
+  <text class="h" x="130" y="238">普通摘要压缩</text>
+  <text class="small" x="130" y="266">看起来省 token，但容易把证据压没</text>
+
+  <rect class="card" x="142" y="320" width="200" height="96"/>
+  <text class="t" x="184" y="361">原始对话</text>
+  <text class="small" x="174" y="389">日志 / 约束 / 路径</text>
+
+  <rect class="bad" x="404" y="320" width="200" height="96"/>
+  <text class="t" x="454" y="361">摘要文本</text>
+  <text class="small" x="442" y="389">大意正确即可</text>
+
+  <path class="arrow-red" d="M342 368 L404 368"/>
+
+  <rect class="bad" x="170" y="505" width="405" height="92"/>
+  <text class="warn" x="202" y="543">风险：摘要变成事实源</text>
+  <text class="small" x="202" y="572">原文措辞、错误输出、用户边界无法证明</text>
+
+  <path class="arrow-red dash" d="M504 416 C504 455, 422 478, 372 505"/>
+
+  <rect class="right" x="758" y="195" width="585" height="510"/>
+  <text class="h" x="792" y="238">账本式记忆</text>
+  <text class="small" x="792" y="266">压缩行动线索，保留回原文的门</text>
+
+  <rect class="blue" x="800" y="315" width="152" height="92"/>
+  <text class="t" x="842" y="354">原文</text>
+  <text class="small" x="828" y="382">不可变事件</text>
+
+  <rect class="good" x="1005" y="315" width="152" height="92"/>
+  <text class="t" x="1048" y="354">观察</text>
+  <text class="small" x="1028" y="382">行动线索</text>
+
+  <rect class="amber" x="1210" y="315" width="92" height="92"/>
+  <text class="t" x="1232" y="354">反思</text>
+  <text class="small" x="1225" y="382">长期视图</text>
+
+  <path class="arrow-green" d="M952 361 L1005 361"/>
+  <path class="arrow-green" d="M1157 361 L1210 361"/>
+
+  <rect class="card" x="803" y="498" width="226" height="98"/>
+  <text class="note" x="835" y="537">原文范围</text>
+  <text class="small" x="835" y="566">每条观察指回原文范围</text>
+
+  <rect class="card" x="1078" y="498" width="226" height="98"/>
+  <text class="note" x="1113" y="537">召回</text>
+  <text class="small" x="1113" y="566">需要精确内容时回查</text>
+
+  <path class="arrow-green dash" d="M1081 407 C1040 444, 963 462, 916 498"/>
+  <path class="arrow-green dash" d="M1191 498 C1132 466, 1074 442, 876 407"/>
+
+  <rect class="good" x="214" y="742" width="1012" height="74"/>
+  <text class="h" x="250" y="787">一句话判断：有损记忆只能指导行动，不能证明事实；证明事实必须回原文。</text>
+</svg>

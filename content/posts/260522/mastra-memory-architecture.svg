@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mastra Observational Memory 运行时架构</title>
+  <desc id="desc">展示主 Agent 上下文、记忆处理器、观察者、反思器、记忆存储和召回工具之间的关系。</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-teal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#b45309"/>
+    </marker>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .bg { fill: #f8fafc; }
+      .panel { fill: #ffffff; stroke: #dbe3ef; stroke-width: 2; rx: 24; filter: url(#soft-shadow); }
+      .lane { fill: #eef6ff; stroke: #bfdbfe; stroke-width: 2; rx: 22; }
+      .lane2 { fill: #ecfdf5; stroke: #99f6e4; stroke-width: 2; rx: 22; }
+      .lane3 { fill: #fff7ed; stroke: #fed7aa; stroke-width: 2; rx: 22; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 18; }
+      .box-blue { fill: #eff6ff; stroke: #60a5fa; stroke-width: 2; rx: 18; }
+      .box-teal { fill: #f0fdfa; stroke: #2dd4bf; stroke-width: 2; rx: 18; }
+      .box-amber { fill: #fffbeb; stroke: #f59e0b; stroke-width: 2; rx: 18; }
+      .box-red { fill: #fff1f2; stroke: #fb7185; stroke-width: 2; rx: 18; }
+      .title { font: 700 38px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 20px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #475569; }
+      .h { font: 700 24px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #0f172a; }
+      .t { font: 500 18px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #334155; }
+      .small { font: 400 15px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #64748b; }
+      .tag { font: 700 15px -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif; fill: #0369a1; }
+      .arrow-blue { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrow-blue); }
+      .arrow-teal { stroke: #0f766e; stroke-width: 3; fill: none; marker-end: url(#arrow-teal); }
+      .arrow-amber { stroke: #b45309; stroke-width: 3; fill: none; marker-end: url(#arrow-amber); }
+      .dash { stroke-dasharray: 9 8; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1440" height="900"/>
+  <rect class="panel" x="56" y="48" width="1328" height="804"/>
+
+  <text class="title" x="100" y="110">Mastra Observational Memory：运行时架构</text>
+  <text class="subtitle" x="100" y="145">主 Agent 保持连续性，Observer / Reflector 维护派生记忆，精确内容回到原始消息。</text>
+
+  <rect class="lane" x="92" y="190" width="360" height="600"/>
+  <text class="tag" x="120" y="228">事实源</text>
+  <text class="small" x="120" y="255">不可变，负责证明原文</text>
+
+  <rect class="box" x="132" y="305" width="280" height="100"/>
+  <text class="h" x="172" y="348">用户消息</text>
+  <text class="small" x="172" y="378">原始措辞、偏好、约束</text>
+
+  <rect class="box" x="132" y="485" width="280" height="112"/>
+  <text class="h" x="172" y="528">工具调用与结果</text>
+  <text class="small" x="172" y="558">日志、路径、错误输出</text>
+
+  <rect class="lane2" x="540" y="190" width="360" height="600"/>
+  <text class="tag" x="568" y="228" fill="#047857">派生记忆</text>
+  <text class="small" x="568" y="255">可以压缩、追加、重算</text>
+
+  <rect class="box-teal" x="580" y="285" width="280" height="94"/>
+  <text class="h" x="626" y="325">记忆处理器</text>
+  <text class="small" x="626" y="353">截取待观察消息</text>
+
+  <rect class="box-teal" x="580" y="425" width="280" height="94"/>
+  <text class="h" x="636" y="465">观察者 Agent</text>
+  <text class="small" x="636" y="493">生成事件账本</text>
+
+  <rect class="box-amber" x="580" y="565" width="280" height="104"/>
+  <text class="h" x="638" y="607">记忆存储</text>
+  <text class="small" x="638" y="636">原文范围 + 观察 + 反思</text>
+
+  <rect class="lane3" x="988" y="190" width="360" height="600"/>
+  <text class="tag" x="1016" y="228" fill="#b45309">运行时上下文</text>
+  <text class="small" x="1016" y="255">服务下一步行动</text>
+
+  <rect class="box-blue" x="1028" y="282" width="280" height="116"/>
+  <text class="h" x="1082" y="325">主 Agent 上下文</text>
+  <text class="small" x="1082" y="355">当前任务、近期原文、活跃观察</text>
+
+  <rect class="box-blue" x="1028" y="455" width="280" height="96"/>
+  <text class="h" x="1094" y="496">活跃观察</text>
+  <text class="small" x="1094" y="524">替代部分原始消息</text>
+
+  <rect class="box-red" x="1028" y="608" width="280" height="96"/>
+  <text class="h" x="1094" y="649">召回工具</text>
+  <text class="small" x="1094" y="677">需要精确内容时回原文</text>
+
+  <path class="arrow-blue" d="M412 356 C470 356, 498 332, 580 332"/>
+  <path class="arrow-blue" d="M412 541 C470 541, 498 472, 580 472"/>
+  <path class="arrow-teal" d="M720 379 L720 425"/>
+  <path class="arrow-teal" d="M720 519 L720 565"/>
+  <path class="arrow-amber" d="M860 617 C938 617, 957 503, 1028 503"/>
+  <path class="arrow-blue" d="M1028 340 C955 340, 932 332, 860 332"/>
+  <path class="arrow-blue" d="M1168 398 L1168 455"/>
+  <path class="arrow-amber dash" d="M1168 608 C1168 566, 1168 554, 1168 551"/>
+  <path class="arrow-amber dash" d="M1028 656 C820 735, 510 720, 272 597"/>
+
+  <rect class="box-amber" x="585" y="715" width="710" height="52"/>
+  <text class="t" x="614" y="748">原则：Observer 和 Reflector 维护的是派生视图；事实仍然以原始消息为准。</text>
+</svg>
