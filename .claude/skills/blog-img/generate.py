@@ -5,6 +5,7 @@ GPT-only blog image generator.
 Usage:
     python3 generate.py --prompt "..." --out /path/to/post/dir
     python3 generate.py --prompt "..." --out /path/to/post/dir --filename 2.png --quality high
+    python3 generate.py --prompt "..." --out /path/to/post/dir --alt "Architecture" --caption "System boundary"
     python3 generate.py --provider openai --prompt "..." --out /path/to/post/dir
 
 Env vars:
@@ -30,6 +31,18 @@ def get_next_filename(out_dir: Path) -> str:
     while (out_dir / f"{i}.png").exists():
         i += 1
     return f"{i}.png"
+
+
+def escape_markdown_title(text: str) -> str:
+    return text.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def format_markdown_tag(filename: str, alt: str, caption: str) -> str:
+    clean_alt = alt.strip() or "diagram"
+    clean_caption = caption.strip()
+    if not clean_caption:
+        return f"![{clean_alt}]({filename})"
+    return f'![{clean_alt}]({filename} "{escape_markdown_title(clean_caption)}")'
 
 
 def build_request(payload: dict) -> urllib.request.Request:
@@ -117,6 +130,8 @@ def main() -> None:
     parser.add_argument("--prompt", required=True, help="Image generation prompt")
     parser.add_argument("--out", required=True, help="Output directory (post Page Bundle dir)")
     parser.add_argument("--filename", default=None, help="Output filename (default: auto-increment N.png)")
+    parser.add_argument("--alt", default="diagram", help="Markdown alt text for the generated image")
+    parser.add_argument("--caption", default="", help="Figure caption rendered through Markdown title")
     parser.add_argument(
         "--provider",
         default="openai",
@@ -142,7 +157,7 @@ def main() -> None:
 
     print(f"\nSaved: {out_path}")
     print("\nMarkdown tag:")
-    print(f"![diagram]({filename})")
+    print(format_markdown_tag(filename, args.alt, args.caption))
 
 
 if __name__ == "__main__":

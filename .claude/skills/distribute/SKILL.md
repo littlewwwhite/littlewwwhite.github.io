@@ -94,7 +94,7 @@ Tier: **Full**. Keep 100% of the source.
 
 Transformation rules:
 - **Strip Hugo shortcodes**: Remove all `{{< ... >}}` and `{{% ... %}}` syntax
-- **Replace mermaid code blocks with rendered images**: Replace each ` ```mermaid ... ``` ` block with `![diagram](mermaid-N.png)` referencing the PNG rendered in Step 1.5. Match by order of appearance (first mermaid block → `mermaid-1.png`, etc.)
+- **Replace mermaid code blocks with rendered images**: Replace each ` ```mermaid ... ``` ` block with `![diagram](mermaid-N.png "caption text")` when the target platform benefits from a visible caption, referencing the PNG rendered in Step 1.5. Match by order of appearance (first mermaid block → `mermaid-1.png`, etc.)
 - **Convert image paths to absolute URLs**: Replace relative image references like `![alt](image.png)` with `![alt](https://littlewwwhite.github.io/posts/<slug>/image.png)`. For mermaid renders, use the `_dist/<slug>/` path since they are not deployed to the blog
 - **Preserve all Markdown formatting**: Headers, lists, code blocks, tables, bold, italic
 - **Add source attribution** at the end:

@@ -205,6 +205,8 @@ python3 .claude/skills/blog-img/generate.py \
   --prompt "YOUR PROMPT" \
   --out "content/posts/YYMMDD" \
   --filename "1.png" \
+  --alt "diagram description" \
+  --caption "caption text shown below the image" \
   --size 1024x1024 \
   --quality high
 ```
@@ -215,6 +217,8 @@ Flags:
 - `--quality` — `high` by default; can be `medium`, `low`, or empty string to omit
 - `--filename` — omit to auto-increment `N.png`
 - `--out` — post Page Bundle directory
+- `--alt` — Markdown alt text
+- `--caption` — Markdown title rendered as `<figcaption>` below the image
 - `--provider openai` — accepted for backward compatibility only; Gemini is not supported
 
 Output is normalized to `.png` for consistency with existing posts.
@@ -222,10 +226,15 @@ Output is normalized to `.png` for consistency with existing posts.
 ## Insert Into Markdown
 
 ```markdown
-![diagram description](1.png "optional caption")
+![diagram description](1.png "caption text shown below the image")
 ```
 
-The Markdown title renders as `<figcaption>` through the project's Hugo render hook. Use it when the visual benefits from a caption.
+The Markdown title renders as `<figcaption>` through the project's Hugo render hook. For technical diagrams, screenshots, comparisons, and generated explainer images, prefer a concise caption unless the surrounding paragraph already makes the image self-explanatory.
+
+Caption contract:
+- `[]` is alt text for accessibility and image fallback.
+- `""` is the visible bottom caption.
+- Keep captions factual and short: what the reader should notice, not a second paragraph.
 
 ## Prompt Rules
 

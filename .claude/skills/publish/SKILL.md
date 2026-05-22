@@ -82,4 +82,4 @@ To generate social media versions, run: /distribute
 
 - The Hugo build and deploy is handled by GitHub Actions on push to `main`
 - Frontmatter must have title, date, categories (1-2), tags (2-4)
-- Image paths in the post should be relative Page Bundle format (`![alt](image.png)`)
+- Image paths in the post should be relative Page Bundle format (`![alt](image.png)`), and images that need visible bottom descriptions should use Markdown title captions (`![alt](image.png "caption text")`).
