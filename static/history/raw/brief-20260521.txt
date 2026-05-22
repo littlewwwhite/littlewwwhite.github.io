@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天博客圈的主线非常清晰：一边是 Karpathy 加盟 Anthropic 这类标志性人事变动，另一边是 Gemini 落地、AI 成本与社会反弹等更现实的产业问题。今日摘要已成功生成并同步发布到公开 history/RSS；博客抓取阶段 92 个源里有 4 个临时失败，但不影响精选结果。
+
+1. Andrej Karpathy 加入 Anthropic
+来源：daringfireball.net｜评分：26/30
+看点：Karpathy 宣布加入 Anthropic，明确看好未来几年 LLM 的关键演进窗口。
+推荐理由：这不只是个人去向新闻，更是顶级研究者对下一阶段模型竞争格局的投票。
+关键词：Karpathy、Anthropic、LLM
+原文：https://x.com/karpathy/status/2056753169888334312
+
+2. Gemini 3.5 Flash：更昂贵但将被 Google 全面应用
+来源：simonwillison.net｜评分：25/30
+看点：Google 在 I/O 后全面推进 Gemini 3.5 Flash，即便价格更高也要进入核心产品线。
+推荐理由：能帮助快速判断 Google 对模型能力、成本与产品整合的真实优先级。
+关键词：Gemini 3.5 Flash、Google I/O、模型部署
+原文：https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything
+
+3. AI 的成本过高
+来源：wheresyoured.at｜评分：25/30
+看点：文章从 NVIDIA、Anthropic 等案例切入，指出大模型算力与运营成本仍高得惊人。
+推荐理由：如果关心 AI 商业化，这篇对“为什么增长不等于高利润”讲得很透。
+关键词：AI 成本、NVIDIA、Anthropic
+原文：https://www.wheresyoured.at/ai-is-too-expensive/
+
+4. 生成式 AI 会成为科技行业的“越南战争”吗？
+来源：garymarcus.substack.com｜评分：25/30
+看点：作者把生成式 AI 比作高投入高争议战场，讨论公众反弹是否会倒逼行业纠偏。
+推荐理由：适合从技术之外补足社会接受度、伦理与舆论约束这条关键变量。
+关键词：生成式 AI、公众反弹、技术伦理
+原文：https://garymarcus.substack.com/p/could-generative-ai-could-turn-out
+
+5. 引用 SpaceX 的 S-1 文件
+来源：simonwillison.net｜评分：24/30
+看点：SpaceX 的 S-1 文件透露其 AI 算力、对外算力服务及与 Anthropic 的云协议布局。
+推荐理由：这是观察“航天公司+算力基础设施+AI 服务”融合趋势的少见一手材料。
+关键词：SpaceX、算力、Anthropic
+原文：https://simonwillison.net/2026/May/20/spacex-s1/#atom-everything
+
+GitHub Trending Top 5
+
+今天 GitHub 热门几乎被 AI 开发工具和工作流增强项目占据，主题集中在“让智能编码更便宜、更可控、更可复用”。如果你在搭建 AI 工程栈，这 5 个仓库都很有参考价值。
+
+1. tinyhumansai/openhuman
+来源：Rust｜评分：今日 +3,394★
+看点：主打“个人超级智能”的本地化 AI 助手路线，强调私有、简单和强能力。
+推荐理由：代表了个人 AI 操作系统这一持续升温的产品方向，值得跟踪其架构选择。
+关键词：个人 AI、隐私、本地助手
+原文：https://github.com/tinyhumansai/openhuman
+
+2. multica-ai/andrej-karpathy-skills
+来源：项目｜评分：今日 +2,679★
+看点：用单一 CLAUDE.md 文件系统性改进 Claude Code 行为，吸收了 Karpathy 对编码型 LLM 的观察。
+推荐理由：非常适合想快速提升代码代理表现的人直接借鉴提示工程套路。
+关键词：Claude Code、提示工程、编码代理
+原文：https://github.com/multica-ai/andrej-karpathy-skills
+
+3. colbymchenry/codegraph
+来源：TypeScript｜评分：今日 +2,123★
+看点：通过预索引代码知识图谱降低 Claude Code、Codex、Cursor、OpenCode 的 token 和工具调用成本。
+推荐理由：它击中了当前 AI 编码最痛的上下文成本问题，实用性很强。
+关键词：代码图谱、上下文压缩、AI 编码
+原文：https://github.com/colbymchenry/codegraph
+
+4. Imbad0202/academic-research-skills
+来源：Python｜评分：今日 +1,667★
+看点：面向 Claude Code 的学术研究工作流包，覆盖 research、write、review、revise、finalize 全流程。
+推荐理由：对于把大模型用于论文与研究协作的人，这类结构化技能库很容易落地复用。
+关键词：学术写作、研究工作流、Claude
+原文：https://github.com/Imbad0202/academic-research-skills
+
+5. rohitg00/ai-engineering-from-scratch
+来源：Python｜评分：今日 +765★
+看点：定位为从零学习并构建 AI 工程系统的实战型仓库。
+推荐理由：适合作为系统化入门材料，帮助把零散 AI 工具认知串成完整工程方法。
+关键词：AI 工程、从零构建、学习路径
+原文：https://github.com/rohitg00/ai-engineering-from-scratch
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单以高效推理、视觉语言后训练和 agentic 临床推理为主，整体上很偏“把模型真正用起来”的工程研究。前两篇尤其值得关注：一个攻 MoE diffusion 推理效率，一个攻视觉感知与推理解耦训练。
+
+1. TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload
+来源：Computation and Language｜评分：Kimi 4★
+看点：提出 TIDE，在不额外训练的前提下，通过 I/O 感知的专家卸载与刷新策略提升 MoE diffusion LLM 推理吞吐。
+推荐理由：这是少见同时兼顾系统优化、无损加速和资源受限部署场景的推理工作。
+关键词：MoE、Diffusion LLM、推理优化
+原文：https://papers.cool/arxiv/2605.20179
+
+2. From Seeing to Thinking: Decoupling Perception and Reasoning Improves Post-Training of Vision-Language Models
+来源：Computation and Language , Computer Vision and Pattern Recognition｜评分：Kimi 4★
+看点：论文主张先巩固视觉感知再精炼视觉/文本推理，证明分阶段训练优于混合训练。
+推荐理由：它直接挑战“VLM 不够强是因为不会想”的常见直觉，对后训练设计很有启发。
+关键词：视觉语言模型、感知推理解耦、分阶段训练
+原文：https://papers.cool/arxiv/2605.20177
+
+3. ClinSeekAgent: Automating Multimodal Evidence Seeking for Agentic Clinical Reasoning
+来源：Computation and Language｜评分：Kimi 1★
+看点：构建能主动检索病历、知识库和医学影像证据的临床智能体，而不是只消费预整理输入。
+推荐理由：把 agentic workflow 真正带进临床推理，是医疗 AI 很有代表性的落地方向。
+关键词：临床智能体、多模态证据、医疗推理
+原文：https://papers.cool/arxiv/2605.20176
+
+4. KoRe: Compact Knowledge Representations for Large Language Models
+来源：Computation and Language｜评分：Kimi 1★
+看点：通过把 1-hop 知识图子图编码成紧凑离散 token，将可编辑知识注入 LLM 并显著减少 token 使用。
+推荐理由：对想解决知识更新、可解释性和幻觉问题的人来说，这条 KG+LLM 路线很值得看。
+关键词：知识图谱、知识注入、紧凑表示
+原文：https://papers.cool/arxiv/2605.20170
+
+5. Less Back-and-Forth: A Comparative Study of Structured Prompting
+来源：Computation and Language , Artificial Intelligence , Human-Computer Interaction｜评分：Top 5
+看点：比较原始提示、检查单提示和澄清式提示后发现，检查单式 prompting 在质量与交互成本之间表现最好。
+推荐理由：结论非常实用，几乎能直接迁移到日常使用 ChatGPT、Claude、Grok 的提示设计中。
+关键词：结构化提示、检查单、提示工程
+原文：https://papers.cool/arxiv/2605.20149
