@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选里，Google I/O 2026 几乎包揽了 AI 产品化与搜索入口重构的话题，同时 Anthropic 的“盈利”叙事也开始被认真拆解。另有一条重磅安全事件：本轮 RSS 共扫描 92 个源、成功 88 个，4 个源临时失败，但不影响今日 Top 5 的整体判断。
+
+1. Anthropic 的“盈利”骗局
+来源：wheresyoured.at｜评分：26/30
+看点：文章质疑 Anthropic 所谓“即将盈利”更多可能是口径选择，而非真实反映高算力成本后的健康财务状态。
+推荐理由：这类分析直接关系到大模型公司的商业可持续性，适合判断行业估值与叙事是否过热。
+关键词：Anthropic、盈利、商业化
+原文：https://www.wheresyoured.at/anthropics-profitability-swindle/
+
+2. The Verge：2026 年 Google I/O 的 13 项最大发布
+来源：daringfireball.net｜评分：25/30
+看点：Google 在 I/O 上集中发布 Gemini 3.5、Search/Gmail 新能力与 Aura 智能眼镜，展示 AI 全线落地节奏。
+推荐理由：如果只看一篇 I/O 总览，这篇足够高效，能快速把握 Google 今年 AI 战略的主轴。
+关键词：Google I/O、Gemini、AI 模型
+原文：https://www.theverge.com/tech/933415/google-io-2026-biggest-announcements-ai-gemini?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Ik5tNTBSc0hxRXQiLCJwIjoiL3RlY2gvOTMzNDE1L2dvb2dsZS1pby0yMDI2LWJpZ2dlc3QtYW5ub3VuY2VtZW50cy1haS1nZW1pbmkiLCJleHAiOjE3Nzk3NTk5MjQsImlhdCI6MTc3OTMyNzkyNH0.g_JiqbJBfi9YcDT1re8aofzmpb3tcZNwY2jQybgwJL0
+
+3. WSJ：Google 推出新的 Gemini AI 代理以处理个人任务
+来源：daringfireball.net｜评分：25/30
+看点：Google 推出个人 AI 代理 Gemini Spark，强调跨产品协同与替用户执行任务的“代理式 AI”能力。
+推荐理由：这是从聊天助手走向执行助手的重要信号，值得关注其对个人工作流和平台竞争的影响。
+关键词：Google、Gemini AI、代理式 AI
+原文：https://www.wsj.com/tech/ai/google-unveils-new-gemini-ai-agent-for-personal-tasks-b8093197?st=BFmPev
+
+4. NYT：AI 驱动下，Google 25 年来首次改变搜索框
+来源：daringfireball.net｜评分：25/30
+看点：Google 正把搜索框从“关键词输入框”改造成可承载复杂自然语言问题的 AI 入口。
+推荐理由：搜索框的变化往往意味着用户行为与流量分发逻辑的变化，这是互联网入口级别的信号。
+关键词：Google Search、AI、搜索交互
+原文：https://www.nytimes.com/2026/05/19/business/google-seach-bar-ai-gemini.html?unlocked_article_code=1.jlA.95yh.ptfBUHf-rBtB&smid=url-share
+
+5. 涉嫌 Kimwolf Botnet 主谋在美加被捕
+来源：krebsonsecurity.com｜评分：26/30
+看点：执法部门逮捕了被指运营 Kimwolf 物联网僵尸网络的嫌疑人，该网络过去半年感染数百万设备并发动大规模 DDoS。
+推荐理由：这不仅是一起高价值安全案件，也提醒所有 AI/云基础设施从业者持续重视边缘设备与网络韧性。
+关键词：botnet、Kimwolf、DDoS
+原文：https://krebsonsecurity.com/2026/05/alleged-kimwolf-botmaster-dort-arrested-charged-in-u-s-and-canada/
+
+GitHub Trending Top 5
+
+今天的 GitHub 热点高度集中在 AI coding agent 的“技能层”和开发效率增强工具，说明生态已从单纯模型比拼转向工作流、插件与上下文工程。值得注意的是，和 Claude Code、Codex、OpenCode 相关的周边项目热度非常集中。
+
+1. anthropics/claude-plugins-official
+来源：Python｜评分：今日 +682★
+看点：Anthropic 官方维护的 Claude Code 插件目录，主打高质量、官方背书的插件生态。
+推荐理由：官方目录往往会定义插件能力边界与最佳实践，是观察 Claude 工具生态成熟度的核心入口。
+关键词：Claude、插件、官方生态
+原文：https://github.com/anthropics/claude-plugins-official
+
+2. colbymchenry/codegraph
+来源：TypeScript｜评分：今日 +4294★
+看点：为 Claude Code、Codex、Cursor、OpenCode 提供预索引代码知识图谱，降低 token 与工具调用成本。
+推荐理由：它直指 AI 编程助手的核心瓶颈——上下文获取效率，属于非常实用的基础设施型项目。
+关键词：代码图谱、上下文工程、AI 编程
+原文：https://github.com/colbymchenry/codegraph
+
+3. multica-ai/andrej-karpathy-skills
+来源：项目｜评分：今日 +2614★
+看点：把 Andrej Karpathy 关于 LLM 编码失误的观察沉淀为单文件 CLAUDE.md 技能配置。
+推荐理由：这是把“经验教训”结构化成 agent 行为提示词的典型案例，适合参考其方法论而不只是内容本身。
+关键词：Karpathy、提示工程、Claude
+原文：https://github.com/multica-ai/andrej-karpathy-skills
+
+4. dotnet/skills
+来源：C#｜评分：今日 +129★
+看点：微软 .NET 团队维护的 skills 仓库，帮助 AI coding agents 更好处理 .NET 与 C# 开发任务。
+推荐理由：来自官方生态的 agent 技能模板，往往更贴近真实工程场景与框架细节。
+关键词：.NET、C#、AI 代理
+原文：https://github.com/dotnet/skills
+
+5. obra/superpowers
+来源：Shell｜评分：今日 +1576★
+看点：一个面向 agentic 开发的技能框架与软件开发方法论，强调让代理真正“会做事”。
+推荐理由：如果你在搭建团队级 AI 开发流程，这类方法论型项目通常比单点工具更值得长期跟踪。
+关键词：agentic、开发方法、技能框架
+原文：https://github.com/obra/superpowers
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单以 NLP、LLM agent 和记忆机制为主，偏“语言理解 + 代理能力 + 软件工程自动化”三线并进。唯一带 Kimi 星标的是一篇关于自适应记忆的 agent 论文，信号很明确：让模型知道“何时记、记什么”正在成为新热点。
+
+1. Leveraging LLMs for Grammar Adaptation: A Study on Metamodel-Grammar Co-Evolution
+来源：计算与语言 / 软件工程｜评分：Top 1
+看点：论文研究如何用 LLM 自动适配元模型演化后的语法，显著优于部分规则式方法，尤其适合复杂 DSL 演化场景。
+推荐理由：它把 LLM 用到软件工程自动化的细分难题里，展示了模型在“理解并修改形式化结构”上的实际潜力。
+关键词：语法适配、元模型、软件工程
+原文：https://papers.cool/arxiv/2605.21465
+
+2. Mem-π: Adaptive Memory through Learning When and What to Generate
+来源：计算与语言 / 人工智能｜评分：Kimi 1★
+看点：提出一种自适应记忆框架，不靠静态检索，而是学习在什么时机生成什么样的上下文指导。
+推荐理由：这正击中 LLM agent 的核心瓶颈，尤其对网页导航、终端工具使用等复杂任务很有参考价值。
+关键词：LLM Agent、记忆机制、强化学习
+原文：https://papers.cool/arxiv/2605.21463
+
+3. Quantifying the cross-linguistic effects of syncretism on agreement attraction
+来源：计算与语言｜评分：Top 3
+看点：利用大模型的 surprisal 与 attention entropy 分析不同语言里形态融合对一致性吸引错误的影响。
+推荐理由：这是把 LLM 当作认知与语言学研究工具的代表作，适合关注模型语言能力解释性的读者。
+关键词：语言学、跨语言、句法一致
+原文：https://papers.cool/arxiv/2605.21403
+
+4. Post-Hoc Understanding of Metaphor Processing in Decoder-Only Language Models via Conditional Scale Entropy
+来源：计算与语言｜评分：Top 4
+看点：论文提出条件尺度熵，分析 decoder-only 模型在隐喻理解时跨层频谱协同的结构特征。
+推荐理由：对做模型可解释性、机制解释或语言表征分析的人来说，这是一篇方法上很有新意的工作。
+关键词：隐喻、可解释性、Transformer
+原文：https://papers.cool/arxiv/2605.21391
+
+5. Findings of the Fifth Shared Task on Multilingual Coreference Resolution: Expanding Datasets for Long-Range Entities
+来源：计算与语言｜评分：Top 5
+看点：多语言共指消解共享任务扩展了长距离实体与更多语种数据，LLM 方法表现出明显追赶态势。
+推荐理由：共指消解是语言理解基本功，这类 benchmark 变化往往会直接影响未来多语言信息抽取与代理理解能力。
+关键词：共指消解、多语言、数据集
+原文：https://papers.cool/arxiv/2605.21369
