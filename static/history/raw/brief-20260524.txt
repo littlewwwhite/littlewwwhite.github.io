@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选一边在拆解 AI 商业化的真实成本，一边在提醒工程与安全领域不要为“快速创新”牺牲基本纪律。最值得关注的信号是：AI 龙头的增长与盈利承压、安全事件的治理代价上升，以及经典工程原则在新周期里重新变得重要。
+
+1. OpenAI 在 2026 年第一季度出现 -122% 的非 GAAP 营业利润率，ChatGPT 增长停滞
+来源：wheresyoured.at｜评分：27/30
+看点：文章披露 OpenAI 一季度虽有 57 亿美元收入，但非 GAAP 营业利润率低至 -122%，且 ChatGPT 增长放缓。
+推荐理由：这是理解当下 AI 赛道“高收入但高烧钱”矛盾最直接的一篇，能帮助判断行业可持续性。
+关键词：OpenAI、ChatGPT、财务
+原文：https://www.wheresyoured.at/news-openai-had-a-negative-122-operating-margin-in-q1-2026-and-chatgpt-growth-has-stalled/
+
+2. CISA 试图遏制数据泄露，议员们要求给出答复
+来源：krebsonsecurity.com｜评分：26/30
+看点：CISA 承包商将 AWS GovCloud 密钥及敏感信息泄露到公开 GitHub，引发美国议员追责。
+推荐理由：这篇把“凭证管理失控”如何迅速升级为机构级安全与政治问题讲得非常具体。
+关键词：CISA、数据泄露、GitHub
+原文：https://krebsonsecurity.com/2026/05/lawmakers-demand-answers-as-cisa-tries-to-contain-data-leak/
+
+3. 如果我们正处于 AI 泡沫中？（第二部分）
+来源：wheresyoured.at｜评分：26/30
+看点：作者延续 AI 泡沫讨论，从投资过热、叙事膨胀与潜在破裂后果切入审视行业现状。
+推荐理由：适合与 OpenAI 财务分析对照阅读，有助于把单点新闻放进更大的周期框架里理解。
+关键词：AI 泡沫、市场分析、投资
+原文：https://www.wheresyoured.at/premium-what-if-were-in-an-ai-bubble-part-2/
+
+4. 为什么你说 COM STA 线程必须泵消息，如果我看到创建 STA 线程而不泵消息的示例代码？
+来源：devblogs.microsoft.com/oldnewthing｜评分：25/30
+看点：文章解释了 COM STA 线程为何通常必须进行消息泵处理，以及示例代码为何常让人误解。
+推荐理由：这是经典系统工程知识点，能帮助开发者避免 Windows/COM 相关并发与响应性陷阱。
+关键词：COM、STA 线程、消息泵
+原文：https://devblogs.microsoft.com/oldnewthing/20260522-00/?p=112348
+
+5. 不要自己动手...
+来源：susam.net｜评分：25/30
+看点：作者借“不要自己实现密码学”式的经验，强调在安全敏感和生产环境中应优先采用成熟方案。
+推荐理由：在 AI 工具链与工程系统快速拼装的当下，这类“克制型工程观”尤其值得反复重温。
+关键词：最佳实践、安全、成熟库
+原文：https://susam.net/do-not-roll-your-own.html
+
+GitHub Trending Top 5
+
+今天 GitHub 热门项目高度集中在代码理解、Agent 插件生态和 AI 工程实战，说明“让模型更懂代码、让开发者更快落地”仍是最强主线。前几名项目的单日涨星都很高，热度非常集中。
+
+1. colbymchenry/codegraph
+来源：TypeScript｜评分：今日 +2456★
+看点：这是面向 Claude Code、Codex、Cursor、OpenCode 和 Hermes Agent 的预索引代码知识图谱工具，主打更少 token 和更少工具调用。
+推荐理由：它直击 AI 编程代理的核心瓶颈——上下文成本与代码理解效率，实用价值很强。
+关键词：代码图谱、Agent、代码理解
+原文：https://github.com/colbymchenry/codegraph
+
+2. Lum1104/Understand-Anything
+来源：TypeScript｜评分：今日 +2299★
+看点：项目可将任意代码库转成交互式知识图谱，支持搜索、探索和提问，兼容多种主流 AI 编程助手。
+推荐理由：如果你关注“可视化代码理解”与“团队级知识沉淀”，这是今天最值得试的工具之一。
+关键词：知识图谱、代码可视化、开发工具
+原文：https://github.com/Lum1104/Understand-Anything
+
+3. anthropics/claude-plugins-official
+来源：Python｜评分：今日 +2193★
+看点：Anthropic 官方维护的 Claude Code 高质量插件目录，意在推动插件生态标准化与可信分发。
+推荐理由：官方目录往往预示生态进入加速期，适合关注 Claude Code 工作流的人持续跟进。
+关键词：Claude Code、插件生态、Anthropic
+原文：https://github.com/anthropics/claude-plugins-official
+
+4. rohitg00/ai-engineering-from-scratch
+来源：Python｜评分：今日 +1521★
+看点：这是一个从零学习并交付 AI 工程项目的实践型仓库，强调 Learn it、Build it、Ship it。
+推荐理由：适合想系统补齐 AI 工程落地能力的人，兼顾学习路径与实际构建。
+关键词：AI 工程、实战教程、项目落地
+原文：https://github.com/rohitg00/ai-engineering-from-scratch
+
+5. Fincept-Corporation/FinceptTerminal
+来源：Python｜评分：今日 +545★
+看点：一个面向金融分析、投资研究与经济数据探索的现代终端应用，强调交互式分析体验。
+推荐理由：它把 AI/数据工具与金融场景结合得较深，适合关注垂直行业工作台的人留意。
+关键词：金融科技、市场分析、终端应用
+原文：https://github.com/Fincept-Corporation/FinceptTerminal
+
+papers.cool/arxiv 每日 Top 5
+
+今天论文榜单主要围绕语言模型基础能力校准：分词、时序知识、政治偏见、新闻检索与临床推理。整体看点不在“更大模型”，而在“更可靠、更贴近真实世界约束”的方法设计。
+
+1. Tokenisation via Convex Relaxations
+来源：Computation and Language , Machine Learning｜评分：Kimi 8★
+看点：论文将分词器构建表述为线性规划问题，用凸优化替代 BPE/Unigram 的局部贪心策略，提出 ConvexTok。
+推荐理由：分词常被视作老问题，但它直接影响语言模型压缩效率与下游表现，这篇有基础设施级意义。
+关键词：分词、凸优化、语言模型
+原文：https://papers.cool/arxiv/2605.22821
+
+2. Understanding Data Temporality Impact on Large Language Models Pre-training
+来源：Computation and Language , Artificial Intelligence｜评分：Kimi 5★
+看点：论文研究预训练数据的时间顺序对模型时效性知识的影响，发现按时间顺序训练可提升事实新鲜度与时间精度。
+推荐理由：它切中了“模型为什么知道旧闻却不懂新事”这一关键问题，对持续学习和数据治理都很重要。
+关键词：时间性、预训练、事实新鲜度
+原文：https://papers.cool/arxiv/2605.22769
+
+3. Evaluating Commercial AI Chatbots as News Intermediaries
+来源：Computation and Language｜评分：Kimi 2★
+看点：作者用 14 天、2100 个问题评估六款商用 AI 聊天机器人处理新闻事实的能力，发现检索偏差与虚假前提脆弱性明显。
+推荐理由：这篇非常适合理解“AI 做新闻中介”时最容易被忽视的系统性风险，尤其是区域不平等与检索依赖。
+关键词：新闻问答、检索偏差、聊天机器人
+原文：https://papers.cool/arxiv/2605.22785
+
+4. Reducing Political Manipulation with Consistency Training
+来源：Computation and Language , Artificial Intelligence｜评分：Top 4
+看点：论文提出 Political Consistency Training，通过一致性训练降低模型在政治议题中的隐性偏见与不对称回应。
+推荐理由：在模型安全与价值对齐讨论持续升温的背景下，这篇提供了较具体的训练路径与衡量指标。
+关键词：政治偏见、一致性训练、模型对齐
+原文：https://papers.cool/arxiv/2605.22771
+
+5. ChronoMedKG: A Temporally-Grounded Biomedical Knowledge Graph and Benchmark for Clinical Reasoning
+来源：Computation and Language｜评分：Top 5
+看点：论文构建带时间维度的生物医学知识图谱 ChronoMedKG，用于改善临床推理中的疾病进程与症状时序理解。
+推荐理由：它把知识图谱、医学证据与时序推理结合起来，对医疗 AI 的真实可用性很有启发。
+关键词：医学知识图谱、临床推理、时间建模
+原文：https://papers.cool/arxiv/2605.22734
