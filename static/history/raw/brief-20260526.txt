@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今早博客精选延续“安全风险上升、AI 基础设施下沉”两条主线：一边是网络攻击、数据暴露与供应链签名继续升温，另一边是 LLM 推理开始探索更便宜、更分布式的硬件路径。今日摘要已同步归档到公开历史 feed；本次 RSS 抓取中有 4 个源暂时失败，但不影响最终 Top 5 生成。
+
+1. 荷兰查获800台服务器，逮捕2人以协助网络攻击
+来源：krebsonsecurity.com｜评分：26/30
+看点：荷兰执法部门针对疑似为俄罗斯网络行动提供基础设施的托管网络展开打击，一次性查扣 800 台服务器并逮捕相关人员。
+推荐理由：这篇报道把“网络攻击并不只发生在代码层，而是依附在现实基础设施上”讲得非常具体，适合理解当下地缘网络安全态势。
+关键词：网络犯罪、托管基础设施、执法
+原文：https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/
+
+2. 签名是为了应对糟糕的日子
+来源：nesbitt.io｜评分：26/30
+看点：文章强调 TUF、in-toto、Sigstore 等签名与验证体系的真正价值，往往只会在遭遇攻击和供应链事故时集中体现。
+推荐理由：它不是泛泛谈“最佳实践”，而是直接解释为什么很多安全投入在平时看似无感、出事时却决定生死。
+关键词：软件签名、供应链安全、Sigstore
+原文：https://nesbitt.io/2026/05/24/signing-is-for-the-bad-days.html
+
+3. 特朗普移动网站暴露了预购数量和相关客户信息
+来源：daringfireball.net｜评分：25/30
+看点：特朗普移动预购站点被指可能暴露潜在用户姓名、住址和电话等敏感信息，反映出营销型产品上线时常见的数据保护短板。
+推荐理由：这类案例很适合作为“面向消费者的网站为什么必须把隐私与表单安全前置”的现实教材。
+关键词：数据泄露、隐私风险、预购系统
+原文：https://www.theguardian.com/us-news/2026/may/23/trump-mobile-investigating-potential-exposure-of-would-be-customers-personal-information
+
+4. Python包中的GitHub Actions安全
+来源：nesbitt.io｜评分：25/30
+看点：文章讨论如何在 Python 包开发流程中审视和加固 GitHub Actions，降低 CI/CD 成为供应链攻击入口的风险。
+推荐理由：对维护开源包、内部工具链和自动发布流程的团队都很实用，属于“很工程、也很容易被忽视”的高价值主题。
+关键词：GitHub Actions、Python 包、安全
+原文：https://nesbitt.io/2026/05/25/github-actions-security-in-python-packages.html
+
+5. 在DwarfStar中分发LLM推理
+来源：antirez.com｜评分：26/30
+看点：文章探讨如何在 DwarfStar 框架下分发 LLM 推理，利用 Apple 大内存硬件等非传统高端 GPU 路线来降低部署成本。
+推荐理由：它抓住了当前 AI 工程最现实的问题之一：不是模型能不能跑，而是怎样更便宜、更节能、更可扩展地跑。
+关键词：LLM 推理、分布式计算、硬件优化
+原文：http://antirez.com/news/167
+
+GitHub Trending Top 5
+
+今天的 GitHub 热门项目明显偏向 AI 代理、知识工作插件与工程化能力栈，说明“给模型加工具、加技能、加工作流”仍是开发者最关注的方向。与纯模型能力相比，围绕 AI 编程与代理生态的基础设施正在更快出圈。
+
+1. Lum1104/Understand-Anything
+来源：TypeScript｜评分：今日 +5604★
+看点：把代码转成可交互知识图谱，支持搜索、探索和问答，目标是让复杂代码库“可视化且可对话”。
+推荐理由：它切中 AI 辅助编程的一个真痛点——不是生成代码，而是理解现有系统的结构与依赖。
+关键词：代码理解、知识图谱、AI 编程
+原文：https://github.com/Lum1104/Understand-Anything
+
+2. anthropics/knowledge-work-plugins
+来源：Python｜评分：今日 +1441★
+看点：Anthropic 开源的一组面向知识工作场景的插件，帮助 Claude Cowork 类工作流扩展真实生产力能力。
+推荐理由：值得关注的不只是插件本身，而是它透露出 AI 助手正在从聊天框走向可组合工作平台。
+关键词：插件生态、知识工作、Claude
+原文：https://github.com/anthropics/knowledge-work-plugins
+
+3. rohitg00/ai-engineering-from-scratch
+来源：Python｜评分：今日 +3154★
+看点：这是一个从零学习并构建 AI 工程项目的资源仓库，强调“学会、做出、发布”全链路实践。
+推荐理由：对想补齐 AI 工程落地能力的人来说，这类系统化实战仓库往往比零散教程更高效。
+关键词：AI 工程、实战教程、项目构建
+原文：https://github.com/rohitg00/ai-engineering-from-scratch
+
+4. affaan-m/ECC
+来源：JavaScript｜评分：今日 +2025★
+看点：项目聚焦 AI agent harness 的性能优化，覆盖技能、记忆、安全与研究优先开发等能力模块。
+推荐理由：它代表了另一个重要趋势：大家开始不满足于“能跑的代理”，而是追求“更稳、更快、更有纪律的代理系统”。
+关键词：AI 代理、性能优化、记忆系统
+原文：https://github.com/affaan-m/ECC
+
+5. mukul975/Anthropic-Cybersecurity-Skills
+来源：Python｜评分：今日 +1004★
+看点：仓库整理了 754 个结构化网络安全技能，并映射到 MITRE ATT&CK、NIST CSF 等多个框架，面向 AI agent 复用。
+推荐理由：这类“把专业知识结构化给 AI 用”的项目，很可能成为行业代理系统垂直化落地的重要基础。
+关键词：网络安全、技能库、框架映射
+原文：https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+
+papers.cool/arxiv 每日 Top 5
+
+今天论文榜几乎被计算语言学与语言模型表征问题占据，主题集中在多语言迁移、概念层级、数据过滤和评测方法。整体看，学界正在从“把模型做大”转向更细的语言结构理解、训练数据治理与评测可靠性建设。
+
+1. Multilingual Knowledge Transfer under Data Constraints via Lexical Interventions
+来源：Computation and Language｜评分：Kimi 5★
+看点：论文提出用双语词汇表对高资源语料进行词汇替换，在不增加额外训练阶段的情况下提升低资源语言知识迁移效率。
+推荐理由：它方法轻量、成本低，却直指多语言模型最关键的瓶颈之一，非常适合资源受限语言场景。
+关键词：多语言迁移、低资源语言、词汇干预
+原文：https://papers.cool/arxiv/2605.23885
+
+2. Hierarchical Concept Geometry in Language Models Emerges from Word Co-occurrence
+来源：Computation and Language , Machine Learning｜评分：Kimi 2★
+看点：论文从理论和实验两侧说明，语言模型中的概念层级几何结构可能直接由词共现统计自然涌现，而非必须依赖专门的层级机制。
+推荐理由：如果这一观点成立，会影响我们理解 LLM “懂概念”这件事的根源，也会影响表示学习解释框架。
+关键词：概念层级、词共现、表示几何
+原文：https://papers.cool/arxiv/2605.23821
+
+3. Is a Document Educational or Just Wikipedia-Style? -- Pitfalls of Classifier-Based Quality Filtering
+来源：Computation and Language｜评分：Kimi 2★
+看点：研究指出，只要把低质量文本简单改写成 Wikipedia 风格，就可能骗过训练语料质量分类器，进入预训练数据集。
+推荐理由：这对当前依赖自动质量过滤构建语料的 LLM 训练流程是一个直接警示，现实影响很大。
+关键词：数据过滤、语料质量、对抗改写
+原文：https://papers.cool/arxiv/2605.23721
+
+4. NLG Evaluation: Past, Present, Future
+来源：Computation and Language｜评分：Kimi 1★
+看点：文章回顾自然语言生成评测从早期语言学传统到当下 LLM-as-Judge 的演进，并讨论未来影响、定性与安全评测的重要性。
+推荐理由：做生成式 AI 产品的人都绕不开“怎么评估”，这篇综述有助于建立更完整的评测视角。
+关键词：NLG 评测、LLM-as-Judge、评测方法
+原文：https://papers.cool/arxiv/2605.23715
+
+5. A graph-based analysis of semantic types and coercion in contextualized word embeddings
+来源：Computation and Language｜评分：Kimi 1★
+看点：论文用图分析方法研究上下文化词向量中的语义类型与 coercion 现象，并比较普通嵌入与 sense-enhanced 嵌入的表现差异。
+推荐理由：它虽然偏基础研究，但对理解语言模型如何编码语义类型信息、如何处理语境冲突很有启发。
+关键词：语义类型、上下文化词向量、图分析
+原文：https://papers.cool/arxiv/2605.23710
