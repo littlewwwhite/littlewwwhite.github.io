@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选延续两条主线：一条是 AI 进入现实世界后的伦理、治理与投入产出争议，另一条是代理式系统与基础设施带来的安全和工程挑战。今晨摘要已生成并归档，公开历史站点与 RSS 也已同步更新；个别 RSS 源抓取超时，但不影响今日精选结果。
+
+1. 教皇利奥十四世关于人工智能的通谕《人类的宏伟》
+来源：simonwillison.net｜评分：27/30
+看点：这篇文章梳理了教皇就 AI 伦理发布的正式通谕，核心讨论是如何在智能系统扩张中守住人的尊严与责任边界。
+推荐理由：它把 AI 伦理从技术圈争论提升到全球公共伦理议题，适合所有关心 AI 治理方向的人先读。
+关键词：AI伦理、人类尊严、治理
+原文：https://simonwillison.net/2026/May/25/encyclical-on-ai/#atom-everything
+
+2. 微软 Copilot Cowork 存在文件泄露风险
+来源：simonwillison.net｜评分：25/30
+看点：文章指出微软 Copilot Cowork 出现可导致文件外泄的安全问题，暴露出代理式 AI 在权限控制与数据隔离上的脆弱面。
+推荐理由：这不是抽象风险，而是贴近企业真实使用场景的安全警报，对评估 AI 办公助手落地价值很关键。
+关键词：Copilot、数据外泄、代理安全
+原文：https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything
+
+3. 在 DwarfStar 中分布式 LLM 推理
+来源：antirez.com｜评分：25/30
+看点：作者讨论了大模型推理在分布式场景下的成本瓶颈，并提出用 Apple 统一内存硬件替代昂贵 NVIDIA 方案的思路。
+推荐理由：如果你关心本地大模型、推理成本或非传统硬件路线，这篇很有启发性。
+关键词：LLM推理、分布式计算、硬件成本
+原文：http://antirez.com/news/167
+
+4. 如果足够多的其他公司报告相同情况，泡沫就会破裂。
+来源：garymarcus.substack.com｜评分：25/30
+看点：文章围绕 Uber 高管对 AI 投资回报的质疑展开，认为企业端若持续看不到生产率兑现，AI 泡沫预期可能松动。
+推荐理由：在“人人都在上 AI”的阶段，真正值得盯的是 ROI，这篇提供了难得的逆风视角。
+关键词：AI投资、生产率、泡沫
+原文：https://garymarcus.substack.com/p/if-enough-other-companies-report
+
+5. 荷兰查获800台服务器，逮捕2人，涉嫌协助网络攻击
+来源：krebsonsecurity.com｜评分：25/30
+看点：荷兰执法部门针对涉嫌协助俄罗斯网络攻击与信息行动的托管基础设施采取强力打击，查扣大量服务器并实施逮捕。
+推荐理由：它反映了网络安全已深度嵌入地缘政治与基础设施治理，值得安全从业者重点关注。
+关键词：网络攻击、执法行动、托管基础设施
+原文：https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/
+
+GitHub Trending Top 5
+
+今天的 GitHub 热门项目几乎被“AI 代理开发基础设施”占满，从代码理解图谱、代理优化框架到插件与安全技能库，明显显示开发者正在给智能体补齐工程化底座。对想做 AI Coding、Agent 平台或工作流自动化的人来说，这份榜单很有参考价值。
+
+1. Lum1104/Understand-Anything
+来源：TypeScript｜评分：今日 +4697★
+看点：把任意代码库转成交互式知识图谱，支持搜索、探索并面向 Claude Code、Codex、Cursor 等工具做问答式理解。
+推荐理由：它击中了 AI 编码时代最痛的“读懂代码库”问题，适合所有做大型项目协作的人关注。
+关键词：代码图谱、代码理解、AI开发
+原文：https://github.com/Lum1104/Understand-Anything
+
+2. affaan-m/ECC
+来源：JavaScript｜评分：今日 +1915★
+看点：这是一个面向 AI 代理性能优化的系统，覆盖技能、记忆、安全与 research-first 开发等关键能力。
+推荐理由：如果你在搭建通用 Agent 框架，这类“代理运行时增强层”非常值得研究。
+关键词：Agent框架、性能优化、记忆系统
+原文：https://github.com/affaan-m/ECC
+
+3. rohitg00/ai-engineering-from-scratch
+来源：Python｜评分：今日 +2155★
+看点：项目主打从零学习并实战交付 AI 工程，强调“学会、做出、上线”的完整路径。
+推荐理由：适合作为 AI 工程入门到落地的系统化材料，尤其适合团队培训和自学路线搭建。
+关键词：AI工程、实战教程、从零开始
+原文：https://github.com/rohitg00/ai-engineering-from-scratch
+
+4. anthropics/knowledge-work-plugins
+来源：Python｜评分：今日 +1718★
+看点：Anthropic 开源了一批面向知识工作者的插件仓库，服务于 Claude Cowork 这类协作式智能工作流。
+推荐理由：它让人看到大模型厂商正在把“聊天能力”延伸成“工作能力”，很适合观察产品方向。
+关键词：插件生态、知识工作、Claude
+原文：https://github.com/anthropics/knowledge-work-plugins
+
+5. mukul975/Anthropic-Cybersecurity-Skills
+来源：Python｜评分：今日 +880★
+看点：该仓库整理了 754 个结构化网络安全技能，并映射到 MITRE ATT&CK、NIST CSF 等多个框架。
+推荐理由：它非常适合做安全智能体的技能底库，也能作为安全知识组织方式的优秀样本。
+关键词：网络安全、技能库、框架映射
+原文：https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+
+papers.cool/arxiv 每日 Top 5
+
+今天的 arXiv 热点以大模型能力边界和评测可靠性为主：一边是让模型“睡眠巩固记忆”的新机制，另一边是对 benchmark、金融语义理解、评审提示优化等环节的系统反思。整体看，研究焦点正从“把模型做大”转向“把能力评准、用稳、解释清”。
+
+1. Language Models Need Sleep
+来源：Computation and Language / Artificial Intelligence｜评分：Kimi 7★
+看点：论文提出让语言模型周期性“睡眠”，把近期上下文压缩进持久状态，再清空缓存，以改善长上下文与深层推理表现。
+推荐理由：这是对长上下文扩展的一条很新颖路线，兼顾推理质量和在线延迟，值得重点关注。
+关键词：长上下文、记忆巩固、推理
+原文：https://papers.cool/arxiv/2605.26099
+
+2. Automated Benchmark Auditing for AI Agents and Large Language Models
+来源：Computation and Language｜评分：Kimi 1★
+看点：作者提出自动化 benchmark 审计框架 ABA，发现相当一部分前沿任务存在规格漏洞、环境依赖和评测逻辑问题。
+推荐理由：如果基准本身有缺陷，再强的模型排名也可能失真；这篇对整个评测体系都有现实意义。
+关键词：基准测试、自动审计、AI代理
+原文：https://papers.cool/arxiv/2605.26079
+
+3. StakeBench: Evaluating Language Understanding Grounded in Market Commitment
+来源：Computation and Language / Artificial Intelligence / General Finance｜评分：Kimi 1★
+看点：论文把金融语言理解建立在真实市场承诺和交易行为之上，而不是外部人工标签，构造了新的评测框架 StakeBench。
+推荐理由：它把“说了什么”与“实际下注了什么”连接起来，对金融 NLP 和市场推断都很有启发。
+关键词：金融NLP、市场承诺、评测框架
+原文：https://papers.cool/arxiv/2605.26074
+
+4. WhoSaidIt: Human-LLM Collaborative Annotation for Text-Based Multilingual Speaker-Attribute Classification
+来源：Computation and Language｜评分：Kimi 1★
+看点：这篇工作研究人类与 LLM 协同标注多语言说话者属性分类，通过聚焦分歧样本来提升标注稳定性。
+推荐理由：多语种、高歧义标注一直是数据质量难点，这篇提供了很实用的协同标注方法论。
+关键词：多语言、数据标注、人机协作
+原文：https://papers.cool/arxiv/2605.26070
+
+5. When Gradients Collide: Failure Modes of Multi-Objective Prompt Optimization for LLM Judges
+来源：Computation and Language / Artificial Intelligence / Machine Learning / Multiagent Systems / Software Engineering｜评分：Kimi 1★
+看点：论文分析多目标提示优化在 LLM 评审器上的失败模式，指出梯度稀释和指令互扰会显著拖累优化效果。
+推荐理由：对所有想把 LLM 用作评委、审稿器或自动评测器的人，这篇能帮助避开常见但隐蔽的坑。
+关键词：提示优化、LLM评审、多目标学习
+原文：https://papers.cool/arxiv/2605.26046
