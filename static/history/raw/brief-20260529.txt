@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选集中在三个方向：大模型商业化开始兑现收入，人与 AI 的认知边界重新成为核心议题，安全与基础设施层面的新风险也在快速出现。整体看，行业讨论正从“模型能做什么”转向“模型值多少钱、该如何使用、会带来什么副作用”。
+
+1. Anthropic 和 OpenAI 已找到产品-市场契合点
+来源：simonwillison.net｜评分：26/30
+看点：Anthropic 即将迎来首个盈利季度，而 OpenAI 和 Anthropic 的大型语言模型（LLM）使用成本正令企业用户感到意外。文章认为，这表明两家公司已成功找到产品-市场契合点，LLM 已成为企业不可或缺的工具。这种高昂的使用成本反而证明了 LLM 的价值和广泛应用，预示着 AI 商业化的加速。
+推荐理由：把 AI 商业化从技术叙事推进到可持续营收，适合判断模型公司进入兑现期的节奏。
+关键词：AI、product-market fit、Anthropic
+原文：https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything
+
+2. 使用我的大脑
+来源：terriblesoftware.org｜评分：26/30
+看点：AI 在增强人类思维能力方面表现出色，但当它悄无声息地取代了本应由大脑完成的思考过程时，就会带来潜在的危险。文章强调了保持人类主动思考的重要性，警惕过度依赖 AI 导致思维能力的退化。
+推荐理由：直指生成式 AI 时代最容易被忽视的人类思维退化风险，值得作为使用边界的反思样本。
+关键词：AI、thinking、cognition
+原文：https://terriblesoftware.org/2026/05/27/using-my-fucking-brain/
+
+3. 研究人员发布通过分析 SSD 活动来监控网页访问者的方法
+来源：daringfireball.net｜评分：25/30
+看点：研究人员发现了一种新的网络监控技术，该技术通过分析固态硬盘（SSD）的活动来推断网页访问者的行为。这种侧信道攻击利用了 SSD 读写操作的物理表现，可能被用于解密加密流量或窃取敏感信息。随着 Web 浏览器功能的日益复杂，这种新型监控手段对用户隐私构成了新的威胁。
+推荐理由：展示浏览器与硬件侧信道结合后的新型隐私威胁，对安全从业者有直接预警价值。
+关键词：SSD activity、surveillance、side channel
+原文：https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/
+
+4. Claude Opus 4.8：“适度但切实的改进”
+来源：simonwillison.net｜评分：24/30
+看点：Anthropic 发布了 Claude Opus 4.8，并坦诚其为“适度但切实的改进”。公司同时表示正在努力开发成本更低的同等性能模型。这种透明且务实的发布策略，与以往 AI 领域过度宣传的模式形成鲜明对比，显示出 AI 公司在技术迭代和成本控制上的务实态度。
+推荐理由：帮助快速理解 Anthropic 新模型的真实增益与成本导向，避免只看宣传口径。
+关键词：Claude Opus、LLM、performance improvement
+原文：https://simonwillison.net/2026/May/28/claude-opus-4-8/#atom-everything
+
+5. 疯狂的沙盒化舞蹈
+来源：xeiaso.net｜评分：24/30
+看点：Kefka 是一个 Go 原生的 shell 沙盒，集成了 coreutils 和通过 WebAssembly 运行的 Python 等功能。文章深入探讨了实现这一复杂沙盒环境所涉及的技术细节和“疯狂”的实现过程，展示了在构建安全隔离环境方面的创新思路。
+推荐理由：从工程实现细节切入沙箱设计，兼具系统安全与开发者工具视角。
+关键词：sandbox、Go、WebAssembly
+原文：https://xeiaso.net/blog/2026/dancing-mad-sandboxing/
+
+GitHub Trending Top 5
+
+今天的 GitHub 热点几乎被 AI 工作流、内容生成和“去 AI 味”工具主导，说明开发者关注点正在从单一模型能力转向生产效率与输出质量控制。上榜项目兼具强实用性和鲜明场景导向，适合快速判断社区最新偏好。
+
+1. harry0703/MoneyPrinterTurbo
+来源：Python｜评分：今日 +4,698★
+看点：把大模型、脚本与视频生产串成一键化流程，直指短视频自动化生成。
+推荐理由：AI 视频生成是最明确的高频应用场景之一，这个项目的爆发式增长说明需求已非常具体。
+关键词：AI视频、自动化、内容生成
+原文：https://github.com/harry0703/MoneyPrinterTurbo
+
+2. affaan-m/ECC
+来源：JavaScript｜评分：今日 +1,385★
+看点：为 Claude Code、Codex 等代理式开发工具补足技能、记忆与安全等工程护栏。
+推荐理由：AI 编程正在进入“工具链治理”阶段，这类 agent harness 项目对团队落地尤其有参考价值。
+关键词：AI代理、开发工具、安全
+原文：https://github.com/affaan-m/ECC
+
+3. Leonxlnx/taste-skill
+来源：Shell｜评分：今日 +2,234★
+看点：试图通过技能文件改善模型输出品味，减少模板化与泛化内容。
+推荐理由：它切中了生成内容同质化痛点，适合作为提示工程与风格控制的轻量实践。
+关键词：提示工程、内容质量、风格控制
+原文：https://github.com/Leonxlnx/taste-skill
+
+4. hardikpandya/stop-slop
+来源：项目｜评分：今日 +761★
+看点：专注消除英文写作中的 AI 痕迹，面向文本润色这一高频需求。
+推荐理由：在人人都用生成式写作的背景下，“去 AI 味”已经成为独立赛道。
+关键词：写作优化、去AI味、文本编辑
+原文：https://github.com/hardikpandya/stop-slop
+
+5. twentyhq/twenty
+来源：TypeScript｜评分：今日 +493★
+看点：以开源 Salesforce 替代品定位切入，并强调面向 AI 设计的 CRM。
+推荐理由：把企业 CRM 与 AI 原生流程结合，是商业软件落地 AI 的典型方向。
+关键词：开源CRM、企业软件、AI原生
+原文：https://github.com/twentyhq/twenty
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单延续了“模型更会推理、更会校验、更贴近人类行为”的主线，既有训练方法创新，也有多模态对齐与评测层面的细化工作。几篇高排名论文都在补齐大模型系统化进步所需的关键基础件。
+
+1. VLMs May Not Globally Enhance Human Alignment over LLMs During Natural Reading
+来源：Computation and Language、Neurons and Cognition｜评分：Kimi 1★
+看点：比较同源 LLM 与 VLM 在纯文本自然阅读中的人类对齐差异，质疑多模态预训练是否天然更像人。
+推荐理由：这项工作有助于校正业界对多模态“全局更优”的直觉，适合关注认知建模与评测的人。
+关键词：多模态、人类对齐、阅读认知
+原文：https://papers.cool/arxiv/2605.28818
+
+2. Self-Improving Language Models with Bidirectional Evolutionary Search
+来源：Computation and Language｜评分：Kimi 5★
+看点：提出双向进化搜索 BES，把前向候选演化与后向目标分解结合起来提升自改进能力。
+推荐理由：如果你关心推理增强和后训练新范式，这篇论文提供了很强的方法论价值。
+关键词：自改进、搜索、推理优化
+原文：https://papers.cool/arxiv/2605.28814
+
+3. OmniVerifier-M1: Multimodal Meta-Verifier with Explicit Structured Recalibration
+来源：Computation and Language、Artificial Intelligence、Computer Vision and Pattern Recognition、Machine Learning｜评分：Kimi 1★
+看点：围绕多模态 verifier 训练，引入显式结构化再校准与符号化验证反馈。
+推荐理由：它对应的是多模态系统走向可靠部署时最需要的验证与纠错基础设施。
+关键词：多模态验证、结构化反馈、可靠性
+原文：https://papers.cool/arxiv/2605.28805
+
+4. Human Label Variation as Stable Signal: Learning Annotator-Specific Explanation Behavior via Cross-Annotator Preference Optimization
+来源：Computation and Language｜评分：Top 4
+看点：将标注者差异视为稳定信号，研究模型如何学习带有个体风格的解释行为。
+推荐理由：这对高质量数据构建、偏好建模和可解释标注流程都有现实意义。
+关键词：偏好优化、标注行为、可解释性
+原文：https://papers.cool/arxiv/2605.28802
+
+5. Skill-Conditioned Gated Self-Distillation for LLM Reasoning
+来源：Computation and Language、Artificial Intelligence｜评分：Kimi 5★
+看点：利用技能条件化门控自蒸馏提升 LLM 推理，把技能库作为教师侧特权信息来源。
+推荐理由：它把技能检索、验证器和蒸馏结合到一起，对构建可复用 reasoning pipeline 很有启发。
+关键词：自蒸馏、技能库、数学推理
+原文：https://papers.cool/arxiv/2605.28791
