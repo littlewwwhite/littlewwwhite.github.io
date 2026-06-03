@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今天的博客精选明显聚焦在两条主线：一条是 AI 直接进入真实业务流程后带来的安全暴露，另一条是 AI 正在反向重塑用户与互联网的交互方式。本轮从 92 个源中成功抓取 88 个、4 个源临时失败，但当日摘要与公开历史 RSS 已正常更新。
+
+1. 用户称：唯一会定期发生这种情况的包管理器“无能为力”
+来源：xeiaso.net｜评分：26/30
+看点：Redhat Insights 的 JavaScript 包遭遇 NPM 供应链攻击，攻击者窃取多云与 CI/CD 凭证并实现持续传播。
+推荐理由：这是一起高度贴近现实开发链路的事故，能帮助团队重新审视包管理、2FA 与凭证边界设计。
+关键词：供应链攻击、NPM、凭证
+原文：https://xeiaso.net/shitposts/no-way-to-prevent-this/supply-chain/2026-redhat-javascript-clients/
+
+2. 黑客只需要求Meta AI即可获得高知名度Instagram账户的访问权限，结果奏效
+来源：simonwillison.net｜评分：25/30
+看点：攻击者通过诱导 Meta 的 AI 支持机器人执行密码重置，成功获取高知名度 Instagram 账户访问权。
+推荐理由：它把“提示注入/社工”从内容风险推进到了账户接管层面，所有接入 AI 客服的产品都值得对照检查。
+关键词：Meta AI、Instagram、社工攻击
+原文：https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/#atom-everything
+
+3. 黑客利用Meta的AI支持机器人劫持Instagram账户
+来源：krebsonsecurity.com｜评分：25/30
+看点：进一步披露了 Meta AI 支持机器人被系统化利用的细节，攻击路径已扩散到 Telegram 等渠道传播。
+推荐理由：与上一条互为补充，提供了更完整的事件脉络和攻击扩散视角，适合安全与风控团队联读。
+关键词：Meta AI、账户劫持、支持机器人
+原文：https://krebsonsecurity.com/2026/06/hackers-used-metas-ai-support-bot-to-seize-instagram-accounts/
+
+4. 1000起数据泄露事件之后，披露延迟比以往任何时候都糟糕
+来源：troyhunt.com｜评分：24/30
+看点：作者基于 HIBP 收录到的 1000 起数据泄露事件指出，在法规更完善的今天，披露延迟反而更加严重。
+推荐理由：这篇文章适合管理层与安全负责人阅读，因为它讨论的不是单点漏洞，而是组织层面的披露机制失灵。
+关键词：数据泄露、披露延迟、隐私法规
+原文：https://www.troyhunt.com/1000-data-breaches-later-the-disclosure-lag-is-worse-than-ever/
+
+5. 网络正在改变，我们回不去了
+来源：idiallo.com｜评分：26/30
+看点：文章认为 AI 正把用户与网络的交互，从关键词式“机器语言”推动到自然语言式“人类表达”。
+推荐理由：它不是在讲某个模型新功能，而是在解释搜索、内容分发与网页入口会如何被长期改写。
+关键词：Web 变化、自然语言、搜索
+原文：https://idiallo.com/blog/web-is-changing-we-are-not-going-back?src=feed
+
+GitHub Trending Top 5
+
+今天的 GitHub 热门项目以 AI 工具链、内容生成和高可用抓取框架为主，整体偏向“把模型能力真正落地成工作流”的方向。榜单里既有文档处理基础设施，也有面向个人创作和长期记忆系统的产品化尝试。
+
+1. microsoft/markitdown
+来源：Python｜评分：今日 +3,034★
+看点：这是一个将文件与 Office 文档统一转换为 Markdown 的 Python 工具，适合做 LLM 预处理与知识库入库。
+推荐理由：文档标准化是 AI 工作流最常见却最耗时的环节之一，这类基础工具往往最有复用价值。
+关键词：Markdown、文档转换、知识库
+原文：https://github.com/microsoft/markitdown
+
+2. nesquena/hermes-webui
+来源：Python｜评分：今日 +945★
+看点：为 Hermes Agent 提供 Web 与移动端使用界面，把命令行能力包装成更易访问的交互入口。
+推荐理由：它体现了 Agent 产品化的关键一步：不是只做模型，而是做跨设备、可持续使用的前端体验。
+关键词：Agent、WebUI、移动端
+原文：https://github.com/nesquena/hermes-webui
+
+3. supermemoryai/supermemory
+来源：TypeScript｜评分：今日 +647★
+看点：这是一个面向 AI 时代的记忆引擎与 API，主打高速、可扩展的长期记忆能力。
+推荐理由：长期记忆正成为 Agent 与智能应用的基础设施，这类项目很可能决定下一代应用的用户黏性。
+关键词：记忆引擎、API、可扩展
+原文：https://github.com/supermemoryai/supermemory
+
+4. harry0703/MoneyPrinterTurbo
+来源：Python｜评分：今日 +3,375★
+看点：利用大模型一键生成高清短视频，把脚本、画面与生产流程尽量自动化。
+推荐理由：它直接对应当前最强的创作者需求场景，能帮助判断 AI 视频工具离“批量可用”还有多远。
+关键词：AI 视频、短视频、自动生成
+原文：https://github.com/harry0703/MoneyPrinterTurbo
+
+5. D4Vinci/Scrapling
+来源：Python｜评分：今日 +1,486★
+看点：这是一个可自适应的 Web Scraping 框架，从单次请求到大规模爬取都覆盖，强调通用性与鲁棒性。
+推荐理由：在数据仍是 AI 系统燃料的前提下，可靠抓取框架依然是很多自动化与情报系统的底座。
+关键词：网页抓取、爬虫框架、自动化
+原文：https://github.com/D4Vinci/Scrapling
+
+papers.cool/arxiv 每日 Top 5
+
+今天的论文榜单集中在语言模型的“理解与推理内部机制”上：既有长上下文强化学习，也有对语义习得、扩散生成轨迹和可解释性评估的深入分析。整体趋势不是单纯追求更大模型，而是更认真地拆解模型到底学到了什么、又是如何学到的。
+
+1. Language Models Learn Constructional Semantics, Not To Mention Syntax: Investigating LM Understanding of Paired-Focus Constructions
+来源：Computation and Language / Artificial Intelligence｜评分：Top 1
+看点：论文研究语言模型对稀有配对焦点结构的理解，区分了模型学会语法形式与真正掌握语义之间的差异。
+推荐理由：它有助于判断模型“会说”与“真懂”之间的边界，对语言理解评估很有参考价值。
+关键词：constructional semantics、syntax、world knowledge
+原文：https://papers.cool/arxiv/2605.31586
+
+2. LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards
+来源：Computation and Language / Artificial Intelligence / Machine Learning｜评分：Kimi 5★
+看点：论文利用搜索代理轨迹和 rubric reward，提升模型在长上下文中的定位、整合与多跳推理能力。
+推荐理由：长上下文推理是当前 Agent 与检索增强系统的硬问题，这篇工作给出了很实用的训练与奖励设计思路。
+关键词：长上下文、强化学习、搜索代理
+原文：https://papers.cool/arxiv/2605.31584
+
+3. What Gets Unmasked First? Trajectory Analysis of Diffusion Models for Graph-to-Text Generation
+来源：Computation and Language / Artificial Intelligence｜评分：Top 3
+看点：论文分析图到文本扩散模型的解码轨迹，发现实体、关系词和结构词在生成过程中存在稳定的优先级。
+推荐理由：它不只比较结果优劣，而是解释生成路径本身，对理解非自回归文本生成很有启发。
+关键词：扩散模型、Graph-to-Text、解码轨迹
+原文：https://papers.cool/arxiv/2605.31564
+
+4. Disagreeing Rationales: Rethinking Classification and Explainability Evaluation in Hate Speech Detection
+来源：Computation and Language｜评分：Top 4
+看点：论文重新审视仇恨言论检测中的标签分歧与解释分歧，提出统一框架比较分类与可解释性指标。
+推荐理由：对主观任务来说，“标注不一致”本身就是信号，这篇工作对评测设计和数据治理都很关键。
+关键词：可解释性、仇恨言论、评测
+原文：https://papers.cool/arxiv/2605.31563
+
+5. What Am I Missing? Question-Answering as Hidden State Probing
+来源：Computation and Language｜评分：Kimi 1★
+看点：论文把“主动提问”视作探测模型隐藏状态的手段，研究模型自我诊断与最终答题正确性的关系。
+推荐理由：它切中了推理模型一个很重要的问题：模型能否意识到自己不知道什么，这对自我修正能力至关重要。
+关键词：隐藏状态、问答、推理干预
+原文：https://papers.cool/arxiv/2605.31561
