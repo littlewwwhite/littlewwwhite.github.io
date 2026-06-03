@@ -1,0 +1,116 @@
+AI 博客 Top 5
+
+今晨 AI 博客主线非常集中：一边是 AI 客服与账户体系暴露出真实可利用的安全漏洞，另一边是业界继续争论 AI 的可靠性与商业回报。此次日报已从 92 个源中成功处理 88 个，4 个 RSS 源临时失败但不影响成稿，公开历史页与 RSS 也已同步发布。
+
+1. 黑客利用 Meta AI 成功获取高管 Instagram 账户访问权限
+来源：simonwillison.net｜评分：26/30
+看点：黑客通过诱导 Meta 的 AI 支持机器人修改账户绑定邮箱，成功接管多个高影响力 Instagram 账户。
+推荐理由：这是 AI 客服“可被社工操纵”最直观的案例之一，对所有做智能客服、身份验证和风控的人都很有警示意义。
+关键词：Meta AI、Instagram、社工攻击
+原文：https://simonwillison.net/2026/Jun/1/hackers-simply-asked-meta-ai/#atom-everything
+
+2. 黑客利用 Meta AI 支持机器人窃取 Instagram 账户
+来源：krebsonsecurity.com｜评分：26/30
+看点：文章补充了攻击传播路径与操作细节，显示 Telegram 教程已将这类 AI 机器人漏洞工具化、规模化。
+推荐理由：Krebs 的报道更偏实战与安全取证，适合从攻击链和平台防御视角理解这次事件。
+关键词：Meta AI、账户恢复、AI 支持机器人
+原文：https://krebsonsecurity.com/2026/06/hackers-used-metas-ai-support-bot-to-seize-instagram-accounts/
+
+3. 1000 次数据泄露后，披露延迟依旧严峻
+来源：troyhunt.com｜评分：26/30
+看点：Troy Hunt 以 HIBP 收录第 1000 起泄露事件为节点，反思为什么企业在数据泄露后的公开披露依然严重滞后。
+推荐理由：这篇文章把“合规存在但披露仍慢”的结构性问题讲得很透，适合安全、法务和数据治理团队一起看。
+关键词：数据泄露、披露延迟、HIBP
+原文：https://www.troyhunt.com/1000-data-breaches-later-the-disclosure-lag-is-worse-than-ever/
+
+4. AI 健全性梦想成真：一次突破性进展
+来源：garymarcus.substack.com｜评分：26/30
+看点：Gary Marcus 将最新进展描述为 AI “健全性”突破，核心指向模型可靠性、可控性与行为一致性的改善。
+推荐理由：虽然标题带有强烈观点色彩，但它抓住了当前 AI 安全与对齐讨论中最重要的命题之一。
+关键词：AI 健全性、可靠性、对齐
+原文：https://garymarcus.substack.com/p/breaking-when-dreams-for-ai-sanity
+
+5. AI 没有投资回报率
+来源：wheresyoured.at｜评分：25/30
+看点：文章质疑 AI 的商业投入是否真正转化为可衡量 ROI，认为很多项目仍停留在高成本、低兑现阶段。
+推荐理由：在市场追逐 AI 的时点，这种逆向审视有助于重新校准“技术热度”和“业务价值”之间的距离。
+关键词：AI、ROI、商业化
+原文：https://www.wheresyoured.at/ai-doesnt-have-roi/
+
+GitHub Trending Top 5
+
+今天的 GitHub Trending 很偏“AI 工具链提效”和“开发基础设施增强”：压缩上下文、文档转 Markdown、Agent 能力增强、抓取框架和 Hermes WebUI 都在升温。整体看，大家仍在围绕“让模型更便宜、更可用、更易集成”持续打磨。
+
+1. chopratejas/headroom
+来源：Python｜评分：今日 +1,265★
+看点：这是一个面向 LLM 的上下文压缩工具，可在把日志、文件和 RAG 内容喂给模型前先做高比例压缩。
+推荐理由：如果你在做 Agent、RAG 或长上下文应用，它能直接帮助降低 token 成本并提升吞吐效率。
+关键词：上下文压缩、LLM、RAG
+原文：https://github.com/chopratejas/headroom
+
+2. microsoft/markitdown
+来源：Python｜评分：今日 +3,618★
+看点：MarkItDown 专注于把各类文件与 Office 文档统一转换成 Markdown，方便后续检索、嵌入和模型处理。
+推荐理由：这是 AI 文档处理链路里最常见也最刚需的一环，微软出品也意味着生态整合空间很大。
+关键词：Markdown、文档转换、知识处理
+原文：https://github.com/microsoft/markitdown
+
+3. affaan-m/ECC
+来源：JavaScript｜评分：今日 +1,533★
+看点：ECC 主打 Agent harness 性能优化，覆盖技能、记忆、安全和 research-first 开发等多个 AI coding 维度。
+推荐理由：对正在构建 Claude Code、Codex 或多 Agent 工作流的人来说，这类“增强型运行框架”很值得跟进。
+关键词：Agent、性能优化、开发框架
+原文：https://github.com/affaan-m/ECC
+
+4. D4Vinci/Scrapling
+来源：Python｜评分：今日 +1,182★
+看点：Scrapling 是一套自适应 Web Scraping 框架，既能处理单次抓取，也能支撑大规模爬取任务。
+推荐理由：在数据抓取越来越需要兼顾稳定性和扩展性的背景下，这种统一型框架非常适合作为采集底座。
+关键词：网络抓取、爬虫框架、自动化
+原文：https://github.com/D4Vinci/Scrapling
+
+5. nesquena/hermes-webui
+来源：Python｜评分：今日 +1,722★
+看点：Hermes WebUI 旨在把 Hermes Agent 带到网页和手机端，降低日常使用门槛并增强交互体验。
+推荐理由：Agent 产品化的关键不只在模型能力，也在入口与体验，这类 WebUI 项目往往能快速放大可用性。
+关键词：Hermes、WebUI、移动端
+原文：https://github.com/nesquena/hermes-webui
+
+papers.cool/arxiv 每日 Top 5
+
+今天的 papers.cool/arxiv 以大模型压缩、推理能力评测和生成效率优化为主，既有工程向加速，也有能力边界测试。整体趋势说明，学界仍在同时推进“更省资源”和“更强能力”这两条主线。
+
+1. From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression
+来源：计算与语言、人工智能｜评分：Kimi 3★
+看点：论文提出 SubFit，把 LLM 压缩粒度从整层细化到子模块，并允许非连续选择压缩位置，从而改善压缩后的精度与困惑度表现。
+推荐理由：这是非常实用的后训练压缩思路，对想在不重训前提下压缩大模型的人尤其有参考价值。
+关键词：模型压缩、子模块、SubFit
+原文：https://papers.cool/arxiv/2606.02559
+
+2. HERO'S JOURNEY: Testing Complex Rule Induction with Text Games
+来源：计算与语言｜评分：Top 2
+看点：论文用文字游戏构建规则归纳基准，系统测试大模型从示例中推断复杂隐含规则并执行多步任务的能力。
+推荐理由：如果你关心 LLM 是否真的会“抽象规则并执行”，这篇工作提供了很好的测量框架。
+关键词：规则归纳、文本游戏、基准测试
+原文：https://papers.cool/arxiv/2606.02556
+
+3. SN-WER: Script-Normalized WER for Multi-Script Indic ASR Evaluation
+来源：计算与语言｜评分：Top 3
+看点：论文提出 SN-WER，通过先做文字转写归一化再计算 WER，减少多语种 ASR 在不同书写系统下的虚高误差。
+推荐理由：它解决的是评测层面的真实痛点，尤其适合多语种语音识别和下游搜索、索引场景。
+关键词：ASR、WER、多语种评测
+原文：https://papers.cool/arxiv/2606.02548
+
+4. Transferable Self-Harm Surveillance from Emergency Department Triage Notes Using an Evidence-Augmented Machine Learning Approach
+来源：计算与语言｜评分：Top 4
+看点：这项研究结合传统机器学习、LLM 筛查和证据抽取，从急诊分诊记录中识别自残行为，并验证了跨医院迁移能力。
+推荐理由：它展示了医疗文本分类如何走向真实部署，也体现了“证据增强”路线在高风险场景中的价值。
+关键词：医疗 NLP、自残监测、证据增强
+原文：https://papers.cool/arxiv/2606.02545
+
+5. SimSD: Simple Speculative Decoding in Diffusion Language Models
+来源：计算与语言、人工智能｜评分：Top 5
+看点：论文为扩散式语言模型设计了可训练外的 speculative decoding 方法，在保持生成质量的同时显著提升解码吞吐。
+推荐理由：扩散 LLM 还在早期，但如果它们想和自回归模型竞争速度，类似 SimSD 的解码技术会是关键拼图。
+关键词：扩散语言模型、推测解码、推理加速
+原文：https://papers.cool/arxiv/2606.02544
