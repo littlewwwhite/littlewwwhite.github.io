@@ -1,0 +1,26 @@
+AI 博客
+1. AI 没有投资回报率
+看点：直指当下企业上 AI 的核心矛盾：成本高、收益难量化、很多项目并没有形成清晰 ROI。
+为什么值得看：比“模型又变强了”更接近真实决策问题，适合判断哪些 AI 投入只是热闹｜原文：https://www.wheresyoured.at/ai-doesnt-have-roi/
+
+2. 微软发布新的 MAI 模型
+看点：微软公开了面向推理和代码场景的新模型，参数规模很大，说明大厂仍在持续加码自研 LLM。
+为什么值得看：这是判断模型竞争格局和代码模型走向的重要信号，和开发者工具链直接相关｜原文：https://simonwillison.net/2026/Jun/2/microsofts-new-models/#atom-everything
+
+GitHub Trending
+1. headroom
+看点：在 LLM 前压缩日志、工具输出和 RAG 内容，主打大幅降 token 成本且尽量不损答案质量。
+为什么值得看：非常实用，几乎所有 agent/RAG/长上下文应用都能直接受益｜原文：https://github.com/chopratejas/headroom
+
+2. markitdown
+看点：微软出的文档转 Markdown 工具，面向办公文档和多种文件格式的统一文本化处理。
+为什么值得看：知识库构建、RAG 入库、自动化内容清洗都很常用，落地价值明确｜原文：https://github.com/microsoft/markitdown
+
+papers.cool/arxiv
+1. Agentic Chain-of-Thought Steering for Efficient and Controllable LLM Reasoning
+看点：把推理过程做成可控的“引导式思考”，在尽量保住效果的同时减少推理 token 消耗。
+为什么值得看：如果你关心推理成本、延迟和可控性，这比单纯追求更长 CoT 更有现实意义｜原文：https://papers.cool/arxiv/2606.03965
+
+2. QUBRIC: Co-Designing Queries and Rubrics for RL Beyond Verifiable Rewards
+看点：讨论如何把难以验证的问题改写成可训练、可打分的 RL 数据，并用于 GRPO 训练。
+为什么值得看：对后训练和评测设计很有启发，尤其适合做复杂任务、开放式任务的团队参考｜原文：https://papers.cool/arxiv/2606.03968
