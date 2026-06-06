@@ -1,0 +1,26 @@
+AI 博客
+1. AGI之后，什么仍然稀缺？
+看点：这篇从“AGI把生产做得极便宜之后，什么还稀缺”切入，认为真正升值的是创造力、审美、信任和深度人际互动。
+为什么值得看：不是喊口号，而是在帮你校准 AI 时代的长期价值判断｜原文：https://www.dwarkesh.com/p/alex-imas-phil-trammell
+
+2. Uber限制Claude Code等AI工具使用以控制成本
+看点：大厂真实案例说明，AI 编程工具的组织级使用正在撞上预算墙，成本管理开始成为落地第一问题。
+为什么值得看：对所有在推 agent、Copilot、自动化开发的团队都很有现实参考价值｜原文：https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything
+
+GitHub Trending
+1. headroom
+看点：把日志、RAG 分片、工具输出先压缩再喂给模型，主打大幅降 token 成本，同时尽量不损失答案质量。
+为什么值得看：这类“先压上下文再推理”的基础设施很可能会快速进入 agent 标配栈｜原文：https://github.com/chopratejas/headroom
+
+2. PaddleOCR
+看点：把 PDF 和图片文档转成结构化数据，支持 100 多种语言，直接服务于文档理解和 LLM 工作流。
+为什么值得看：不是新概念，而是高频刚需；谁在做 AI 文档流，基本都绕不开这类能力｜原文：https://github.com/PaddlePaddle/PaddleOCR
+
+papers.cool/arxiv
+1. Streaming Communication in Multi-Agent Reasoning
+看点：提出 StreamMA，让多智能体在推理步骤生成时就边产出边传递，既降延迟，又意外提升效果。
+为什么值得看：少见地同时打到 agent 系统最痛的两点：速度和质量，且实验覆盖数学、科学、代码多基准｜原文：https://papers.cool/arxiv/2606.05158
+
+2. Evaluating Large Language Models in Dynamic Clinical Decision-Making with Standardized Patient Cases
+看点：用标准化病人式交互基准评估医疗场景里的 LLM，发现静态 benchmark 好看，不代表真实临床流程可靠。
+为什么值得看：对“AI 进医疗”是很重要的降温提醒，强调流程级评测比单轮答题更关键｜原文：https://papers.cool/arxiv/2606.05112
