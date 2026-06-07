@@ -1,0 +1,20 @@
+AI 博客
+1. AI 爱好者与 AI 怀疑论者：一场与时间和熵的赛跑
+看点：Simon Willison 把 AI 阵营的真实分歧说透了：一边急着把能力变成产品，一边担心混乱正在加速累积。
+为什么值得看：很少见到把“现在该怎么做 AI”讲得这么具体又不站队的文章｜原文：https://simonwillison.net/2026/Jun/4/ai-enthusiasts-ai-skeptics/#atom-everything
+
+GitHub Trending
+1. headroom
+看点：在日志、工具输出、RAG chunk 进模型前先压缩，目标是大幅降 token 成本而不明显伤答案质量。
+为什么值得看：非常贴近 Agent/RAG 落地痛点，属于能直接省钱提吞吐的基础设施｜原文：https://github.com/chopratejas/headroom
+2. open-notebook
+看点：开源版 NotebookLM，强调更灵活的知识整理、问答与工作流扩展。
+为什么值得看：这类可自托管替代品对团队知识库和研究场景都很实用｜原文：https://github.com/lfnovo/open-notebook
+
+papers.cool/arxiv
+1. You Only Index Once: Cross-Layer Sparse Attention with Shared Routing
+看点：把稀疏注意力路由索引跨层复用，在长上下文下同时追求速度和质量。
+为什么值得看：聚焦最硬核的推理成本问题，论文声称 128K 场景吞吐最高提升 17.1x｜原文：https://papers.cool/arxiv/2606.06467
+2. Self-Augmenting Retrieval for Diffusion Language Models
+看点：利用扩散语言模型去噪早期的低置信 token 做动态检索，让 RAG 更早拿到证据。
+为什么值得看：不是小修小补，而是在新生成范式里重做 retrieval 机制｜原文：https://papers.cool/arxiv/2606.06474
