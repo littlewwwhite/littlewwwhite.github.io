@@ -1,0 +1,20 @@
+AI 博客
+1. 用 MicroPython + WASM 做 Python 沙箱
+看点：把 Python 执行放进浏览器/WASM 沙箱，已经接入实际 agent 场景，兼顾安全性和可用性。
+为什么值得看：这是“让 AI/Agent 安全跑代码”的很实用一条路线，工程参考价值明显｜原文：https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything
+
+GitHub Trending
+1. CopilotKit
+看点：面向 Agents 与 Generative UI 的前端栈，覆盖 React、Angular、移动端和 Slack，并推动 AG-UI Protocol。
+为什么值得看：如果你在做 AI 产品前端或多端 Agent 交互，这类基础设施比单点 Demo 更有长期价值｜原文：https://github.com/CopilotKit/CopilotKit
+2. MemPalace
+看点：主打“高基准成绩”的开源 AI memory system，直接切中 Agent 长期记忆这个核心痛点。
+为什么值得看：记忆层正在从概念变成可替换组件，适合关注 Agent 工程化的人快速跟进｜原文：https://github.com/MemPalace/mempalace
+
+papers.cool/arxiv
+1. You Only Index Once
+看点：提出跨层共享路由的稀疏注意力，在 128K 上下文下给出最高 7.6x 解码提速、17.1x 吞吐提升。
+为什么值得看：这是长上下文推理里非常硬的系统优化，离真实推理成本和可部署性更近｜原文：https://papers.cool/arxiv/2606.06467
+2. Self-Augmenting Retrieval for Diffusion Language Models
+看点：把扩散语言模型去噪过程里的低置信 token 当“前瞻信号”做动态检索，最高可比基线快 8 倍。
+为什么值得看：不靠重新训练、直接增强检索与推理效率，对 diffusion LLM 的实战路线很有启发｜原文：https://papers.cool/arxiv/2606.06474
