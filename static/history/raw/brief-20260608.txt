@@ -1,0 +1,23 @@
+AI 博客
+1. 关于使用LLM代理启动新项目的思考
+看点：作者结合 Python 重构实战，讨论如何把 LLM agent 用在项目初始化、脚手架生成和依赖管理。
+为什么值得看：今天博客里少数偏实操、可直接迁移到团队工作流的文章｜原文：https://eli.thegreenplace.net/2026/thoughts-on-starting-new-projects-with-llm-agents/
+2. 软件测试的新纪元
+看点：antirez 讨论 AI 辅助编程在测试与工程效率上的真实收益，核心是“在可控场景下，它已经实用”。
+为什么值得看：不是空谈 AGI，而是面向开发者的效率判断，适合拿来校准你对 AI 编程的预期｜原文：http://antirez.com/news/168
+
+GitHub Trending
+1. NousResearch/hermes-agent
+看点：通用型 agent 框架，今天涨幅很猛，覆盖工具调用、记忆、子代理和多平台接入。
+为什么值得看：这类“能落地的 agent 基建”比单点 demo 更有长期价值｜原文：https://github.com/NousResearch/hermes-agent
+2. lfnovo/open-notebook
+看点：开源版 NotebookLM，主打更灵活的知识导入、检索和对话体验。
+为什么值得看：离真实生产需求更近，适合想自建私有知识助手或文档问答系统的人｜原文：https://github.com/lfnovo/open-notebook
+
+papers.cool/arxiv
+1. You Only Index Once: Cross-Layer Sparse Attention with Shared Routing
+看点：把跨层共享路由用于稀疏注意力，论文声称在 128K 上可拿到 7.6x 解码加速和 17.1x 总吞吐提升。
+为什么值得看：这是少数同时碰“长上下文质量”和“推理成本”两个核心瓶颈的工作｜原文：https://papers.cool/arxiv/2606.06467
+2. Self-Augmenting Retrieval for Diffusion Language Models
+看点：利用扩散语言模型去噪过程中的低置信 token 提前做检索，形成训练免费、可插拔的动态 RAG。
+为什么值得看：不仅新，而且实用指标漂亮；如果扩散式 LLM 继续升温，这会是很值得盯的一条技术线｜原文：https://papers.cool/arxiv/2606.06474
