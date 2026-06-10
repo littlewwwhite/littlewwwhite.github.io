@@ -1,0 +1,29 @@
+AI 博客
+
+1. AI 发展正在放缓
+看点：从算力、部署到商业落地，系统性反驳“AI 会持续线性加速”的乐观叙事。
+为什么值得看：不是情绪化唱空，而是提醒大家把注意力从模型发布节奏转回真实瓶颈和回报率｜原文：https://www.wheresyoured.at/ai-is-slowing-down/
+
+2. 软件测试的新时代
+看点：antirez 讨论自动编程在测试与普通开发场景里，何时已经能稳定超过一般手写代码。
+为什么值得看：比泛泛聊“AI 写代码”更务实，直接关系团队怎么重构测试、评审和交付流程｜原文：http://antirez.com/news/168
+
+GitHub Trending
+
+1. mvanhorn/last30days-skill
+看点：把 Reddit、X、YouTube、HN、Polymarket 和网页检索串成一个“研究型 Agent skill”。
+为什么值得看：今天最强信号项目之一，方向不是再造聊天壳，而是提高 AI 做主题研究时的证据密度与可追溯性｜原文：https://github.com/mvanhorn/last30days-skill
+
+2. RyanCodrai/turbovec
+看点：基于 TurboQuant 的向量索引，Rust 实现并带 Python 绑定，明显瞄准高性能检索基础设施。
+为什么值得看：如果你关注 RAG/检索性能，这类更底层的数据结构与压缩优化，比上层 Agent 套壳更有长期价值｜原文：https://github.com/RyanCodrai/turbovec
+
+papers.cool/arxiv
+
+1. How reliable are LLMs when it comes to playing dice?
+看点：用离散概率题系统测 LLM，标准题很强，但遇到反直觉变体、伪装表述和误导提示时明显失真。
+为什么值得看：对“模型会推理”这件事是很扎实的降温证据，尤其适合做评测、提示设计和安全对抗的人看｜原文：https://papers.cool/arxiv/2606.07515
+
+2. Your UnEmbedding Matrix is Secretly a Feature Lens for Text Embeddings
+看点：指出 LLM 文本向量会被高频无信息 token 污染，并用 EmbedFilter 在线性层面做净化与降维。
+为什么值得看：既有机制解释，又有直接可用的 embedding 提升思路，对检索、索引成本和零样本效果都很实用｜原文：https://papers.cool/arxiv/2606.07502
