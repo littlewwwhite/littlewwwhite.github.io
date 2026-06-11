@@ -1,0 +1,23 @@
+AI 博客
+1. 苹果发布 Apple Intelligence，把设备端模型、私有云算力和 Gemini 整合进系统体验
+看点：这不是单点功能更新，而是苹果正式把 AI 升级为操作系统级能力，并把“隐私优先”的架构讲清楚了。
+为什么值得看：它基本定义了未来 iPhone 上 AI 的默认交互形态，也会影响端侧模型、Agent 和应用生态布局｜原文：https://www.apple.com/newsroom/2026/06/apple-intelligence-brings-powerful-ai-capabilities-into-everyday-experiences/
+2. 微软 6 月补丁星期二创纪录，近 200 个漏洞一次性修复
+看点：数量创历史新高，且有相当一部分属于关键级别，至少已有公开利用代码。
+为什么值得看：这类安全基线变化会直接影响企业 IT、云环境和终端防护优先级，信息密度很高｜原文：https://krebsonsecurity.com/2026/06/a-record-breaking-patch-tuesday-for-june-2026/
+
+GitHub Trending
+1. last30days-skill：跨 Reddit、X、YouTube、HN、Polymarket 和网页做主题研究的 Agent 技能
+看点：把“多源检索+综合归纳”封装成可复用工作流，很贴近当下高频的研究型 Agent 场景。
+为什么值得看：不是玩具 demo，而是能直接提升情报收集和选题研究效率的实用项目｜原文：https://github.com/mvanhorn/last30days-skill
+2. turbovec：基于 TurboQuant 的向量索引，Rust 实现并带 Python 绑定
+看点：向量检索基础设施继续卷性能，这个项目同时兼顾底层效率和上层可接入性。
+为什么值得看：如果你在做 RAG、检索或 embedding 服务，这类新索引实现很值得关注｜原文：https://github.com/RyanCodrai/turbovec
+
+papers.cool/arxiv
+1. IS-CoT：用交错式结构化思考解决长文生成“写到后面就塌”的问题
+看点：它把 Plan-Write-Reflect 动态嵌进生成过程，重点解决长文一致性和长度失控。
+为什么值得看：对长报告、长内容创作和写作型模型训练都很实用，问题定义也非常贴近真实需求｜原文：https://papers.cool/arxiv/2606.09709
+2. AdvGRPO：用 GRPO 做语言模型攻防对抗训练
+看点：论文把攻击者与防御者联合训练做得更稳定，还强调多轮攻击和课程式训练。
+为什么值得看：对做模型安全、红队评测和对齐训练的人来说，这比泛泛安全论文更有可操作性｜原文：https://papers.cool/arxiv/2606.09701
