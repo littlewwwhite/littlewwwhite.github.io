@@ -1,0 +1,23 @@
+AI 博客
+1. 谷歌因 AI 幻觉面临法律责任
+看点：法院层面对“模型胡说八道谁负责”开始给出明确方向，影响的不只是谷歌，而是整条生成式 AI 产业链。
+为什么值得看：这是 AI 合规与产品责任的分水岭话题，直接关系搜索、客服、Copilot 等落地形态｜原文：https://garymarcus.substack.com/p/breaking-google-liable-for-hallucinations
+2. 苹果发布 Apple Intelligence 系统
+看点：苹果把端侧模型、私有云计算和系统级集成一起推出，AI 终于不只是聊天框，而是操作系统能力。
+为什么值得看：它代表消费级 AI 的下一阶段竞争点：隐私、默认可用、深度嵌入日常工作流｜原文：https://www.apple.com/newsroom/2026/06/apple-intelligence-brings-powerful-ai-capabilities-into-everyday-experiences/
+
+GitHub Trending
+1. addyosmani/agent-skills
+看点：把 AI 编码助手常见工程任务沉淀成可复用技能包，适合直接提升 agent 的稳定性与交付质量。
+为什么值得看：不是玩具型提示词，而是能落到真实开发流程里的工程资产｜原文：https://github.com/addyosmani/agent-skills
+2. mvanhorn/last30days-skill
+看点：自动横扫 Reddit、X、YouTube、HN、Polymarket 和网页，做近 30 天主题研究与综合摘要。
+为什么值得看：很适合做“快速行业扫描/舆情研究”这类高价值信息工作流｜原文：https://github.com/mvanhorn/last30days-skill
+
+papers.cool/arxiv
+1. PhantomBench：系统测语言模型对“不存在概念”的幻觉
+看点：作者构造 6 万多个不存在的术语和实体，发现主流模型在“该不知道时”仍频繁硬答，幻觉率很高。
+为什么值得看：这是评估模型边界感和拒答能力的强基准，对高风险场景尤其重要｜原文：https://papers.cool/arxiv/2606.11105
+2. VISTA：面向 Agent 评测的交互式用户模拟工具包
+看点：同时支持 UI 和 API 层面的用户模拟，还补上了真实度、覆盖度、有效性等评估指标。
+为什么值得看：如果你在做 agent 产品，这类动态评测框架比静态 benchmark 更接近真实失败模式｜原文：https://papers.cool/arxiv/2606.11079
