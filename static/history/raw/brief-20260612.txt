@@ -1,0 +1,23 @@
+AI 博客
+1. Anthropic 撤回会“妨碍”Claude 研究的安全策略
+看点：因研究社区强烈反弹，Anthropic 承认新限制伤害了研究可用性，转向更透明的安全控制。
+为什么值得看：这不是小修小补，而是头部模型厂商在“安全”与“开放研究”之间公开后撤的信号｜原文：https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything
+2. OpenAI 被曝考虑大幅降价
+看点：如果消息属实，模型价格战可能继续升级，推理成本和产品定价都会被重写。
+为什么值得看：对开发者和创业公司最直接，意味着 AI 应用层的成本结构、竞争门槛和商业模式可能同步变化｜原文：https://garymarcus.substack.com/p/breaking-openai-is-pondering-drastic
+
+GitHub Trending
+1. apple/container
+看点：苹果开源在 Mac 上用轻量虚机跑 Linux 容器的工具，直指 Apple Silicon 本地容器体验。
+为什么值得看：这是苹果亲自下场补“Mac 原生容器”基础设施，开发环境和本地部署链路都可能受影响｜原文：https://github.com/apple/container
+2. addyosmani/agent-skills
+看点：把 AI 编码代理的工程技能做成可复用资产，覆盖真实生产开发流程。
+为什么值得看：现在大家都在做 agent，但真正稀缺的是可迁移的方法库，这个仓库信号很强｜原文：https://github.com/addyosmani/agent-skills
+
+papers.cool/arxiv
+1. Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs
+看点：提出 ModSleuth，系统追溯 LLM 训练、评测、数据与上游模型之间的隐藏依赖，挖出 1060 个可验证依赖。
+为什么值得看：这篇切中当下模型透明度、许可证合规和“到底用了谁的数据/模型”这类高价值问题｜原文：https://papers.cool/arxiv/2606.12385
+2. Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization
+看点：把可验证环境像乐高一样递归组合，用更少基础环境换来更强推理泛化。
+为什么值得看：对 reasoning RL 很实用，不只是刷榜，而是在回答“怎样低成本扩展训练环境”这个关键问题｜原文：https://papers.cool/arxiv/2606.12373
