@@ -1,0 +1,26 @@
+AI 博客
+1. Anthropic 撤回可能“坑到”AI 研究者的 Claude 政策
+看点：Anthropic 承认此前对前沿模型“可见性”限制做了错误权衡，已撤回相关要求。
+为什么值得看：这不是小修小补，而是头部模型公司在安全、开放、研究生态之间重新校准，直接影响开发者和研究者怎么用 Claude｜原文：https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/#atom-everything
+
+2. 为什么 AI 服务里的缓存输入 token 更便宜？
+看点：把 cached token 便宜的原因讲透了，本质是少做 GPU 重计算，直接复用中间表示。
+为什么值得看：很实用，做 RAG、长上下文、Agent 编排时都关系到真实成本，读完能更好理解怎么省钱和提速｜原文：https://xeiaso.net/notes/2026/why-llm-cached-token-cheaper/
+
+GitHub Trending
+1. apple/container
+看点：Apple 官方做的 Mac 上 Linux 容器工具，用轻量虚拟机承载，明显是 Apple silicon 时代的基础设施信号。
+为什么值得看：今天增长最猛之一，说明本地容器体验仍有大机会；对做开发环境、CI、本地 AI 工具链的人都值得关注｜原文：https://github.com/apple/container
+
+2. addyosmani/agent-skills
+看点：面向 AI coding agent 的工程化技能库，把可复用的开发套路沉淀成标准化能力。
+为什么值得看：Agent 开发正在从“会调模型”走向“会做流程资产化”，这个仓库很贴近实际生产协作｜原文：https://github.com/addyosmani/agent-skills
+
+papers.cool/arxiv
+1. EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments
+看点：做了一个专门测动态环境下 Agent 的基准，并提出 EvoMem 这种“记忆补丁”范式。
+为什么值得看：比单纯刷静态 benchmark 更接近真实世界，尤其适合关注 Agent 长期任务、环境变更和记忆机制的人｜原文：https://papers.cool/arxiv/2606.13681
+
+2. HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents
+看点：把多步工具调用折叠成单次更高粒度执行，减少模型在主推理链里搬运低层数据流。
+为什么值得看：很像把 Agent 从“逐步点按钮”升级到“写小程序调工具”，对 MCP/工具使用准确率和上下文效率都有现实意义｜原文：https://papers.cool/arxiv/2606.13663
