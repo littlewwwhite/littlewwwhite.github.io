@@ -1,0 +1,26 @@
+AI 博客
+1. 美国商务部有效叫停 Anthropic 最新模型
+看点：美国政府直接把前沿模型出口管制落到具体公司和具体模型上，AI 监管从口头讨论进入实操阶段。
+为什么值得看：这不是一般政策噪音，而是会真实影响模型可用范围、国际竞争和后续监管模板的信号｜原文：https://garymarcus.substack.com/p/breaking-news-us-commerce-department
+
+2. 硅谷泡沫（第一部分）
+看点：从 OpenAI、Anthropic 的烧钱模式和潜在上市压力切入，讨论这一轮 AI 狂热的资金逻辑是否已接近拐点。
+为什么值得看：如果你想判断 AI 行业接下来是继续猛冲还是开始挤泡沫，这篇比日常融资新闻更有框架感｜原文：https://www.wheresyoured.at/premium-the-silicon-valley-bubble-part-1/
+
+GitHub Trending
+1. apple/container
+看点：Apple 自己下场做 Mac 上的轻量 Linux 容器工具，面向 Apple silicon，路线很明确。
+为什么值得看：这类基础设施一旦做成，会直接影响本地开发、CI 体验和 Mac 上容器生态，信号强于一般应用项目｜原文：https://github.com/apple/container
+
+2. addyosmani/agent-skills
+看点：把 AI coding agent 的工程技能做成可复用资产，明显踩中了“让代理真正能干活”的核心需求。
+为什么值得看：今天很多人都在做 agent，但真正高价值的是可迁移的方法论和技能库，这个仓库有较强实用性｜原文：https://github.com/addyosmani/agent-skills
+
+papers.cool/arxiv
+1. Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning
+看点：不是单纯给模型喂更多知识，而是让检索专门服务“类比推理”，再结合强化微调提升复杂推理能力。
+为什么值得看：如果你关心 RAG 下一步怎么从“找相似文本”升级到“找可迁移思路”，这篇很值得跟｜原文：https://papers.cool/arxiv/2606.13680
+
+2. HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents
+看点：把多步工具调用折叠成更高层的可执行单元，减少上下文浪费和低级流程暴露，明显贴近真实 agent 系统。
+为什么值得看：它讨论的是 agent 真落地时最痛的效率问题，不只是 benchmark 提分，对工具式智能体设计很有参考价值｜原文：https://papers.cool/arxiv/2606.13663
