@@ -1,0 +1,153 @@
+<!--
+input: Claude Code prompt evolution article and its runtime化 argument.
+output: Deterministic architecture / logic diagram used as a blog image.
+pos: Visual explanation asset for content/posts/260615/index.md.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Code Agent Runtime 架构逻辑图</title>
+  <desc id="desc">Prompt 快照差异如何被抽象成 Agent Runtime：证据输入进入 runtime kernel，再连接权限、沙箱、编排、验证、记忆、调度和远程模块。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f4ee; }
+      .panel { fill: #fffdfa; stroke: #c9d2d0; stroke-width: 2; }
+      .panel-blue { fill: #eef7f6; stroke: #2f7d7a; stroke-width: 2.5; }
+      .panel-amber { fill: #fff4df; stroke: #b7791f; stroke-width: 2.5; }
+      .panel-indigo { fill: #f2f4ff; stroke: #5964c8; stroke-width: 2.5; }
+      .panel-red { fill: #fff1f0; stroke: #c2413a; stroke-width: 2.5; }
+      .muted { fill: #5e6b73; font-size: 23px; }
+      .small { fill: #53616a; font-size: 22px; }
+      .tiny { fill: #61717a; font-size: 19px; }
+      .label { fill: #1f2933; font-size: 26px; font-weight: 700; }
+      .title { fill: #1f2933; font-size: 43px; font-weight: 800; }
+      .subtitle { fill: #4f5f68; font-size: 24px; }
+      .mono { font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace; }
+      text { font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+      .arrow { stroke: #33515c; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .arrow-soft { stroke: #5f7780; stroke-width: 2.5; fill: none; marker-end: url(#arrowSoft); }
+      .arrow-dashed { stroke: #6a7e86; stroke-width: 2.5; fill: none; stroke-dasharray: 9 8; marker-end: url(#arrowSoft); }
+      .connector { stroke: #9aa9ad; stroke-width: 1.5; fill: none; stroke-dasharray: 4 8; }
+      .chip { fill: #20323a; opacity: .92; }
+      .chip-text { fill: #ffffff; font-size: 20px; font-weight: 700; }
+      .accent { fill: #2f7d7a; }
+      .accent-amber { fill: #c47a1f; }
+      .accent-indigo { fill: #5964c8; }
+      .accent-red { fill: #c2413a; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#33515c"/>
+    </marker>
+    <marker id="arrowSoft" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f7780"/>
+    </marker>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#30414a" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" width="1600" height="980"/>
+  <path class="connector" d="M110 150H1490M110 820H1490M210 110V870M1390 110V870"/>
+
+  <text class="title" x="800" y="76" text-anchor="middle">Claude Code 如何长成 Agent Runtime</text>
+  <text class="subtitle" x="800" y="118" text-anchor="middle">从“工具说明写在 prompt 里”到“权限、沙箱、编排、验证、记忆被协议化”</text>
+
+  <g filter="url(#shadow)">
+    <rect class="panel" x="84" y="206" width="286" height="360" rx="22"/>
+    <text class="label" x="122" y="254">输入证据层</text>
+    <text class="small" x="122" y="292">341 个版本快照</text>
+    <line x1="122" y1="312" x2="330" y2="312" stroke="#d7dfdc" stroke-width="2"/>
+    <g>
+      <rect x="122" y="338" width="206" height="48" rx="12" fill="#eef7f6" stroke="#9cc8c4"/>
+      <text class="tiny" x="142" y="369">Prompt 体量差异</text>
+      <circle cx="312" cy="362" r="6" class="accent"/>
+    </g>
+    <g>
+      <rect x="122" y="406" width="206" height="48" rx="12" fill="#f2f4ff" stroke="#b7bdf0"/>
+      <text class="tiny" x="142" y="437">Tool 协议差异</text>
+      <circle cx="312" cy="430" r="6" class="accent-indigo"/>
+    </g>
+    <g>
+      <rect x="122" y="474" width="206" height="48" rx="12" fill="#fff4df" stroke="#e1bf7a"/>
+      <text class="tiny" x="142" y="505">原文引文校验</text>
+      <circle cx="312" cy="498" r="6" class="accent-amber"/>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="panel-blue" x="505" y="214" width="590" height="314" rx="28"/>
+    <text class="label" x="800" y="264" text-anchor="middle">Agent Runtime Kernel</text>
+    <text class="muted" x="800" y="303" text-anchor="middle">把工程师临时判断固化成运行时保证</text>
+    <g>
+      <rect class="chip" x="560" y="346" width="150" height="46" rx="23"/>
+      <text class="chip-text" x="635" y="376" text-anchor="middle">身份翻转</text>
+      <text class="tiny mono" x="635" y="421" text-anchor="middle">CLI → Agent</text>
+    </g>
+    <g>
+      <rect class="chip" x="725" y="346" width="150" height="46" rx="23"/>
+      <text class="chip-text" x="800" y="376" text-anchor="middle">主循环</text>
+      <text class="tiny" x="800" y="421" text-anchor="middle">观察 → 计划 → 行动</text>
+    </g>
+    <g>
+      <rect class="chip" x="890" y="346" width="150" height="46" rx="23"/>
+      <text class="chip-text" x="965" y="376" text-anchor="middle">治理路由</text>
+      <text class="tiny" x="965" y="421" text-anchor="middle">权限·沙箱·预算</text>
+    </g>
+    <text class="small" x="800" y="474" text-anchor="middle">Prompt 不再只是指令文本，而是 runtime contract 的载体</text>
+  </g>
+
+  <path class="arrow" d="M370 386 C420 386 445 374 505 374"/>
+
+  <g filter="url(#shadow)">
+    <rect class="panel-amber" x="1200" y="170" width="290" height="146" rx="20"/>
+    <text class="label" x="1345" y="218" text-anchor="middle">权限 / 计划</text>
+    <text class="small" x="1345" y="256" text-anchor="middle">EnterPlanMode</text>
+    <text class="tiny" x="1345" y="286" text-anchor="middle">allowedPrompts 最小授权</text>
+  </g>
+  <path class="arrow-soft" d="M1095 300 C1140 260 1160 235 1200 235"/>
+
+  <g filter="url(#shadow)">
+    <rect class="panel-red" x="1200" y="374" width="290" height="146" rx="20"/>
+    <text class="label" x="1345" y="422" text-anchor="middle">沙箱 / 副作用</text>
+    <text class="small" x="1345" y="460" text-anchor="middle">Bash 默认受限</text>
+    <text class="tiny" x="1345" y="490" text-anchor="middle">Git safety protocol</text>
+  </g>
+  <path class="arrow-soft" d="M1095 385 C1138 405 1160 430 1200 445"/>
+
+  <g filter="url(#shadow)">
+    <rect class="panel-indigo" x="1200" y="578" width="290" height="146" rx="20"/>
+    <text class="label" x="1345" y="626" text-anchor="middle">验证 / 汇报</text>
+    <text class="small" x="1345" y="664" text-anchor="middle">faithful reporting</text>
+    <text class="tiny" x="1345" y="694" text-anchor="middle">失败要说失败和输出</text>
+  </g>
+  <path class="arrow-soft" d="M1032 528 C1095 600 1140 645 1200 651"/>
+
+  <g filter="url(#shadow)">
+    <rect class="panel-blue" x="505" y="642" width="278" height="154" rx="20"/>
+    <text class="label" x="644" y="692" text-anchor="middle">Workflow 编排</text>
+    <text class="small" x="644" y="730" text-anchor="middle">agent / parallel / phase</text>
+    <text class="tiny" x="644" y="760" text-anchor="middle">预算、并发、恢复</text>
+  </g>
+  <path class="arrow-soft" d="M705 528 C675 568 654 598 644 642"/>
+
+  <g filter="url(#shadow)">
+    <rect class="panel-blue" x="817" y="642" width="278" height="154" rx="20"/>
+    <text class="label" x="956" y="692" text-anchor="middle">持久记忆</text>
+    <text class="small" x="956" y="730" text-anchor="middle">auto memory</text>
+    <text class="tiny" x="956" y="760" text-anchor="middle">user / project / reference</text>
+  </g>
+  <path class="arrow-soft" d="M900 528 C926 568 946 598 956 642"/>
+
+  <g filter="url(#shadow)">
+    <rect class="panel" x="84" y="640" width="286" height="156" rx="20"/>
+    <text class="label" x="227" y="690" text-anchor="middle">会话外器官</text>
+    <text class="small" x="227" y="728" text-anchor="middle">Cron / Monitor</text>
+    <text class="tiny" x="227" y="758" text-anchor="middle">RemoteTrigger / DesignSync</text>
+  </g>
+  <path class="arrow-dashed" d="M505 486 C398 548 315 598 252 640"/>
+
+  <path class="arrow-dashed" d="M956 796 C940 870 710 888 520 826 C390 784 302 774 226 796"/>
+
+  <g>
+    <rect x="350" y="865" width="900" height="58" rx="29" fill="#20323a"/>
+    <text x="800" y="903" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">核心读法：不是“更长的 system prompt”，而是“软件工程运行时被写进协议层”</text>
+  </g>
+</svg>
