@@ -1,0 +1,23 @@
+AI 博客
+1. 人工智能尚未取代软件工程师，未来也不会
+看点：Simon Willison 直指“AI 快替代程序员”的叙事过度简化，强调真实瓶颈在需求理解、系统设计、协作与责任闭环。
+为什么值得看：这篇最适合给所有正在重估开发者角色的人校准预期，观点克制但很扎实｜原文：https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything
+2. AI 的破碎经济学
+看点：从成本、商业模式和价值兑现三条线审视当下 AI 产业，核心判断是技术进步很快，但经济回报结构并不健康。
+为什么值得看：如果你更关心 AI 行业接下来是继续狂奔还是进入出清，这篇比产品发布会更有信号｜原文：https://www.wheresyoured.at/brokenomics/
+
+GitHub Trending
+1. Agent-Reach
+看点：一个让 AI agent 直接读写和搜索 Twitter、Reddit、YouTube、GitHub、B 站、小红书等站点的 CLI，主打“零 API 费”。
+为什么值得看：今天榜单里真正有新意的项目不多，这个最贴近 agent 实战，适合做信息获取层或自动化原型｜原文：https://github.com/Panniantong/Agent-Reach
+
+papers.cool/arxiv
+1. AgentSpec：用可控组合拆解具身 Agent 脚手架
+看点：把 perception、memory、reasoning、reflection、action 等模块标准化重组，研究 agent 性能到底来自单模块还是组合关系。
+为什么值得看：对做 agent 系统的人很有价值，重点不是再堆模块，而是理解“什么搭配在什么环境下有效”｜原文：https://papers.cool/arxiv/2606.14674
+2. AdaSR：自适应流式推理
+看点：让模型在输入流到来时边读边想，并动态决定何时深想、分配多少计算，目标是兼顾准确率、延迟和算力效率。
+为什么值得看：这比常规“更强推理”论文更贴近视频、语音、实时交互等真实场景，工程含义比较直接｜原文：https://papers.cool/arxiv/2606.14694
+3. CORA：修补多模态推理里“思考过程”和“最终答案”不一致的问题
+看点：给多模态 RLVR 加入一致性奖励，降低看起来想得很多、但答案和推理对不上的情况。
+为什么值得看：如果多模态 agent 要进生产，faithfulness 是绕不过去的，这篇切的问题很实在｜原文：https://papers.cool/arxiv/2606.14691
