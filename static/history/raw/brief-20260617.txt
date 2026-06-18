@@ -1,0 +1,28 @@
+AI 博客
+1. AI 的破碎经济学
+看点：直指 AI 行业表面繁荣背后的亏损结构，点名高投入、低可持续性的根本矛盾。
+为什么值得看：这不是模型小更新，而是对整轮 AI 商业化叙事的压力测试｜原文：https://www.wheresyoured.at/brokenomics/
+
+2. OpenAI 2025 年亏损近 8 倍，支出达 340 亿美元
+看点：用更具体的财务数字把“烧钱换增长”讲透，补全上一条的现实证据。
+为什么值得看：如果你关心大模型公司的护城河、估值和未来价格战，这篇很关键｜原文：https://www.wheresyoured.at/exclusive-openai-financials/
+
+3. Auth.md：AI 代理注册开放协议
+看点：试图把 AI 代理访问服务时的注册、权限发现和 OAuth 流程标准化。
+为什么值得看：Agent 真正走向可用，协议层比又一个 demo 更重要，这篇有基础设施意义｜原文：https://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q22026
+
+GitHub Trending
+今天没有特别值得推的内容。
+
+papers.cool/arxiv
+1. Context-Aware RL for Agentic and Multimodal LLMs
+看点：不是只奖最终答案，而是训练模型识别“哪段上下文真正支撑答案”，同时覆盖 agent 轨迹和多模态任务。
+为什么值得看：对长链路 agent、工具调用和视觉问答都更贴近真实瓶颈，方法也有实操迁移价值｜原文：https://papers.cool/arxiv/2606.17053
+
+2. KVEraser：高效擦除局部上下文的 KV Cache 方法
+看点：在长上下文里发现脏信息、错误工具结果或提示注入后，不必整段重算，直接编辑 KV cache。
+为什么值得看：这类“事后纠错”能力非常适合真实 Agent 系统，兼顾安全、延迟和成本｜原文：https://papers.cool/arxiv/2606.17034
+
+3. The Value Axis：模型会编码自己是否走在正确轨道上
+看点：论文尝试证明模型内部存在一条“价值轴”，能反映当前策略是否更可能成功，并影响自信、回退和探索行为。
+为什么值得看：如果结论站得住，会直接影响我们理解推理、自纠和对齐后的内部机制｜原文：https://papers.cool/arxiv/2606.17056
