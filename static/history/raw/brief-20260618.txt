@@ -1,0 +1,23 @@
+AI 博客
+1. Qwen3.6-27B 是强大的本地编码助手
+看点：Georgi Gerganov 公开背书，称它已能稳定承担日常本地编码任务，在 M2 Ultra 和 RTX 5090 上都很好用。
+为什么值得看：这是少见来自一线基础设施作者的高可信实战评价，对关注本地模型落地的人信号很强｜原文：https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything
+2. AI 正在颠覆代码生产的经济学
+看点：Charity Majors 认为代码生成已从昂贵稀缺品变成近乎免费、可丢弃、可重生的产物，软件工程的价值坐标正在迁移。
+为什么值得看：它不是聊“会不会替代”，而是直接讨论团队该如何重新看待代码、维护与工程流程｜原文：https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything
+
+GitHub Trending
+1. Agent-Reach
+看点：一个让 AI agent 直接读搜 Twitter、Reddit、YouTube、GitHub、B 站、小红书的 CLI，主打零 API 费和全网可达。
+为什么值得看：如果你在做信息检索型 agent，这类“低成本接入真实互联网”的工具非常实用，今天热度也最高｜原文：https://github.com/Panniantong/Agent-Reach
+2. codebase-memory-mcp
+看点：把代码库索引成持久知识图谱，支持 158 种语言、极低查询延迟、显著降低 token 消耗。
+为什么值得看：这类基础设施正好卡在“代码智能 + agent 工具链”的关键位置，比单纯套壳应用更有长期价值｜原文：https://github.com/DeusData/codebase-memory-mcp
+
+papers.cool/arxiv
+1. Variable-Width Transformers
+看点：提出非均匀宽度 Transformer，前后层更宽、中间层更窄，在同参数量下优于均匀基线，还能减少约 22% FLOPs 和 15% KV cache 成本。
+为什么值得看：这是少见同时兼顾效果与推理成本的架构改进，对大模型训练和部署都很有参考意义｜原文：https://papers.cool/arxiv/2606.18246
+2. Zone of Proximal Policy Optimization
+看点：把教师能力放进 prompt 而不是直接放进梯度，试图解决小模型蒸馏和 RL 中常见的泛化与漂移问题。
+为什么值得看：如果你关注后训练、蒸馏和 VLM/LLM 小模型增强，这篇方法论上有新意，也给出了跨多基准的收益｜原文：https://papers.cool/arxiv/2606.18216
