@@ -1,6 +1,6 @@
 ---
 title: "RTK: 一个 Rust 写的 CLI 代理，把 LLM Token 消耗砍掉 80%"
-date: 2026-03-31
+date: 2026-04-01
 categories:
   - AI
   - 工具
