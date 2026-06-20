@@ -1,0 +1,26 @@
+AI 博客
+1. GLM-5.2：可能是最强大的纯文本开源大模型
+看点：7530 亿参数、MoE 架构、MIT 开源，属于近期最值得关注的纯文本开源模型发布。
+为什么值得看：对开源 LLM 选型和能力上限有直接参考价值｜原文：https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything
+2. “Popa”僵尸网络与以色列上市公司关联
+看点：研究把持续多年的 Android 僵尸网络、广告欺诈与上市公司商业代理服务链条联系起来。
+为什么值得看：不是普通安全新闻，而是把黑产基础设施和正规商业利益连到了一起｜原文：https://krebsonsecurity.com/2026/06/popa-botnet-linked-to-publicly-traded-israeli-firm/
+3. AI 颠覆了代码生产的经济学
+看点：生成代码越来越便宜，真正稀缺的转向工程纪律、验证、维护和系统性判断。
+为什么值得看：这篇很适合拿来校准团队对 AI 编程的预期，不是喊口号而是改生产逻辑｜原文：https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything
+
+GitHub Trending
+1. obra/superpowers
+看点：今天增长最猛，主打 agentic skills framework 和一套可执行的软件开发方法论。
+为什么值得看：如果你在关注 AI agent 如何真正落地到开发流程，这个项目信号最强｜原文：https://github.com/obra/superpowers
+2. google-research/timesfm
+看点：Google Research 的时间序列基础模型，适合预测类场景，今天热度也很高。
+为什么值得看：比一般 demo 型热门仓库更扎实，面向真实 forecasting 任务更有复用价值｜原文：https://github.com/google-research/timesfm
+
+papers.cool/arxiv
+1. DreamReasoner-8B：面向推理的扩散语言模型
+看点：研究 block-size curriculum learning，让扩散式语言模型在长链推理上逼近主流开源自回归模型。
+为什么值得看：如果这条路线成立，可能影响未来高效推理模型的训练与推理范式｜原文：https://papers.cool/arxiv/2606.19257
+2. Learning User Simulators with Turing Rewards
+看点：用“像不像真人”而不是“像不像标准答案”来训练用户模拟器，面向 agent、个性化和评测都很关键。
+为什么值得看：这类方法对训练更真实的交互式 AI 系统很实用，也有明显外溢价值｜原文：https://papers.cool/arxiv/2606.19336
