@@ -47,3 +47,9 @@ content/posts/.claude/
 # Stray screenshots / debug artifacts
 tweet-screenshot.png
 *-screenshot.png
+
+# Ephemeral / generated artifacts
+__pycache__/
+*.pyc
+implementation-notes.md
+Pasted image*.png

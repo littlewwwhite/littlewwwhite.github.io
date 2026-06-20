@@ -18,14 +18,6 @@
    /blog-format 251028
    ```
 
-### 本地预览
-
-```bash
-hugo server -D
-```
-
-访问 http://localhost:1313
-
 ### 发布
 
 ```bash
@@ -35,6 +27,16 @@ git push
 ```
 
 GitHub Actions 会自动部署到 GitHub Pages。
+
+### 内容分发
+
+```bash
+bun run publish:pack
+bun run publish:open
+```
+
+`publish:pack` 会按 frontmatter date 选择最新文章，生成 `_dist/<slug>/` 发布包和 `aibeike-fill-plan.json`，默认停在同步前。
+`publish:open` 会生成发布包和填表计划，然后打开爱贝壳扩展。
 
 ## 目录结构
 

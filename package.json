@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "publish:pack": "python3 .agents/skills/distribute/scripts/prepare_publish_pack.py --latest --no-browser",
+    "publish:open": "python3 .agents/skills/distribute/scripts/prepare_publish_pack.py --latest",
+    "publish:check": "python3 .agents/skills/distribute/tests/test_generate_publish_pack.py && python3 .agents/skills/distribute/tests/test_prepare_publish_pack.py && python3 .agents/skills/distribute/tests/test_build_aibeike_fill_plan.py && python3 .claude/skills/distribute/tests/test_generate_publish_pack.py && python3 .claude/skills/distribute/tests/test_prepare_publish_pack.py && python3 .claude/skills/distribute/tests/test_build_aibeike_fill_plan.py && hugo --gc --minify"
+  }
+}
