@@ -1,0 +1,26 @@
+AI 博客
+1. AI 的数据黑洞
+看点：这篇文章直指大模型继续扩张的核心瓶颈不是算力而是“样本效率”——现在的 AI 仍在吞噬海量数据，离更高效学习还有明显距离。
+为什么值得看：这是理解下一阶段 AI 竞争焦点的高信号文章，关系到训练范式、数据壁垒和模型上限｜原文：https://www.dwarkesh.com/p/the-sample-efficiency-black-hole-2
+
+2. “Popa”僵尸网络与上市公司关联
+看点：一个持续四年的安卓僵尸网络，被追查到可能与一家上市公司旗下代理网络业务存在关联，背后牵出广告欺诈、账号劫持和大规模抓取。
+为什么值得看：不是普通安全新闻，而是把黑灰产、代理基础设施和正规商业实体的边界问题摆到了台面上｜原文：https://krebsonsecurity.com/2026/06/popa-botnet-linked-to-publicly-traded-israeli-firm/
+
+3. 开源与无形之手
+看点：一边是每周千万级下载，一边是单维护者、零收入，文章用极简案例把开源生态的激励失衡说得很透。
+为什么值得看：对做开发工具、AI 基础设施和独立开源的人都很有现实意义，值得当成行业结构性问题来看｜原文：https://nesbitt.io/2026/06/18/open-source-vs-the-invisible-hand.html
+
+GitHub Trending
+1. codebase-memory-mcp
+看点：把代码库索引成持久知识图谱，主打超低延迟查询、超低 token 消耗，明显是给 AI 编码/Agent 工作流做基础设施。
+为什么值得看：这类“让 Agent 真正记住代码库”的能力比又一个聊天壳子更实用，且今天热度很高｜原文：https://github.com/DeusData/codebase-memory-mcp
+
+2. TimesFM
+看点：Google Research 的时间序列基础模型开源项目，面向预测任务，属于“基础模型从文本/图像走向时序数据”的代表方向。
+为什么值得看：如果你关注金融、供应链、运维监控或需求预测，这是少数兼具研究背景和落地想象力的项目｜原文：https://github.com/google-research/timesfm
+
+papers.cool/arxiv
+1. Hierarchical Recovery for Cross-Device Agent Systems
+看点：论文聚焦跨设备 Agent 在失败后的恢复机制，不只会“全局重规划”，而是把设备本地修复与全局重规划分层处理，还配了专门基准。
+为什么值得看：这是 Agent 从 demo 走向可靠执行的关键问题，尤其适合关注 computer use、多端协作和生产级代理系统的人｜原文：https://papers.cool/arxiv/2606.20487
