@@ -1,0 +1,23 @@
+AI 博客
+1. AI核心的数据黑洞
+看点：指出当前大模型进步背后最硬的瓶颈不是算力而是样本效率，海量数据堆砌正在逼近边际收益下降。
+为什么值得看：这是理解下一阶段模型突破会落在“更高效利用数据”还是“继续暴力扩容”上的关键文章｜原文：https://www.dwarkesh.com/p/the-sample-efficiency-black-hole
+2. 引用Sean Lynch关于MCP的观点
+看点：把认证从代理上下文里剥离，甚至把MCP收敛成“认证网关”，直指 AI agent 落地时最现实的安全与架构问题。
+为什么值得看：不是泛泛聊 agent 愿景，而是给出很具体的系统边界思路，对做工具调用和企业接入的人尤其有启发｜原文：https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything
+
+GitHub Trending
+1. codebase-memory-mcp
+看点：把代码库索引成持久知识图谱，主打 158 种语言、低延迟查询和大幅降 token，明显瞄准 AI 编程助手的“长期记忆”痛点。
+为什么值得看：如果效果属实，这类基础设施会直接提升复杂代码库上的 agent 可用性，比又一个聊天壳子更有实际价值｜原文：https://github.com/DeusData/codebase-memory-mcp
+2. OpenMontage
+看点：把视频生产拆成 12 条流水线、52 个工具、500+ agent skills，试图把“AI 写代码”扩成“AI 做完整视频制作”。
+为什么值得看：虽然概念感较强，但它代表了 agent 从单点能力走向端到端工作流编排的方向，值得观察是否能跑通真实产出｜原文：https://github.com/calesthio/OpenMontage
+
+papers.cool/arxiv
+1. Hierarchical Recovery for Cross-Device Agent Systems
+看点：研究跨 Linux/Android 多设备 agent 在失败后的分层恢复，而不是粗暴全局重规划，重点解决真实执行中的修复成本。
+为什么值得看：这比单纯刷 benchmark 更贴近 computer-use agent 的工程现实，对未来多端协同代理很重要｜原文：https://papers.cool/arxiv/2606.20487
+2. Implicit Feedback from Users
+看点：用鼠标轨迹和眼动等隐式反馈来做 LLM 对齐，实验显示相对纯文本偏好信号能明显提升奖励模型和 DPO 效果。
+为什么值得看：如果隐式反馈真能稳定采集，LLM 对齐的数据来源会被大幅扩展，这对产品级持续优化很有想象空间｜原文：https://papers.cool/arxiv/2606.20482
