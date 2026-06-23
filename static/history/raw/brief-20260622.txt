@@ -1,0 +1,26 @@
+AI 博客
+1. Cloudflare 临时账户支持 AI 代理
+看点：现在可直接用临时账户部署 Workers，几乎把 AI agent/原型应用的上手门槛砍到最低。
+为什么值得看：这是“让 agent 直接触达生产能力”的基础设施更新，实用性很强｜原文：https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything
+
+2. sqlite-utils 4.0rc1 引入迁移和嵌套事务
+看点：给 SQLite 工作流补上 migrations 和 nested transactions，两项都是工程落地里的关键能力。
+为什么值得看：对本地优先、轻量部署、AI 工具链常见的 SQLite 场景很有价值｜原文：https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything
+
+GitHub Trending
+1. chopratejas/headroom
+看点：在日志、工具输出、RAG chunk 进入模型前先做压缩，主打大幅降 token 但尽量不伤答案质量。
+为什么值得看：这是当下 agent/RAG 系统最现实的降本增效方向之一，通用性比“单点炫技项目”更强｜原文：https://github.com/chopratejas/headroom
+
+2. calesthio/OpenMontage
+看点：把 agent 工作流扩展到视频生产，号称覆盖脚本、剪辑、工具链编排等完整流程。
+为什么值得看：虽然还偏早期，但它代表了 AI agent 从写代码走向复杂内容生产的一个清晰趋势｜原文：https://github.com/calesthio/OpenMontage
+
+papers.cool/arxiv
+1. Beyond Global Replanning: Hierarchical Recovery for Cross-Device Agent Systems
+看点：研究多设备 agent 在失败后的分层恢复，不是一出错就全局重规划，而是先做设备内修复。
+为什么值得看：这是 computer-use agent 真正走向稳定可用的关键问题，且直接关系成本、成功率和可维护性｜原文：https://papers.cool/arxiv/2606.20487
+
+2. Your Mouse and Eyes Secretly Leak Your Preference: LLM Alignment using Implicit Feedback from Users
+看点：把鼠标轨迹和眼动这类隐式反馈引入对齐，提升 reward model 与后续偏好优化效果。
+为什么值得看：如果这条路线成立，未来高质量对齐数据不必完全依赖昂贵的显式人工标注｜原文：https://papers.cool/arxiv/2606.20482
