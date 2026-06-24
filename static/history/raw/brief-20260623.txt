@@ -1,0 +1,23 @@
+AI 博客
+1. Cloudflare 临时账户：AI 代理可直接部署 Workers
+看点：不用注册账号，`wrangler deploy --temporary` 就能起服务，明显降低 AI agent 与个人开发者的部署摩擦。
+为什么值得看：这是很实用的基础设施变化，可能直接影响一批 agent 工作流设计｜原文：https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything
+2. 专家感知量化：接近 Q2 体积拿到接近 Q4 质量
+看点：针对 MoE 模型只保关键专家、重压缩非关键专家，本地推理在尺寸和质量之间找到更优平衡。
+为什么值得看：对本地部署和低成本推理很有现实意义，不是空谈 benchmark｜原文：https://martinalderson.com/posts/expert-aware-quantisation/?utm_source=rss&utm_medium=rss&utm_campaign=feed
+
+GitHub Trending
+1. OpenMontage
+看点：开源 agent 化视频生产系统，号称覆盖 12 条流水线、52 个工具、500+ skills，野心很大。
+为什么值得看：如果你关心“AI 从写代码走向做内容”，这是今天最值得观察的项目之一｜原文：https://github.com/calesthio/OpenMontage
+2. Anthropic-Cybersecurity-Skills
+看点：把 800+ 网络安全技能按 ATT&CK、NIST 等框架结构化，面向 Claude Code、Copilot、Codex 等 agent 复用。
+为什么值得看：这类“给 agent 喂可执行安全能力”的资产，实操价值比普通提示词仓库高很多｜原文：https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+
+papers.cool/arxiv
+1. H-RePlan：跨设备 Agent 的分层恢复机制
+看点：把设备内局部修复与全局重规划拆开做，还配了 Linux+Android 的故障注入基准 HeraBench。
+为什么值得看：多设备 agent 真正落地时，鲁棒性比单次成功更关键，这篇更像可复用系统方案｜原文：https://papers.cool/arxiv/2606.20487
+2. 用鼠标轨迹和眼动做 LLM 对齐
+看点：不靠显式打分，而是用隐式反馈训练奖励模型，文本奖励准确率从 55% 提到 64%，DPO 后质量提升也明显。
+为什么值得看：如果这条路线成立，未来采集用户偏好数据的成本会显著下降｜原文：https://papers.cool/arxiv/2606.20482
