@@ -1,0 +1,23 @@
+AI 博客
+1. 提示注入作为角色混淆
+看点：把 prompt injection 解释成“角色混淆”，从模型如何理解自己身份与指令的角度重构这类攻击。
+为什么值得看：这是今天最有方法论价值的一篇，直接影响 agent/工具调用场景下的防御设计｜原文：https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything
+2. 即将到来的循环
+看点：作者判断下一阶段不是“人直接提问模型”，而是把模型接入持续运行的任务循环，让 agent 自动接活、执行、回写。
+为什么值得看：比单纯聊 agents 更具体，适合判断自动化工作流和 AI coding 的产品方向｜原文：https://lucumr.pocoo.org/2026/6/23/the-coming-loop/
+
+GitHub Trending
+1. OpenMontage
+看点：开源 agent 化视频生产系统，号称覆盖 12 条 pipeline、52 个工具、500+ skills，定位非常明确。
+为什么值得看：如果你关心“AI 不只是聊天，而是完整内容生产流水线”，这是今天最值得点开的项目｜原文：https://github.com/calesthio/OpenMontage
+2. Anthropic-Cybersecurity-Skills
+看点：把 817 个网络安全技能结构化整理，并映射到 MITRE ATT&CK、NIST CSF、ATLAS 等框架，面向 AI agents 复用。
+为什么值得看：不是炫 demo，而是偏基础设施和知识工程，实际更容易被安全 agent、Copilot 工作流直接吃进去｜原文：https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+
+papers.cool/arxiv
+1. Randomized YaRN Improves Length Generalization for Long-Context Reasoning
+看点：通过随机化位置编码和长度课程训练，让模型在只见过短上下文时，也能更稳泛化到 16K-128K 长上下文推理。
+为什么值得看：长上下文一直是实战瓶颈，这篇更像可操作训练 recipe，不只是 benchmark 刷分｜原文：https://papers.cool/arxiv/2606.23687
+2. EnterpriseClawBench: Benchmarking Agents from Real Workplace Sessions
+看点：基于真实企业工作会话构造 852 个可复现实验任务，专门测企业 agent 在文件、工具、交付物上的真实表现。
+为什么值得看：比通用 benchmark 更贴近“公司里到底能不能用 agent”，对评估企业级 AI 落地很有参考价值｜原文：https://papers.cool/arxiv/2606.23654
