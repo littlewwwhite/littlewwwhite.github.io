@@ -1,0 +1,23 @@
+AI 博客
+1. “无处可防”：当只有一种语言存在此类漏洞时，用户如是说
+看点：libssh2 的 CVE-2026-55200 暴露了经典内存安全问题，直接可远程利用。
+为什么值得看：安全团队和后端维护者都能立刻对照排查，属于高优先级修复信号。｜原文：https://xeiaso.net/shitposts/no-way-to-prevent-this/memory-safety/CVE-2026-55200/
+2. [赞助] WorkOS：代理需要认证。现在有了相关规范。
+看点：auth.md 试图把“代理替用户注册/授权”标准化，补上 agent 时代的认证缺口。
+为什么值得看：这是很实用的基础设施方向，可能直接影响 AI agent 接入真实产品的方式。｜原文：http://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q32026
+
+GitHub Trending
+1. apple/container
+看点：Mac 上用轻量虚拟机创建和运行 Linux 容器，明显偏基础设施与本地开发体验。
+为什么值得看：Apple 官方项目，若你在 Mac/Apple Silicon 上做容器相关开发，这个值得重点看。｜原文：https://github.com/apple/container
+2. calesthio/OpenMontage
+看点：把 AI coding assistant 变成视频制作工作室，集成了多条 pipeline 和大量 agent skills。
+为什么值得看：很像“AI 工作流编排”的实战样板，适合关注 agent 工具链的人。｜原文：https://github.com/calesthio/OpenMontage
+
+papers.cool/arxiv
+1. SHERLOC: Structured Diagnostic Localization for Code Repair Agents
+看点：面向代码修复 agent 的结构化定位框架，直接提升 SWE-Bench 上的定位与修复效率。
+为什么值得看：对做 coding agent、自动修 bug、repo-level 工具调用的人非常实用。｜原文：https://papers.cool/arxiv/2606.24820
+2. Are We Ready For An Agent-Native Memory System?
+看点：系统性评估 12 种 agent memory 架构，讨论存储、检索、维护和成本权衡。
+为什么值得看：这是 agent 长期记忆方向的高密度综述+实验，适合做产品和架构选型参考。｜原文：https://papers.cool/arxiv/2606.24775
