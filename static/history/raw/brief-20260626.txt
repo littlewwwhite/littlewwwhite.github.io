@@ -1,0 +1,26 @@
+AI 博客
+1. AI 代理需要身份验证，现在有了规范
+看点：WorkOS 提出 auth.md，让网站用类似 robots.txt 的方式声明 AI 代理如何注册、授权和拿凭证，Cloudflare、Firecrawl、Resend 已开始采用。
+为什么值得看：这是 AI agent 真正走向可用基础设施的一环，和账户体系、OAuth、自动化接入直接相关｜原文：http://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q32026
+
+2. AI 与责任
+看点：德国判例把 AI 概览的错误信息责任明确压回部署方，意味着“模型乱说”不再是可轻易甩掉的免责理由。
+为什么值得看：这比泛泛讨论 AI 风险更实在，直接影响产品上线、法务审查和高风险场景部署｜原文：https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything
+
+GitHub Trending
+1. OpenMontage
+看点：一个开源 agentic 视频生产系统，号称覆盖 12 条流水线、52 个工具、500+ agent skills，把 AI 编程助手扩展成视频工作室。
+为什么值得看：如果你关心 AI agent 从写代码走向多媒体生产，这是少见的完整工作流项目，不只是 demo｜原文：https://github.com/calesthio/OpenMontage
+
+2. design.md
+看点：Google Labs 在推一个给 coding agents 理解视觉规范的 DESIGN.md 格式，想把设计系统变成代理可持续读取的结构化上下文。
+为什么值得看：这很可能成为“给 AI 写设计说明”的早期约定，对前端生成、设计协作和品牌一致性都很关键｜原文：https://github.com/google-labs-code/design.md
+
+papers.cool/arxiv
+1. Real-Time Voice AI Hears but Does Not Listen
+看点：评测发现主流实时语音 AI 虽能识别哭腔、恐惧、讽刺，却常在决策时忽略这些信号，像只看文字转录一样行动。
+为什么值得看：这对客服、风控、语音代理是非常具体的警告，说明“听见情绪”和“按情绪做判断”之间还有明显鸿沟｜原文：https://papers.cool/arxiv/2606.26083
+
+2. Same Evidence, Different Answer
+看点：这篇论文审计多模态大模型对信息顺序的敏感性，发现同样证据换个顺序，18 个模型都会明显翻答案。
+为什么值得看：它直指模型可靠性短板；如果你的应用依赖长上下文、多图文混排或检索拼接，这个问题非常实际｜原文：https://papers.cool/arxiv/2606.26079
