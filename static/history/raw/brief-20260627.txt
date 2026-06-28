@@ -1,0 +1,23 @@
+AI 博客
+1. 下一个重大突破将是 AI 在工作中学习
+看点：最有价值的数据不在静态语料，而在真实工作流里的即时反馈；作者把“边干边学”视为下一阶段范式跃迁。
+为什么值得看：这不是又一篇空谈 AGI 的文章，而是直接指向企业怎么把模型接入生产闭环｜原文：https://www.dwarkesh.com/p/the-next-paradigm
+2. AI 与责任
+看点：德国最新判例开始把 AI 代理的错误回答责任，明确压回部署它的组织而不是“模型自己”。
+为什么值得看：对做 AI 产品、搜索摘要、客服代理的人都很关键，合规和风控门槛会被迅速抬高｜原文：https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything
+3. 2000 人尝试破解我的 AI 助手后发生了什么
+看点：6000 次攻击、约 500 美元 token 成本，最终仍未泄露秘密，给出了一个少见的真实对抗样本。
+为什么值得看：比泛泛谈提示注入更有参考价值，适合看防护边界、成本与工程取舍｜原文：https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything
+
+GitHub Trending
+1. design.md
+看点：Google Labs 推的规范文件，想把“设计系统”像 README 一样结构化交给编码代理长期理解和复用。
+为什么值得看：如果 AI 编程正进入团队协作阶段，这类约定可能会变成前端/产品设计的新基础设施｜原文：https://github.com/google-labs-code/design.md
+
+papers.cool/arxiv
+1. 用自主探索与 hindsight 经验提升 GUI Agent 规划能力
+看点：核心不是堆更大模型，而是先让智能体自己探索，再把经验回灌成高层训练数据，7B 模型在真实 GUI 任务上打赢 32B。
+为什么值得看：对网页代理、桌面代理和低成本多模态 Agent 很实用，方法论比单点刷榜更有迁移性｜原文：https://papers.cool/arxiv/2606.27330
+2. 多语言推理级联需要更多上下文
+看点：论文证明“先翻译成英文推理再翻回去”会丢关键信息，保留原始问题到最后一步能稳定提升效果。
+为什么值得看：结论简单但很能落地，做多语种助手、翻译问答、海外产品的人几乎可以直接改 pipeline｜原文：https://papers.cool/arxiv/2606.27306
