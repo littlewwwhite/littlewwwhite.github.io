@@ -1,0 +1,26 @@
+AI 博客
+1. AI 的下一个突破：在岗学习
+看点：主张让模型在真实工作流里持续学习，吃到最宝贵的用户交互反馈数据。
+为什么值得看：这比“继续堆预训练”更像下一阶段范式，直接关系 agent 的长期上限｜原文：https://www.dwarkesh.com/p/the-next-paradigm
+
+2. OpenAI 引用：GPT-5.6 系列预览
+看点：Sol、Terra、Luna 三档模型同时瞄准性能、成本和速度平衡，Terra 被称可打 GPT-5.5 但更便宜。
+为什么值得看：如果消息兑现，接下来一轮模型竞争会明显转向性价比和可规模化部署｜原文：https://simonwillison.net/2026/Jun/26/openai/#atom-everything
+
+3. 2000 人围攻一位 AI 助手，结果没攻破
+看点：一次真实众测式安全挑战，6000 次尝试、500 美元 token 成本，最终无人拿到密钥。
+为什么值得看：比口头安全承诺更有说服力，对邮件型 agent 的防注入设计很有参考价值｜原文：https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything
+
+GitHub Trending
+1. SimpleX Chat：无用户标识的私密通信网络
+看点：不依赖手机号、用户名等中心化标识，且 iOS、Android、桌面端都已可用。
+为什么值得看：今天热度最高，隐私产品思路很清晰，也体现去平台化通信的持续需求｜原文：https://github.com/simplex-chat/simplex-chat
+
+2. openpilot：面向 300+ 车型的开源辅助驾驶系统
+看点：把驾驶辅助做成持续演进的机器人操作系统，不是实验室 demo，而是大规模真实落地。
+为什么值得看：这是少数长期在真实世界闭环迭代的自动化项目，工程含金量很高｜原文：https://github.com/commaai/openpilot
+
+papers.cool/arxiv
+1. 让 GUI Agent 先自主探索，再用事后经验反哺规划
+看点：论文提出 PEEU，让小型多模态模型先探索界面环境，再把 hindsight 经验整理成高层规划训练数据。
+为什么值得看：7B 模型在真实基准上超过更大的 32B，说明 GUI agent 的关键瓶颈确实在规划而不只是在视觉识别｜原文：https://papers.cool/arxiv/2606.27330
