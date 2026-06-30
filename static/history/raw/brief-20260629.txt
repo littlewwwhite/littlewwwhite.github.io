@@ -1,0 +1,30 @@
+AI 博客
+1. OpenAI 宣布但被阻止发布新的 GPT-5.6 模型
+看点：一次性放出 Sol/Terra/Luna 三档预览，既讲性能也讲安全和成本，但“宣布了却发不出来”本身更值得警惕。
+为什么值得看：它不只是新模型消息，更透露了前沿模型发布正越来越受安全、监管与内部风控牵制｜原文：https://openai.com/index/previewing-gpt-5-6-sol/
+
+2. 中国赶上来了
+看点：Gary Marcus 直指全球 AI 竞争格局在变，中国模型与产业推进速度已逼得美国重新审视自己的判断。
+为什么值得看：这是理解未来开源、监管、地缘竞争三条主线怎么交织的高信号文章｜原文：https://garymarcus.substack.com/p/china-catches-up
+
+3. 引用 Jon Udell 的观点
+看点：把“人在回路中”改写成“智能体加入团队”，强调 AI 应该是被编排、被监督的协作者，而不是黑箱代理人。
+为什么值得看：对做产品、写代码、搭工作流的人都很实用，是比空谈 AGI 更可落地的人机协作框架｜原文：https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything
+
+GitHub Trending
+1. ai-berkshire
+看点：把巴菲特、芒格、段永平、李录的方法论和 Claude Code/Codex 多 Agent 研究流程结合，直接面向投资研究场景。
+为什么值得看：不是泛泛的“AI 炒股”项目，而是把研究框架、方法论和 agent 协作真正揉到一起，实操味很强｜原文：https://github.com/xbtlin/ai-berkshire
+
+2. simplex-chat/simplex-chat
+看点：不依赖用户标识符的隐私通信网络，今天热度很高，说明市场对去中心化、强隐私通信仍有真实需求。
+为什么值得看：在身份、数据、平台控制都越来越敏感的阶段，这类基础设施项目的长期价值大于短期 demo 型 AI 项目｜原文：https://github.com/simplex-chat/simplex-chat
+
+papers.cool/arxiv
+1. Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning
+看点：让小型多模态模型通过自主探索和 hindsight 经验学习 GUI 任务规划，7B 模型在真实基准上超过更大的 32B 模型。
+为什么值得看：这篇最接近“怎么把便宜模型训成更能干的 agent”，对桌面/网页智能体非常有现实意义｜原文：https://papers.cool/arxiv/2606.27330
+
+2. Multilingual Reasoning Cascades Need More Context
+看点：指出多语种推理里“先翻译到英文再翻回去”的常见链路会丢信息，并给出几乎零训练成本的改进方案。
+为什么值得看：结论非常可执行——把原始问题保留到最后一步即可，适合所有做多语种 LLM 产品的人直接借鉴｜原文：https://papers.cool/arxiv/2606.27306
