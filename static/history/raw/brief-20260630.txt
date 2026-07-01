@@ -1,0 +1,26 @@
+AI 博客
+1. Ornith-1.0：用于智能体编码的自脚手架大语言模型
+看点：开源 9B/31B/35B/397B 系列，主打 agentic coding，在同规模开源模型里把代码能力又往前推了一截。
+为什么值得看：如果你关心“更能干的开源编码助手”这是今天最硬的一条｜原文：https://simonwillison.net/2026/Jun/29/ornith/#atom-everything
+
+2. Auth.md：WorkOS 推出的智能体注册开放协议
+看点：用托管在自定义域名上的 Markdown 描述智能体注册方式，试图把 AI agent 接入服务这件事标准化。
+为什么值得看：AI agent 真要大规模落地，身份、注册、权限一定要先有共识层｜原文：https://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q22026
+
+GitHub Trending
+1. SimpleX Chat
+看点：无任何用户标识符的私密通信网络，今天涨星很猛，方向是“默认隐私”而不是“事后补救”。
+为什么值得看：在 AI 与数据收集越来越激进的背景下，隐私基础设施本身就是高价值赛道｜原文：https://github.com/simplex-chat/simplex-chat
+
+2. FluidVoice
+看点：macOS 本地离线语音转文字，强调速度与完全本地处理，不把语音送上云。
+为什么值得看：这是很实用的 AI 产品形态，兼顾体验、隐私和可立即使用的生产力｜原文：https://github.com/altic-dev/FluidVoice
+
+papers.cool/arxiv
+1. Vision-Default, Prior-Override
+看点：用因果机制分析视觉语言模型在“看到的内容”和“记住的常识”冲突时如何决策，定位到少量关键注意力头。
+为什么值得看：这类工作直接关系到多模态模型的可靠性、可解释性和后续可控改造｜原文：https://papers.cool/arxiv/2606.28273
+
+2. Mechanism-Driven Monitors for Preemptive Detection of LLM Training Instability
+看点：提出从模型内部机制出发的监控信号，能在训练真正崩掉前几千步提前预警。
+为什么值得看：这是非常偏工程但很关键的能力，能直接减少大模型训练中的算力浪费和事故成本｜原文：https://papers.cool/arxiv/2606.28116
