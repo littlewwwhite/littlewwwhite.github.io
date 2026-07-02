@@ -1,0 +1,23 @@
+AI 博客
+1. Ornith-1.0：面向智能体编程的开源自脚手架模型
+看点：9B/31B 稠密版与 35B/397B MoE 同发，基于 Gemma 4 和 Qwen 3.5，在开源代码模型里打到很强水位。
+为什么值得看：这是“开源代码智能体”方向少见的实打实进展，离可复用的强编程代理更近了一步｜原文：https://simonwillison.net/2026/Jun/29/ornith/#atom-everything
+2. Auth.md：WorkOS 提出的智能体注册开放协议
+看点：用托管在开发者域名下的 Markdown 文件描述 agent 注册信息与流程，试图把“AI 代理接入服务”标准化。
+为什么值得看：如果 agent 生态真要互联互通，身份注册和能力声明会是基础设施，这篇值得提前关注｜原文：https://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q22026
+
+GitHub Trending
+1. Strix：开源 AI 渗透测试工具
+看点：把漏洞发现与修复建议结合到一条链路里，直接瞄准“让 AI 帮你做安全测试”这个很实用的场景。
+为什么值得看：安全是 AI 工具落地后最缺的补位能力之一，这类工具比一般 demo 更接近真实团队需求｜原文：https://github.com/usestrix/strix
+2. OmniRoute：统一接入 231+ 模型提供方的 AI 网关
+看点：一个端点接 Claude Code、Codex、Cursor、Cline 等，并带自动 fallback、压缩、省 token、多模态接口。
+为什么值得看：模型入口正在快速碎片化，这类“统一路由层”会越来越有基础设施价值｜原文：https://github.com/diegosouzapw/OmniRoute
+
+papers.cool/arxiv
+1. Agents-A1：用 35B Agent 做出接近万亿参数级表现
+看点：核心不是继续堆参数，而是拉长 agent horizon、做长轨迹训练与多教师蒸馏，在多项长程任务上逼近甚至追平 1T 级模型。
+为什么值得看：这是当前 agent scaling 很有代表性的一条路线，说明“更长任务链条”可能比单纯加大模型更重要｜原文：https://papers.cool/arxiv/2606.30616
+2. FlashMorph：把 Transformer 高效变成 Hybrid Attention
+看点：把混合注意力层选择做成受预算约束的全局优化问题，不再靠拍脑袋式层位启发式。
+为什么值得看：长上下文成本是大模型部署痛点，这类方法如果成熟，会直接影响推理效率与可用长度｜原文：https://papers.cool/arxiv/2606.30562
