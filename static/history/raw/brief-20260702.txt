@@ -1,0 +1,23 @@
+AI 博客
+1. 从零开始构建 LLM：用 JAX 搭训练循环
+看点：把 LLM 训练最核心的一层扒开讲清楚，覆盖训练循环骨架、组件拆解和实现路径。
+为什么值得看：这类“从零到一”实操文很少，适合想真正理解训练过程而不只会调 API 的人｜原文：https://www.gilesthomas.com/2026/06/llm-from-scratch-34a-building-a-jax-training-loop-for-an-llm-training-run
+2. Claude Sonnet 5 的新特性
+看点：Anthropic 新模型性能继续逼近高端档位，但价格更友好，开发者可用性也更强。
+为什么值得看：这不是单纯发版新闻，直接关系到很多团队下个月选型、成本和替换窗口｜原文：https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything
+
+GitHub Trending
+1. strix
+看点：开源 AI 渗透测试工具，主打自动发现并修复应用漏洞，方向明确、落地感强。
+为什么值得看：AI 安全从“聊天”走向“真接入生产”后，安全验证会越来越刚需，这类工具有真实使用场景｜原文：https://github.com/usestrix/strix
+2. agency-agents
+看点：把一组分工明确的 AI agents 打包成“现成数字团队”，覆盖前端、社区、审核等多角色。
+为什么值得看：虽然概念味稍重，但它代表了多代理工作流产品化的一个典型方向，值得看设计思路｜原文：https://github.com/msitarzewski/agency-agents
+
+papers.cool/arxiv
+1. Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs
+看点：用“元认知反馈”训练模型更诚实地表达不确定性，目标是减少高自信胡说。
+为什么值得看：如果这条路线成立，能直接改善 LLM 可信度与校准能力，是比单纯堆 benchmark 更重要的能力改进｜原文：https://papers.cool/arxiv/2606.32032
+2. Generative Skill Composition for LLM Agents
+看点：把 agent 的技能调用从“检索几个技能”提升到“联合决定选哪些、用几个、先后顺序”。
+为什么值得看：这是 agent 真正提升任务成功率的关键层，尤其对复杂编码/运维工作流很有参考价值｜原文：https://papers.cool/arxiv/2606.32025
