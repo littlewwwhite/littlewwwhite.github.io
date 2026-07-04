@@ -1,0 +1,26 @@
+AI 博客
+1. 用 DSPy 评估并改进 Datasette Agent 的 SQL 系统提示
+看点：不是泛泛谈 prompt，而是把 DSPy 真正用到 SQL Agent 评测与迭代上，展示怎样系统化提高正确率。
+为什么值得看：对做 Agent、评测、Text-to-SQL 的人都很实用，方法可直接迁移｜原文：https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything
+
+2. 文本 AI 水印永远很容易被移除
+看点：直指欧盟 AI 法案语境下的核心矛盾：只要靠文本表面特征做水印，稍微改写就能洗掉。
+为什么值得看：这是理解“AI 内容可检测”边界的关键一篇，做合规、内容平台、检测工具都该看｜原文：https://seangoedecke.com/text-ai-watermarks/
+
+3. 黑客仅靠“请求 Meta AI”就拿下 Instagram 账户
+看点：不是理论风险，而是把 AI 助手接入账户流程后，社工与自动化结合带来的真实安全洞。
+为什么值得看：非常具体地提醒大家，AI 产品一旦接触高权限流程，最先爆炸的往往是风控设计｜原文：https://www.404media.co/hackers-simply-asked-meta-ai-to-give-them-access-to-high-profile-instagram-accounts-it-worked/
+
+GitHub Trending
+1. Strix
+看点：开源 AI 渗透测试工具，定位清晰，直接瞄准“让 AI 帮你找并修应用漏洞”这个高价值场景。
+为什么值得看：今天 GitHub 里它的信号最强，既贴近安全刚需，也比一般 agent 拼盘更有落地感｜原文：https://github.com/usestrix/strix
+
+papers.cool/arxiv
+1. 状态-预测分离假说
+看点：提出把 Transformer 里“存状态”和“做下一个 token 预测”两条职责拆开，并报告更好的数据/算力效率。
+为什么值得看：如果结果能站稳，这可能是比小修小补更重要的架构方向信号｜原文：https://papers.cool/arxiv/2607.01218
+
+2. Distill to Detect：用蒸馏暴露 LLM 隐蔽偏见
+看点：针对模型供应链里最难查的“隐性偏置”，把分布差异蒸馏进 cartridge，再把偏见信号放大到可检测。
+为什么值得看：兼具安全性与可操作性，不只是指出问题，还给了一个像样的审计思路｜原文：https://papers.cool/arxiv/2607.01208
