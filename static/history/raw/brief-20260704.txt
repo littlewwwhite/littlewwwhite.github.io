@@ -1,0 +1,23 @@
+AI 博客
+1. 使用 DSPy 评估和改进 Datasette Agent 的 SQL 系统提示
+看点：把 DSPy 用到真实 SQL Agent 的系统提示评测与迭代上，属于很落地的 LLM 工程案例。
+为什么值得看：比空谈提示工程更实用，直接展示怎样系统化提升 Agent 质量｜原文：https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything
+2. 理解力成为新的瓶颈
+看点：作者认为工具和模型进步太快，真正稀缺的开始变成“理解问题、抽象问题、组织知识”的能力。
+为什么值得看：适合校准团队和个人在 AI 时代的核心竞争力，不只是追新模型｜原文：https://geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck.html
+
+GitHub Trending
+1. usestrix/strix
+看点：开源 AI 渗透测试工具，主打自动发现并修复应用漏洞，今天增星很猛。
+为什么值得看：安全+AI 的结合足够具体，离真实生产场景比很多 demo 型项目更近｜原文：https://github.com/usestrix/strix
+2. openai/codex-plugin-cc
+看点：把 Codex 接进 Claude Code 做代码审查和任务委派，直接打到多 Agent 编程协作这个热点。
+为什么值得看：如果你在搭 AI coding workflow，这类插件式互操作比单模型能力更有现实意义｜原文：https://github.com/openai/codex-plugin-cc
+
+papers.cool/arxiv
+1. LACUNA：用于评估 LLM“遗忘”定位精度的测试平台
+看点：不是只看输出像不像忘了，而是首次用参数级真值去检验 unlearning 到底有没有删干净。
+为什么值得看：直击隐私删除与 resurfacing attack 的核心漏洞，对安全和合规都很关键｜原文：https://papers.cool/arxiv/2607.02513
+2. 视觉锚定自反思：用强化学习提升视觉语言模型纠错能力
+看点：让模型在反思时真正回到图像证据上，而不是只在文本链路里“自我说服”。
+为什么值得看：对表格、图表、空间推理这类高误判任务很实用，属于能提升多模态可靠性的方向｜原文：https://papers.cool/arxiv/2607.02490
