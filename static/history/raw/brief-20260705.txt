@@ -1,0 +1,23 @@
+AI 博客
+1. 开源人工智能差距地图
+看点：试图系统盘点开源 AI 生态缺口，而且背后有大额资金和全球协作推进，不只是“又一个目录站”。
+为什么值得看：这类基础设施可能影响未来开源 AI 的资源流向和创业机会｜原文：https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything
+2. Claude 的糟糕 Electron Mac 应用是内部操作
+看点：直指 Claude Mac 客户端体验差的根源是技术选型失误，批评很狠，但论点具体。
+为什么值得看：对所有做 AI 产品的人都有提醒意义，模型再强，客户端体验做差一样掉分｜原文：https://daringfireball.net/2026/07/claudes_criminally_bad_mac_app_is_an_inside_job
+3. 更好的模型，反而更差的工具调用
+看点：大模型生成能力更强了，但一到真实工具调用就可能乱填字段、破坏 schema，暴露“会说不等于会干”。
+为什么值得看：这正是 agent 落地的核心痛点，比单纯模型跑分更接近一线实践｜原文：https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything
+
+GitHub Trending
+1. usestrix/strix
+看点：开源 AI 渗透测试工具，定位明确，既踩中安全也踩中 AI 应用上线前的真实需求。
+为什么值得看：如果你在做 LLM 产品，这类自动化安全检查工具的实用价值远高于很多玩具项目｜原文：https://github.com/usestrix/strix
+2. alibaba/page-agent
+看点：直接在网页内用自然语言控制 GUI，属于“浏览器原生 agent”路线，落地感很强。
+为什么值得看：相比纯 demo 型 agent，它更接近真实业务自动化和前端操控场景｜原文：https://github.com/alibaba/page-agent
+
+papers.cool/arxiv
+1. LACUNA：评估 LLM Unlearning 定位精度的测试平台
+看点：不是只看模型表面“忘了没有”，而是首次把参数级定位精度拉进评测，专打伪遗忘和 resurfacing 问题。
+为什么值得看：AI 合规、隐私删除、模型治理都会越来越依赖这类更硬的 unlearning 基准｜原文：https://papers.cool/arxiv/2607.02513
