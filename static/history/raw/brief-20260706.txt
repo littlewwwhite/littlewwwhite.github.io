@@ -1,0 +1,23 @@
+AI 博客
+1. sqlite-utils 4.0rc2：大部分由 Claude Fable 完成
+看点：Simon Willison 把一次真实开源版本发布与 AI 参与成本直接摊开讲，连“约 149.25 美元写出 rc2”这种账都算清了。
+为什么值得看：比起空泛聊 AI 编程，这种可量化的实战复盘更能帮助判断 agent 写软件的真实 ROI｜原文：https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything
+
+GitHub Trending
+1. Meetily
+看点：本地优先的 AI 会议助手，主打更快的 Whisper/Parakeet 实时转写、说话人区分和 Ollama 总结，核心卖点是全程不走云。
+为什么值得看：隐私、本地部署、会议场景三个热点叠加，而且工程形态完整，离“能直接用”比很多 demo 更近｜原文：https://github.com/Zackriya-Solutions/meetily
+2. openai/codex-plugin-cc
+看点：把 Codex 接进 Claude Code 做代码审查和任务委派，直接押注“多 agent 协作开发”这条线。
+为什么值得看：不是再造一个聊天壳，而是解决真实工作流里的跨模型协同，值得关注后续插件生态怎么长出来｜原文：https://github.com/openai/codex-plugin-cc
+
+papers.cool/arxiv
+1. LACUNA：评测 LLM 遗忘定位精度的测试平台
+看点：不只看“表面上忘没忘”，而是第一次把遗忘是否真打到存知识的参数上做成可验证基准。
+为什么值得看：对隐私删除、模型合规和“遗忘后会不会被重新诱导出来”这些关键问题都更接近实战｜原文：https://papers.cool/arxiv/2607.02513
+2. 通过强化学习让视觉语言模型学会“看图反思”
+看点：论文专门解决多模态模型反思时只会改文字、不会重新看图的问题，用 RL 逼它做视觉落地的自我纠错。
+为什么值得看：如果你关心图表理解、空间推理、复杂视觉 agent，这类“反思但不脱离视觉证据”的训练方向很重要｜原文：https://papers.cool/arxiv/2607.02490
+3. 规模化能否提升 LLM 社会模拟？
+看点：作者系统检查了 social simulation 是否会像常规能力一样随算力和模型规模提升，并指出哪些任务会卡住。
+为什么值得看：结论不鸡血——多数任务会随规模进步，但校准人类偏差、低资源人群和长期预测不一定，这对做 AI 社会科学的人很关键｜原文：https://papers.cool/arxiv/2607.02464
