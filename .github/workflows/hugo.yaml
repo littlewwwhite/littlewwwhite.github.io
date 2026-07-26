@@ -46,10 +46,7 @@ jobs:
           submodules: recursive
           fetch-depth: 0
       - name: Validate PNG assets
-        run: |
-          sudo apt-get update
-          sudo apt-get install --yes --no-install-recommends pngcheck
-          find content static -type f -iname '*.png' -print0 | xargs -0 --no-run-if-empty pngcheck -q
+        run: python3 .github/scripts/validate_pngs.py content static
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
