@@ -18,6 +18,7 @@ Before outlining or writing:
 ## Core contract
 
 - Put truth before narrative. Never invent a failure, emotion, experiment, personal history, or change of mind to make the article feel human.
+- Preserve the author’s real route into the question when the user supplies it: the current project, habitual choice, reason for reconsidering it, research action, and question that emerged. Do not flatten this into an impersonal “business context.”
 - Put argument before coverage. Do not preserve every source point merely because it was collected.
 - Enter through a concrete situation, event, tension, judgment, or thought. Do not greet the reader with a benchmark table, specification list, or detached headline number.
 - Use paragraphs as the default unit of thought. Use lists, tables, code, and diagrams only for the jobs they perform better than prose.
@@ -108,14 +109,25 @@ Parallel sections are not automatically wrong. Keep them when the subject is gen
 
 Before drafting, make three internal decisions.
 
+**Author trace:** when the user has supplied real first-person context, extract the causal path that made the article happen:
+
+- what the author is building, using, seeing, or deciding now;
+- which familiar or habitual choice they initially reached for;
+- why that inertia became worth questioning now;
+- what they actually researched, tested, or compared;
+- which sharper question or judgment emerged.
+
+Treat this as source material, not a five-beat template. Keep only the beats that are true and useful. Preserve a natural colloquial aside or self-description when it belongs to the user’s voice; do not sanitize it into corporate prose, repeat it on a schedule, or fabricate familiarity with the reader.
+
 **Opening seed:** choose the most truthful concrete entry available:
 
+- the author trace above, when it genuinely explains why the research began;
 - a situation or operational problem the user actually faces;
 - something that happened during the supplied work or this task;
 - a comparison, contradiction, or decision that needs resolving;
 - the author’s bounded opinion, doubt, or thought about the subject.
 
-The first paragraph must establish why the question matters before presenting dense measurements. Do not open with a table, a specification inventory, or an isolated string of percentages and latency numbers. When a number is itself the incident, first frame what happened and why it was surprising or consequential, then give the measurement.
+Establish why the author entered the question before presenting dense measurements. When real personal context exists, do not replace “how I came to investigate this” with a generic statement that the system may eventually face scale or cost pressure. Do not open with a table, a specification inventory, or an isolated string of percentages and latency numbers. When a number is itself the incident, first frame what happened and why it was surprising or consequential, then give the measurement.
 
 **Page rhythm:** decide where the reader needs continuous reasoning and where a different visual weight would help. A long article rendered almost entirely as headings plus plain paragraphs is unfinished even when the prose is correct. Look for honest uses of:
 
@@ -195,6 +207,8 @@ Revise before output if any answer is unsatisfactory:
 - Is the deepest passage where the understanding or decision actually changes?
 - Are background facts compressed?
 - Is any “I” sentence unsupported by real work or user-provided experience?
+- When the user supplied a real reason for writing, does the opening preserve that personal causal path, or has it been abstracted into an authorless product problem?
+- Does the prose preserve the user’s natural degree of colloquialism and curiosity without copying one catchphrase into every article?
 - Was a failure, analogy, aphorism, counterargument, action list, or dramatic reversal inserted mechanically?
 - Does the article make a real judgment, or only arrange facts attractively?
 
@@ -248,3 +262,4 @@ When the user corrects an article or this skill:
 3. Add the concrete correction to `references/learning-log.md`.
 4. Promote repeated or explicit high-priority corrections into `references/writing-guidelines.md`.
 5. Remove or rewrite any older rule that conflicts with the correction. Do not merely append another rule.
+6. Generalize from the user’s reasoning path and linguistic preferences, not from one topic noun or sentence pattern; add a counterexample when overfitting is likely.

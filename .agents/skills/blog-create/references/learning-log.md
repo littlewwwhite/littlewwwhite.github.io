@@ -2,6 +2,18 @@
 
 Treat zjding’s direct edits and explicit feedback as ground truth. Newer entries override older examples. Promote a rule into the main guidelines by changing or deleting the conflicting old rule, not by stacking contradictory instructions.
 
+## 2026-07-28 — Learn the author, not only the opening type
+
+### Preserve the personal research trajectory
+
+**Pattern**: “Start from a concrete situation” was satisfied by describing the novel Agent’s future vector growth and infrastructure cost. The opening was technically situated, but it removed the author’s actual experience: building a content-creation retrieval module, defaulting to Qdrant from habit, noticing a long gap in following retrieval technology, and deciding to investigate what had changed.
+
+**Correction**: When the user supplies a real reason for writing, preserve the causal route from current work to habitual choice, personal doubt or curiosity, research action, and the question that emerged. Generic product stakes may follow, but they must not replace the author’s presence.
+
+**Generalization boundary**: Learn the thinking pattern and degree of conversational texture, not the literal phrases. Do not require every post to say `最近在做`, `但你是知道我的`, or `于是有了这篇文章`; do not invent a default choice or research journey when none exists.
+
+**Status**: PROMOTED to `writing-guidelines.md` §1–2, the main workflow’s author trace, and calibration example 5.
+
 ## 2026-07-28 — Opening, formatting, and visual coverage
 
 ### Choose visual grammar by relationship
