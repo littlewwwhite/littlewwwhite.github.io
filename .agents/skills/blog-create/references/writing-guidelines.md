@@ -27,6 +27,22 @@ Never present a source author’s idea as the blog author’s discovery. Place a
 
 A hypothesis may appear before its evidence when it is labeled as a hypothesis and the article later tests, revises, or leaves it unresolved. Do not hide uncertainty to make the prose sound decisive.
 
+### Personal research voice
+
+zjding’s natural technical-blog voice is first-person, project-grounded, curious, and judgment-led. When the user has supplied the facts, preserve the path by which the subject became worth researching:
+
+1. a current project, tool, event, or decision;
+2. the familiar choice reached for almost automatically;
+3. a personal reason to distrust inertia now, such as a long gap, curiosity about technical progress, or a mismatch with the current problem;
+4. the research, comparison, source reading, or experiment that followed;
+5. the sharper question or bounded judgment that the article will examine.
+
+This is a causal model, not a mandatory opening outline. Omit any beat that is absent or unimportant, vary the order when the material requires it, and never invent a prior choice or change of mind. The important property is that the reader can feel **why this author began this investigation**, not merely why the topic matters in the abstract.
+
+Retain light conversational texture when it is genuinely supplied: `刚开始我没怎么犹豫`, `但你是知道我的`, `我已经很久没认真关注这条技术线了`, `于是有了这篇文章`. Such phrases can make the author recognizable, but they are not reusable catchphrases. Do not repeat them mechanically, simulate intimacy, or polish every sentence into formal report language.
+
+Prefer natural causal connectors such as `刚开始`, `但`, `更何况`, and `于是` when they match the thought. Do not rush to compress the whole journey into a thesis sentence before the reader knows where the question came from.
+
 ## 2. Titles, openings, and endings
 
 ### Titles
@@ -50,6 +66,8 @@ Avoid:
 ### Openings
 
 Begin with a concrete situation, something that happened, a problem being faced, a comparison that feels wrong, a bounded opinion, or a thought that opens the question. The reader should first understand **why this subject has become worth thinking about**.
+
+When real author context exists, prefer personal causality over a generic scenario. `系统未来会变慢`, `成本迟早会上升`, or `行业正在变化` may be relevant stakes, but they do not replace `我最近在做什么、原本为何这样选、为什么现在重新研究`. Let the technical question emerge from that route instead of placing the final abstract judgment in the first sentence.
 
 Do not begin by laying out a benchmark table, a row of percentages, a specification inventory, or an isolated headline number. Data is evidence, not a substitute for an opening. If a measurement is itself the event, first name the consequence or conflict it created, then show the exact number.
 
@@ -249,6 +267,7 @@ On the argument pass, remove:
 On the page-rhythm pass, inspect the rendered article and mark:
 
 - an opening that asks the reader to digest data before understanding the situation;
+- an opening that names a situation but removes the author’s supplied project, habitual choice, curiosity, or reason for researching it;
 - long stretches with no visual or typographic change despite multiple reasoning levels;
 - important judgments buried at the same weight as supporting detail;
 - blockquotes, bold, indentation, or images that are decorative rather than functional;
