@@ -79,7 +79,7 @@ A Mermaid diagram repeats three sentences as three boxes connected in a row.
 
 Use Mermaid when the reader needs to see that turbopuffer changes where bytes live while turbovec changes how many bytes each vector occupies. The diagram earns its place because the two independent axes are easier to compare spatially than in another paragraph.
 
-## 5. Data-first opening versus situated opening
+## 5. Data-first or authorless opening versus personal research entry
 
 ### Weak
 
@@ -89,15 +89,33 @@ Use Mermaid when the reader needs to see that turbopuffer changes where bytes li
 
 The numbers are valid, but the reader has not yet been given a reason to care about this particular comparison.
 
-### Better
+### Still weak
 
 ```markdown
 小说 Agent 的检索还没有贵到需要立即迁移，但向量会随章节、角色和版本不断累积。真正需要提前弄清的，不是哪款库在一张榜单上更快，而是内存开始成为约束时，我们愿意拿多少召回去换空间。
-
-这也是我重跑 turbovec 低比特量化实验的原因。它先回答一个更窄的问题：同一批向量从 Float32 压到 2、3、4 bit 后，空间与 Recall@10 怎样一起变化。
 ```
 
-The situation and decision come first. The experiment now has a job instead of acting as the hook.
+This establishes product stakes, but it still reads like an analyst’s summary. The supplied author has disappeared: the reader cannot see what was being built, why Qdrant was the default, or what triggered the research.
+
+### Better
+
+```markdown
+最近在做一个内容创作相关的检索模块。拿小说检索 Agent 来说，刚开始我几乎没怎么犹豫，还是沿用以前的习惯，用 Qdrant 先把检索基建搭起来。
+
+但你是知道我的：越是这种“以前就这么做”的选择，我越想重新确认一下。更何况我已经很久没有认真关注过检索这条技术线了。几年过去，向量检索有没有出现新的技术进步？继续用 Qdrant，究竟是它仍然最合适，还是仅仅因为它是我最熟悉的选择？
+
+于是我重新看了一遍最近的向量数据库、压缩索引和冷热分层方案，也就有了这篇文章。研究到后面，问题逐渐收敛成了两笔账：当内存、存储或尾延迟开始吃紧时，我们究竟在为哪一段数据路径付费？
+```
+
+The opening preserves the author’s actual path from project to habitual choice, doubt, research, and question. Its phrases are not a template: another post may begin from a bug, a source conflict, or a decision, and should not imitate Qdrant or `但你是知道我的`.
+
+### Overfit
+
+```markdown
+最近在做一个支付模块。你是知道我的，我很久没关注支付了，于是研究了一遍，也就有了这篇文章。
+```
+
+This copies the surface rhythm but not the reasoning. If there was no habitual choice, time gap, or investigation, use the real trigger instead of filling five slots.
 
 ## 6. Flat formatting versus real hierarchy
 
