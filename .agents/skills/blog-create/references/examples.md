@@ -78,3 +78,55 @@ A Mermaid diagram repeats three sentences as three boxes connected in a row.
 ### Better
 
 Use Mermaid when the reader needs to see that turbopuffer changes where bytes live while turbovec changes how many bytes each vector occupies. The diagram earns its place because the two independent axes are easier to compare spatially than in another paragraph.
+
+## 5. Data-first opening versus situated opening
+
+### Weak
+
+```markdown
+在 50,000×384 的随机单位向量上，2 bit、3 bit、4 bit 索引分别为 4.77、7.06、9.35 MiB，Recall@10 分别为 0.4755、0.7010、0.8335。
+```
+
+The numbers are valid, but the reader has not yet been given a reason to care about this particular comparison.
+
+### Better
+
+```markdown
+小说 Agent 的检索还没有贵到需要立即迁移，但向量会随章节、角色和版本不断累积。真正需要提前弄清的，不是哪款库在一张榜单上更快，而是内存开始成为约束时，我们愿意拿多少召回去换空间。
+
+这也是我重跑 turbovec 低比特量化实验的原因。它先回答一个更窄的问题：同一批向量从 Float32 压到 2、3、4 bit 后，空间与 Recall@10 怎样一起变化。
+```
+
+The situation and decision come first. The experiment now has a job instead of acting as the hook.
+
+## 6. Flat formatting versus real hierarchy
+
+### Weak
+
+Five long sections all use only `##` headings, ordinary paragraphs, and one final table. The prose may be correct, but the reader cannot see which sentence is the decision, which is a boundary, and which mechanism deserves a pause.
+
+### Better
+
+Keep the causal explanation in prose, bold the term that changes the model, isolate the bounded decision in a clearly authored blockquote, show the exact comparison as a table or chart, and follow the visual with interpretation. The formats differ because their semantic jobs differ.
+
+```markdown
+**真正稳定复现的是空间—召回交换，不是速度排名。**
+
+> 我的判断：在真实小说 Query 建立评测集之前，这组随机向量结果只能决定下一步测什么，不能决定是否迁移。
+```
+
+## 7. Visual deletion versus visual coverage
+
+### Weak
+
+The post keeps one architecture Mermaid because it is “necessary” and removes every other visual because the surrounding paragraphs contain the same facts.
+
+### Better
+
+Audit the reader’s mental work. If the article asks them to understand remote storage and cache topology, compare a 2/3/4-bit trade-off, and remember the difference between “moving bytes” and “shrinking bytes,” those are three different visual jobs:
+
+- Mermaid for the exact storage and cache path;
+- a deterministic chart for the bit-width/size/recall relationship;
+- a concept illustration for the two intervention levels.
+
+None should duplicate another. Together they reduce three different kinds of cognitive load.
