@@ -19,7 +19,9 @@ Before outlining or writing:
 
 - Put truth before narrative. Never invent a failure, emotion, experiment, personal history, or change of mind to make the article feel human.
 - Put argument before coverage. Do not preserve every source point merely because it was collected.
+- Enter through a concrete situation, event, tension, judgment, or thought. Do not greet the reader with a benchmark table, specification list, or detached headline number.
 - Use paragraphs as the default unit of thought. Use lists, tables, code, and diagrams only for the jobs they perform better than prose.
+- Design reading rhythm as well as argument. Use emphasis, quotations or judgment blocks, indentation, code, tables, diagrams, charts, and illustrations when they create real hierarchy.
 - Match the article’s promise to its evidence. Architecture reading is not a product benchmark; a synthetic test is not production validation.
 - Allocate depth unevenly. Slow down where evidence changes the model or the decision; compress background and mechanical detail.
 - Keep facts, direct observations, hypotheses/inferences, and opinions distinguishable.
@@ -102,7 +104,33 @@ Use that movement as the article’s backbone only if it actually happened. Othe
 
 Parallel sections are not automatically wrong. Keep them when the subject is genuinely parallel and the reader benefits from comparison; use a table when the fields repeat exactly. Do not force every article into “failure → discovery,” “expectation → reversal,” or an ever-higher abstraction ladder.
 
-### 5. Outline only what the argument needs
+### 5. Choose the entry, page rhythm, and visual coverage
+
+Before drafting, make three internal decisions.
+
+**Opening seed:** choose the most truthful concrete entry available:
+
+- a situation or operational problem the user actually faces;
+- something that happened during the supplied work or this task;
+- a comparison, contradiction, or decision that needs resolving;
+- the author’s bounded opinion, doubt, or thought about the subject.
+
+The first paragraph must establish why the question matters before presenting dense measurements. Do not open with a table, a specification inventory, or an isolated string of percentages and latency numbers. When a number is itself the incident, first frame what happened and why it was surprising or consequential, then give the measurement.
+
+**Page rhythm:** decide where the reader needs continuous reasoning and where a different visual weight would help. A long article rendered almost entirely as headings plus plain paragraphs is unfinished even when the prose is correct. Look for honest uses of:
+
+- bold anchors inside dense paragraphs;
+- a blockquote for a sourced quotation, a clearly labeled author judgment, a decisive question, or an important boundary;
+- indentation or nested structure when hierarchy is real;
+- code, tables, charts, diagrams, screenshots, or illustrations for their native jobs.
+
+Do not distribute these formats evenly or add them decoratively. Use contrast: dense reasoning beside a compact visual, a key judgment isolated after evidence, or a code block followed by interpretation.
+
+**Visual coverage:** inventory the relationships the article asks the reader to hold in working memory. For each architecture, data path, sequence, state change, quantitative trade-off, repeated comparison, decision branch, abstract mechanism, or UI state, decide whether prose is still the best representation. Use the project’s `blog-img` skill when a concept diagram, explainer poster, annotated screenshot, or other custom visual would materially improve comprehension.
+
+There is no universal image quota, but “no minimum” is not permission to under-illustrate. If the article contains several distinct spatial, temporal, comparative, or quantitative relationships yet only one or two visuals, re-check whether prose is doing a diagram’s job. A visual may earn its place by explaining, reducing cognitive load, orienting the reader, or creating a durable memory anchor; it need not introduce a new factual claim.
+
+### 6. Outline only what the argument needs
 
 Give each section one job in the argument. Remove a section when it merely:
 
@@ -116,7 +144,7 @@ Let section lengths differ. A background section may be one compact paragraph; a
 
 Do not output a formal outline or “progression spine” unless it helps the user make a real choice.
 
-### 6. Write from evidence toward judgment
+### 7. Write from evidence toward judgment
 
 Follow `references/writing-guidelines.md`.
 
@@ -125,13 +153,14 @@ In particular:
 - Keep related sentences in the same paragraph until one reasoning move is complete.
 - Convert metric dumps and sentence-like bullet lists into causal prose.
 - Use a list only when the items are independent, parallel, and meant to be scanned or executed.
-- Use a table for exact repeated-field comparison, code for executable behavior, and Mermaid only when topology or event order is materially clearer than prose.
+- Use a table for exact repeated-field comparison, code for executable behavior, charts for quantitative relationships, and Mermaid when topology or event order is materially clearer than prose.
+- Use bold, blockquotes, indentation, captions, and whitespace to expose hierarchy and reading rhythm; do not let the entire article collapse into one typographic voice.
 - Use first person only for experience supplied by the user or work actually performed during this task and backed by artifacts. Never invent feelings or prior production experience.
 - State source facts, direct observations, and inferences with different levels of certainty.
 - Preserve useful small frictions and associations only when they change the reader’s model. Do not add “human texture” on a schedule.
 - Use no fixed article length, paragraph count, number of sections, number of visuals, number of failures, or required word count for a turning point.
 
-### 7. Review the draft against its promise
+### 8. Review the draft against its promise
 
 Revise before output if any answer is unsatisfactory:
 
@@ -144,11 +173,13 @@ Revise before output if any answer is unsatisfactory:
 
 #### Prose integrity
 
+- Does the opening begin with a concrete situation, event, tension, judgment, or thought before it asks the reader to absorb data?
 - Do paragraph breaks follow changes in thought rather than individual sentences?
 - Does every list pass the independent + parallel + scan-worthy test?
 - Are there naked labels followed by metric inventories?
 - Are sections split more finely than the reasoning requires?
 - Is any transition sentence present only because a template demanded one?
+- Does the page have deliberate hierarchy, or is nearly everything rendered with the same visual weight?
 
 #### Depth and voice
 
@@ -161,10 +192,13 @@ Revise before output if any answer is unsatisfactory:
 #### Visual and source utility
 
 - Does every image, table, or Mermaid diagram explain a relationship that would be harder to understand without it?
+- Did the draft inspect every spatial, temporal, comparative, and quantitative relationship for a better visual form?
+- Were useful concept or navigation images deleted merely because nearby prose can restate them?
+- Do the visuals vary by function rather than repeat one diagram grammar throughout the post?
 - Are precise architectures and data charts based on deterministic sources rather than decorative image generation?
 - Are important external claims anchored inline to primary evidence?
 
-### 8. Produce and validate the Page Bundle
+### 9. Produce and validate the Page Bundle
 
 For this Hugo repository, create or update:
 
