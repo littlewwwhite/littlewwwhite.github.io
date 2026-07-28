@@ -165,15 +165,21 @@ Headers should help navigation and may be a judgment, question, mechanism, or co
 
 ## 7. Plan visual coverage, not visual decoration
 
-Use:
+Choose the representation after identifying the relationship:
 
-- Mermaid for topology, branching, or event order;
-- tables for exact mappings and repeated-field comparisons;
-- charts for quantitative relationships;
-- screenshots for concrete interfaces, states, and before/after evidence;
-- concept diagrams or generated illustrations for mechanisms, intuition, navigation, or a memorable conceptual anchor;
-- an explainer poster when one signature figure can synthesize a dense section or the whole article;
-- code for executable semantics.
+| Reader needs to understand | Prefer | Boundary |
+|---|---|---|
+| A simple claim or one-step relation | Prose | Do not diagram what one sentence makes obvious |
+| Exact mappings or repeated fields | Table | Add interpretation outside the table |
+| Lightweight topology, branching, state, or event order | Mermaid | Use only when spatial layout reveals something |
+| Detailed calls, ownership, waiting, retry, or lifecycle | Sequence diagram; Mermaid or PlantUML | Prefer PlantUML only when its richer notation is useful and supported by the publication pipeline |
+| Stages, transformations, queues, fan-out, or failure paths | Pipeline/flow diagram | Show meaningful branches and boundaries, not a long row of boxes |
+| Measured trend, distribution, trade-off, or uncertainty | Deterministic Matplotlib chart | Preserve source data and generation code; label axes, units, sample size, and conditions |
+| Concrete interface, state, or before/after evidence | Screenshot | Annotate only what the reader should inspect |
+| Mechanism, intuition, navigation, or a memorable anchor | Concept diagram or illustration | Never invent precise architecture or evidence |
+| Executable semantics | Code | Follow it with interpretation |
+
+Mermaid and PlantUML are not goals; they are notations for particular diagrams. A sequence diagram or pipeline diagram describes the semantic form, while Matplotlib is for quantitative evidence. Do not use one as a decorative substitute for another.
 
 Plan visuals before the prose hardens. Mark every place where the reader must mentally simulate:
 
@@ -185,9 +191,9 @@ Plan visuals before the prose hardens. Mark every place where the reader must me
 - how an abstract mechanism should be pictured;
 - where to look inside a UI or screenshot.
 
-For each place, choose the native representation or consciously keep prose. A paragraph is better than a diagram that merely turns three sentences into three boxes, but a paragraph being technically sufficient does not make the visual redundant. A useful visual may reduce cognitive load, orient the reader between sections, or make an abstract idea memorable.
+For each place, choose the native representation or consciously keep prose. A paragraph is better than a diagram that merely turns three sentences into three boxes. A visual is justified only when it improves comprehension, comparison, orientation, evidence reading, or memory.
 
-Do not impose a universal image count. Instead enforce coverage: when an article contains multiple distinct visualizable relationships but almost all remain prose, the visual plan is incomplete. Medium and long technical articles will often need more than one visual mode—for example, an architecture diagram plus a trade-off chart plus a conceptual illustration—because those forms solve different reader problems.
+Do not impose a universal image count or a mandatory Mermaid block. An article may legitimately need no diagram; another may need a sequence view, pipeline view, and data chart because they solve different reader problems. Re-audit both extremes: several difficult relationships left entirely in prose, and a simple article padded with diagrams.
 
 Do not optimize visuals only by deletion. Merge genuinely duplicate diagrams, but retain or improve an image that contributes explanation, navigation, pacing, or memory even when nearby prose can paraphrase it.
 
@@ -198,7 +204,8 @@ Before publication:
 - decode changed images completely;
 - inspect the full canvas for cropping, black regions, illegible text, and incorrect aspect ratio;
 - verify captions and relative paths;
-- render Mermaid through the actual Hugo path;
+- render Mermaid, PlantUML, and any other diagram source through a publication path the repository actually supports;
+- regenerate deterministic charts from their checked-in data and script when practical;
 - keep source attribution for reused diagrams.
 
 ## 8. Language, hierarchy, and page rhythm

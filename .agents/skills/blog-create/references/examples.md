@@ -130,3 +130,17 @@ Audit the reader’s mental work. If the article asks them to understand remote 
 - a concept illustration for the two intervention levels.
 
 None should duplicate another. Together they reduce three different kinds of cognitive load.
+
+## 8. Diagram habit versus semantic routing
+
+### Weak
+
+Every technical article receives a Mermaid flowchart. A two-step explanation becomes two boxes and an arrow; benchmark results remain a table even though the article discusses a trend; a retry protocol is flattened into another left-to-right flow.
+
+The page contains more visuals, but each was chosen from habit rather than from the relationship.
+
+### Better
+
+Keep the two-step explanation as prose. Use a sequence diagram for the retry protocol because message order, waiting, and ownership matter. Generate the benchmark curve with Matplotlib because the claim concerns how recall changes with bit width, and preserve both the raw data and plotting script.
+
+Use PlantUML instead of Mermaid only when a detailed sequence, component, class, or deployment view benefits from its richer notation and the Hugo publication path can render it. The objective is not to maximize Mermaid, PlantUML, or image count; it is to minimize the reader’s effort without weakening evidence.

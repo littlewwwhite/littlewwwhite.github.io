@@ -4,6 +4,14 @@ Treat zjding’s direct edits and explicit feedback as ground truth. Newer entri
 
 ## 2026-07-28 — Opening, formatting, and visual coverage
 
+### Choose visual grammar by relationship
+
+**Pattern**: “Add more visuals” can overcorrect into Mermaid-by-default. Mermaid, PlantUML, sequence diagrams, pipeline diagrams, and Matplotlib plots were treated as interchangeable decoration rather than tools for different semantic jobs.
+
+**Correction**: First decide whether prose already explains the relationship clearly. If a visual is warranted, route by meaning: sequence for messages and lifecycle, pipeline for stages and failure paths, Mermaid for lightweight supported relationship diagrams, PlantUML for richer formal diagrams when the build supports it, and Matplotlib for reproducible quantitative evidence. Do not require Mermaid or any diagram in every article.
+
+**Status**: PROMOTED to `writing-guidelines.md` §7, the main workflow’s visual plan, and calibration example 8.
+
 ### Situation before data
 
 **Pattern**: The evidence-led rule was interpreted as permission to place benchmark numbers at the top of the article. The result was accurate but read like a report rather than a piece of thinking.
