@@ -49,7 +49,11 @@ Avoid:
 
 ### Openings
 
-Begin with the most concrete source of tension available: a result, an operational problem, a failed comparison, or a decision that needs evidence. A plain direct opening is acceptable. Do not force one of a fixed set of hooks.
+Begin with a concrete situation, something that happened, a problem being faced, a comparison that feels wrong, a bounded opinion, or a thought that opens the question. The reader should first understand **why this subject has become worth thinking about**.
+
+Do not begin by laying out a benchmark table, a row of percentages, a specification inventory, or an isolated headline number. Data is evidence, not a substitute for an opening. If a measurement is itself the event, first name the consequence or conflict it created, then show the exact number.
+
+A plain direct opening is acceptable. Do not force one of a fixed set of hooks, and never invent a scene, prior belief, or personal experience. The situation may come from the user’s real context, a supplied artifact, a source conflict, work performed during this task, or an explicitly framed present-tense judgment.
 
 Avoid preambles such as `随着……的发展`, `本文将介绍`, or a meta-discussion about terminology unless terminology is the actual technical problem.
 
@@ -159,17 +163,39 @@ Use transitions when the logical relation is not obvious. Do not insert a bridge
 
 Headers should help navigation and may be a judgment, question, mechanism, or concise topic label. Do not contort every header into a slogan.
 
-## 7. Visuals must earn their place
+## 7. Plan visual coverage, not visual decoration
 
-Use:
+Choose the representation after identifying the relationship:
 
-- Mermaid for topology, branching, or event order;
-- tables for exact mappings and repeated-field comparisons;
-- charts for quantitative relationships;
-- screenshots or generated illustrations when visual appearance itself matters;
-- code for executable semantics.
+| Reader needs to understand | Prefer | Boundary |
+|---|---|---|
+| A simple claim or one-step relation | Prose | Do not diagram what one sentence makes obvious |
+| Exact mappings or repeated fields | Table | Add interpretation outside the table |
+| Lightweight topology, branching, state, or event order | Mermaid | Use only when spatial layout reveals something |
+| Detailed calls, ownership, waiting, retry, or lifecycle | Sequence diagram; Mermaid or PlantUML | Prefer PlantUML only when its richer notation is useful and supported by the publication pipeline |
+| Stages, transformations, queues, fan-out, or failure paths | Pipeline/flow diagram | Show meaningful branches and boundaries, not a long row of boxes |
+| Measured trend, distribution, trade-off, or uncertainty | Deterministic Matplotlib chart | Preserve source data and generation code; label axes, units, sample size, and conditions |
+| Concrete interface, state, or before/after evidence | Screenshot | Annotate only what the reader should inspect |
+| Mechanism, intuition, navigation, or a memorable anchor | Concept diagram or illustration | Never invent precise architecture or evidence |
+| Executable semantics | Code | Follow it with interpretation |
 
-Do not impose a minimum number of visuals. A paragraph is better than a diagram that only repeats the paragraph.
+Mermaid and PlantUML are not goals; they are notations for particular diagrams. A sequence diagram or pipeline diagram describes the semantic form, while Matplotlib is for quantitative evidence. Do not use one as a decorative substitute for another.
+
+Plan visuals before the prose hardens. Mark every place where the reader must mentally simulate:
+
+- where components or bytes live;
+- what happens over time;
+- how state branches or changes;
+- how two or more systems map across the same dimensions;
+- how a metric changes with a parameter;
+- how an abstract mechanism should be pictured;
+- where to look inside a UI or screenshot.
+
+For each place, choose the native representation or consciously keep prose. A paragraph is better than a diagram that merely turns three sentences into three boxes. A visual is justified only when it improves comprehension, comparison, orientation, evidence reading, or memory.
+
+Do not impose a universal image count or a mandatory Mermaid block. An article may legitimately need no diagram; another may need a sequence view, pipeline view, and data chart because they solve different reader problems. Re-audit both extremes: several difficult relationships left entirely in prose, and a simple article padded with diagrams.
+
+Do not optimize visuals only by deletion. Merge genuinely duplicate diagrams, but retain or improve an image that contributes explanation, navigation, pacing, or memory even when nearby prose can paraphrase it.
 
 Generated illustrations may provide a conceptual anchor, but must not invent precise architecture, benchmark data, UI state, or source evidence. A “小黑” illustration should communicate one idea, not decorate a section.
 
@@ -178,19 +204,26 @@ Before publication:
 - decode changed images completely;
 - inspect the full canvas for cropping, black regions, illegible text, and incorrect aspect ratio;
 - verify captions and relative paths;
-- render Mermaid through the actual Hugo path;
+- render Mermaid, PlantUML, and any other diagram source through a publication path the repository actually supports;
+- regenerate deterministic charts from their checked-in data and script when practical;
 - keep source attribution for reused diagrams.
 
-## 8. Language and formatting
+## 8. Language, hierarchy, and page rhythm
 
 - Write prose in Simplified Chinese.
 - Keep code, identifiers, product names, and commands in their original language.
 - Prefer concrete verbs and nouns over abstract packaging.
-- Use bold sparingly for the one term or result a reader might otherwise miss.
-- Use blockquotes only for actual quotations or a rare sentence that benefits from isolation.
+- Use **bold** to give a dense paragraph one or two reading anchors: a decisive term, changed judgment, mechanism, or result. Do not bold whole sentences repeatedly.
+- Use blockquotes for an attributed source quotation, a clearly labeled author judgment, the decisive question, or an important boundary that benefits from isolation. Do not present an author-written callout as someone else’s quotation.
+- Use indentation and nested structure only when the content has real parent-child hierarchy. Do not flatten hierarchical material into a long paragraph, and do not indent merely for decoration.
+- Put commands and executable behavior in code blocks; follow them with interpretation instead of leaving code to explain itself.
+- Use captions to tell the reader what to notice in a figure, not to repeat the preceding paragraph.
+- Alternate visual weight where the material supports it: sustained reasoning, a compact emphasized judgment, a figure or table, then interpretation. Avoid a page whose every section has the same Markdown silhouette.
 - Avoid report filler: `综上所述`, `值得注意的是`, `由此可见`, `赋能`, `闭环`, `抓手`, `深耕`, `广阔前景`.
 - Avoid repetitive AI constructions: `不仅……更……`, `真正的 X 不是 A 而是 B`, `从 X 到 Y`, and symmetrical “优势/局限” sections.
 - Do not ban a word mechanically when it is the precise technical term; ban the empty rhetorical habit.
+
+Formatting must expose structure already present in the thought. It cannot rescue weak reasoning, and uniform plain prose is not a virtue when it hides hierarchy.
 
 No fixed word count applies. The article is finished when the promise is supported, the important boundary is stated, and further detail would not change the reader’s model or decision.
 
@@ -212,6 +245,14 @@ On the argument pass, remove:
 - repeated conclusions;
 - lists that should be paragraphs;
 - ornamental transitions and slogans.
+
+On the page-rhythm pass, inspect the rendered article and mark:
+
+- an opening that asks the reader to digest data before understanding the situation;
+- long stretches with no visual or typographic change despite multiple reasoning levels;
+- important judgments buried at the same weight as supporting detail;
+- blockquotes, bold, indentation, or images that are decorative rather than functional;
+- mechanisms, timelines, comparisons, or trade-offs still being simulated entirely in prose.
 
 On the skeptical pass, mark:
 

@@ -2,6 +2,40 @@
 
 Treat zjding’s direct edits and explicit feedback as ground truth. Newer entries override older examples. Promote a rule into the main guidelines by changing or deleting the conflicting old rule, not by stacking contradictory instructions.
 
+## 2026-07-28 — Opening, formatting, and visual coverage
+
+### Choose visual grammar by relationship
+
+**Pattern**: “Add more visuals” can overcorrect into Mermaid-by-default. Mermaid, PlantUML, sequence diagrams, pipeline diagrams, and Matplotlib plots were treated as interchangeable decoration rather than tools for different semantic jobs.
+
+**Correction**: First decide whether prose already explains the relationship clearly. If a visual is warranted, route by meaning: sequence for messages and lifecycle, pipeline for stages and failure paths, Mermaid for lightweight supported relationship diagrams, PlantUML for richer formal diagrams when the build supports it, and Matplotlib for reproducible quantitative evidence. Do not require Mermaid or any diagram in every article.
+
+**Status**: PROMOTED to `writing-guidelines.md` §7, the main workflow’s visual plan, and calibration example 8.
+
+### Situation before data
+
+**Pattern**: The evidence-led rule was interpreted as permission to place benchmark numbers at the top of the article. The result was accurate but read like a report rather than a piece of thinking.
+
+**Correction**: Open from a real situation, event, tension, opinion, doubt, or thought. Establish why the question exists before presenting dense data. Measurements support the opening; they do not replace it.
+
+**Status**: PROMOTED to `writing-guidelines.md` §2 and the main workflow’s entry decision.
+
+### Deliberate page rhythm
+
+**Pattern**: Avoiding fragmented lists overcorrected into nearly uniform headings, paragraphs, and tables. Bold anchors, hierarchy, blockquotes, captions, and other changes of visual weight were rarely used.
+
+**Correction**: Design typographic hierarchy around the argument. Use emphasis, labeled judgment or boundary blocks, real indentation, code, captions, and whitespace when they expose existing structure. Reject both decorative formatting and visually flat long-form prose.
+
+**Status**: PROMOTED to `writing-guidelines.md` §8 and the final page-rhythm pass.
+
+### Visual coverage, not minimum deletion
+
+**Pattern**: “Every visual must earn its place” and “no minimum number” were applied almost entirely as deletion rules. The revision removed redundant diagrams but also under-illustrated mechanisms, comparisons, and conceptual transitions.
+
+**Correction**: Plan visuals by the relationships readers must understand. Count explanation, cognitive relief, navigation, and memory as legitimate visual value. Do not set a universal quota, but treat several visualizable relationships with only one or two visuals as a reason to re-audit coverage.
+
+**Status**: PROMOTED to `writing-guidelines.md` §7 and the main workflow’s visual plan.
+
 ## 2026-07-27 — Turbopuffer / turbovec revision
 
 ### Paragraphs before lists
