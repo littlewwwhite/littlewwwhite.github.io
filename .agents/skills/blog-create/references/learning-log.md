@@ -2,6 +2,16 @@
 
 Treat zjding’s direct edits and explicit feedback as ground truth. Newer entries override older examples. Promote a rule into the main guidelines by changing or deleting the conflicting old rule, not by stacking contradictory instructions.
 
+## 2026-08-04 — Direct technical titles
+
+### Name the mechanism instead of packaging it
+
+**Pattern**: `向量检索的两笔字节账` used a metaphor to package two concrete dimensions. It sounded memorable, but concealed the article's actual subject until the reader opened it.
+
+**Correction**: Name the mechanisms or decision directly. Prefer `向量检索中的存储分层与低比特量化` when those are the two dimensions under discussion. Do not treat novelty or metaphor as a title-quality signal.
+
+**Status**: PROMOTED to `writing-guidelines.md` §2.
+
 ## 2026-07-28 — Learn the author, not only the opening type
 
 ### Preserve the personal research trajectory

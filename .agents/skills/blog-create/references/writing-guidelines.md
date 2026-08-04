@@ -51,7 +51,7 @@ Answer “这篇文章讲什么” naturally. Prefer a concrete object plus the 
 
 Good:
 
-- `向量检索的两笔字节账`
+- `向量检索中的存储分层与低比特量化`
 - `为什么我暂时不会把小说检索迁到 turbopuffer`
 - `turbovec 低比特量化：压缩率必须和召回率一起读`
 
@@ -59,6 +59,7 @@ Avoid:
 
 - correcting a spelling mistake as the article’s opening move;
 - gimmicks built from coincidental names such as “两个 Turbo 的两条路”;
+- metaphors such as “两笔账” that hide the concrete technical dimensions;
 - stacked product names with no reader question;
 - clickbait mystery, number stacking, or a conclusion stronger than the evidence;
 - habitual `不是 X，而是 Y`.
